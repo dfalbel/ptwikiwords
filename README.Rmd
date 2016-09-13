@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+ptwikiwords
+===============================
+> Words used in Portuguese Wikipedia
+
+This data-package contains a dataset with words used in a random sample from ~15.000
+pages from the [Portuguese Wikipedia](https://pt.wikipedia.org/).
+
+# Installing
+
+It can be installed using:
+
+```{r, eval = F}
+devtools::install_github("dfalbel/ptwikiwords")
+```
+
+# Using
+
+After installing the package, you can load the dataset using:
+
+```{r}
+library(ptwikiwords)
+data(ptwikiwords)
+head(ptwikiwords)
+```
+
+The dataset contains 3 columns:
+
+* word: word, as is, found in Wikipedia pages
+* count: number of times the word was found in the sample of Wikipedia pages
+* check: wheter the word exists in the portuguese language
