@@ -26,12 +26,12 @@ library(ptwikiwords)
 data(ptwikiwords)
 head(ptwikiwords)
 #>   word  count check
-#> 1   de 183886  TRUE
-#> 2    a  95064  TRUE
-#> 3    e  86692  TRUE
-#> 4    o  75879  TRUE
-#> 5   em  58109  TRUE
-#> 6   do  51980  TRUE
+#> 1   de 210954  TRUE
+#> 2    a 109652  TRUE
+#> 3    e 100028  TRUE
+#> 4    o  87839  TRUE
+#> 5   em  67040  TRUE
+#> 6   do  59489  TRUE
 ```
 
 The dataset contains 3 columns:
