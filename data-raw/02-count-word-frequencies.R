@@ -1,6 +1,6 @@
 library(magrittr)
 
-words <- list.files("data-raw/wikipages/", full.names = T) %>%
+ptwikiwords <- list.files("data-raw/wikipages/", full.names = T) %>%
   plyr::llply(function(x){
     xml2::read_html(x) %>%
       rvest::html_nodes("p") %>%
@@ -17,12 +17,12 @@ words <- list.files("data-raw/wikipages/", full.names = T) %>%
 
 
 # use hunspell to use only valid words
-words$check <- hunspell::hunspell_check(
-  words$word,
+ptwikiwords$check <- hunspell::hunspell_check(
+  ptwikiwords$word,
   dict = system.file("dict/Portuguese_Brazilian.dic", package = "ptstem")
   )
 
-
+devtools::use_data(ptwikiwords)
 
 
 
