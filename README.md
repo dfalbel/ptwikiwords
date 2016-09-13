@@ -5,6 +5,8 @@ ptwikiwords
 
 > Words used in Portuguese Wikipedia
 
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/ptwikiwords.svg?branch=master)](https://travis-ci.org/dfalbel/ptwikiwords)
+
 This data-package contains a dataset with words used in a random sample from ~15.000 pages from the [Portuguese Wikipedia](https://pt.wikipedia.org/).
 
 Installing
