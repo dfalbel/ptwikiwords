@@ -3,6 +3,7 @@ Type: Package
 Title: Words used in Portuguese Wikipedia
 Version: 0.0.0.9000
 Authors@R: person("Daniel", "Falbel", email = "dfalbel@gmail.com", role = c("aut", "cre"))
+Depends: R (>= 3.1.0)
 Description: Contains a datset of words used in 15.000 randomly extracted pages
     from the portuguese Wikipedia.
 License: MIT + file LICENSE
