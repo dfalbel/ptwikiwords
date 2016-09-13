@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Constante de Chaitin – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Constante_de_Chaitin","wgTitle":"Constante de Chaitin","wgCurRevisionId":42785053,"wgRevisionId":42785053,"wgArticleId":4635438,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Artigos que carecem de notas de rodapé desde julho de 2015","Teoria da computação"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Constante_de_Chaitin","wgRelevantArticleId":4635438,"wgRequestId":"V9cvRQpAEKkAAAoBD9wAAABO","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q735775","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Constante_de_Chaitin"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Constante_de_Chaitin"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Constante_de_Chaitin rootpage-Constante_de_Chaitin skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Constante de Chaitin</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><table align="center" class="noprint" style="width:80%; margin:0 auto; border-collapse:collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #f28500;">
+<tr>
+<td width="8%" align="center">
+<div style="width:52px;"><a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes" title="Wikipédia:Livro de estilo/Cite as fontes"><img alt="Text document with red question mark.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></a></div>
+</td>
+<td width="91%">Este artigo ou secção contém <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes#Refer.C3.AAncias_no_fim" title="Wikipédia:Livro de estilo/Cite as fontes">fontes no fim do texto</a>, mas que <b>não são <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes#Refer.C3.AAncias_no_texto" title="Wikipédia:Livro de estilo/Cite as fontes">citadas no corpo do artigo</a></b>, o que <b>compromete a <a href="/wiki/Wikip%C3%A9dia:V" class="mw-redirect" title="Wikipédia:V">confiabilidade</a></b> das informações. <small>(desde julho de 2015)</small><br />
+<small>Por favor, <span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Constante_de_Chaitin&amp;action=edit">melhore</a></span> este artigo introduzindo <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Notas_de_rodap%C3%A9" class="mw-redirect" title="Wikipédia:Livro de estilo/Notas de rodapé">notas de rodapé</a> citando as fontes, inserindo-as no corpo do texto quando necessário.</small></td>
+<td width="1%" align="center"></td>
+</tr>
+</table>
+<p>Em <a href="/wiki/Ci%C3%AAncia_da_computa%C3%A7%C3%A3o" title="Ciência da computação">ciência da computação</a>, na sub-área de <a href="/wiki/Teoria_da_informa%C3%A7%C3%A3o_algor%C3%ADtmica" class="mw-redirect" title="Teoria da informação algorítmica">teoria da informação algorítmica</a>, a <b>constante de Chaitin</b> (<b>número Ômega de Chaitin</b>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> ou <b>probabilidade de parada</b> é um <a href="/wiki/N%C3%BAmero_real" title="Número real">número real</a> que informalmente representa a <a href="/wiki/Probabilidade" title="Probabilidade">probabilidade</a> de que um programa construído de forma aleatória irá parar. Estes números são formados de uma construção de <a href="/wiki/Gregory_Chaitin" title="Gregory Chaitin">Gregory Chaitin</a>.</p>
+<p>Apesar de haver uma infinidade de probabilidades de parada, é comum usar o símbolo <a href="/wiki/Ohm" title="Ohm">Ω (ohm)</a> para nos referirmos a elas como se fossem apenas uma. Porque Ω depende da codificação utilizada no programa, então é chamado as vezes de <b>Construção de Chaitin</b> ao invés de <b>Constante de Chaitin</b> quando não referencia nenhuma codificação específica.</p>
+<p>Cada probabilidade de parada é um número real <a href="/wiki/N%C3%BAmero_normal" title="Número normal">normal</a> e <a href="/wiki/N%C3%BAmero_transcendente" title="Número transcendente">transcendente</a> que não é <a href="/wiki/N%C3%BAmero_comput%C3%A1vel" title="Número computável">computável</a>, o que significa que não existe <a href="/wiki/Algoritmo" title="Algoritmo">algoritmo</a> para computar aqueles dígitos. De fato, cada probabilidade de parada é uma sequência aleatória de <a href="/wiki/Per_Martin-L%C3%B6f" title="Per Martin-Löf">Martin-Löf</a>, representando que não existe algoritmo algum que possa adivinhar de fato seus dígitos.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#O_contexto"><span class="tocnumber">1</span> <span class="toctext">O contexto</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Defini.C3.A7.C3.A3o"><span class="tocnumber">2</span> <span class="toctext">Definição</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rela.C3.A7.C3.A3o_com_o_problema_da_parada"><span class="tocnumber">3</span> <span class="toctext">Relação com o problema da parada</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Interpreta.C3.A7.C3.A3o_como_uma_probabilidade"><span class="tocnumber">4</span> <span class="toctext">Interpretação como uma probabilidade</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Propriedades"><span class="tocnumber">5</span> <span class="toctext">Propriedades</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Incomputabilidade"><span class="tocnumber">6</span> <span class="toctext">Incomputabilidade</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Teorema_da_incompletude_para_probabilidade_de_parada"><span class="tocnumber">7</span> <span class="toctext">Teorema da incompletude para probabilidade de parada</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Super_.C3.94mega"><span class="tocnumber">8</span> <span class="toctext">Super Ômega</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">9</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1"><a href="#Refer.C3.AAncias"><span class="tocnumber">10</span> <span class="toctext">Referências</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">11</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="O_contexto">O contexto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: O contexto">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=1" title="Editar secção: O contexto">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A definição de uma probabilidade de parada remete à existência de <b>funções computáveis universais livres de prefixo.</b> Como uma função, intuitivamente, representa uma linguagem de programação com a propriedade de que nenhum programa válido pode ser obtido como uma extensão apropriada de outro programa válido.</p>
+<p>Suponha que <i>F</i> é uma função parcial que recebe um argumento, uma string binária finita, e possivelmente retorna uma única string binária como saída. A função <i>F</i> é chamada <b><a href="/wiki/Fun%C3%A7%C3%A3o_comput%C3%A1vel" title="Função computável">computável</a></b> se existe uma <a href="/wiki/M%C3%A1quina_de_Turing" title="Máquina de Turing">Máquina de Turing</a> que a computa (no sentido de que para qualquer string binária <i>x</i> tal que <i>F(x) = y</i> a máquina de Turing para com <i>y</i> em sua fita quando dada a entrada <i>x</i>).</p>
+<p>A função <i>F</i> é chamada <b><a href="/wiki/Turing_completude" title="Turing completude">universal</a></b> se a possui a seguinte propriedade: para cada função computável <i>f</i> de uma única variável, existe uma string <i>w</i> de modo que para todo <i>x</i>, <i>F</i>(<i>w</i>&#160;<i>x</i>) = <i>f</i>(<i>x</i>); aqui <i>w</i>&#160;<i>x</i> representa a <a href="/wiki/Concatena%C3%A7%C3%A3o" title="Concatenação">concatenação</a> de duas strings <i>w</i> e <i>x</i>. Isso significa que <i>F</i> pode ser usado para simular qualquer função computável de uma variável. Informalmente, <i>w</i> representa um "script" para a função computável <i>f</i>, e <i>F</i> representa um "interpretador" que analisa o script como um prefixo de sua entrada e então executa ele no restante da entrada.</p>
+<p>O <b>domínio</b> de <i>F</i> é o conjunto de todas as entradas <i>p</i> em que ele é definido. Para os <i>F</i> que são universais, <i>p</i> podem ser geralmente vistas como ambos uma concatenação de uma parte de um programa e parte de dados, e como um único programa para a função <i>F</i>.</p>
+<p>A função <i>F</i> é chamada <b>livre de prefixo</b> se não houver dois elementos <i>p</i>, <i>p′</i> em seu domínio tal que <i>p′</i> é uma extensão própria de <i>p</i>. Isso pode ser definido como: o domínio de <i>F</i> é um <a href="/w/index.php?title=C%C3%B3digo_livre_de_prefixo&amp;action=edit&amp;redlink=1" class="new" title="Código livre de prefixo (página não existe)">código livre de prefixo</a> (código instantâneo) no conjunto de strings binárias finitas. Uma maneira simples de aplicar o prefixo livre é usar máquinas das quais a entrada é um fluxo binário de bits que são lidos um por vez. Não existe marcador de fim da cadeia; o fim da entrada é determinado pela máquina universal que decide parar de ler mais bits. Aqui, a diferença entre duas noções de programas mencionados no último parágrafo se tornam claras; uma é facilmente reconhecida por alguma gramática, enquanto a outra requer computação arbitrária para ser reconhecida.</p>
+<p>O domínio de qualquer função universal computável é um <a href="/w/index.php?title=Conjunto_enumer%C3%A1vel_comput%C3%A1vel&amp;action=edit&amp;redlink=1" class="new" title="Conjunto enumerável computável (página não existe)">conjunto enumerável computável</a> mas nunca um <a href="/wiki/Conjunto_comput%C3%A1vel" class="mw-redirect" title="Conjunto computável">conjunto computável</a>. O domínio é sempre <a href="/w/index.php?title=Turing_equivalente&amp;action=edit&amp;redlink=1" class="new" title="Turing equivalente (página não existe)">Turing equivalente</a> ao <a href="/wiki/Problema_da_parada" title="Problema da parada">problema da parada</a>.</p>
+<h2><span class="mw-headline" id="Defini.C3.A7.C3.A3o">Definição</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Definição">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=2" title="Editar secção: Definição">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Seja <i>P</i><sub>F</sub> o domínio de uma função computável universal livre de prefixo universal <i>F</i>. A constante Ω<sub>F</sub> é então definida como</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>F</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>p</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <msub>
+              <mi>P</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>F</mi>
+              </mrow>
+            </msub>
+          </mrow>
+        </munder>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>p</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Omega _{F}=\sum _{p\in P_{F}}2^{-|p|}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc95e8dc8c8d25244e5f3ce3d6da59c0da6eb1dd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.505ex; width:15.28ex; height:6.009ex;" alt="{\displaystyle \Omega _{F}=\sum _{p\in P_{F}}2^{-|p|}}" /></span>,</dd>
+</dl>
+<p>onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>|</mo>
+          <mi>p</mi>
+          <mo>|</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left|p\right|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/99c120b5eecfdfb4729e159e6027dab6e180a4c6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:2.494ex; height:2.843ex;" alt="{\displaystyle \left|p\right|}" /></span> é o tamanho de uma string <i>p</i>. É uma <a href="/wiki/S%C3%A9rie_(matem%C3%A1tica)" title="Série (matemática)">soma infinita</a> que tem uma soma para cada <i>p</i> no domínio de <i>F</i>. O requerimento é que o domínio seja livre de prefixo, juntamente a <a href="/wiki/Desigualdade_de_Kraft" title="Desigualdade de Kraft">desigualdade de Kraft</a>, garante que essa soma converge para um <a href="/wiki/N%C3%BAmero_real" title="Número real">número real</a> entre 0 e 1. Se <i>F</i> é uma consequência do contexto então Ω<sub>F</sub> pode ser simplesmente denominado Ω, ainda que diferentes funções universais livres de prefixo levam à difrentes valores de Ω.</p>
+<h2><span class="mw-headline" id="Rela.C3.A7.C3.A3o_com_o_problema_da_parada">Relação com o problema da parada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Relação com o problema da parada">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=3" title="Editar secção: Relação com o problema da parada">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Conhecendo os primeiros <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>N</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle N}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5e3890c981ae85503089652feb48b191b57aae3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.074ex; height:2.176ex;" alt="N" /></span> bits de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x03A9;<!-- Ω --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Omega }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/24b0d5ca6f381068d756f6337c08e0af9d1eeb6f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.689ex; height:2.176ex;" alt="\Omega " /></span>, pode-se calcular o <a href="/wiki/Problema_da_parada" title="Problema da parada">problema da parada</a> para todos os programas de tamanho até <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>N</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle N}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5e3890c981ae85503089652feb48b191b57aae3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.074ex; height:2.176ex;" alt="N" /></span>. Seja o programa <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.079ex; width:1.259ex; height:2.009ex;" alt="p" /></span> para qual o problema da parada deve ser resolvido em <i>N</i> bits de tamanho. Em um <a href="/w/index.php?title=Implementador_Universal_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)&amp;action=edit&amp;redlink=1" class="new" title="Implementador Universal (ciência da computação) (página não existe)">implementador universal</a> de forma, todos os programas de todos os tamanhos são rodados, até que um número suficiente deles tiverem parado para assim contribuir conjuntamente com probabilidade suficiente para combinar estes primeiros <i>N</i> bits. Se o programa <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.079ex; width:1.259ex; height:2.009ex;" alt="p" /></span> ainda não parados, então ele nunca irá parar, desde que sua constribuição à probabilidade da parada irá afetar os primeiros N bits. Assim, o problema da parada vai ser resolvido por <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.079ex; width:1.259ex; height:2.009ex;" alt="p" /></span>.</p>
+<p>Por causa de muitos problemas pendentes em teoria dos números, como a <a href="/wiki/Conjectura_de_Goldbach" class="mw-redirect" title="Conjectura de Goldbach">conjectura de Goldbach</a> são equivalentes à resolver o problema da paradapara programas especiais (que irão basicamente procurar por contraexemplos e para se um for achado), sabendo bits o suficiente da constante de Chaitin irá também significa saber a resposta para esses problemas. Mas como o problema da parada geralmente não é solúvel, e portanto calcular qualquer um exceto os primeiros bits da constante de Chaitin não é possível, isso apenas reduz problemas difíceis para problemas impossíveis, seria como tentar construir uma <a href="/w/index.php?title=M%C3%A1quina_de_or%C3%A1culo&amp;action=edit&amp;redlink=1" class="new" title="Máquina de oráculo (página não existe)">máquina de oráculo para o problema da parada</a>.</p>
+<h2><span class="mw-headline" id="Interpreta.C3.A7.C3.A3o_como_uma_probabilidade">Interpretação como uma probabilidade</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Interpretação como uma probabilidade">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=4" title="Editar secção: Interpretação como uma probabilidade">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O <a href="/w/index.php?title=Espa%C3%A7o_de_Cantor&amp;action=edit&amp;redlink=1" class="new" title="Espaço de Cantor (página não existe)">espaço de Cantor</a> é uma coleção de todas as sequencias infinitas de 0s e 1s. A probabilidade de parada pode ser interpretada como a [[ teoria da medida|medida]] de um determinado subconjunto do espaço de Cantor sob a <a href="/wiki/Medida_de_probabilidade" title="Medida de probabilidade">medida de probabilidade</a> no espaço de Cantor. É a partir dessa interpretação que as probabilidades de paradas têm seu nome.</p>
+<p>A medida de probabilidade no espaço Cantor, algumas vezes chamada de "medida da moeda justa", é definido tal que para qualquer string binária <i>x</i> o conjunto de sequências que começam com <i>x</i> tem medida 2<sup>−|<i>x</i>|</sup>. Isso implica que para cada número natural <i>n</i>, o conjunto de sequências <i>f</i> no espaço de Cantor tal que <i>f</i>(<i>n</i>) = 1 tem medida 1/2, e o conjunto de sequências as quais o <i>n-ésimo</i> elemento é 0 também tem medida 1/2.</p>
+<p>Seja <i>F</i> uma função computável universal livre de prefixo. O domínio <i>P</i> de <i>F</i> consiste em um conjunto infinito de strings binárias</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>p</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P=\{p_{1},p_{2},\ldots \}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bfe3acc8644ab3ca422f0c7373948eb58e19e263" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:16.516ex; height:2.843ex;" alt="{\displaystyle P=\{p_{1},p_{2},\ldots \}}" /></span>.</dd>
+</dl>
+<p>Cada uma dessas strings <i>p</i><sub><i>i</i></sub> determina um subconjunto <i>S</i><sub><i>i</i></sub> do espaço de Cantor; o conjunto <i>S</i><sub><i>i</i></sub> contém todas as sequências no espaço de Cantor que começam com <i>p</i><sub><i>i</i></sub>. Esses conjuntos são disjuntos porque <i>P</i> é um conjunto livre de prefixo. A soma</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>p</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mi>P</mi>
+          </mrow>
+        </munder>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+            <mi>p</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo stretchy="false">|</mo>
+            </mrow>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sum _{p\in P}2^{-|p|}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e33a6e14c7e357f6fa70e077565a7311c73f69b1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:8.207ex; height:5.843ex;" alt="{\displaystyle \sum _{p\in P}2^{-|p|}}" /></span></dd>
+</dl>
+<p>representa e medida do conjunto</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo>&#x22C3;<!-- ⋃ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="double-struck">N</mi>
+            </mrow>
+          </mrow>
+        </munder>
+        <msub>
+          <mi>S</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \bigcup _{i\in \mathbb {N} }S_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0903d290d47ac0ee3a555191bafffffa9b4974ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:5.502ex; height:5.676ex;" alt="{\displaystyle \bigcup _{i\in \mathbb {N} }S_{i}}" /></span>.</dd>
+</dl>
+<p>Desta forma, Ω<sub><i>F</i></sub> representa a probabilidade de que selecionado aleatoriamente uma sequência infinita de 0s e 1s que começam com uma cadeia de bits (de algum tamanho finito) que está no domínio de <i>F</i>. É por essa razão que Ω<sub><i>F</i></sub> é chamado probabilidade de parada.</p>
+<h2><span class="mw-headline" id="Propriedades">Propriedades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Propriedades">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=5" title="Editar secção: Propriedades">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cada constante de Chaitin Ω tem as seguintes propriedades:</p>
+<ul>
+<li>É <a href="/w/index.php?title=Aleatoriedade_algor%C3%ADtmica&amp;action=edit&amp;redlink=1" class="new" title="Aleatoriedade algorítmica (página não existe)">algoritmicamente aleatória</a>. Isso significa que o menor programa para produzir os primeiros <i>n</i> bits de Ω deve ser de tamanho pelo menos <i>n</i>-O(1). Isso porque, como no exemplo de Goldbach, aqueles <i>n</i> bits nos permitem achar exatamente qual programa para entre todos aqueles de tamanho no máximo<i>n</i>.</li>
+<li>É um <a href="/wiki/N%C3%BAmero_normal" title="Número normal">número normal</a>, o que significa que seus dígitos são igualmente distribuidos como se fossem gerados por um lançamento de uma moeda justa.</li>
+<li>Não é um <a href="/wiki/N%C3%BAmero_comput%C3%A1vel" title="Número computável">número computável</a>; não há função computável que enumera sua expansão binária, como discutido abaixo.</li>
+<li>É o conjunto de números racionais <i>q</i> tal que <i>q</i> &lt; Ω é <a href="/w/index.php?title=Conjunto_computavelmente_enumer%C3%A1vel&amp;action=edit&amp;redlink=1" class="new" title="Conjunto computavelmente enumerável (página não existe)">computavelmente enumerável</a>; um número real com a propriedade que é chamada <b>número real c.e.-esquerda</b> (computavelmente enumerável à esquerda) em <a href="/wiki/Teoria_da_recurs%C3%A3o" class="mw-redirect" title="Teoria da recursão">teoria da recursão</a>.</li>
+<li>É o conjunto de números racionais <i>q</i> tal que <i>q</i> &gt; Ω não é computavelmente enumerável.</li>
+<li>Ω é um <a href="/w/index.php?title=N%C3%BAmero_aritm%C3%A9tico&amp;action=edit&amp;redlink=1" class="new" title="Número aritmético (página não existe)">número aritmético</a>.</li>
+<li>É <a href="/w/index.php?title=Turing_equivalente&amp;action=edit&amp;redlink=1" class="new" title="Turing equivalente (página não existe)">Turing equivalente</a> ao <a href="/wiki/Problema_da_parada" title="Problema da parada">problema da parada</a> e, assim, ao nível <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi mathvariant="normal">&#x0394;<!-- Δ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Delta _{2}^{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e2647e336f34cacfba9934032137522052e8af0a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:3.008ex; height:3.176ex;" alt="{\displaystyle \Delta _{2}^{0}}" /></span> da <a href="/wiki/Hierarquia_aritm%C3%A9tica" title="Hierarquia aritmética">hierarquia aritmética</a>.</li>
+</ul>
+<p>Nem todo conjunto que é Turing equivalente ao problema da parada é uma probabilidade de parada. A <a href="/wiki/Rela%C3%A7%C3%A3o_de_equival%C3%AAncia" title="Relação de equivalência">mais fina</a> relação de equivalência, <b>equivalência Solovay</b>, pode ser usada para caracterizar a probabilidade de parada entre os reais c.e.-esquerda.</p>
+<h2><span class="mw-headline" id="Incomputabilidade">Incomputabilidade</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Incomputabilidade">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=6" title="Editar secção: Incomputabilidade">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Um número real é chamado calculável se existe um algoritmo que, dado <i>n</i>, retorna os primeiros <i>n</i> dígitos do número. Isto é equivalente à existência de um programa que enumera os dígitos do número real.</p>
+<p>Nenhuma probabilidade de parada é computável. A prova desse fato depende de um algoritmo que, dada os primeiros <i>n</i> dígitos de Ω, resolve o <a href="/wiki/Problema_da_parada" title="Problema da parada">problema da parada</a> de Turing por programas de tamanho até <i>n</i>. Uma vez que o problema da parada é <a href="/wiki/Problema_indecid%C3%ADvel" title="Problema indecidível">indecidível</a>, Ω não pode ser computado.</p>
+<p>O algoritmo procede como descrito a seguir. Dado os primeiros <i>n</i> dígitos de Ω e um <i>k</i>≤<i>n</i>, o algoritmo enumera o domínio de <i>F</i> até elementos suficientes do domínio serem encontrados de modo que a probabilidade de que eles representam é dentro do limite de 2<sup>−(k+1)</sup> de Ω. Depois deste ponto, nenhum programa adicional de tamanho <i>k</i> pode estar em seu domínio, porque cada um destes iria adicionar<sup>−<i>k</i></sup> para a medida, o que é impossível. Assim, o conjunto de cadeias de comprimento <i>k</i> no domínio é exatamente o conjunto de tais sequências já enumerados.</p>
+<h2><span class="mw-headline" id="Teorema_da_incompletude_para_probabilidade_de_parada">Teorema da incompletude para probabilidade de parada</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=7" class="mw-editsection-visualeditor" title="Editar secção: Teorema da incompletude para probabilidade de parada">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=7" title="Editar secção: Teorema da incompletude para probabilidade de parada">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/w/index.php?title=Teorema_de_incompletude_de_Chaitin&amp;action=edit&amp;redlink=1" class="new" title="Teorema de incompletude de Chaitin (página não existe)">Teorema de incompletude de Chaitin</a></div>
+<p>Para cada <a href="/wiki/Sistema_axiom%C3%A1tico" title="Sistema axiomático">sistema axiomático</a> específico representado consistentemente e eficazmente para <a href="/wiki/N%C3%BAmeros_naturais" class="mw-redirect" title="Números naturais">números naturais</a>, como os da <a href="/wiki/Axiomas_de_Peano" title="Axiomas de Peano">Aritmética de Peano</a>, existe uma constante <i>N</i> tal qual nenhum bit de Ω depois do <i>N-ésimo</i> pode ser provado ser 1 ou 0 dentor desse sistema. A constante <i>N</i> depende de como o <a href="/wiki/Sistema_formal" title="Sistema formal">sistema formal</a> [e efetivamente representado, e assim não reflete diramente a complexidade do sistema axiomático. Esse resultado da incompletude é similar ao <a href="/wiki/Teorema_da_Incompletude_de_G%C3%B6del" class="mw-redirect" title="Teorema da Incompletude de Gödel">Teorema da Incompletude de Gödel</a> que mostra que nenhuma forma teórica consistente para aritmética pode ser completa.</p>
+<h2><span class="mw-headline" id="Super_.C3.94mega">Super Ômega</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=8" class="mw-editsection-visualeditor" title="Editar secção: Super Ômega">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=8" title="Editar secção: Super Ômega">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Como mencionado acima, os primeiros n bits da constante Ômega de<a href="/wiki/Gregory_Chaitin" title="Gregory Chaitin">Gregory Chaitin</a> são aleatórios ou incompreensíveis no sentido de que nós não podemos computá-los por um algoritmo de parada com menos que n-O(1) bits. Entretanto, considere o algoritmo curto, mas nunca um de parada que lista sistematicamente e executa todos os programas possíveis;sempre que um deles é interrompido sua probabilidade é adicionado à saída (inicializada em zero). Depois de um tempo finito os primeiros n bits da saída nunca mais vão mudar (não importa que se desta vez não é computável por um programa de parada). Portanto, há um algoritmo não-parante e curto cuja saída converge (depois de tempo finito) nos primeiros n bits de Ômega. Em outras palavras, os primeiros n bits <a href="/w/index.php?title=Enumer%C3%A1veis&amp;action=edit&amp;redlink=1" class="new" title="Enumeráveis (página não existe)">enumeráveis</a> de Omega são altamente compreensíveis no sentido que são <a href="/w/index.php?title=Limite_comput%C3%A1vel&amp;action=edit&amp;redlink=1" class="new" title="Limite computável (página não existe)">limite computáveis</a> por um algoritmo muito pequeno; eles não são <a href="/w/index.php?title=Aleat%C3%B3rios&amp;action=edit&amp;redlink=1" class="new" title="Aleatórios (página não existe)">aleatórios</a> com respeito ao conjunto de algoritmos enumerados. <a href="/w/index.php?title=J%C3%BCrgen_Schmidhuber&amp;action=edit&amp;redlink=1" class="new" title="Jürgen Schmidhuber (página não existe)">Jürgen Schmidhuber</a> (2000) construiu um "Super Ômega" limite computável que num certo sentido é muito mais aleatória do que o limite computável Ômega original, como não se pode comprimir significativamente o Super Ômega por qualquer algoritmo enumerado não-parante.</p>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=9" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=9" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Complexidade_de_Kolmogorov" title="Complexidade de Kolmogorov">Complexidade de Kolmogorov</a></li>
+<li><a href="/wiki/Teorema_da_incompletude" class="mw-redirect" title="Teorema da incompletude">Teorema da incompletude</a></li>
+</ul>
+<h2 style="cursor: help;" title="Esta seção foi configurada para não ser editável diretamente. Edite a página toda ou a seção anterior em vez disso."><span class="mw-headline" id="Refer.C3.AAncias">Referências</span></h2>
+<div class="reflist references-small" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><a href="/w/index.php?title=Mathworld.wolfram.com&amp;action=edit&amp;redlink=1" class="new" title="Mathworld.wolfram.com (página não existe)">mathworld.wolfram.com</a>, <a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/ChaitinsConstant.html">Chaitin's Constant</a>. Visitado em 28 de Maio de 2012</span></li>
+</ol>
+</div>
+<ul>
+<li>Cristian S. Calude (2002). <i>Information and Randomness: An Algorithmic Perspective</i>, second edition. Springer. <a href="/wiki/Especial:Fontes_de_livros/3540434666" class="internal mw-magiclink-isbn">ISBN 3-540-43466-6</a></li>
+<li>Cristian S. Calude, Michael J. Dinneen, and Chi-Kou Shu. <i><a rel="nofollow" class="external text" href="http://www.cs.auckland.ac.nz/~cristian/Calude361_370.pdf">Computing a Glimpse of Randomness</a>.</i></li>
+<li>R. Downey, and D. Hirschfeldt (2010), <i>Algorithmic Randomness and Complexity</i>, monograph in preparation, Springer-Verlag. Preliminary version can be found <a rel="nofollow" class="external text" href="http://www.mcs.vuw.ac.nz/~downey">online</a>.</li>
+<li>Ming Li and Paul Vitányi (1997). <i>An Introduction to Kolmogorov Complexity and Its Applications</i>. Springer. <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/li97introduction.html">Introduction chapter full-text</a>.</li>
+<li><a href="/w/index.php?title=J%C3%BCrgen_Schmidhuber&amp;action=edit&amp;redlink=1" class="new" title="Jürgen Schmidhuber (página não existe)">Jürgen Schmidhuber</a> (2000). Algorithmic Theories of Everything (arXiv: quant-ph/ 0011122). Journal reference: J. Schmidhuber (2002). Hierarchies of generalized Kolmogorov complexities and nonenumerable universal measures computable in the limit. International Journal of Foundations of Computer Science 13(4):587-612.</li>
+</ul>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit&amp;vesection=10" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit&amp;section=10" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.plus.maths.org.uk/issue37/features/omega/index.html">Omega and why maths has no TOEs</a> article based on one written by <a href="/wiki/Gregory_Chaitin" title="Gregory Chaitin">Gregory Chaitin</a> which appeared in the August 2004 edition of Mathematics Today, on the occasion of the 50th anniversary of Alan Turing's death.</li>
+<li><a rel="nofollow" class="external text" href="http://www.umcs.maine.edu/~chaitin/sciamer3.pdf"><i>The Limits of Reason</i></a>, Gregory Chaitin, originally appeared in Scientific American, March 2006.</li>
+<li><a rel="nofollow" class="external text" href="http://www.idsia.ch/~juergen/kolmogorov.html">Limit-computable Super Omega more random than Omega</a> and generalizations of algorithmic information, by <a href="/w/index.php?title=J%C3%BCrgen_Schmidhuber&amp;action=edit&amp;redlink=1" class="new" title="Jürgen Schmidhuber (página não existe)">Jürgen Schmidhuber</a></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:4635438-0!*!0!!pt!4!*!math=5 and timestamp 20160818132734 and revision id 42785053
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Constante_de_Chaitin&amp;oldid=42785053">https://pt.wikipedia.org/w/index.php?title=Constante_de_Chaitin&amp;oldid=42785053</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Teoria_da_computa%C3%A7%C3%A3o" title="Categoria:Teoria da computação">Teoria da computação</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoria oculta: <ul><li><a href="/wiki/Categoria:!Artigos_que_carecem_de_notas_de_rodap%C3%A9_desde_julho_de_2015" title="Categoria:!Artigos que carecem de notas de rodapé desde julho de 2015">!Artigos que carecem de notas de rodapé desde julho de 2015</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Constante+de+Chaitin" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Constante+de+Chaitin" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Constante_de_Chaitin"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:Constante_de_Chaitin&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Constante_de_Chaitin" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Constante_de_Chaitin&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Constante+de+Chaitin">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Constante+de+Chaitin&amp;returnto=Constante+de+Chaitin&amp;oldid=42785053&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Constante_de_Chaitin&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Constante_de_Chaitin" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Constante_de_Chaitin" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Constante_de_Chaitin&amp;oldid=42785053" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Constante_de_Chaitin&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q735775" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Constante_de_Chaitin&amp;id=42785053" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Chaitinovo_%C4%8D%C3%ADslo" title="Chaitinovo číslo — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Chaitinsche_Konstante" title="Chaitinsche Konstante — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Chaitin%27s_constant" title="Chaitin's constant — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Constante_de_Chaitin" title="Constante de Chaitin — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Om%C3%A9ga_de_Chaitin" title="Oméga de Chaitin — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Costante_di_Chaitin" title="Costante di Chaitin — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A3%E3%82%A4%E3%83%86%E3%82%A3%E3%83%B3%E3%81%AE%E5%AE%9A%E6%95%B0" title="チャイティンの定数 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B0_%D0%A5%D0%B0%D0%B9%D1%82%D0%B8%D0%BD%D0%B0" title="Константа Хайтина — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Chaitins_konstant" title="Chaitins konstant — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q735775#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 17h22min de 5 de julho de 2015.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Constante_de_Chaitin&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.080",
+            "walltime": "0.155",
+            "ppvisitednodes": {
+                "value": 1195,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 3907,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 1501,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 10,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   62.421      1 -total",
+                " 77.71%   48.505      1 Predefinição:Sem_notas",
+                " 60.40%   37.700      1 Predefinição:Manutenção/Categorizando_por_assunto",
+                " 11.89%    7.424      1 Predefinição:Ambox",
+                "  9.77%    6.098      1 Predefinição:Main",
+                "  7.98%    4.983      1 Predefinição:Referências",
+                "  3.32%    2.074      1 Predefinição:Argvar",
+                "  3.03%    1.894      1 Predefinição:Esconder_link_para_editar_seção",
+                "  2.71%    1.689      1 Predefinição:Truncar"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.003",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 522508,
+                "limit": 52428800
+            }
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1271",
+            "timestamp": "20160818132734",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":107,"wgHostname":"mw1214"});});</script>
+	</body>
+</html>

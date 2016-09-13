@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Algoritmo de multiplicação de Booth – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Algoritmo_de_multiplicação_de_Booth","wgTitle":"Algoritmo de multiplicação de Booth","wgCurRevisionId":44408561,"wgRevisionId":44408561,"wgArticleId":607316,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Algoritmos","Aritmética computacional"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Algoritmo_de_multiplicação_de_Booth","wgRelevantArticleId":607316,"wgRequestId":"V9csJgpAIDMAAA3PBd8AAABH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q477049","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Algoritmo_de_multiplicação_de_Booth rootpage-Algoritmo_de_multiplicação_de_Booth skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Algoritmo de multiplicação de Booth</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p>O <b>algoritmo de multiplicação de Booth</b> é um <a href="/wiki/Algoritmo" title="Algoritmo">algoritmo</a> de <a href="/wiki/Multiplica%C3%A7%C3%A3o" title="Multiplicação">multiplicação</a> para <a href="/wiki/N%C3%BAmeros_bin%C3%A1rios" class="mw-redirect" title="Números binários">números binários</a> com sinal na notação <a href="/wiki/Complemento_de_dois" class="mw-redirect" title="Complemento de dois">complemento de dois</a>. O algoritmo foi inventado por <a href="/wiki/Andrew_D._Booth" title="Andrew D. Booth">Andrew D. Booth</a> em 1951 enquanto fazia pesquisas sobre <a href="/wiki/Cristalografia" title="Cristalografia">Cristalografia</a> no Colégio Birkbeck em Bloomsbury, <a href="/wiki/Londres" title="Londres">Londres</a>. Booth usava <a href="/wiki/Calculadora" title="Calculadora">calculadoras</a> que eram mais rápidas em deslocar do que em somar e criou o algoritmo para aumentar sua velocidade. O algoritmo de Booth é interessante para o estudo de <a href="/wiki/Arquitetura_de_computadores" title="Arquitetura de computadores">arquitetura de computadores</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Processo"><span class="tocnumber">1</span> <span class="toctext">Processo</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Exemplo"><span class="tocnumber">2</span> <span class="toctext">Exemplo</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Como_funciona"><span class="tocnumber">3</span> <span class="toctext">Como funciona</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">4</span> <span class="toctext">Ligações externas</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Refer.C3.AAncias"><span class="tocnumber">5</span> <span class="toctext">Referências</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Processo">Processo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Processo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit&amp;section=1" title="Editar secção: Processo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Se x é o número de bits da representação binária em complemento de dois do multiplicando e y o número de bits da do multiplicador&#160;:</p>
+<ul>
+<li>Desenhe uma grade com 3 linhas, com x + y + 1 colunas e um espaço para cada bit. Chame as linhas de A (adição), S (subtração), e P (produto).</li>
+<li>Preencha os primeiros x bits de cada linha com:
+<ul>
+<li>o A: o multiplicando</li>
+<li>o S: o negativo do multiplicando</li>
+<li>o P: zeros</li>
+</ul>
+</li>
+<li>Preencha os próximos y bits de cada linha com&#160;:
+<ul>
+<li>o A: zeros</li>
+<li>o S: zeros</li>
+<li>o P: o multiplicador</li>
+</ul>
+</li>
+<li>Coloque zero no último <a href="/wiki/Bit" title="Bit">bit</a> de cada linha.</li>
+</ul>
+<ul>
+<li>Repita o procedimento abaixo 'número de bits de y' vezes:</li>
+<li>1. Se os dois últimos bits do produto são:
+<ul>
+<li>o 00 ou 11: não faça nada.</li>
+<li>o 01: P = P + A. Ignore qualquer estouro.</li>
+<li>o 10: P = P + S. Ignore qualquer estouro.</li>
+</ul>
+</li>
+<li>2. Desloque P para a direita um bit. Neste passo, o sinal de P deve ser preservado, isto é, se o bit mais significativo for 1, então após o deslocamento o novo bit mais significativo também deve ser 1. Caso o bit mais significativo for 0, após o deslocamento o novo bit mais significativo deve também ser 0.</li>
+</ul>
+<ul>
+<li>Descarte o primeiro (nós contamos da direita para esquerda quando lidamos com bits) bit do produto para o resultado final.</li>
+</ul>
+<h2><span class="mw-headline" id="Exemplo">Exemplo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Exemplo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit&amp;section=2" title="Editar secção: Exemplo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Encontre 3 × (-4):</p>
+<ul>
+<li>A = 0011 0000 0</li>
+<li>S = 1101 0000 0</li>
+<li>P = 0000 1100 0</li>
+</ul>
+<ul>
+<li>Execute o loop quatro vezes&#160;:
+<ol>
+<li>P = 0000 110<b>0 0</b>. Os últimos dois bits são 00.
+<ul>
+<li>P = 0000 0110 0. Um deslocamento a direita.</li>
+</ul>
+</li>
+<li>P = 0000 011<b>0 0</b>. Os últimos dois bits são 00.
+<ul>
+<li>P = 0000 0011 0. Um deslocamento a direita.</li>
+</ul>
+</li>
+<li>P = 0000 001<b>1 0</b>. Os últimos dois bits são 10.
+<ul>
+<li>P = 1101 0011 0. P = P + S.</li>
+<li>P = 1110 1001 1. Um deslocamento a direita.</li>
+</ul>
+</li>
+<li>P = 1110 100<b>1 1</b>. Os últimos dois bits são 11.
+<ul>
+<li>P = 1111 0100 1. Um deslocamento a direita.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>O <a href="/wiki/Produto" class="mw-disambig" title="Produto">produto</a> é 1111 0100, que representa -12.</li>
+</ul>
+<p>A técnica mencionada acima é inadequada quando o multiplicando é um número negativo mais comprido que o que pode ser representado (i.e. se o multiplicando tem 8 bits então esse valor é -128). Uma correção possível para esse problema é adicionar mais um bit a esquerda de A, S e P. Abaixo, nós demonstramos a técnica melhorada multiplicando -8 por 2 usando 4 bits para o multiplicando e o multiplicador:</p>
+<ul>
+<li>A = 1 1000 0000 0</li>
+<li>S = 0 1000 0000 0</li>
+<li>P = 0 0000 0010 0</li>
+</ul>
+<ul>
+<li>Faça o loop quatro vezes:
+<ol>
+<li>P = 0 0000 0010 0. Os últimos dois bits são 00.
+<ul>
+<li>P = 0 0000 0001 0. Deslocar a direita.</li>
+</ul>
+</li>
+<li>P = 0 0000 0001 0. Os últimos dois bits são 10.
+<ul>
+<li>P = 0 1000 0001 0. P = P + S.</li>
+<li>P = 0 0100 0000 1. Deslocar a direita.</li>
+</ul>
+</li>
+<li>P = 0 0100 0000 1. Os últimos dois bits são 01.
+<ul>
+<li>P = 1 1100 0000 1. P = P + A.</li>
+<li>P = 1 1110 0000 0. Deslocar a direita.</li>
+</ul>
+</li>
+<li>P = 1 1110 0000 0. Os últimos dois bits são 00.
+<ul>
+<li>P = 1 1111 0000 0. Deslocar a direita.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>O produto é 11110000 (depois de descartar o primeiro e o último bit) que é -16.</li>
+</ul>
+<h2><span class="mw-headline" id="Como_funciona">Como funciona</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Como funciona">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit&amp;section=3" title="Editar secção: Como funciona">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Considere um multiplicador positivo consistindo de um bloco de 1s rodeados por 0s. Por exemplo, 00111110. O produto é dado por&#160;:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>62</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M\times \,^{\prime \prime }0\;0\;1\;1\;1\;1\;1\;0\,^{\prime \prime }=M\times (2^{5}+2^{4}+2^{3}+2^{2}+2^{1})=M\times 62}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6cf549eb3981a5cdddb3f14f17a416af773b8b56" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:65.858ex; height:3.176ex;" alt="{\displaystyle M\times \,^{\prime \prime }0\;0\;1\;1\;1\;1\;1\;0\,^{\prime \prime }=M\times (2^{5}+2^{4}+2^{3}+2^{2}+2^{1})=M\times 62}" /></span></dd>
+</dl>
+<p>onde M é o multiplicando. O número de operações podem ser reduzidas a duas, reescrevendo a mesma como</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>-1</mtext>
+        </mrow>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>62</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M\times \,^{\prime \prime }0\;1\;0\;0\;0\;0{\mbox{-1}}\;0\,^{\prime \prime }=M\times (2^{6}-2^{1})=M\times 62}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d4377aa2d982d9adbd829a2dadc09504c8a37b56" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:50.742ex; height:3.176ex;" alt="{\displaystyle M\times \,^{\prime \prime }0\;1\;0\;0\;0\;0{\mbox{-1}}\;0\,^{\prime \prime }=M\times (2^{6}-2^{1})=M\times 62}" /></span></dd>
+</dl>
+<p>De fato, pode ser mostrado que qualquer seqüência de 1's em um número binário pode ser quebrada na diferença de dois números binários:</p>
+<p><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mn>0</mn>
+        <mover>
+          <mrow class="MJX-TeXAtom-OP">
+            <mover>
+              <mrow>
+                <mn>1</mn>
+                <mo>&#x2026;<!-- … --></mo>
+                <mn>1</mn>
+              </mrow>
+              <mo accent="false">&#x23DE;<!-- ⏞ --></mo>
+            </mover>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </mover>
+        <mn>0</mn>
+        <mo>&#x2026;<!-- … --></mo>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mn>1</mn>
+        <mover>
+          <mrow class="MJX-TeXAtom-OP">
+            <mover>
+              <mrow>
+                <mn>0</mn>
+                <mo>&#x2026;<!-- … --></mo>
+                <mn>0</mn>
+              </mrow>
+              <mo accent="false">&#x23DE;<!-- ⏞ --></mo>
+            </mover>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </mover>
+        <mn>0</mn>
+        <mo>&#x2026;<!-- … --></mo>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mn>0</mn>
+        <mover>
+          <mrow class="MJX-TeXAtom-OP">
+            <mover>
+              <mrow>
+                <mn>0</mn>
+                <mo>&#x2026;<!-- … --></mo>
+                <mn>1</mn>
+              </mrow>
+              <mo accent="false">&#x23DE;<!-- ⏞ --></mo>
+            </mover>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </mover>
+        <mn>0</mn>
+        <mo>&#x2026;<!-- … --></mo>
+        <msub>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (\ldots 0\overbrace {1\ldots 1} ^{n}0\ldots )_{2}\equiv (\ldots 1\overbrace {0\ldots 0} ^{n}0\ldots )_{2}-(\ldots 0\overbrace {0\ldots 1} ^{n}0\ldots )_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/075ac69d13327969c6bd851de564a0397b13d554" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:57.959ex; height:5.509ex;" alt="{\displaystyle (\ldots 0\overbrace {1\ldots 1} ^{n}0\ldots )_{2}\equiv (\ldots 1\overbrace {0\ldots 0} ^{n}0\ldots )_{2}-(\ldots 0\overbrace {0\ldots 1} ^{n}0\ldots )_{2}}" /></span>.</p>
+<p>Daí, podemos efetivamente substituir a multiplicação por uma string de 1s no número original por operações mais simples, adicionando o multiplicador, deslocando o produto parcial assim formado por lugares apropriados e então, finalmente, subtraindo o multiplicador. Isso faz uso do fato de que não se deve fazer nada além de deslocar enquanto lidamos com 0s no multiplicador binário, e é similar a usar propriedade matemática que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>99</mn>
+        <mo>=</mo>
+        <mn>100</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 99=100-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/be5db66d45522c482d24f1bfc3338a2450b05533" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:12.997ex; height:2.176ex;" alt="{\displaystyle 99=100-1}" /></span> enquanto multiplicamos por 99.</p>
+<p>Este esquema pode ser estendido para qualquer número de blocos de 1s no multiplicador (incluindo o caso de um único 1 em um bloco). Assim,</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>58</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M\times \,^{\prime \prime }0\;0\;1\;1\;1\;0\;1\;0\,^{\prime \prime }=M\times (2^{5}+2^{4}+2^{3}+2^{1})=M\times 58}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4b5ff6f4ec10f44e164474db1dc4a80cb4c18c35" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:60.773ex; height:3.176ex;" alt="{\displaystyle M\times \,^{\prime \prime }0\;0\;1\;1\;1\;0\;1\;0\,^{\prime \prime }=M\times (2^{5}+2^{4}+2^{3}+2^{1})=M\times 58}" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>-1</mtext>
+        </mrow>
+        <mspace width="thickmathspace" />
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>-1</mtext>
+        </mrow>
+        <mspace width="thickmathspace" />
+        <mn>0</mn>
+        <msup>
+          <mspace width="thinmathspace" />
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+            <mi class="MJX-variant" mathvariant="normal">&#x2032;<!-- ′ --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mn>58</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M\times \,^{\prime \prime }0\;1\;0\;0{\mbox{-1}}\;1{\mbox{-1}}\;0\,^{\prime \prime }=M\times (2^{6}-2^{3}+2^{2}-2^{1})=M\times 58}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7566039df89b3fcabbe6f2aefb2676454addd623" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:61.052ex; height:3.176ex;" alt="{\displaystyle M\times \,^{\prime \prime }0\;1\;0\;0{\mbox{-1}}\;1{\mbox{-1}}\;0\,^{\prime \prime }=M\times (2^{6}-2^{3}+2^{2}-2^{1})=M\times 58}" /></span></dd>
+</dl>
+<p>O algoritmo de Booth segue esse esquema por executar uma adição quando encontra o primeiro dígito de um bloco de 1s (0 1) e uma subtração quando encontra o final de um bloco (1 0). Isso funciona também para números negativos. Quando os 1s no multiplicador são agrupados em blocos longos, o algoritmo de Booth executa menos adições e subtrações que o algoritmo normal de multiplicação.</p>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit&amp;section=4" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.geoffknagge.com/fyp/booth.shtml">Radix-4 Booth Encoding</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.russinoff.com/libman/text/node38.html">Radix-8 Booth Encoding</a> in <a rel="nofollow" class="external text" href="http://www.russinoff.com/libman/">A Formal Theory of RTL and Computer Arithmatic</a></li>
+</ul>
+<h2><span class="mw-headline" id="Refer.C3.AAncias">Referências</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit&amp;section=5" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ol>
+<li>Collin, Andrew. <a rel="nofollow" class="external text" href="http://www.cs.man.ac.uk./CCS/res/res05.htm#e">Andrew Booth's Computers at Birkbeck College</a>. <i>Resurrection</i>, Issue 5, Spring 1993. London: Computer Conservation Society.</li>
+<li>Patterson, David and John Hennessy. <i>Computer Organization and Design: The Hardware/Software Interface, Second Edition</i>. <a href="/wiki/Especial:Fontes_de_livros/1558604286" class="internal mw-magiclink-isbn">ISBN 1-55860-428-6</a>. San Francisco, California: Morgan Kaufmann Publishers. 1998.</li>
+<li>Stallings, William. <i>Computer Organization and Architecture: Designing for performance, Fifth Edition</i>. <a href="/wiki/Especial:Fontes_de_livros/0130812943" class="internal mw-magiclink-isbn">ISBN 0-13-081294-3</a>. New Jersey: Prentice-Hall, Inc.. 2000.</li>
+</ol>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:607316-0!*!0!!pt!*!*!math=5 and timestamp 20160830002249 and revision id 44408561
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Algoritmo_de_multiplicação_de_Booth&amp;oldid=44408561">https://pt.wikipedia.org/w/index.php?title=Algoritmo_de_multiplicação_de_Booth&amp;oldid=44408561</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:Algoritmos" title="Categoria:Algoritmos">Algoritmos</a></li><li><a href="/wiki/Categoria:Aritm%C3%A9tica_computacional" title="Categoria:Aritmética computacional">Aritmética computacional</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Algoritmo+de+multiplica%C3%A7%C3%A3o+de+Booth" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Algoritmo+de+multiplica%C3%A7%C3%A3o+de+Booth" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Algoritmo+de+multiplica%C3%A7%C3%A3o+de+Booth">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Algoritmo+de+multiplica%C3%A7%C3%A3o+de+Booth&amp;returnto=Algoritmo+de+multiplica%C3%A7%C3%A3o+de+Booth&amp;oldid=44408561&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;oldid=44408561" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q477049" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;id=44408561" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9_%D8%A8%D9%88%D9%88%D8%AB_%D9%84%D9%84%D8%B6%D8%B1%D8%A8" title="خوارزمية بووث للضرب — árabe" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Algorisme_de_Booth" title="Algorisme de Booth — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Booth%C5%AFv_algoritmus" title="Boothův algoritmus — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Booth-Algorithmus" title="Booth-Algorithmus — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm" title="Booth's multiplication algorithm — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Algoritmo_de_Booth" title="Algoritmo de Booth — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85_%D8%A8%D9%88%D8%AB" title="الگوریتم بوث — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Algorithme_de_multiplication_de_Booth" title="Algorithme de multiplication de Booth — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Algoritmo_di_Booth" title="Algoritmo di Booth — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%82%B9%E3%81%AE%E4%B9%97%E7%AE%97%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0" title="ブースの乗算アルゴリズム — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Buta_algoritms" title="Buta algoritms — letão" lang="lv" hreflang="lv">Latviešu</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D1%83%D1%82%D0%B0" title="Алгоритм Бута — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%91%D1%83%D1%82%D0%BE%D0%B2_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%B0%D0%BC" title="Бутов алгоритам — sérvio" lang="sr" hreflang="sr">Српски / srpski</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%91%D1%83%D1%82%D0%B0" title="Алгоритм Бута — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%B8%83%E6%96%AF%E4%B9%98%E6%B3%95%E7%AE%97%E6%B3%95" title="布斯乘法算法 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q477049#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 16h51min de 6 de janeiro de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.024",
+            "walltime": "0.068",
+            "ppvisitednodes": {
+                "value": 58,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 19,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 3,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%    3.137      1 Predefinição:Ligações_externas",
+                "100.00%    3.137      1 -total"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1269",
+            "timestamp": "20160830002249",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":100,"wgHostname":"mw1181"});});</script>
+	</body>
+</html>

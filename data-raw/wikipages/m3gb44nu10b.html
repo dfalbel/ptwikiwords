@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>DNS cache poisoning – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"DNS_cache_poisoning","wgTitle":"DNS cache poisoning","wgCurRevisionId":42448015,"wgRevisionId":42448015,"wgArticleId":3449521,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Artigos a revisar","DNS","Crackers"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"DNS_cache_poisoning","wgRelevantArticleId":3449521,"wgRequestId":"V9bR-wpAAEYAAOb7-D4AAACH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q53219","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/DNS_cache_poisoning"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/DNS_cache_poisoning"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-DNS_cache_poisoning rootpage-DNS_cache_poisoning skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">DNS cache poisoning</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><table align="center" class="noprint" style="width:80%; margin:0 auto; border-collapse:collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #f28500;">
+<tr>
+<td width="8%" align="center">
+<div style="width:52px;"><a href="/wiki/Ficheiro:Searchtool.svg" class="image"><img alt="Searchtool.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/40px-Searchtool.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/60px-Searchtool.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/61/Searchtool.svg/80px-Searchtool.svg.png 2x" data-file-width="512" data-file-height="512" /></a></div>
+</td>
+<td width="91%"><b>Esta página foi marcada para revisão, devido a inconsistências e/ou dados de confiabilidade duvidosa.</b> Se tem algum conhecimento sobre o tema, por favor, verifique e <span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=DNS_cache_poisoning&amp;action=edit">melhore</a></span> a consistência e o rigor deste artigo.</td>
+<td width="1%" align="center"></td>
+</tr>
+</table>
+<p><b>Envenenamento de cache DNS (DNS cache poisoning)</b> é o comprometimento na segurança ou na integridade dos dados em um Sistema de Nomes de Domínios (<a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a> DNS). Esse problema acontece quando os dados que são introduzidos na cache de um servidor de nomes DNS não se originam do servidor de nomes DNS com autoridade real. Tal problema pode ser uma tentativa de ataque malicioso em um servidor de nomes, mas também pode ser o resultado de um erro não intencional de configuração na cache do servidor DNS.</p>
+<p>Quando um servidor DNS recebe dados não autenticados e armazena os mesmos em sua cache para otimizar o desempenho, tais dados podem ser falsos e, portanto, podemos ter o envenenamento da cache do servidor que fornece os dados não autenticados para seus clientes.</p>
+<p>Um Servidor DNS tem como uma de suas funções realizar a tradução de um nome de domínio (como exemplo.com) em um endereço IP que um host na internet usa para obter conteúdo disponível na internet. Se um servidor DNS é envenenado, este pode retornar o endereço IP incorreto, desviando o tráfego para outro computador.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Ataques_de_envenenamento_de_cache"><span class="tocnumber">1</span> <span class="toctext">Ataques de envenenamento de cache</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Variantes"><span class="tocnumber">2</span> <span class="toctext">Variantes</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Redirecionar_o_servidor_de_nomes_do_dom.C3.ADnio_alvo"><span class="tocnumber">2.1</span> <span class="toctext">Redirecionar o servidor de nomes do domínio alvo</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Redirecionar_o_registro_NS_para_outro_dom.C3.ADnio_alvo"><span class="tocnumber">2.2</span> <span class="toctext">Redirecionar o registro NS para outro domínio alvo</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Preven.C3.A7.C3.A3o_e_Mitiga.C3.A7.C3.A3o"><span class="tocnumber">3</span> <span class="toctext">Prevenção e Mitigação</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">4</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Ataques_de_envenenamento_de_cache">Ataques de envenenamento de cache</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Ataques de envenenamento de cache">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=1" title="Editar secção: Ataques de envenenamento de cache">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Normalmente, um computador na rede usa um servidor DNS fornecido pelo computador da organização do usuário ou um provedor de acesso à Internet (ISP - <a href="/w/index.php?title=Internet_service_provider&amp;action=edit&amp;redlink=1" class="new" title="Internet service provider (página não existe)">Internet service provider</a>). Os servidores DNS são geralmente implantados na rede das organizações melhorando o desempenho pelo uso de caches que armazenam os resultados de consultas que foram realizadas recentemente. Ataques de envenenamento de cache em um único servidor DNS pode afetar os usuários atendidos diretamente pelo servidor comprometido.</p>
+<p>Para executar um ataque de envenenamento de cache, o invasor explora uma falha no software DNS. Se o servidor não valida corretamente as respostas DNS para assegurar que elas são de uma fonte com autoridade (por exemplo, através do uso de DNSSEC) o servidor vai acabar armazenando localmente em sua cache as entradas incorretas e fornecer aos seus usuários tal resultado incorreto quando os mesmos realizarem as requisições DNS.</p>
+<p>Esta técnica pode ser usada para direcionar os usuários de um site para outro site de escolha do atacante. Por exemplo, um atacante falsifica o endereço IP das entradas DNS para um website alvo em um dado servidor DNS, substituído-os com o endereço IP de um servidor controlado por ele. Em seguida, o atacante cria arquivos no servidor que ele controla com nomes que casam com os que estão no servidor alvo. Esses arquivos poderiam conter conteúdo malicioso, tal como um worm ou um vírus de computador. Um usuário cujo computador referencie o servidor DNS envenenado seria conduzido a aceitar o conteúdo vindo do servidor não autenticado e sem saber que o conteúdo baixado se trata de conteúdo malicioso.</p>
+<p>Neste ataque o atacante pode injetar dados falsos no cache de um servidor de nomes, permitindo que informações falsas sejam passadas para os clientes. Porém, não é tão simples enviar um pacote aleatório para um servidor de nomes, pois o mesmo só aceita respostas de consultas realizadas. Caso contrário, a resposta que não é esperada é descartada. Assim o servidor de nomes se baseia nos seguintes aspectos do pacote de resposta: (1) A resposta deve chegar na mesma porta UDP; (2) A seção ‘QUESTION’ do pacote DNS corresponde a pergunta na consulta pendente; (3) O QUERY ID ‘casa’ com a consulta pendente; (4) As seções AUTHORITY e ADDITIONAL, representam nomes que estão no mesmo domínio da consulta. Satisfeitas essas condições o servidor de nome aceitará um pacote como resposta verdadeira a uma consulta.</p>
+<p>Temos que o ‘QUERY ID’ é simplesmente incrementado por um em cada requisição, sendo fácil adivinhar o próximo valor do ‘QUERY ID’. Uma forma que o atacante tem de obter o ‘QUERY ID’ é sniffando o tráfego de rede e verificando qual seria o valor atual do ‘QUERY ID’, ou o atacante pode enviar ao servidor vítima uma consulta por um nome em um domínio para um servidor de nomes que o atacante controla. O servidor de nomes vítima recebe o pedido e faz o processo habitual de resolução de nomes, consultando a partir de um servidor de nomes raiz. Desta forma o servidor de nomes da vítima será direcionado ao servidor de nomes do atacante que tem autoridade sobre o domínio consultado. O atacante então pode descobrir a ‘porta de origem’ e o ‘query ID’ utilizado. Neste ponto o atacante conhece tanto o último ‘query ID’ como a ‘porta fonte’ utilizada pela vítima. O servidor de nomes da vítima sempre envia consultas da mesma porta UDP.</p>
+<p>Em posse dessas informações o atacante poderá envenenar o servidor de nomes da vítima com um endereço IP falso para o domínio consultado pela vítima e cujo servidor DNSSEC ‘S’ não é capaz de resolver. Os passos são os seguintes: o atacante de posse da informação da ‘porta fonte’ e do último ‘QUERY ID’ obtido, ao perceber que a vítima realiza uma consulta ao servidor, começa a inundar a vítima com pacotes de respostas DNS forjadas, incrementando o ‘QUERY ID’ (numa tentativa de adivinhar o ‘QUERY ID’ correto). Todos os pacotes se passam pelo servidor de nomes ‘S’, mas o endereço IP corresponde ao endereço do atacante. Isso ocorre, porque como o servidor de nomes ‘S’ não assina sua mensagem, a vítima não tem meios de garantir que a mensagem é falsa. Assim, quando a resposta verdadeira do servidor de nomes ‘S’ chegar, a vítima irá ignorar.</p>
+<h2><span class="mw-headline" id="Variantes">Variantes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Variantes">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=2" title="Editar secção: Variantes">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Nas seguintes variantes do ataque, as entradas para o servidor <tt>ns.target<a href="/w/index.php?title=.example&amp;action=edit&amp;redlink=1" class="new" title=".example (página não existe)">.example</a></tt> seriam envenenadas e redirecionadas para o servidor de nomes do atacante no endereço IP <tt>w.x.y.z</tt>. Esse ataque assume que o servidor de nomes para <tt>target.example</tt> é <tt>ns.target.example</tt>.</p>
+<p>Para realizar os ataques o atacante deve forçar o servidor DNS alvo a fazer uma requisição a um domínio controlado por um dos servidores de nome do atacante.</p>
+<h3><span class="mw-headline" id="Redirecionar_o_servidor_de_nomes_do_dom.C3.ADnio_alvo">Redirecionar o servidor de nomes do domínio alvo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Redirecionar o servidor de nomes do domínio alvo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=3" title="Editar secção: Redirecionar o servidor de nomes do domínio alvo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A primeira variante do envenenamento de cache DNS envolve o redirecionamento do servidor de nomes do atacante para o servidor de nomes do domínio alvo, atribuindo, em seguida, ao servidor de nomes um endereço IP especificado pelo atacante.</p>
+<p>Requisição do servidor DNS: qual é o registro do endereço para <tt>subdomain.attacker.example</tt>?</p>
+<pre>
+subdomain.attacker.example. IN A
+</pre>
+<p>Resposta do atacante:</p>
+<pre>
+Answer:
+(no response)
+</pre>
+<pre>
+Authority section:
+attacker.example. 3600 IN NS ns.target.example.
+</pre>
+<pre>
+Additional section:
+ns.target.example. IN A w.x.y.z
+</pre>
+<p>Um servidor vulnerável armazenaria em sua cache o registro A (endereço IP) para <tt>ns.target.example</tt>, permitindo que o atacante resolva consultas para o domínio <tt>target.example</tt> inteiro.</p>
+<h3><span class="mw-headline" id="Redirecionar_o_registro_NS_para_outro_dom.C3.ADnio_alvo">Redirecionar o registro NS para outro domínio alvo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Redirecionar o registro NS para outro domínio alvo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=4" title="Editar secção: Redirecionar o registro NS para outro domínio alvo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A segunda variante do envenenamento de cache DNS envolve o redirecionamento do servidor de nomes para outro domínio não relacionado coma requisição original para um endereço IP especificado pelo atacante.</p>
+<p>Requisição do servidor DNS: qual o registro para <tt>subdomain.attacker.example</tt>?</p>
+<pre>
+subdomain.attacker.example. IN A
+</pre>
+<p>Resposta do atacante:</p>
+<pre>
+Answer:
+(no response)
+</pre>
+<pre>
+Authority section:
+target.example. 3600 IN NS ns.attacker.example.
+</pre>
+<pre>
+Additional section:
+ns.attacker.example. IN A w.x.y.z
+</pre>
+<p>Um servidor vulnerável armazenaria em sua cache a informação não relacionada ao registro NS do <tt>ns.target.example</tt>, permitindo que o atacante resolva consultas para o domínio <tt>target.example</tt> inteiro.</p>
+<h2><span class="mw-headline" id="Preven.C3.A7.C3.A3o_e_Mitiga.C3.A7.C3.A3o">Prevenção e Mitigação</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Prevenção e Mitigação">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=5" title="Editar secção: Prevenção e Mitigação">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Muitos ataques de envenenamento de cache podem ser evitados em servidores DNS, desde que os mesmos passem a confiar menos nas informações que são passadas para eles por outros servidores DNS, e ignorando qualquer registro DNS que não são relevantes para consulta. Por exemplo, as versões do BIND 9.5.0-P1 [1] e acima, realizam esse tipo de checagem. [2] Como dito acima, randomização da porta fonte para consultas DNS, combinado com o uso de criptografia segura para selecionar ambos, a porta fonte e o nonce 16-bit, pode reduzir bastante a probabilidade de que esses ataques sejam bem sucedidos. Contudo roteadores, firewalls, proxies, e outros dispositivos gateways que realizam tradução de endereços de rede (NAT), ou mais especificamente, tradução de endereço de portas (PAT), frequentemente reescrevem as portas fontes em ordem, a fim de acompanhar o estado da conexão. Quando modificam a porta de origem, os dispositivos PAT removem a aleatoriedade da porta de origem implementada por servidores de nome. Este tipo de ataque pode também ser mitigado na camada de transporte ou na camada de aplicação por realizar uma validação fim a fim, uma vez que uma conexão é estabelecida. Um exemplo comum disso é o uso da Transport Layer Security e das assinaturas digitais. Por exemplo, ao usar uma versão segura de HTTP, HTTPS, os usuários podem checar se o certificado digital do servidor é válido e pertence ao proprietário esperado do site. Da mesma forma, a segurança do Shell de programas de login remoto checam o certificado digital nos terminais (se conhecido) antes de proceder com a sessão. Para aplicações que baixam atualizações automaticamente, a aplicação pode incorporar um cópia do certificado assinado localmente e validar a assinatura armazenada na atualização do software.</p>
+<p>Secure DNS (DNSSEC) usa criptografia de assinaturas eletrônicas assinadas com um certificado de chave públicas confiável para determinar a autenticidade dos dados. DNSSEC pode conter ataques de envenenamento de cache, porém a partir de 2008 ainda não era amplamente implantado. Em 2010 o DNSSEC foi implementado nos servidores root zone da Internet.</p>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit&amp;section=6" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.trusteer.com/docs/bind9dns.html">BIND 9 DNS Cache Poisoning - Discovered by Amit Klein (Trusteer)</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.scanit.be/advisory-2007-11-14.html">Predictable transaction IDs in Microsoft DNS server allow cache poisoning</a></li>
+<li><a rel="nofollow" class="external text" href="http://support.microsoft.com/default.aspx?scid=kb;en-us;241352">Microsoft Knowledge Base: How to prevent DNS cache pollution</a></li>
+<li><a rel="nofollow" class="external text" href="http://isc.sans.org/diary.php?date=2005-04-07">SANS DNS cache poisoning update</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.dnssec.net/dns-threats.php">DNS Threats &amp; Weaknesses: research and presentations</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.hackernotcracker.com/2007-01/blocking-unwanted-domain-names-creative-usage-of-the-hosts-file.html">Blocking Unwanted Domain Names</a> Creative Usage of the Hosts File</li>
+<li><a rel="nofollow" class="external text" href="http://member.dnsstuff.com/includes/ToolHandler.php?ToolFormName=vu800113">Dnsstuff.com's DNS Vulnerability Check</a> Test to see if you are Vulnerable</li>
+<li><a rel="nofollow" class="external text" href="http://www.grc.com/dns/dns.htm">Steve Gibson of GRC's ISP DNS testing tool</a> Check your ISP's DNS resolvers for vulnerabilities</li>
+<li><a rel="nofollow" class="external text" href="http://www.security-database.com/toolswatch/PorkBind-1-2-Yet-another-Cache-DNS.html">Security-Database Tools Watch</a> PorkBind Scanner for 13 DNS Flaws including the DNS Poisoning</li>
+<li><a rel="nofollow" class="external text" href="http://www.checkpoint.com/defense/advisories/public/dnsvideo/index.html">Movie explaining DNS Cache Poisioning</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.unixwiz.net/techtips/iguide-kaminsky-dns-vuln.html">An Illustrated Guide to the Kaminsky DNS Vulnerability</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.kb.cert.org/vuls/id/800113#pat">US CERT advisory&#160;: Multiple DNS implementations vulnerable to cache poisoning</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.wired.com/techbiz/people/magazine/16-12/ff_kaminsky">Secret Geek A-Team Hacks Back, Defends Worldwide Web</a> An article about defending against DNS poisoning</li>
+<li><a rel="nofollow" class="external text" href="http://www.ehackingnews.com/2011/11/brazil-isp-servers-under-dns-cache.html">Brazil ISP servers under Massive DNS cache Poisoning attack</a></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:3449521-0!*!0!!pt!4!* and timestamp 20160907204443 and revision id 42448015
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=DNS_cache_poisoning&amp;oldid=42448015">https://pt.wikipedia.org/w/index.php?title=DNS_cache_poisoning&amp;oldid=42448015</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:DNS" title="Categoria:DNS">DNS</a></li><li><a href="/wiki/Categoria:Crackers" title="Categoria:Crackers">Crackers</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoria oculta: <ul><li><a href="/wiki/Categoria:!Artigos_a_revisar" title="Categoria:!Artigos a revisar">!Artigos a revisar</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=DNS+cache+poisoning" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=DNS+cache+poisoning" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/DNS_cache_poisoning"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:DNS_cache_poisoning&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/DNS_cache_poisoning" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=DNS_cache_poisoning&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=DNS+cache+poisoning">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=DNS+cache+poisoning&amp;returnto=DNS+cache+poisoning&amp;oldid=42448015&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=DNS_cache_poisoning&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/DNS_cache_poisoning" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/DNS_cache_poisoning" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=DNS_cache_poisoning&amp;oldid=42448015" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=DNS_cache_poisoning&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q53219" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=DNS_cache_poisoning&amp;id=42448015" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Enverinament_DNS" title="Enverinament DNS — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Cache_poisoning" title="Cache poisoning — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Cache_Poisoning" title="Cache Poisoning — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/DNS_cache_poisoning" title="DNS cache poisoning — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AC%D8%B9%D9%84_%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87_%D9%86%D8%A7%D9%85_%D8%AF%D8%A7%D9%85%D9%86%D9%87" title="جعل سامانه نام دامنه — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Empoisonnement_du_cache_DNS" title="Empoisonnement du cache DNS — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%94%D7%A8%D7%A2%D7%9C%D7%AA_DNS" title="הרעלת DNS — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/DNS-gyors%C3%ADt%C3%B3t%C3%A1r-m%C3%A9rgez%C3%A9s" title="DNS-gyorsítótár-mérgezés — húngaro" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/DNS_cache_poisoning" title="DNS cache poisoning — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/DNS%E5%81%BD%E8%A3%85" title="DNS偽装 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Perdayaan_DNS" title="Perdayaan DNS — malaio" lang="ms" hreflang="ms">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Zatruwanie_DNS" title="Zatruwanie DNS — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/DNS_cache_poisoning" title="DNS cache poisoning — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B1%A1%E6%9F%93" title="域名服务器缓存污染 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q53219#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 04h44min de 27 de maio de 2015.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=DNS_cache_poisoning&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.048",
+            "walltime": "0.054",
+            "ppvisitednodes": {
+                "value": 935,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 1615,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 510,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 8,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   39.294      1 Predefinição:Revisão",
+                "100.00%   39.294      1 -total",
+                " 70.97%   27.887      1 Predefinição:Manutenção/Categorizando_por_assunto",
+                " 17.64%    6.930      1 Predefinição:Ambox"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1263",
+            "timestamp": "20160907204444",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":76,"wgHostname":"mw1275"});});</script>
+	</body>
+</html>

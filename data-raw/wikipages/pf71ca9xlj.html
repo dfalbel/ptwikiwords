@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Fórmula de Euler – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Fórmula_de_Euler","wgTitle":"Fórmula de Euler","wgCurRevisionId":46069564,"wgRevisionId":46069564,"wgArticleId":69711,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Leonhard Euler","Teoremas de matemática"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Fórmula_de_Euler","wgRelevantArticleId":69711,"wgRequestId":"V9XSfApAADgAAJDzbfkAAACF","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q184871","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/F%C3%B3rmula_de_Euler"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Euler"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Fórmula_de_Euler rootpage-Fórmula_de_Euler skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Fórmula de Euler</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><table class="infobox" style="clear:right; float:right;" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding:0px;">
+<table style="width:210px; background:transparent; margin:0.25em; margin-bottom:0em; text-align:center; font-size:11px;" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-left:5px;">
+<p><small><span style="white-space:nowrap;">&#160;&#160;</span>Parte de uma série de artigos sobre</small><br />
+<span style="font-size:175%;">a constante matemática <b><a href="/wiki/N%C3%BAmero_de_Euler" title="Número de Euler">e</a></b></span></p>
+</td>
+</tr>
+<tr>
+<td style="padding-left:12px; padding-bottom:5px;"><a href="/wiki/Ficheiro:Euler%27s_formula.svg" class="image"><img alt="Euler's formula.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Euler%27s_formula.svg/180px-Euler%27s_formula.svg.png" width="180" height="178" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Euler%27s_formula.svg/270px-Euler%27s_formula.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/71/Euler%27s_formula.svg/360px-Euler%27s_formula.svg.png 2x" data-file-width="760" data-file-height="750" /></a></td>
+</tr>
+<tr>
+<td style="padding:0px; border-top:solid 1px #aaaaaa;">
+<p><a href="/wiki/Logaritmo_natural" title="Logaritmo natural">Logaritmo natural</a><span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Fun%C3%A7%C3%A3o_exponencial" title="Função exponencial">Função exponencial</a></p>
+</td>
+</tr>
+<tr>
+<td style="padding:0px; border-top:solid 1px #aaaaaa;">
+<p><b>Aplicações em:</b> <a href="/wiki/Juros#Juros_compostos" class="mw-redirect" title="Juros">juros compostos</a><span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Identidade_de_Euler" title="Identidade de Euler">identidade de Euler</a> &amp; <strong class="selflink">fórmula de Euler</strong> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Meia-vida" title="Meia-vida">meia-vida</a> &amp; <a href="/wiki/Crescimento_exponencial" title="Crescimento exponencial">crescimento</a>/<a href="/wiki/Decaimento_exponencial" title="Decaimento exponencial">decaimento exponencial</a></p>
+</td>
+</tr>
+<tr>
+<td style="padding:0px; border-top:solid 1px #aaaaaa;">
+<p><b>Definindo e:</b> <a href="/wiki/Prova_de_irracionalidade_do_n%C3%BAmero_de_Euler" title="Prova de irracionalidade do número de Euler">Prova de irracionalidade do número de Euler</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Representa%C3%A7%C3%B5es_de_e" title="Representações de e">representações de e</a><span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Teorema_de_Lindemann%E2%80%93Weierstrass" title="Teorema de Lindemann–Weierstrass">teorema de Lindemann–Weierstrass</a></p>
+</td>
+</tr>
+<tr>
+<td style="padding:0px; border-top:solid 1px #aaaaaa;">
+<p><b>Pessoas</b> <a href="/wiki/John_Napier" title="John Napier">John Napier</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Leonhard_Euler" title="Leonhard Euler">Leonhard Euler</a><br /></p>
+</td>
+</tr>
+<tr>
+<td style="padding:0px; border-top:solid 1px #aaaaaa;">
+<p><a href="/w/index.php?title=Conjectura_de_Schanuel&amp;action=edit&amp;redlink=1" class="new" title="Conjectura de Schanuel (página não existe)">conjectura de Schanuel</a><br /></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/Ficheiro:Euler%27s_formula.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Euler%27s_formula.png/300px-Euler%27s_formula.png" width="300" height="276" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Euler%27s_formula.png/450px-Euler%27s_formula.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Euler%27s_formula.png/600px-Euler%27s_formula.png 2x" data-file-width="741" data-file-height="681" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Euler%27s_formula.png" class="internal" title="Ampliar"></a></div>
+Interpretação geométrica da fórmula de Euler.</div>
+</div>
+</div>
+<p>A <b>fórmula de Euler</b>, cujo nome é uma homenagem a <a href="/wiki/Leonhard_Euler" title="Leonhard Euler">Leonhard Euler</a>, é uma fórmula <a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a> da área específica da <a href="/wiki/An%C3%A1lise_complexa" title="Análise complexa">análise complexa</a>, que mostra uma relação entre as <a href="/wiki/Fun%C3%A7%C3%B5es_trigonom%C3%A9tricas" class="mw-redirect" title="Funções trigonométricas">funções trigonométricas</a> e a <a href="/wiki/Fun%C3%A7%C3%A3o_exponencial" title="Função exponencial">função exponencial</a> (a <a href="/wiki/Identidade_de_Euler" title="Identidade de Euler">identidade de Euler</a> é um caso especial da fórmula de Euler). A fórmula é dada por:<sup id="cite_ref-simon_1-0" class="reference"><a href="#cite_note-simon-1"><span>[</span>1<span>]</span></a></sup></p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mspace width="thinmathspace" />
+        <mi>sen</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{ix}=\cos \left(x\right)+i\,\operatorname {sen} \left(x\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c2ef698a9aac59fb5b669d05817b1d965c2ff2a7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.151ex; height:3.176ex;" alt="e^{ix} = \cos\left (x \right) + i\,\operatorname{sen}\left( x \right)" /></span>,</dd>
+</dl>
+<p>em que&#160;:</p>
+<dl>
+<dd><i>x</i> é o <a href="/wiki/Argumento_(matem%C3%A1tica)" title="Argumento (matemática)">argumento</a> <a href="/wiki/N%C3%BAmeros_reais" class="mw-redirect" title="Números reais">real</a> (em <a href="/wiki/Radiano" title="Radiano">radianos</a>);</dd>
+<dd><i>e</i> é a <a href="/wiki/N%C3%BAmero_de_Euler" title="Número de Euler">base do logaritmo natural</a>;</dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>i</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle i^{2}=-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/88e98a401d352e5037d5043028e2d7f449e83fa6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.975ex; height:2.676ex;" alt="i^2=-1" /></span> , onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>i</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/add78d8608ad86e54951b8c8bd6c8d8416533d20" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:0.813ex; height:2.176ex;" alt="i" /></span> é a <a href="/wiki/Unidade_imagin%C3%A1ria" title="Unidade imaginária">unidade imaginária</a> (<a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">número complexo</a>);</dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mi>e</mi>
+        <mi>n</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle sen(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/10c2c284b4b2f32571cfd382aee1ab6676aae14d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.77ex; height:2.843ex;" alt="sen(x)" /></span> e <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+        <mi>o</mi>
+        <mi>s</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle cos(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c7cd3991f3a32fe83a9a87a60edbc3be4b7736b2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.427ex; height:2.843ex;" alt="cos(x)" /></span> são <a href="/wiki/Fun%C3%A7%C3%A3o_trigonom%C3%A9trica" title="Função trigonométrica">funções trigonométricas</a>.</dd>
+</dl>
+<p>A relação entre exponencial complexa e funções trigonométricas foi primeiro provada pelo matemático inglês <a href="/wiki/Roger_Cotes" title="Roger Cotes">Roger Cotes</a> em <a href="/wiki/1714" title="1714">1714</a>, na forma</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>ln</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>i</mi>
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ln(\cos x+i\sin x)=ix}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04cf2196c2ba0ecd3982f6510aeb013edca371f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.587ex; height:2.843ex;" alt="\ln(\cos x+i\sin x)=ix" /></span></dd>
+</dl>
+<p>em que <i>ln</i> é o <a href="/wiki/Logaritmo_natural" title="Logaritmo natural">logaritmo natural</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Prova_utilizando_c.C3.A1lculo"><span class="tocnumber">1</span> <span class="toctext">Prova utilizando cálculo</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Prova_utilizando_s.C3.A9rie_de_Taylor"><span class="tocnumber">2</span> <span class="toctext">Prova utilizando série de Taylor</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Exemplo"><span class="tocnumber">3</span> <span class="toctext">Exemplo</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">4</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1"><a href="#Refer.C3.AAncias"><span class="tocnumber">5</span> <span class="toctext">Referências</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">6</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Prova_utilizando_c.C3.A1lculo">Prova utilizando cálculo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Prova utilizando cálculo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit&amp;section=1" title="Editar secção: Prova utilizando cálculo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Complex_number_illustration_modarg.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Complex_number_illustration_modarg.svg/220px-Complex_number_illustration_modarg.svg.png" width="220" height="237" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Complex_number_illustration_modarg.svg/330px-Complex_number_illustration_modarg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Complex_number_illustration_modarg.svg/440px-Complex_number_illustration_modarg.svg.png 2x" data-file-width="183" data-file-height="197" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Complex_number_illustration_modarg.svg" class="internal" title="Ampliar"></a></div>
+O ponto negro representa um <a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">número complexo</a>. Seu valor absoluto é "r", a distãncia da origem. Seu <a href="/wiki/Argumento" title="Argumento">argumento</a> é φ, seu <a href="/wiki/%C3%82ngulo" title="Ângulo">ângulo</a> em radianos</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:ExpIPi.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/ExpIPi.gif/220px-ExpIPi.gif" width="220" height="197" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/ExpIPi.gif/330px-ExpIPi.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/0/0e/ExpIPi.gif 2x" data-file-width="360" data-file-height="323" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:ExpIPi.gif" class="internal" title="Ampliar"></a></div>
+A <a href="/wiki/Fun%C3%A7%C3%A3o_exponencial" title="Função exponencial">função exponencial</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>&#x03C0;<!-- π --></mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{i\pi }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/14a02b8464db88c495fd187a3e181865822b21de" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.85ex; height:2.676ex;" alt="e^{{i\pi }}" /></span> pode ser definida como o <a href="/wiki/Limite_de_uma_sequ%C3%AAncia" title="Limite de uma sequência">limite de uma sequência</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>&#x03C0;<!-- π --></mi>
+                </mrow>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left(1+{\frac {i\pi }{n}}\right)^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f8a058d1b98e9f33138398f0d09b9a757ebf0127" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:11.683ex; height:6.176ex;" alt="\left(1+{\frac  {i\pi }{n}}\right)^{n}" /></span>, quando n tende ao <a href="/wiki/Infinito" title="Infinito">infinito</a>. Nesta animação, "n" assume valores crescentes entre 1 e 100. À medida que n cresce, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mrow>
+                  <mi>i</mi>
+                  <mi>&#x03C0;<!-- π --></mi>
+                </mrow>
+                <mi>n</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left(1+{\frac {i\pi }{n}}\right)^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f8a058d1b98e9f33138398f0d09b9a757ebf0127" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:11.683ex; height:6.176ex;" alt="\left(1+{\frac  {i\pi }{n}}\right)^{n}" /></span> se aproxima de -1.</div>
+</div>
+</div>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/wiki/Tabela_de_derivadas" title="Tabela de derivadas">tabela de derivadas</a></div>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">número complexo</a></div>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/wiki/Cosseno" title="Cosseno">cosseno</a></div>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/wiki/Seno" title="Seno">seno</a></div>
+<p>Uma propriedade conhecida das <a href="/wiki/Fun%C3%A7%C3%A3o_exponencial" title="Função exponencial">funções exponenciais</a> é que elas são iguais às suas derivadas:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>d</mi>
+            <mrow>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {d}{dx}}e^{x}=e^{x}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c432d20d9a75e0f41d682184fa4b640357c3d6b3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.005ex; width:11.059ex; height:5.509ex;" alt="\frac{d}{dx} e^x = e^x" /></span>, onde "x" é um <a href="/wiki/N%C3%BAmero_real" title="Número real">número real</a>.</dd>
+</dl>
+<p>As <a href="/wiki/Fun%C3%A7%C3%A3o_exponencial" title="Função exponencial">funções exponenciais</a> com números complexos também satisfazem esta mesma propriedade<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>d</mi>
+            <mrow>
+              <mi>d</mi>
+              <mi>z</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>z</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>z</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {d}{dz}}e^{z}=e^{z}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/832da883f2bf14bf61a5318cf456e48bf997539b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.005ex; width:10.476ex; height:5.509ex;" alt="{\frac  {d}{dz}}e^{z}=e^{z}" /></span>, onde "z" é um <a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">número complexo</a>.</dd>
+</dl>
+<p>Portanto, pela <a href="/wiki/Regra_da_cadeia" title="Regra da cadeia">regra da cadeia</a>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>d</mi>
+            <mrow>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>i</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mtext>&#xA0;</mtext>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {d}{dx}}e^{ix}=ie^{ix}\ .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/41590651f9144c09cf218deb62c6086928a1b763" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.005ex; width:14.26ex; height:5.509ex;" alt="{\frac  {d}{dx}}e^{{ix}}=ie^{{ix}}\ ." /></span></dd>
+</dl>
+<p>Então definimos uma nova <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">função</a>, que chamaremos de "f":</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>i</mi>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mtext>&#xA0;</mtext>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)=(\cos x-i\sin x)\cdot e^{ix}\ .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6aeafe6a7eb78ffd3e19b9f8a8ccb27c973bc86f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:28.709ex; height:3.176ex;" alt="f(x)=(\cos x-i\sin x)\cdot e^{{ix}}\ ." /></span></dd>
+</dl>
+<p>Pela <a href="/wiki/Regra_do_produto" title="Regra do produto">regra do produto</a>, que vale também para <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">funções</a> que tenham como <a href="/wiki/Imagem" title="Imagem">imagem</a> <a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">números complexos</a>, a <a href="/wiki/Derivada" title="Derivada">derivada</a> de f(x) será::</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>d</mi>
+                    <mrow>
+                      <mi>d</mi>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mi>f</mi>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>d</mi>
+                    <mrow>
+                      <mi>d</mi>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>d</mi>
+                    <mrow>
+                      <mi>d</mi>
+                      <mi>x</mi>
+                    </mrow>
+                  </mfrac>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo stretchy="false">(</mo>
+                <mi>i</mi>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <mi>i</mi>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mn>0</mn>
+                <mtext>&#xA0;</mtext>
+                <mo>.</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}{\frac {d}{dx}}f(x)&amp;=(\cos x-i\sin x)\cdot {\frac {d}{dx}}e^{ix}+{\frac {d}{dx}}(\cos x-i\sin x)\cdot e^{ix}\\&amp;=(\cos x-i\sin x)(ie^{ix})+(-\sin x-i\cos x)\cdot e^{ix}\\&amp;=(i\cos x+\sin x-\sin x-i\cos x)\cdot e^{ix}\\&amp;=0\ .\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe41236d3a96a2d6d371a9352b39f355542356cb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -7.005ex; width:61.185ex; height:15.176ex;" alt="{\begin{aligned}{\frac  {d}{dx}}f(x)&amp;=(\cos x-i\sin x)\cdot {\frac  {d}{dx}}e^{{ix}}+{\frac  {d}{dx}}(\cos x-i\sin x)\cdot e^{{ix}}\\&amp;=(\cos x-i\sin x)(ie^{{ix}})+(-\sin x-i\cos x)\cdot e^{{ix}}\\&amp;=(i\cos x+\sin x-\sin x-i\cos x)\cdot e^{{ix}}\\&amp;=0\ .\end{aligned}}" /></span></dd>
+</dl>
+<p>Portanto, f(x) deve ser uma <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">função</a> constante em x. Já que f(0)=1 (o que pode ser facilmente descoberto substituindo-se x por 0 na <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">função</a>),</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>i</mi>
+        <mi>sin</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mtext>&#xA0;</mtext>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1=(\cos x-i\sin x)\cdot e^{ix}\ .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45835d236d55b79b320f0ec8d21bea2a0c255a6d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:25.423ex; height:3.176ex;" alt="1=(\cos x-i\sin x)\cdot e^{{ix}}\ ." /></span></dd>
+</dl>
+<p>Multiplicando os dois lados por cos <i>x</i>&#160;+&#160;<i>i</i>&#160;sin&#160;<i>x</i>, obtemos</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo stretchy="false">(</mo>
+                <mi>cos</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd />
+              <mtd>
+                <mi></mi>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>cos</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mo stretchy="false">(</mo>
+                <mi>i</mi>
+                <mi>sin</mi>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>cos</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <msup>
+                  <mi>sin</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>&#x2061;<!-- ⁡ --></mo>
+                <mi>x</mi>
+                <mo stretchy="false">)</mo>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <mo>=</mo>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mi>x</mi>
+                  </mrow>
+                </msup>
+                <mtext>&#xA0;</mtext>
+                <mo>.</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}\cos x+i\sin x&amp;=(\cos x+i\sin x)(\cos x-i\sin x)\cdot e^{ix}\\&amp;=(\cos ^{2}x-(i\sin x)^{2})\cdot e^{ix}=(\cos ^{2}x+\sin ^{2}x)\cdot e^{ix}=e^{ix}\ .\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/89fdc921224b23a23cc760828b68cb011f860cd4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.437ex; margin-bottom: -0.235ex; width:72.383ex; height:6.509ex;" alt="{\begin{aligned}\cos x+i\sin x&amp;=(\cos x+i\sin x)(\cos x-i\sin x)\cdot e^{{ix}}\\&amp;=(\cos ^{2}x-(i\sin x)^{2})\cdot e^{{ix}}=(\cos ^{2}x+\sin ^{2}x)\cdot e^{{ix}}=e^{{ix}}\ .\end{aligned}}" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Prova_utilizando_s.C3.A9rie_de_Taylor">Prova utilizando série de Taylor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Prova utilizando série de Taylor">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit&amp;section=2" title="Editar secção: Prova utilizando série de Taylor">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Para o estudo da fórmula de Euler necessitamos do conhecimento de expansão em séries de potência. Introduziremos uma grande ferramenta, sem uma análise profunda, que é o seguinte conceito:</p>
+<p>A expansão em <a href="/wiki/S%C3%A9rie_de_Taylor" title="Série de Taylor">série de Taylor</a> de uma <a href="/wiki/Fun%C3%A7%C3%A3o_anal%C3%ADtica" title="Função analítica">função analítica</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/202945cce41ecebb6f643f31d119c514bec7a074" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.459ex; height:2.843ex;" alt="f(x)" /></span> centrada em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ffd2487510aa438433a2579450ab2b3d557e5edc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.24ex; height:1.676ex;" alt="a" /></span> é representada como:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mi>o</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>C</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo>&#x2212;<!-- − --></mo>
+          <mi>a</mi>
+          <msup>
+            <mo stretchy="false">)</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msup>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)=\sum _{n=o}^{\infty }{C_{n}}{(x-a)^{n}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d315b5ccdbfa22eab20fbea41a74cc4accb9436b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:22.706ex; height:7.009ex;" alt="f(x)=\sum _{{n=o}}^{{\infty }}{{C_{n}}}{(x-a)^{n}}" /></span></dd>
+</dl>
+<p>com <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>x</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>a</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&lt;</mo>
+        <mi>R</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |x-a|&lt;R}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc60330bda5d3f8ee4d2d4fe3741d903e18be558" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.629ex; height:2.843ex;" alt="|x-a|&lt;R" /></span> , onde</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>C</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msup>
+                  <mi>f</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>n</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+              <mo stretchy="false">(</mo>
+              <mi>a</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle C_{n}={\frac {{f^{n}}(a)}{n!}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b5278b86dea89264dfec93f1419bfc4540ef0e7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.005ex; width:12.47ex; height:5.843ex;" alt="C_{n}={\frac  {{f^{n}}(a)}{n!}}" /></span></dd>
+</dl>
+<p>Usando esse conceito de expansão e tomando <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)=e^{x}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dd65bb8c6bd27613de9dac411434bc434dcac468" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.842ex; height:2.843ex;" alt="f(x)=e^{x}" /></span> em torno de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/90d476e5e765a5d77bbcff32e4584579207ec7d8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.522ex; height:2.176ex;" alt="a=0" /></span>, teremos:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msup>
+                    <mi>f</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo stretchy="false">(</mo>
+                <mn>0</mn>
+                <mo stretchy="false">)</mo>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msup>
+                  <mi>x</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>n</mi>
+                  </mrow>
+                </msup>
+              </mrow>
+            </mrow>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msup>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>x</mi>
+            <mrow>
+              <mn>1</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mrow>
+              <mn>2</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>3</mn>
+              </mrow>
+            </msup>
+            <mrow>
+              <mn>3</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>.</mo>
+          <mo>.</mo>
+          <mo>.</mo>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msup>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{x}=\sum _{n=0}^{\infty }{\frac {{{f^{n}}(0)}{x^{n}}}{n!}}=\sum _{n=0}^{\infty }{\frac {x^{n}}{n!}}=1+{\frac {x}{1!}}+{\frac {x^{2}}{2!}}+{\frac {x^{3}}{3!}}+{...}+{\frac {x^{n}}{n!}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf8ea4bd3c7e8eeab6564f72925b18abd44fd5d9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:62.187ex; height:7.176ex;" alt="e^{x}=\sum _{{n=0}}^{{\infty }}{\frac  {{{f^{n}}(0)}{x^{n}}}{n!}}=\sum _{{n=0}}^{{\infty }}{{\frac  {x^{n}}{n!}}}=1+{{\frac  {x}{1!}}}+{{\frac  {x^{2}}{2!}}}+{{\frac  {x^{3}}{3!}}}+{...}+{{\frac  {x^{n}}{n!}}}" /></span></dd>
+</dl>
+<p>para todo <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.34ex; height:1.676ex;" alt=" x" /></span> com intervalo de convergência de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo>,</mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (-\infty ,\infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0c8c11c44279888c9e395eeb5f45d121348ae10a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.362ex; height:2.843ex;" alt="(-\infty ,\infty )" /></span></p>
+<p>Em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ee42176e76ae6b56d68c42ced807e08b962a2b54" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.622ex; height:2.176ex;" alt="x=1" /></span>, na equação acima, obtém-se a expressão para o número <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>e</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cd253103f0876afc68ebead27a5aa9867d927467" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.094ex; height:1.676ex;" alt="e" /></span>, como uma soma de uma série infinita:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>e</mi>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>1</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>2</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>3</mn>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>.</mo>
+          <mo>.</mo>
+          <mo>.</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e=\sum _{n=0}^{\infty }{\frac {1}{n!}}=1+{\frac {1}{1!}}+{\frac {1}{2!}}+{\frac {1}{3!}}+{...}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2726895d2db35ff3fccceb709e7bd5a434a0dfa9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:37.284ex; height:7.176ex;" alt="e=\sum _{{n=0}}^{{\infty }}{\frac  {1}{n!}}=1+{{\frac  {1}{1!}}}+{{\frac  {1}{2!}}}+{{\frac  {1}{3!}}}+{...}" /></span></dd>
+</dl>
+<p>Se admitirmos a validade de substituirmos <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.34ex; height:1.676ex;" alt=" x" /></span> por <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>i</mi>
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle ix}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8620946c5b679256caa25581a6fb98efa502141e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.153ex; height:2.176ex;" alt="ix" /></span> na equação obteremos:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mi>i</mi>
+              <mi>x</mi>
+              <msup>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>n</mi>
+                </mrow>
+              </msup>
+            </mrow>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+              <mo>=</mo>
+              <mn>0</mn>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+            </mrow>
+          </munderover>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">(</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msup>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>2</mn>
+                      <mi>n</mi>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mrow>
+                <mo stretchy="false">(</mo>
+                <mn>2</mn>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <munderover>
+            <mo>&#x2211;<!-- ∑ --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+              <mo>=</mo>
+              <mn>1</mn>
+            </mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+            </mrow>
+          </munderover>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo stretchy="false">(</mo>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                  <msup>
+                    <mo stretchy="false">)</mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>n</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+                <mo>&#x22C5;<!-- ⋅ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msup>
+                    <mi>x</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>2</mn>
+                      <mi>n</mi>
+                      <mo>&#x2212;<!-- − --></mo>
+                      <mn>1</mn>
+                    </mrow>
+                  </msup>
+                </mrow>
+              </mrow>
+              <mrow>
+                <mo stretchy="false">(</mo>
+                <mn>2</mn>
+                <mi>n</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>!</mo>
+              </mrow>
+            </mfrac>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{ix}=\sum _{n=0}^{\infty }{\frac {(ix)^{n}}{n!}}={\sum _{n=0}^{\infty }{\frac {{(-1)^{n}}\cdot {x^{2n}}}{(2n)!}}}+i{\sum _{n=1}^{\infty }{\frac {{(-1)^{n-1}}\cdot {x^{2n-1}}}{(2n-1)!}}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4dc2628808f9d02ca5ed221ecc82f74c765aca7b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:58.201ex; height:7.176ex;" alt="e^{{ix}}=\sum _{{n=0}}^{{\infty }}{\frac  {(ix)^{n}}{n!}}={\sum _{{n=0}}^{{\infty }}{\frac  {{(-1)^{n}}\cdot {x^{{2n}}}}{(2n)!}}}+i{\sum _{{n=1}}^{{\infty }}{\frac  {{(-1)^{{n-1}}}\cdot {x^{{2n-1}}}}{(2n-1)!}}}" /></span></dd>
+</dl>
+<p>A primeira parte da soma da equação anterior (<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{ix}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5271aa5bef13f6bd715afeda45bc59ae37d7c6d4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.849ex; height:2.676ex;" alt="e^{{ix}}" /></span>) é a expansão do <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+        <mi>o</mi>
+        <mi>s</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle cos(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c7cd3991f3a32fe83a9a87a60edbc3be4b7736b2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.427ex; height:2.843ex;" alt="cos(x)" /></span> e a segunda é a expansão do <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mi>e</mi>
+        <mi>n</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle sen(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/10c2c284b4b2f32571cfd382aee1ab6676aae14d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.77ex; height:2.843ex;" alt="sen(x)" /></span> em <a href="/wiki/S%C3%A9rie_de_Maclaurin" class="mw-redirect" title="Série de Maclaurin">série de Maclaurin</a>. Assim teremos a equação que ficou conhecida como fórmula de Euler</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mspace width="thinmathspace" />
+        <mi>sen</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{ix}=\cos \left(x\right)+i\,\operatorname {sen} \left(x\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c2ef698a9aac59fb5b669d05817b1d965c2ff2a7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.151ex; height:3.176ex;" alt="e^{{ix}}=\cos \left(x\right)+i\,\operatorname {sen}\left(x\right)" /></span></dd>
+</dl>
+<p>que de forma mais generalizada pode ser escrita como:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>u</mi>
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>u</mi>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mspace width="thinmathspace" />
+        <mi>sen</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mi>u</mi>
+          <mi>x</mi>
+          <mo>)</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{iux}=\cos \left(ux\right)+i\,\operatorname {sen} \left(ux\right)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c292689de9856fa4ea40e31c994dd27081e7163f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:26.779ex; height:3.176ex;" alt="e^{{iux}}=\cos \left(ux\right)+i\,\operatorname {sen}\left(ux\right)" /></span>.</dd>
+</dl>
+<h2><span class="mw-headline" id="Exemplo">Exemplo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Exemplo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit&amp;section=3" title="Editar secção: Exemplo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Se tomarmos como <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>&#x03C0;<!-- π --></mi>
+        <mo>=</mo>
+        <mn>3</mn>
+        <mo>,</mo>
+        <mn>1415....</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x=\pi =3,1415....}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a88651fca950cb62139597567742c329f4f593b3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:18.439ex; height:2.509ex;" alt="x=\pi =3,1415...." /></span>, então teremos um importante produto<sup id="cite_ref-simon_1-1" class="reference"><a href="#cite_note-simon-1"><span>[</span>1<span>]</span></a></sup>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>&#x03C0;<!-- π --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>&#x03C0;<!-- π --></mi>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{i\pi }=-1\rightarrow -e^{i\pi }=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/37a5d1754d71d1e8c07b0ff63ad963c7fb9b0725" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:21.526ex; height:2.676ex;" alt="e^{{i\pi }}=-1\rightarrow -e^{{i\pi }}=1" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit&amp;section=4" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/F%C3%B3rmula_de_De_Moivre" title="Fórmula de De Moivre">Fórmula de De Moivre</a></li>
+</ul>
+<h2 style="cursor: help;" title="Esta seção foi configurada para não ser editável diretamente. Edite a página toda ou a seção anterior em vez disso."><span class="mw-headline" id="Refer.C3.AAncias">Referências</span></h2>
+<div class="reflist references-small" style="">
+<ol class="references">
+<li id="cite_note-simon-1"><span class="mw-cite-backlink">↑ <sup><i><b><a href="#cite_ref-simon_1-0">a</a></b></i></sup> <sup><i><b><a href="#cite_ref-simon_1-1">b</a></b></i></sup></span> <span class="reference-text">SIMON, Carl P., e BLUME, Lawrence. <i>Matemática para Economistas</i>. Porto Alegre: Bookman, 2005. Reimpressão 2008. <a href="/wiki/Especial:Fontes_de_livros/9788536303079" class="internal mw-magiclink-isbn">ISBN 978-85-363-0307-9</a>. Seção A3.4, páginas 871 e 872.</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">John Stillwell (2002). Mathematics and Its History. Springer.</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text"><cite class="citation web">Daniels, Doug. <a rel="nofollow" class="external text" href="http://cnx.org/content/m10276/latest/">«Complex Differentiation»</a><span class="reference-accessdate">. Consultado em <span class="nowrap">15 May</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AF%C3%B3rmula+de+Euler&amp;rft.aufirst=Doug&amp;rft.aulast=Daniels&amp;rft.btitle=Complex+Differentiation&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fcnx.org%2Fcontent%2Fm10276%2Flatest%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit&amp;section=5" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.DJTricities.com/eulers">Prova da relação de Euler</a></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:69711-0!*!0!!pt!4!*!math=5 and timestamp 20160909152702 and revision id 46069564
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Fórmula_de_Euler&amp;oldid=46069564">https://pt.wikipedia.org/w/index.php?title=Fórmula_de_Euler&amp;oldid=46069564</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:Leonhard_Euler" title="Categoria:Leonhard Euler">Leonhard Euler</a></li><li><a href="/wiki/Categoria:Teoremas_de_matem%C3%A1tica" title="Categoria:Teoremas de matemática">Teoremas de matemática</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=F%C3%B3rmula+de+Euler" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=F%C3%B3rmula+de+Euler" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/F%C3%B3rmula_de_Euler"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:F%C3%B3rmula_de_Euler"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/F%C3%B3rmula_de_Euler" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=F%C3%B3rmula+de+Euler">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=F%C3%B3rmula+de+Euler&amp;returnto=F%C3%B3rmula+de+Euler&amp;oldid=46069564&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/F%C3%B3rmula_de_Euler" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/F%C3%B3rmula_de_Euler" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;oldid=46069564" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=F%C3%B3rmula_de_Euler&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q184871" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=F%C3%B3rmula_de_Euler&amp;id=46069564" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Euler_se_formule" title="Euler se formule — africânder" lang="af" hreflang="af">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B5%D9%8A%D8%BA%D8%A9_%D8%A3%D9%88%D9%8A%D9%84%D8%B1" title="صيغة أويلر — árabe" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Eyler_d%C3%BCsturu" title="Eyler düsturu — azerbaijano" lang="az" hreflang="az">Azərbaycanca</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0" title="Формула Эйлера — bielorrusso" lang="be" hreflang="be">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%9E%D0%B9%D0%BB%D0%B5%D1%80" title="Формула на Ойлер — búlgaro" lang="bg" hreflang="bg">Български</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%85%E0%A6%AF%E0%A6%BC%E0%A6%B2%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0_%E0%A6%B8%E0%A7%82%E0%A6%A4%E0%A7%8D%E0%A6%B0" title="অয়লারের সূত্র — bengali" lang="bn" hreflang="bn">বাংলা</a></li><li class="interlanguage-link interwiki-bs"><a href="https://bs.wikipedia.org/wiki/Eulerova_formula" title="Eulerova formula — bósnio" lang="bs" hreflang="bs">Bosanski</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/F%C3%B3rmula_d%27Euler" title="Fórmula d'Euler — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Euler%C5%AFv_vzorec" title="Eulerův vzorec — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-cy"><a href="https://cy.wikipedia.org/wiki/Fformwla_Euler" title="Fformwla Euler — galês" lang="cy" hreflang="cy">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Eulers_formel" title="Eulers formel — dinamarquês" lang="da" hreflang="da">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Eulersche_Formel" title="Eulersche Formel — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%A4%CF%8D%CF%80%CE%BF%CF%82_%CF%84%CE%BF%CF%85_%CE%8C%CE%B9%CE%BB%CE%B5%CF%81" title="Τύπος του Όιλερ — grego" lang="el" hreflang="el">Ελληνικά</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Euler%27s_formula" title="Euler's formula — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/E%C5%ADlera_formulo" title="Eŭlera formulo — esperanto" lang="eo" hreflang="eo">Esperanto</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/F%C3%B3rmula_de_Euler" title="Fórmula de Euler — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Euleri_valem" title="Euleri valem — estónio" lang="et" hreflang="et">Eesti</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Eulerren_formula" title="Eulerren formula — basco" lang="eu" hreflang="eu">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%81%D8%B1%D9%85%D9%88%D9%84_%D8%A7%D9%88%DB%8C%D9%84%D8%B1" title="فرمول اویلر — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Eulerin_lause_(funktioteoria)" title="Eulerin lause (funktioteoria) — finlandês" lang="fi" hreflang="fi">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Formule_d%27Euler" title="Formule d'Euler — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A0%D7%95%D7%A1%D7%97%D7%AA_%D7%90%D7%95%D7%99%D7%9C%D7%A8_(%D7%90%D7%A0%D7%9C%D7%99%D7%96%D7%94_%D7%9E%D7%A8%D7%95%D7%9B%D7%91%D7%AA)" title="נוסחת אוילר (אנליזה מרוכבת) — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-hi"><a href="https://hi.wikipedia.org/wiki/%E0%A4%91%E0%A4%AF%E0%A4%B2%E0%A4%B0_%E0%A4%95%E0%A4%BE_%E0%A4%B8%E0%A5%82%E0%A4%A4%E0%A5%8D%E0%A4%B0" title="ऑयलर का सूत्र — hindi" lang="hi" hreflang="hi">हिन्दी</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Eulerova_formula" title="Eulerova formula — croata" lang="hr" hreflang="hr">Hrvatski</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Euler-k%C3%A9plet" title="Euler-képlet — húngaro" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%B7%D5%B5%D5%AC%D5%A5%D6%80%D5%AB_%D5%A2%D5%A1%D5%B6%D5%A1%D5%B1%D6%87" title="Էյլերի բանաձև — arménio" lang="hy" hreflang="hy">Հայերեն</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Rumus_Euler" title="Rumus Euler — indonésio" lang="id" hreflang="id">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Jafna_Eulers" title="Jafna Eulers — islandês" lang="is" hreflang="is">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Formula_di_Eulero" title="Formula di Eulero — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%82%A4%E3%83%A9%E3%83%BC%E3%81%AE%E5%85%AC%E5%BC%8F" title="オイラーの公式 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-km"><a href="https://km.wikipedia.org/wiki/%E1%9E%9A%E1%9E%BC%E1%9E%94%E1%9E%98%E1%9E%93%E1%9F%92%E1%9E%8F%E1%9E%A2%E1%9E%99%E1%9E%9B%E1%9F%90%E1%9E%9A" title="រូបមន្តអយល័រ — khmer" lang="km" hreflang="km">ភាសាខ្មែរ</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%98%A4%EC%9D%BC%EB%9F%AC%EC%9D%98_%EA%B3%B5%EC%8B%9D" title="오일러의 공식 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Oilerio_formul%C4%97" title="Oilerio formulė — lituano" lang="lt" hreflang="lt">Lietuvių</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D1%98%D0%BB%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0" title="Ојлерова формула — macedónio" lang="mk" hreflang="mk">Македонски</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Formula_Euler" title="Formula Euler — malaio" lang="ms" hreflang="ms">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Formule_van_Euler" title="Formule van Euler — holandês" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Eulers_formel" title="Eulers formel — norueguês" lang="no" hreflang="no">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Wz%C3%B3r_Eulera" title="Wzór Eulera — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Formula_lui_Euler" title="Formula lui Euler — romeno" lang="ro" hreflang="ro">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0" title="Формула Эйлера — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Eulerjeva_formula" title="Eulerjeva formula — esloveno" lang="sl" hreflang="sl">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9E%D1%98%D0%BB%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%84%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0" title="Ојлерова формула — sérvio" lang="sr" hreflang="sr">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Eulers_formel" title="Eulers formel — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%86%E0%AE%AF%E0%AF%8D%E0%AE%B2%E0%AE%B0%E0%AE%BF%E0%AE%A9%E0%AF%8D_%E0%AE%B5%E0%AE%BE%E0%AE%AF%E0%AF%8D%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AF%81" title="ஆய்லரின் வாய்ப்பாடு — tâmil" lang="ta" hreflang="ta">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%AD%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B8%AD%E0%B8%A3%E0%B9%8C" title="สูตรของออยเลอร์ — tailandês" lang="th" hreflang="th">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Euler_form%C3%BCl%C3%BC" title="Euler formülü — turco" lang="tr" hreflang="tr">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A4%D0%BE%D1%80%D0%BC%D1%83%D0%BB%D0%B0_%D0%95%D0%B9%D0%BB%D0%B5%D1%80%D0%B0" title="Формула Ейлера — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-ur"><a href="https://ur.wikipedia.org/wiki/%D8%B9%D8%A7%D8%A6%D9%84%D8%B1%DB%8C_%DA%A9%D9%84%DB%8C%DB%81" title="عائلری کلیہ — urdu" lang="ur" hreflang="ur">اردو</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F" title="欧拉公式 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q184871#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 14h48min de 3 de julho de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=F%C3%B3rmula_de_Euler&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.163",
+            "walltime": "0.307",
+            "ppvisitednodes": {
+                "value": 641,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 5812,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 254,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 7,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "entityaccesscount": {
+                "value": 0,
+                "limit": 400
+            },
+            "timingprofile": [
+                "100.00%  112.702      1 -total",
+                " 53.76%   60.593      1 Predefinição:Referências",
+                " 39.67%   44.706      1 Predefinição:Cite_web",
+                " 25.08%   28.266      1 Predefinição:E_(constante_matemática)",
+                " 20.49%   23.088      1 Predefinição:Spaces",
+                " 10.45%   11.777      4 Predefinição:AP",
+                "  3.20%    3.610      4 Predefinição:Truncar",
+                "  2.28%    2.566      1 Predefinição:Link",
+                "  1.96%    2.212      6 Predefinição:·",
+                "  1.85%    2.083      1 Predefinição:Esconder_link_para_editar_seção"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.027",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 1467852,
+                "limit": 52428800
+            }
+        },
+        "cachereport": {
+            "origin": "mw1162",
+            "timestamp": "20160909152702",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":94,"wgHostname":"mw1261"});});</script>
+	</body>
+</html>

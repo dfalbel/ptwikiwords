@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Operações em cadeias de caracteres – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Operações_em_cadeias_de_caracteres","wgTitle":"Operações em cadeias de caracteres","wgCurRevisionId":44189720,"wgRevisionId":44189720,"wgArticleId":4637719,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Artigos possivelmente não enciclopédicos","Linguagens formais"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Operações_em_cadeias_de_caracteres","wgRelevantArticleId":4637719,"wgRequestId":"V9dAcApAIDYAAHAp2O0AAABN","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q7623989","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Operações_em_cadeias_de_caracteres rootpage-Operações_em_cadeias_de_caracteres skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Operações em cadeias de caracteres</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><table align="center" class="noprint" style="width:80%; margin:0 auto; border-collapse:collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #f28500;">
+<tr>
+<td width="8%" align="center">
+<div style="width:52px;"><a href="/wiki/Ficheiro:Emblem-question.svg" class="image"><img alt="Emblem-question.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emblem-question.svg/35px-Emblem-question.svg.png" width="35" height="35" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emblem-question.svg/53px-Emblem-question.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Emblem-question.svg/70px-Emblem-question.svg.png 2x" data-file-width="48" data-file-height="48" /></a></div>
+</td>
+<td width="91%"><strong>Este artigo ou se(c)ção pode conter texto de natureza <a href="/wiki/Wikip%C3%A9dia:O_que_a_Wikip%C3%A9dia_n%C3%A3o_%C3%A9" title="Wikipédia:O que a Wikipédia não é">não enciclopédica</a>.</strong> <small>(desde <em>fevereiro de 2015</em>)</small><br />
+<small>Justifique o uso dessa marcação e tente resolver essas questões na <a href="/w/index.php?title=Discuss%C3%A3o:Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;redlink=1" class="new" title="Discussão:Operações em cadeias de caracteres (página não existe)">página de discussão</a>.</small></td>
+<td width="1%" align="center"></td>
+</tr>
+</table>
+<p>Em <a href="/wiki/Ci%C3%AAncia_da_computa%C3%A7%C3%A3o" title="Ciência da computação">ciência da computação</a> e nas <a href="/wiki/Linguagem_formal" title="Linguagem formal">linguagens formais</a> é comum o uso de uma variedade de funções que operam sobre <a href="/wiki/Cadeia_de_caracteres" title="Cadeia de caracteres">cadeias de caracteres</a> com o intuito de transformá-las em variações bem definidas com base em sua estrutura original.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Concatena.C3.A7.C3.A3o"><span class="tocnumber">1</span> <span class="toctext">Concatenação</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Substitui.C3.A7.C3.A3o_de_cadeia"><span class="tocnumber">2</span> <span class="toctext">Substituição de cadeia</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Homomorfismo_de_cadeia"><span class="tocnumber">3</span> <span class="toctext">Homomorfismo de cadeia</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Proje.C3.A7.C3.A3o_de_cadeia"><span class="tocnumber">4</span> <span class="toctext">Projeção de cadeia</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Quociente_.C3.A0_direita"><span class="tocnumber">5</span> <span class="toctext">Quociente à direita</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Rela.C3.A7.C3.A3o_sint.C3.A1tica"><span class="tocnumber">6</span> <span class="toctext">Relação sintática</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Cancelamento_.C3.A0_direita"><span class="tocnumber">7</span> <span class="toctext">Cancelamento à direita</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Prefixos"><span class="tocnumber">8</span> <span class="toctext">Prefixos</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">9</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Notas"><span class="tocnumber">10</span> <span class="toctext">Notas</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Refer.C3.AAncias"><span class="tocnumber">11</span> <span class="toctext">Referências</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Concatena.C3.A7.C3.A3o">Concatenação</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Concatenação">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=1" title="Editar secção: Concatenação">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="hatnote"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/17px-Magnifying_glass_01.svg.png" width="17" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/26px-Magnifying_glass_01.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Magnifying_glass_01.svg/34px-Magnifying_glass_01.svg.png 2x" data-file-width="663" data-file-height="659" />Ver artigo principal: <a href="/wiki/Concatena%C3%A7%C3%A3o" title="Concatenação">Concatenação</a></div>
+<p>É a operação que une uma cadeia de caracteres a outra cadeia de caracteres, formando uma nova cadeia contendo os caracteres da primeira seguidos pelos caracteres da segunda. A concatenação de duas cadeias <i>s</i> e <i>t</i> é usualmente denotado por <i>s · t</i> ou abreviado como <i>st</i>. Concatenar uma cadeia qualquer com uma <a href="/wiki/Cadeia_vazia" title="Cadeia vazia">cadeia vazia</a> <i>𝜀</i> não altera a cadeia original, assim <i>s · 𝜀 = s = 𝜀 · s</i>. A concatenação de cadeias de caraceres é <a href="/wiki/Associativa" class="mw-redirect" title="Associativa">associativa</a>, mas não é <a href="/wiki/Comutativa" class="mw-redirect" title="Comutativa">comutativa</a>, portanto, <i>s · (t · u) = (s · t) · u</i>, mas <i>s · t ≠ t · s</i>.</p>
+<h2><span class="mw-headline" id="Substitui.C3.A7.C3.A3o_de_cadeia">Substituição de cadeia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Substituição de cadeia">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=2" title="Editar secção: Substituição de cadeia">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Seja <i>L</i> uma <a href="/wiki/Linguagem_formal" title="Linguagem formal">linguagem</a>, e seja Σ seu alfabeto. Uma <b>substituição de cadeia</b> ou simplesmente uma <b>substituição</b> é um mapeamento <i>f</i> que mapeia letras em Σ para linguagens (possivelmente em um alfabeto diferente). Assim, por exemplo, dada uma letra <i>a</i> ∈ Σ, existe <i>f</i>(<i>a</i>)=<i>L</i><sub><i>a</i></sub> onde <i>L</i><sub><i>a</i></sub> ⊆ Δ<sup><a href="/wiki/Fecho_de_Kleene" title="Fecho de Kleene">*</a></sup> é alguma linguagem cujo alfabeto é Δ. Esse mapeamente pode ser estendido para cadeias como:</p>
+<dl>
+<dd><i>f</i>(ε)=ε</dd>
+</dl>
+<p>para a <a href="/wiki/Cadeia_vazia" title="Cadeia vazia">cadeia vazia</a> ε, e</p>
+<dl>
+<dd><i>f</i>(<i>sa</i>)=<i>f</i>(<i>s</i>)<i>f</i>(<i>a</i>)</dd>
+</dl>
+<p>para uma cadeia <i>s</i> ∈ <i>L</i>. Substituições de cadeias podem ser estendidas a linguagens inteias como <sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x22C3;<!-- ⋃ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>s</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mi>L</mi>
+          </mrow>
+        </munder>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(L)=\bigcup _{s\in L}f(s)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1511863693744491845b202491475c9d126c7cd4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:15.437ex; height:5.676ex;" alt="{\displaystyle f(L)=\bigcup _{s\in L}f(s)}" /></span></dd>
+</dl>
+<p><a href="/wiki/Linguagem_regular" title="Linguagem regular">Linguagens regulares</a> são fechadas sobre substituição de cadeia. Isto é, se cada letra de uma linguagem regular é substituida por uma outra linguagem regular, o resultado é ainda a linguagem regular.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> Similarmente, <a href="/wiki/Linguagem_livre_de_contexto" title="Linguagem livre de contexto">linguagens livres de contexto</a> são fechadas sobre substituição de cadeia.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>note 1<span>]</span></a></sup></p>
+<p>Um simples exemplo é uma conversão <i>f</i><sub>uc</sub>(.) à forma maiúscula, que pode ser definida e.g. como a seguir:</p>
+<table class="wikitable">
+<tr>
+<th>letter</th>
+<th>mapped to language</th>
+<th>remark</th>
+</tr>
+<tr>
+<th><i>x</i></th>
+<th><i>f</i><sub>uc</sub>(<i>x</i>)</th>
+<th></th>
+</tr>
+<tr>
+<td>‹<i>a</i>›</td>
+<td>{ ‹<i>A</i>› }</td>
+<td>map lower-case char to corresponding upper-case char</td>
+</tr>
+<tr>
+<td>‹<i>A</i>›</td>
+<td>{ ‹<i>A</i>› }</td>
+<td>map upper-case char to itself</td>
+</tr>
+<tr>
+<td>‹<i>ß</i>›</td>
+<td>{ ‹<i>SS</i>› }</td>
+<td>no upper-case char available, map to two-char cadeia</td>
+</tr>
+<tr>
+<td>‹0›</td>
+<td>{ ε }</td>
+<td>map digit to empty cadeia</td>
+</tr>
+<tr>
+<td>‹!›</td>
+<td>{ }</td>
+<td>forbid punctuation, map to empty language</td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td>similar for other chars</td>
+</tr>
+</table>
+<p>Para a extensão de <i>f</i><sub>uc</sub> para cadeias, temos e.g.</p>
+<ul>
+<li><i>f</i><sub>uc</sub>(‹Straße›) = {‹S›} ⋅ {‹T›} ⋅ {‹R›} ⋅ {‹A›} ⋅ {‹SS›} ⋅ {‹E›} = {‹STRASSE›},</li>
+<li><i>f</i><sub>uc</sub>(‹u2›) = {‹U} ⋅ {ε} = {‹U›}, and</li>
+<li><i>f</i><sub>uc</sub>(‹Go!›) = {‹G›} ⋅ {‹O›} ⋅ {} = {}.</li>
+</ul>
+<p>Para a extensão de <i>f</i><sub>uc</sub> para linguagens, temos e.g.</p>
+<ul>
+<li><i>f</i><sub>uc</sub>({ ‹Straße›, ‹u2›, ‹Go!› }) = { ‹STRASSE› } ∪ { ‹U› } ∪ { } = { ‹STRASSE›, ‹U› }.</li>
+</ul>
+<p>Para a extensão de <i>f</i><sub>uc</sub> para cadeias, temos e.g.</p>
+<ul>
+<li><i>f</i><sub>uc</sub>(‹Straße›) = {‹S›} ⋅ {‹T›} ⋅ {‹R›} ⋅ {‹A›} ⋅ {‹SS›} ⋅ {‹E›} = {‹STRASSE›},</li>
+<li><i>f</i><sub>uc</sub>(‹u2›) = {‹U} ⋅ {ε} = {‹U›}, e</li>
+<li><i>f</i><sub>uc</sub>(‹Go!›) = {‹G›} ⋅ {‹O›} ⋅ {} = {}.</li>
+</ul>
+<p>Para a extensão de <i>f</i><sub>uc</sub> para linguagens, temos e.g.</p>
+<ul>
+<li><i>f</i><sub>uc</sub>({ ‹Straße›, ‹u2›, ‹Go!› }) = { ‹STRASSE› } ∪ { ‹U› } ∪ { } = { ‹STRASSE›, ‹U› }.</li>
+</ul>
+<p>Um outro exemplo é a conversão de uma cadeia ASC codificada.</p>
+<h2><span class="mw-headline" id="Homomorfismo_de_cadeia">Homomorfismo de cadeia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Homomorfismo de cadeia">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=3" title="Editar secção: Homomorfismo de cadeia">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Um <b>homomorfismo de cadeia</b> (comumente referido como simplesmente <a href="/wiki/Homomorfismo" title="Homomorfismo">homomorfismo</a> em <a href="/wiki/Linguagem_formal" title="Linguagem formal">teoria de linguagens formais</a> é a substituição de cadeia tal que cada letra é substituída por uma cadeia unitária. Isto é, <i>f</i>(<i>a</i>)-<i>s</i>, onde <i>s</i> é uma cadeia, para cada letra <i>a</i>.<sup id="cite_ref-singleton_sets_5-0" class="reference"><a href="#cite_note-singleton_sets-5"><span>[</span>note 2<span>]</span></a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>4<span>]</span></a></sup></p>
+<p>Homomofismos de cadeias são mofismos <a href="/wiki/Monoide" title="Monoide">monoides</a> no <a href="/wiki/Monoide_livre" title="Monoide livre">monoide livre</a>, preservando a operação binaria de concatenação de cadeia. Dada uma linguagem <i>L</i>, o conjunto <i>f</i>(<i>L</i>) é chamado <b>imagem homomorfica</b> de <i>L</i>. A <b>imagem homomorfica invertida</b> de uma cadeia <i>s</i> é definida como</p>
+<dl>
+<dd><i>f</i><sup>−1</sup>(<i>s</i>) = { <i>w</i> | <i>f</i>(<i>w</i>)=<i>s</i> }</dd>
+</dl>
+<p>enquanto que a imagem homomorfica invertida de uma linguagem <i>L</i> é definida como</p>
+<dl>
+<dd><i>f</i><sup>−1</sup>(<i>L</i>) = { <i>s</i> | <i>f</i>(<i>s</i>) ∈ <i>L</i> }</dd>
+</dl>
+<p>No geral, <i>f</i>(<i>f</i><sup>−1</sup>(<i>L</i>)) ≠ <i>L</i>, enquanto não há</p>
+<dl>
+<dd><i>f</i>(<i>f</i><sup>−1</sup>(<i>L</i>)) ⊆ <i>L</i></dd>
+</dl>
+<p>e</p>
+<dl>
+<dd><i>L</i> ⊆ <i>f</i><sup>−1</sup>(<i>f</i>(<i>L</i>))</dd>
+</dl>
+<p>para cada linguagem <i>L</i>.</p>
+<p>A classe de linguagens regulares é fechada sobre homomorfismos e homomorfismos invertidos.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>5<span>]</span></a></sup> Similarmente, as gramáticas livre-de-contexto são fechadas sobre homomorfismos<sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>note 3<span>]</span></a></sup> e homomorfismos invertidos.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>6<span>]</span></a></sup></p>
+<p>Um homomorfismo de cadeia é dito ε-livre (ou e-livre) se <i>f</i>(<i>a</i>) ≠ ε para todo <i>a</i> no alfabeto Σ. Simples cifras de substituição de única letra são exemplos de homomorfismos de cadeia e-livres.</p>
+<p>Um homomorfismo de cadeia exemplo <i>g</i><sub>uc</sub> pode também ser obtido ao definir similar à substituição de cadeia: <i>g</i><sub>uc</sub>(‹a›) = ‹A›, ..., <i>g</i><sub>uc</sub>(‹0›) = ε, mas deixando <i>g</i><sub>uc</sub> undefinido em caracteres de pontuação.</p>
+<p>Exemplos de imagens homomorficas invertidas são</p>
+<ul>
+<li><i>g</i><sub>uc</sub><sup>−1</sup>({ ‹SSS› }) = { ‹sss›, ‹sß›, ‹ßs› }, since <i>g</i><sub>uc</sub>(‹sss›) = <i>g</i><sub>uc</sub>(‹sß›) = <i>g</i><sub>uc</sub>(‹ßs›) = ‹SSS›, and</li>
+<li><i>g</i><sub>uc</sub><sup>−1</sup>({ ‹A›, ‹bb› }) = { ‹a› }, since <i>g</i><sub>uc</sub>(‹a›) = ‹A›, enquanto ‹bb› não pode ser alcançado por <i>g</i><sub>uc</sub>.</li>
+</ul>
+<p>Para a ultima language, <i>g</i><sub>uc</sub>(<i>g</i><sub>uc</sub><sup>−1</sup>({ ‹A›, ‹bb› })) = <i>g</i><sub>uc</sub>({ ‹a› }) = { ‹A› } ≠ { ‹A›, ‹bb› }. O homomorfismo <i>g</i><sub>uc</sub> não é ε-livre, uma vez que mapeia e.g. ‹0› para ε.</p>
+<h2><span class="mw-headline" id="Proje.C3.A7.C3.A3o_de_cadeia">Projeção de cadeia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Projeção de cadeia">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=4" title="Editar secção: Projeção de cadeia">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Se <i>s</i> é uma cadeia, e <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Sigma }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9e1f558f53cda207614abdf90162266c70bc5c1e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.689ex; height:2.176ex;" alt="\Sigma" /></span> é um alfabeto, a <b>projeção de cadeia</b> de <i>s</i> é a cadeia que resulta em remover todas as letras que não estão em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Sigma }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9e1f558f53cda207614abdf90162266c70bc5c1e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.689ex; height:2.176ex;" alt="\Sigma" /></span>. É escrito como <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \pi _{\Sigma }(s)\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bab9254a0a5617c25f195f5c922f8338349069f5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.08ex; height:2.843ex;" alt="{\displaystyle \pi _{\Sigma }(s)\,}" /></span>. É formalmente definido da remoção de letras do lado da mão direita.</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mi>&#x03B5;<!-- ε --></mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>s</mi>
+                  <mo>=</mo>
+                  <mi>&#x03B5;<!-- ε --></mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>&#xA0;the empty cadeia</mtext>
+                  </mrow>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>&#x03C0;<!-- π --></mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>s</mi>
+                  <mo>=</mo>
+                  <mi>t</mi>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>&#xA0;and&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>&#x2209;<!-- ∉ --></mo>
+                  <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>&#x03C0;<!-- π --></mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+                    </mrow>
+                  </msub>
+                  <mo stretchy="false">(</mo>
+                  <mi>t</mi>
+                  <mo stretchy="false">)</mo>
+                  <mi>a</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>s</mi>
+                  <mo>=</mo>
+                  <mi>t</mi>
+                  <mi>a</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>&#xA0;and&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>&#x2208;<!-- ∈ --></mo>
+                  <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \pi _{\Sigma }(s)={\begin{cases}\varepsilon &amp;{\mbox{if }}s=\varepsilon {\mbox{ the empty cadeia}}\\\pi _{\Sigma }(t)&amp;{\mbox{if }}s=ta{\mbox{ and }}a\notin \Sigma \\\pi _{\Sigma }(t)a&amp;{\mbox{if }}s=ta{\mbox{ and }}a\in \Sigma \end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0491c78112640da15e36a114e36fa45710c1ed28" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.838ex; width:45.738ex; height:8.843ex;" alt="{\displaystyle \pi _{\Sigma }(s)={\begin{cases}\varepsilon &amp;{\mbox{if }}s=\varepsilon {\mbox{ the empty cadeia}}\\\pi _{\Sigma }(t)&amp;{\mbox{if }}s=ta{\mbox{ and }}a\notin \Sigma \\\pi _{\Sigma }(t)a&amp;{\mbox{if }}s=ta{\mbox{ and }}a\in \Sigma \end{cases}}}" /></span></dd>
+</dl>
+<p>Aqui <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B5;<!-- ε --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \varepsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a30c89172e5b88edbd45d3e2772c7f5e562e5173" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.094ex; height:1.676ex;" alt="\varepsilon" /></span> denota a cadeia vazia. A projeção de uma cadeia é essencial tal qual a projeção em algebra relacional.</p>
+<p>Projeção de cadeia pode ser promovido a <b>projeção de uma linguagem</b>. Dada uma linguagem formal <i>L</i>, sua projeção é dada por</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">|</mo>
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>L</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \pi _{\Sigma }(L)=\{\pi _{\Sigma }(s)\vert s\in L\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/df759b920cf34b3062ef0618dab9cdadf6c33611" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.535ex; height:2.843ex;" alt="{\displaystyle \pi _{\Sigma }(L)=\{\pi _{\Sigma }(s)\vert s\in L\}}" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Quociente_.C3.A0_direita">Quociente à direita</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Quociente à direita">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=5" title="Editar secção: Quociente à direita">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O <b>quociente à direita</b> de uma letra <i>a</i> de uma cadeia <i>s</i> é a truncação da letra <i>a</i> na cadeia <i>s</i>, do lado referente a mão direita. É denotado como <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>a</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s/a}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ee0904f26672f47e746e5a9dea0432806435b917" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.514ex; height:2.843ex;" alt="{\displaystyle s/a}" /></span>. Se a cadeia naõ tem <i>a</i> no lado referente a mão direita, o resultado é a cadeia vazia. Assim:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mi>a</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>b</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mi>s</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>=</mo>
+                  <mi>b</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mi>&#x03B5;<!-- ε --></mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>&#x2260;<!-- ≠ --></mo>
+                  <mi>b</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (sa)/b={\begin{cases}s&amp;{\mbox{if }}a=b\\\varepsilon &amp;{\mbox{if }}a\neq b\end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3e3e09a4d499f91636b41ece953e2d950a6107f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:22.707ex; height:6.176ex;" alt="{\displaystyle (sa)/b={\begin{cases}s&amp;{\mbox{if }}a=b\\\varepsilon &amp;{\mbox{if }}a\neq b\end{cases}}}" /></span></dd>
+</dl>
+<p>O quociente de uma cadeia vazia é pode ser obtido:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B5;<!-- ε --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>a</mi>
+        <mo>=</mo>
+        <mi>&#x03B5;<!-- ε --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \varepsilon /a=\varepsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b6aa5cd66d00435b0f1de7761599ae278d9d2433" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.71ex; height:2.843ex;" alt="{\displaystyle \varepsilon /a=\varepsilon }" /></span></dd>
+</dl>
+<p>De modo similar, dado um subconjunto <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+        <mo>&#x2282;<!-- ⊂ --></mo>
+        <mi>M</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S\subset M}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/71da27ce79329082f6bc54d5630d26814ec99a14" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.071ex; height:2.176ex;" alt="{\displaystyle S\subset M}" /></span> de um monoide <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f82cade9898ced02fdd08712e5f0c0151758a0dd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.453ex; height:2.176ex;" alt="M" /></span>, pode-se definir o subconjunto quociente como</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>a</mi>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>M</mi>
+        <mo fence="false" stretchy="false">|</mo>
+        <mi>s</mi>
+        <mi>a</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>S</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S/a=\{s\in M\vert sa\in S\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c9ef9a0aed42d43893619aeb9bdf7af87397e45b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:23.142ex; height:2.843ex;" alt="{\displaystyle S/a=\{s\in M\vert sa\in S\}}" /></span></dd>
+</dl>
+<p>Quocientes à esquerda podem ser definidos de maneira similar, com operações se colocando à esquerda de uma cadeia.</p>
+<h2><span class="mw-headline" id="Rela.C3.A7.C3.A3o_sint.C3.A1tica">Relação sintática</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Relação sintática">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=6" title="Editar secção: Relação sintática">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O quociente à direita de um subconjunto <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+        <mo>&#x2282;<!-- ⊂ --></mo>
+        <mi>M</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S\subset M}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/71da27ce79329082f6bc54d5630d26814ec99a14" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:7.071ex; height:2.176ex;" alt="{\displaystyle S\subset M}" /></span> de um monoide <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>M</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle M}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f82cade9898ced02fdd08712e5f0c0151758a0dd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.453ex; height:2.176ex;" alt="M" /></span> define uma relação de equivalencia, chamada de <b>relação sintática à direita</b> de <i>S</i>. É dada por</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mo>&#x223C;<!-- ∼ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+        <mspace width="thickmathspace" />
+        <mspace width="thinmathspace" />
+        <mo>=</mo>
+        <mspace width="thinmathspace" />
+        <mo fence="false" stretchy="false">{</mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>,</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>M</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>M</mi>
+        <mo fence="false" stretchy="false">|</mo>
+        <mi>S</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>s</mi>
+        <mo>=</mo>
+        <mi>S</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>t</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sim _{S}\;\,=\,\{(s,t)\in M\times M\vert S/s=S/t\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c97fad3d9e524ba4c074aaf7973571b977225aba" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:35.862ex; height:2.843ex;" alt="{\displaystyle \sim _{S}\;\,=\,\{(s,t)\in M\times M\vert S/s=S/t\}}" /></span></dd>
+</dl>
+<p>A relação é claramente de indice finito (tem um número finito de classes de equivalencia) se e somente se a família quocientes à direita é finida; isto é, se</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>S</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>m</mi>
+        <mo fence="false" stretchy="false">|</mo>
+        <mi>m</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>M</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{S/m\vert m\in M\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a21ec330c0b0c7fb8718ead9cf5c5269c494db8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.091ex; height:2.843ex;" alt="{\displaystyle \{S/m\vert m\in M\}}" /></span></dd>
+</dl>
+<p>é finito. Nesse caso, <i>S</i> é uma linguagem reconhecível, isto é, uma linguagem que pode ser reconhecida por um automato de estados finito. Isto é discutido em mais detalhes no artigo sobre monoides sintáticos.</p>
+<h2><span class="mw-headline" id="Cancelamento_.C3.A0_direita">Cancelamento à direita</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=7" class="mw-editsection-visualeditor" title="Editar secção: Cancelamento à direita">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=7" title="Editar secção: Cancelamento à direita">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O <b>cancelamento à direita</b> de uma letra <i>a</i> de uma cadeia <i>s</i> é a remoção da primeira ocorrencia de uma letra <i>a</i> na cadeia <i>s</i>, começando pelo lado referente a mão direita. Isto é denotado como <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x00F7;<!-- ÷ --></mo>
+        <mi>a</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\div a}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7a044e28a9bfaff8418387640092a166bdb925d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.192ex; height:1.843ex;" alt="{\displaystyle s\div a}" /></span> e é recursivamente definido como</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mi>a</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x00F7;<!-- ÷ --></mo>
+        <mi>b</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>{</mo>
+            <mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false">
+              <mtr>
+                <mtd>
+                  <mi>s</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>=</mo>
+                  <mi>b</mi>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo stretchy="false">(</mo>
+                  <mi>s</mi>
+                  <mo>&#x00F7;<!-- ÷ --></mo>
+                  <mi>b</mi>
+                  <mo stretchy="false">)</mo>
+                  <mi>a</mi>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mtext>if&#xA0;</mtext>
+                  </mrow>
+                  <mi>a</mi>
+                  <mo>&#x2260;<!-- ≠ --></mo>
+                  <mi>b</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo fence="true" stretchy="true"></mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (sa)\div b={\begin{cases}s&amp;{\mbox{if }}a=b\\(s\div b)a&amp;{\mbox{if }}a\neq b\end{cases}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c26c8a254adb20525c0d4fc9c9f7462327614904" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:31.314ex; height:6.176ex;" alt="{\displaystyle (sa)\div b={\begin{cases}s&amp;{\mbox{if }}a=b\\(s\div b)a&amp;{\mbox{if }}a\neq b\end{cases}}}" /></span></dd>
+</dl>
+<p>A cadeia vazia é sempre cancelável:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B5;<!-- ε --></mi>
+        <mo>&#x00F7;<!-- ÷ --></mo>
+        <mi>a</mi>
+        <mo>=</mo>
+        <mi>&#x03B5;<!-- ε --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \varepsilon \div a=\varepsilon }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b1a9818e928f73eea2b21d313f4b1f01c71540cc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:9.388ex; height:1.843ex;" alt="{\displaystyle \varepsilon \div a=\varepsilon }" /></span></dd>
+</dl>
+<p>Claramente, cancelamento à direita e projeção comutam:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x00F7;<!-- ÷ --></mo>
+        <mi>a</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>&#x03C0;<!-- π --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x03A3;<!-- Σ --></mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>&#x00F7;<!-- ÷ --></mo>
+        <mi>a</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \pi _{\Sigma }(s)\div a=\pi _{\Sigma }(s\div a)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e744017a7995878125e4b4580fa2ee9b74feaabd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.677ex; height:2.843ex;" alt="{\displaystyle \pi _{\Sigma }(s)\div a=\pi _{\Sigma }(s\div a)}" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Prefixos">Prefixos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=8" class="mw-editsection-visualeditor" title="Editar secção: Prefixos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=8" title="Editar secção: Prefixos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O <b>prefixo de uma cadeia</b> é um conjunto de todos os prefixos de uma cadeia, com relação à dada linguagem:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Pref</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>t</mi>
+        <mo fence="false" stretchy="false">|</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <mi>t</mi>
+        <mi>u</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;for&#xA0;</mtext>
+        </mrow>
+        <mi>t</mi>
+        <mo>,</mo>
+        <mi>u</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>Alph</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2217;<!-- ∗ --></mo>
+          </mrow>
+        </msup>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Pref} _{L}(s)=\{t\vert s=tu{\mbox{ for }}t,u\in \operatorname {Alph} (L)^{*}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/09f49f36cf3fafaeb9d6b76012f565a266b461dd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:41.499ex; height:2.843ex;" alt="{\displaystyle \operatorname {Pref} _{L}(s)=\{t\vert s=tu{\mbox{ for }}t,u\in \operatorname {Alph} (L)^{*}\}}" /></span></dd>
+</dl>
+<p>here <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>L</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\in L}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ad374fe76889fd39cb1ae7aca93f9e827492eb29" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.545ex; height:2.176ex;" alt="{\displaystyle s\in L}" /></span>. aqui <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>L</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\in L}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ad374fe76889fd39cb1ae7aca93f9e827492eb29" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.545ex; height:2.176ex;" alt="{\displaystyle s\in L}" /></span>.</p>
+<p>A <b>conjectura de prefixo de uma linguagem</b> é</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munder>
+          <mo>&#x22C3;<!-- ⋃ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>s</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mi>L</mi>
+          </mrow>
+        </munder>
+        <msub>
+          <mi>Pref</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>{</mo>
+          <mi>t</mi>
+          <mo fence="false" stretchy="false">|</mo>
+          <mi>s</mi>
+          <mo>=</mo>
+          <mi>t</mi>
+          <mi>u</mi>
+          <mo>;</mo>
+          <mi>s</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mi>L</mi>
+          <mo>;</mo>
+          <mi>t</mi>
+          <mo>,</mo>
+          <mi>u</mi>
+          <mo>&#x2208;<!-- ∈ --></mo>
+          <mi>Alph</mi>
+          <mo>&#x2061;<!-- ⁡ --></mo>
+          <mo stretchy="false">(</mo>
+          <mi>L</mi>
+          <msup>
+            <mo stretchy="false">)</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo>&#x2217;<!-- ∗ --></mo>
+            </mrow>
+          </msup>
+          <mo>}</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Pref} (L)=\bigcup _{s\in L}\operatorname {Pref} _{L}(s)=\left\{t\vert s=tu;s\in L;t,u\in \operatorname {Alph} (L)^{*}\right\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8f2f8b3ee4fc9d150f47227522fcbf78255d01ec" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:59.363ex; height:5.676ex;" alt="{\displaystyle \operatorname {Pref} (L)=\bigcup _{s\in L}\operatorname {Pref} _{L}(s)=\left\{t\vert s=tu;s\in L;t,u\in \operatorname {Alph} (L)^{*}\right\}}" /></span></dd>
+</dl>
+<p><b>Exemplo:</b><br />
+<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>L</mi>
+        <mo>=</mo>
+        <mrow>
+          <mo>{</mo>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mi>c</mi>
+          <mo>}</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;then&#xA0;</mtext>
+        </mrow>
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>{</mo>
+          <mi>&#x03B5;<!-- ε --></mi>
+          <mo>,</mo>
+          <mi>a</mi>
+          <mo>,</mo>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mo>,</mo>
+          <mi>a</mi>
+          <mi>b</mi>
+          <mi>c</mi>
+          <mo>}</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle L=\left\{abc\right\}{\mbox{ then }}\operatorname {Pref} (L)=\left\{\varepsilon ,a,ab,abc\right\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/25826bcafa16288f0e2b34de787009515ef46faf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:40.953ex; height:2.843ex;" alt="{\displaystyle L=\left\{abc\right\}{\mbox{ then }}\operatorname {Pref} (L)=\left\{\varepsilon ,a,ab,abc\right\}}" /></span></p>
+<p>Uma linguagem é chamada <b>fechada em prefixo</b> se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>L</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Pref} (L)=L}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5fba0b283283551c45d56a2afa7571dd29177db3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.406ex; height:2.843ex;" alt="{\displaystyle \operatorname {Pref} (L)=L}" /></span>.</p>
+<p>O operador de conjectura de prefixo é idempotente:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>Pref</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Pref} (\operatorname {Pref} (L))=\operatorname {Pref} (L)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e08d8ee94c1daa430a4f88f8ab4786e7da5c06a1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:24.628ex; height:2.843ex;" alt="{\displaystyle \operatorname {Pref} (\operatorname {Pref} (L))=\operatorname {Pref} (L)}" /></span></dd>
+</dl>
+<p>A <b>relação de prefixo</b> é a relação binária <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2291;<!-- ⊑ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sqsubseteq }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af6da11aff8e51f703a5961c97ab99d532731e3d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.819ex; height:2.509ex;" alt="{\displaystyle \sqsubseteq }" /></span> tal que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x2291;<!-- ⊑ --></mo>
+        <mi>t</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\sqsubseteq t}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/10711b3ca349da5b93c7217e234aa9ba65ed7ff2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.06ex; height:2.509ex;" alt="{\displaystyle s\sqsubseteq t}" /></span> se e somente se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <msub>
+          <mi>Pref</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\in \operatorname {Pref} _{L}(t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b6f434b296f8306c6a9d40634eb2b72ea9da268" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.272ex; height:2.843ex;" alt="{\displaystyle s\in \operatorname {Pref} _{L}(t)}" /></span>. Essa relação é um exemplo particular de uma ordem de prefixo.</p>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=9" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=9" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Cadeia_de_caracteres" title="Cadeia de caracteres">Cadeia de caracteres</a></li>
+</ul>
+<h2><span class="mw-headline" id="Notas">Notas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=10" class="mw-editsection-visualeditor" title="Editar secção: Notas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=10" title="Editar secção: Notas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-4"><span class="mw-cite-backlink"><a href="#cite_ref-4">↑</a></span> <span class="reference-text">Contudo toda linguagem regular é também livre de contexto, o primeiro teorema não é implicado pelo segundo, uma vez que o primeiro retorna um resultado modelado para linguagens regulares.</span></li>
+<li id="cite_note-singleton_sets-5"><span class="mw-cite-backlink"><a href="#cite_ref-singleton_sets_5-0">↑</a></span> <span class="reference-text">Formalmente, um homomofismo retorna uma linguagem que consiste em apenas uma cadeia, i.e. <i>f</i>(<i>a</i>) = {<i>s</i>}.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><a href="#cite_ref-8">↑</a></span> <span class="reference-text">Isto segue da conjectura de substituição de cadeias sobre substituições arbitrarias.</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Refer.C3.AAncias">Referências</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit&amp;vesection=11" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;section=11" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation book">Hopcroft, John E.; Ullman, Jeffrey D. (1979). <i>Introduction to Automata Theory, Languages and Computation</i> (Reading, Massachusetts: Addison-Wesley Publishing). <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/0-201-02988-X" title="Especial:Fontes de livros/0-201-02988-X">0-201-02988-X</a>. <a href="/wiki/Zentralblatt_MATH" title="Zentralblatt MATH">Zbl</a>&#160;<a rel="nofollow" class="external text" href="//zbmath.org/?format=complete&amp;q=an:0426.68001">0426.68001</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AOpera%C3%A7%C3%B5es+em+cadeias+de+caracteres&amp;rft.aufirst=John+E.&amp;rft.aulast=Hopcroft&amp;rft.au=Ullman%2C+Jeffrey+D.&amp;rft.btitle=Introduction+to+Automata+Theory%2C+Languages+and+Computation&amp;rft.date=1979&amp;rft.genre=book&amp;rft_id=%2F%2Fzbmath.org%2F%3Fformat%3Dcomplete%26q%3Dan%3A0426.68001&amp;rft.isbn=0-201-02988-X&amp;rft.place=Reading%2C+Massachusetts&amp;rft.pub=Addison-Wesley+Publishing&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <i>(See chapter 3.)</i></li>
+</ul>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.3.2, p.60</span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.3.2, Theorem 3.4, p.60</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.6.2, Theorem 6.2, p.131</span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><a href="#cite_ref-6">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.3.2, p.60-61</span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><a href="#cite_ref-7">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.3.2, Theorem 3.5, p.61</span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><a href="#cite_ref-9">↑</a></span> <span class="reference-text">Hopcroft, Ullman (1979), Sect.6.2, Theorem 6.3, p.132</span></li>
+</ol>
+</div>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:4637719-0!*!0!!pt!4!*!math=5 and timestamp 20160901035524 and revision id 44189720
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Operações_em_cadeias_de_caracteres&amp;oldid=44189720">https://pt.wikipedia.org/w/index.php?title=Operações_em_cadeias_de_caracteres&amp;oldid=44189720</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Linguagens_formais" title="Categoria:Linguagens formais">Linguagens formais</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoria oculta: <ul><li><a href="/wiki/Categoria:!Artigos_possivelmente_n%C3%A3o_enciclop%C3%A9dicos" title="Categoria:!Artigos possivelmente não enciclopédicos">!Artigos possivelmente não enciclopédicos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Opera%C3%A7%C3%B5es+em+cadeias+de+caracteres" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Opera%C3%A7%C3%B5es+em+cadeias+de+caracteres" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Opera%C3%A7%C3%B5es+em+cadeias+de+caracteres">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Opera%C3%A7%C3%B5es+em+cadeias+de+caracteres&amp;returnto=Opera%C3%A7%C3%B5es+em+cadeias+de+caracteres&amp;oldid=44189720&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;oldid=44189720" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q7623989" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;id=44189720" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/String_operations" title="String operations — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%90%E7%AE%97" title="字符串运算 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q7623989#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 02h16min de 13 de dezembro de 2015.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Opera%C3%A7%C3%B5es_em_cadeias_de_caracteres&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.129",
+            "walltime": "0.205",
+            "ppvisitednodes": {
+                "value": 599,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 4296,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 702,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 7,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   92.065      1 -total",
+                " 58.60%   53.950      1 Predefinição:Cite_book",
+                " 10.59%    9.749      2 Predefinição:Reflist",
+                " 10.10%    9.294      1 Predefinição:Não_enciclopédico",
+                "  6.60%    6.075      1 Predefinição:Artigo_principal",
+                "  6.26%    5.759      1 Predefinição:Ambox",
+                "  2.43%    2.239      1 Predefinição:Truncar"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.024",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 1401808,
+                "limit": 52428800
+            }
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1179",
+            "timestamp": "20160901035524",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":87,"wgHostname":"mw1184"});});</script>
+	</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Problema do caminho mínimo – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Problema_do_caminho_mínimo","wgTitle":"Problema do caminho mínimo","wgCurRevisionId":46669049,"wgRevisionId":46669049,"wgArticleId":129869,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Páginas que usam referências com parâmetros depreciadas","!Páginas com referências sem URL e com acessodata","Teoria dos grafos","Pesquisa operacional"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Problema_do_caminho_mínimo","wgRelevantArticleId":129869,"wgRequestId":"V9ai1QpAIDMAAEgGnIAAAAAY","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q1058754","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Problema_do_caminho_m%C3%ADnimo"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Problema_do_caminho_m%C3%ADnimo"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Problema_do_caminho_mínimo rootpage-Problema_do_caminho_mínimo skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Problema do caminho mínimo</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:269px;"><a href="/wiki/Ficheiro:Prim_Algorithm_0.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/d/d6/Prim_Algorithm_0.png" width="267" height="258" class="thumbimage" data-file-width="267" data-file-height="258" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Prim_Algorithm_0.png" class="internal" title="Ampliar"></a></div>
+O caminho mínimo entre <i>D</i> e <i>E</i> não é D-E, mas sim D-F-E, com uma distância de 14.</div>
+</div>
+</div>
+<p>Na <a href="/wiki/Teoria_dos_grafos" title="Teoria dos grafos">teoria de grafos</a>, o <b>problema do caminho mínimo</b> consiste na minimização do <i>custo</i> de travessia de um <a href="/wiki/Grafo" class="mw-redirect" title="Grafo">grafo</a> entre dois nós (ou vértices); custo este dado pela soma dos pesos de cada <a href="/wiki/Aresta" title="Aresta">aresta</a> percorrida.</p>
+<p>Formalmente, dado um <a href="/wiki/Grafo_valorado" title="Grafo valorado">grafo valorado</a> (ou seja, um conjunto <i>V</i> de vértices, um conjunto <i>A</i> de arestas e uma função de peso <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>:</mo>
+        <mi>A</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">R</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f:A\to \mathbb {R} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/29b96eb73b42abe3f9b5fc1b9a94dece18f9abf5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.303ex; height:2.676ex;" alt="{\displaystyle f:A\to \mathbb {R} }" /></span>) e, dado qualquer elemento <i>v</i> de <i>V</i>, encontrar um caminho <i>P</i> de <i>v</i> para cada <i>v'</i> de <i>V</i> tal que</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>p</mi>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mi>P</mi>
+          </mrow>
+        </munder>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>p</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sum _{p\in P}f(p)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/75e0421851a9eb44e0cd24929821dd9ae38723b1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:8.052ex; height:5.843ex;" alt="{\displaystyle \sum _{p\in P}f(p)}" /></span></dd>
+</dl>
+<p>é mínimo entre todos os caminhos conectando <i>n</i> a <i>n'</i>.</p>
+<p>Em programação dinâmica, podemos escolher um subproblema de modo que toda a informação vital seja recordada e levada adiante. Assim, vamos definir que para cada vértice <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.138ex; height:1.676ex;" alt="v" /></span> e cada inteiro <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>i</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>k</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle i\leq k}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/99621c1f347c9aa256c050c36d077177f95651be" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.144ex; height:2.509ex;" alt="{\displaystyle i\leq k}" /></span> , <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>d</mi>
+        <mi>i</mi>
+        <mi>s</mi>
+        <mi>t</mi>
+        <mo stretchy="false">(</mo>
+        <mi>v</mi>
+        <mo>,</mo>
+        <mi>i</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle dist(v,i)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8440a0f6f9003936429eb3c1e2cbf7784a42636d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.816ex; height:2.843ex;" alt="{\displaystyle dist(v,i)}" /></span> como o menor caminho de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/01d131dfd7673938b947072a13a9744fe997e632" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.101ex; height:1.676ex;" alt="s" /></span> até <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.138ex; height:1.676ex;" alt="v" /></span> que usa <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>i</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle i}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/add78d8608ad86e54951b8c8bd6c8d8416533d20" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:0.813ex; height:2.176ex;" alt="i" /></span> arestas. Os valores iniciais de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>d</mi>
+        <mi>i</mi>
+        <mi>s</mi>
+        <mi>t</mi>
+        <mo stretchy="false">(</mo>
+        <mi>v</mi>
+        <mo>,</mo>
+        <mn>0</mn>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle dist(v,0)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e898235420f968c89e9b6b2d27eb866570b19d5e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.176ex; height:2.843ex;" alt="{\displaystyle dist(v,0)}" /></span> são <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \infty }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c26c105004f30c27aa7c2a9c601550a4183b1f21" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:1.676ex;" alt="\infty " /></span> para todos os vértices exceto <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/01d131dfd7673938b947072a13a9744fe997e632" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.101ex; height:1.676ex;" alt="s" /></span>, para o qual é 0. E a equação geral de atualização é:</p>
+<p><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>d</mi>
+        <mi>i</mi>
+        <mi>s</mi>
+        <mi>t</mi>
+        <mo stretchy="false">(</mo>
+        <mi>v</mi>
+        <mo>,</mo>
+        <mi>i</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munder>
+          <mo movablelimits="true" form="prefix">min</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">(</mo>
+            <mi>u</mi>
+            <mo>,</mo>
+            <mi>v</mi>
+            <mo stretchy="false">)</mo>
+            <mo>&#x2208;<!-- ∈ --></mo>
+            <mi>E</mi>
+          </mrow>
+        </munder>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>d</mi>
+        <mi>i</mi>
+        <mi>s</mi>
+        <mi>t</mi>
+        <mo stretchy="false">(</mo>
+        <mi>u</mi>
+        <mo>,</mo>
+        <mi>i</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>l</mi>
+        <mo stretchy="false">(</mo>
+        <mi>u</mi>
+        <mo>,</mo>
+        <mi>v</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle dist(v,i)=\min _{(u,v)\in E}\{dist(u,i-1)+l(u,v)\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/046e6c4ceff0b7b1478d9e6929bc267aa31246f2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:42.097ex; height:4.509ex;" alt="{\displaystyle dist(v,i)=\min _{(u,v)\in E}\{dist(u,i-1)+l(u,v)\}}" /></span></p>
+<p>Existem várias variantes para problemas de caminho mínimo, cada uma adequada a um conjunto de problemas diferente:</p>
+<ul>
+<li>Problema de único destino: consiste em determinar o menor caminho entre cada um dos nós do grafo e um nó de destino dado.</li>
+<li>Problema de único origem: determinar o menor caminho entre um nó dado e todos os demais nós do grafo.</li>
+<li>Problema de origem-destino: determinar o menor caminho entre nós dados.</li>
+<li>Problemas de todos os pares: determinar o menor caminho entre cada par de nós presentes no grafo.</li>
+</ul>
+<p>Os algoritmos especializados em solucionar o problema do caminho mínimo são eventualmente chamados de <i>algoritmos de busca de caminhos</i>. Entre os algoritmos dessa classe, os mais conhecidos são:</p>
+<ul>
+<li><a href="/wiki/Algoritmo_de_Dijkstra" title="Algoritmo de Dijkstra">Algoritmo de Dijkstra</a> &#160;— Resolve o problema com um vértice-fonte em grafos cujas arestas tenham peso maior ou igual a zero. Sem reduzir o desempenho, este algoritmo é capaz de determinar o caminho mínimo, partindo de um vértice de início <i>v</i> para <i>todos</i> os outros vértices do grafo.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></li>
+<li><a href="/wiki/Algoritmo_de_Bellman-Ford" title="Algoritmo de Bellman-Ford">Algoritmo de Bellman-Ford</a> &#160;— Resolve o problema para grafos com um vértice-fonte e arestas que podem ter pesos negativos.</li>
+<li><a href="/wiki/Algoritmo_A*" title="Algoritmo A*">Algoritmo A*</a> &#160;— um algoritmo <a href="/wiki/Heur%C3%ADstica" title="Heurística">heurístico</a> que calcula o caminho mínimo com um vértice-fonte.</li>
+<li><a href="/wiki/Algoritmo_de_Floyd-Warshall" title="Algoritmo de Floyd-Warshall">Algoritmo de Floyd-Warshall</a> &#160;— Determina a distância entre todos os pares de vértices de um grafo.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></li>
+<li><a href="/wiki/Algoritmo_de_Johnson" title="Algoritmo de Johnson">Algoritmo de Johnson</a> &#160;— Determina a distância entre todos os pares de vértices de um grafo, pode ser mais veloz que o algoritmo de Floyd-Warshall em <a href="/w/index.php?title=Grafos_esparsos&amp;action=edit&amp;redlink=1" class="new" title="Grafos esparsos (página não existe)">grafos esparsos</a>.</li>
+</ul>
+<p>O problema de caminho mínimo é um dos problemas genéricos intensamente estudados e utilizados em diversas áreas como Engenharia de Transportes, Pesquisa Operacional, Ciência da Computação e Inteligência Artificial. Isso decorre do seu potencial de aplicação a inúmeros problemas práticos que ocorrem em transportes, logística, redes de computadores e de telecomunicações, etc.</p>
+<p>Outras possibilidades de aplicação incluem quaisquer problemas envolvendo redes ou grafos em que se tenha grandezas (distâncias, tempo, perdas, ganhos, despesas) que se acumulem linearmente ao longo do percurso da rede.</p>
+<p>Um problema relacionado é o <a href="/wiki/Problema_do_Caixeiro-viajante" class="mw-redirect" title="Problema do Caixeiro-viajante">Problema do Caixeiro-viajante</a>, que consiste em determinar o caminho mais curto que passa exatamente uma vez por cada vértice e retorna ao vértice de partida. Este é um problema <a href="/wiki/NP-Completo" class="mw-redirect" title="NP-Completo">NP-Completo</a>, para os quais não há uma solução eficiente.</p>
+<h2 style="cursor: help;" title="Esta seção foi configurada para não ser editável diretamente. Edite a página toda ou a seção anterior em vez disso."><span class="mw-headline" id="Refer.C3.AAncias">Referências</span></h2>
+<div class="reflist references-small" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><cite class="citation book">Christian Pretzsch (2007). <a rel="nofollow" class="external text" href="http://books.google.com.br/books?id=E753lIgTIRgC&amp;pg=PA47&amp;dq=Dijkstra's+algorithm+source+vertex+graphs&amp;hl=pt-BR&amp;sa=X&amp;ei=D-J8UoGCDpK1kQejhYGADQ&amp;ved=0CC8Q6AEwAA#v=onepage&amp;q=Dijkstra's%20algorithm%20source%20vertex%20graphs&amp;f=false"><i>IT-Case Study: Ontology-Based Answer Selection in Dialog Systems</i></a> (em inglês) (USA: VDM Verlag Dr. Mueller e.K). <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/978-3836405102" title="Especial:Fontes de livros/978-3836405102">978-3836405102</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AProblema+do+caminho+m%C3+nimo&amp;rft.au=Christian+Pretzsch&amp;rft.btitle=IT-Case+Study%3A+Ontology-Based+Answer+Selection+in+Dialog+Systems&amp;rft.date=2007&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com.br%2Fbooks%3Fid%3DE753lIgTIRgC%26pg%3DPA47%26dq%3DDijkstra%27s%2Balgorithm%2Bsource%2Bvertex%2Bgraphs%26hl%3Dpt-BR%26sa%3DX%26ei%3DD-J8UoGCDpK1kQejhYGADQ%26ved%3D0CC8Q6AEwAA%23v%3Donepage%26q%3DDijkstra%27s%2520algorithm%2520source%2520vertex%2520graphs%26f%3Dfalse&amp;rft.isbn=978-3836405102&amp;rft.place=USA&amp;rft.pub=VDM+Verlag+Dr.+Mueller+e.K&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text"><cite class="citation book">Baras, John; George Theodorakopoulos (2010). <i>Path Problems in Networks</i> Morgan &amp; Claypool Publishers [S.l.] p.&#160;5. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/9781598299243" title="Especial:Fontes de livros/9781598299243">9781598299243</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AProblema+do+caminho+m%C3+nimo&amp;rft.aufirst=John&amp;rft.aulast=Baras&amp;rft.btitle=Path+Problems+in+Networks&amp;rft.date=2010&amp;rft.genre=book&amp;rft.isbn=9781598299243&amp;rft.pages=5&amp;rft.pub=Morgan+%26+Claypool+Publishers&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">A referência emprega parâmetros obsoletos (<a href="/wiki/Ajuda:Erros_nas_refer%C3%AAncias#deprecated_params" title="Ajuda:Erros nas referências">Ajuda</a>);</span> <span style="display:none;font-size:100%" class="error citation-comment"><code style="color:inherit; border:inherit; padding:inherit;">|access-date=</code> requer <code style="color:inherit; border:inherit; padding:inherit;">|url=</code> (<a href="/wiki/Ajuda:Erros_nas_refer%C3%AAncias#accessdate_missing_url" title="Ajuda:Erros nas referências">Ajuda</a>)</span></span></li>
+</ol>
+</div>
+<ul>
+<li><cite class="citation book">Andrew V. Goldberg (2009). <i>The Shortest Path Problem (Dimacs Series in Discrete Mathematics and Theoretical Computer Science)</i> (USA: American Mathematical Society). <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/978-0821843833" title="Especial:Fontes de livros/978-0821843833">978-0821843833</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AProblema+do+caminho+m%C3+nimo&amp;rft.au=Andrew+V.+Goldberg&amp;rft.btitle=The+Shortest+Path+Problem+%28Dimacs+Series+in+Discrete+Mathematics+and+Theoretical+Computer+Science%29&amp;rft.date=2009&amp;rft.genre=book&amp;rft.isbn=978-0821843833&amp;rft.place=USA&amp;rft.pub=American+Mathematical+Society&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<ul class="noprint" style="border-top: solid silver 1px; border-bottom:1px solid silver; padding:3px; background-color: #F9F9F9; text-align: center; margin-top:10px; margin-left: 0; clear: both;">
+<li style="display: inline;"><span style="white-space: nowrap; margin: auto 1.5em"><span style="margin-right: 0.5em"><a href="/wiki/Ficheiro:Nuvola_apps_edu_mathematics-p.svg" title="Portal da matemática"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/25px-Nuvola_apps_edu_mathematics-p.svg.png" width="25" height="25" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/38px-Nuvola_apps_edu_mathematics-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/50px-Nuvola_apps_edu_mathematics-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a></span> <span style="font-weight:bold"><a href="/wiki/Portal:Matem%C3%A1tica" title="Portal:Matemática">Portal da matemática</a></span></span></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:129869-0!*!0!*!*!4!*!math=5 and timestamp 20160909113040 and revision id 46669049
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Problema_do_caminho_mínimo&amp;oldid=46669049">https://pt.wikipedia.org/w/index.php?title=Problema_do_caminho_mínimo&amp;oldid=46669049</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:Teoria_dos_grafos" title="Categoria:Teoria dos grafos">Teoria dos grafos</a></li><li><a href="/wiki/Categoria:Pesquisa_operacional" title="Categoria:Pesquisa operacional">Pesquisa operacional</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categorias ocultas: <ul><li><a href="/wiki/Categoria:!P%C3%A1ginas_que_usam_refer%C3%AAncias_com_par%C3%A2metros_depreciadas" title="Categoria:!Páginas que usam referências com parâmetros depreciadas">!Páginas que usam referências com parâmetros depreciadas</a></li><li><a href="/wiki/Categoria:!P%C3%A1ginas_com_refer%C3%AAncias_sem_URL_e_com_acessodata" title="Categoria:!Páginas com referências sem URL e com acessodata">!Páginas com referências sem URL e com acessodata</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Problema+do+caminho+m%C3%ADnimo" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Problema+do+caminho+m%C3%ADnimo" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Problema_do_caminho_m%C3%ADnimo"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Problema_do_caminho_m%C3%ADnimo"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Problema_do_caminho_m%C3%ADnimo" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Problema+do+caminho+m%C3%ADnimo">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Problema+do+caminho+m%C3%ADnimo&amp;returnto=Problema+do+caminho+m%C3%ADnimo&amp;oldid=46669049&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Problema_do_caminho_m%C3%ADnimo" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Problema_do_caminho_m%C3%ADnimo" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;oldid=46669049" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1058754" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Problema_do_caminho_m%C3%ADnimo&amp;id=46669049" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Problema_del_cam%C3%AD_m%C3%A9s_curt" title="Problema del camí més curt — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/K%C3%BCrzester_Pfad" title="Kürzester Pfad — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Shortest_path_problem" title="Shortest path problem — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Problema_del_camino_m%C3%A1s_corto" title="Problema del camino más corto — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B3%D8%A6%D9%84%D9%87_%DB%8C%D8%A7%D9%81%D8%AA%D9%86_%DA%A9%D9%88%D8%AA%D8%A7%D9%87%D8%AA%D8%B1%DB%8C%D9%86_%D9%85%D8%B3%DB%8C%D8%B1" title="مسئله یافتن کوتاهترین مسیر — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_plus_court_chemin" title="Problème de plus court chemin — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Jarak_terpendek" title="Jarak terpendek — indonésio" lang="id" hreflang="id">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Cammino_minimo" title="Cammino minimo — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E6%9C%80%E7%9F%AD%E7%B5%8C%E8%B7%AF%E5%95%8F%E9%A1%8C" title="最短経路問題 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%B5%9C%EB%8B%A8_%EA%B2%BD%EB%A1%9C_%EB%AC%B8%EC%A0%9C" title="최단 경로 문제 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Trumpiausio_kelio_problema" title="Trumpiausio kelio problema — lituano" lang="lt" hreflang="lt">Lietuvių</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Jarak_terpendek" title="Jarak terpendek — malaio" lang="ms" hreflang="ms">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Problem_najkr%C3%B3tszej_%C5%9Bcie%C5%BCki" title="Problem najkrótszej ścieżki — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE_%D0%BA%D1%80%D0%B0%D1%82%D1%87%D0%B0%D0%B9%D1%88%D0%B5%D0%BC_%D0%BF%D1%83%D1%82%D0%B8" title="Задача о кратчайшем пути — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Problem_najkra%C4%87eg_puta" title="Problem najkraćeg puta — sérvio" lang="sr" hreflang="sr">Српски / srpski</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%9B%E0%B8%B1%E0%B8%8D%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%96%E0%B8%B5%E0%B8%AA%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%AA%E0%B8%B8%E0%B8%94" title="ปัญหาวิถีสั้นสุด — tailandês" lang="th" hreflang="th">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BF%D1%80%D0%BE_%D0%BD%D0%B0%D0%B9%D0%BA%D0%BE%D1%80%D0%BE%D1%82%D1%88%D0%B8%D0%B9_%D1%88%D0%BB%D1%8F%D1%85" title="Задача про найкоротший шлях — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-ur"><a href="https://ur.wikipedia.org/wiki/%DA%A9%D9%85%D8%AA%D8%B1%DB%8C%D9%86_%D8%B1%D8%B3%D8%AA%DB%81_%D8%A7%D9%84%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85" title="کمترین رستہ الخوارزم — urdu" lang="ur" hreflang="ur">اردو</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/B%C3%A0i_to%C3%A1n_%C4%91%C6%B0%E1%BB%9Dng_%C4%91i_ng%E1%BA%AFn_nh%E1%BA%A5t" title="Bài toán đường đi ngắn nhất — vietnamita" lang="vi" hreflang="vi">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E7%9F%AD%E8%B7%AF%E9%97%AE%E9%A2%98" title="最短路问题 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1058754#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 11h30min de 9 de setembro de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Problema_do_caminho_m%C3%ADnimo&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","ext.cite.a11y","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.164",
+            "walltime": "0.251",
+            "ppvisitednodes": {
+                "value": 820,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 9334,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 232,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 8,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "entityaccesscount": {
+                "value": 0,
+                "limit": 400
+            },
+            "timingprofile": [
+                "100.00%  149.702      1 -total",
+                " 48.72%   72.929      1 Predefinição:Referências",
+                " 48.08%   71.983      1 Predefinição:Portal3",
+                " 46.30%   69.318      1 Predefinição:Portal3/Portais",
+                " 43.17%   64.629      3 Predefinição:Citar_livro",
+                "  1.94%    2.906      1 Predefinição:Portal3/Suporte",
+                "  0.89%    1.332      1 Predefinição:Esconder_link_para_editar_seção"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.040",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 1725152,
+                "limit": 52428800
+            }
+        },
+        "cachereport": {
+            "origin": "mw1264",
+            "timestamp": "20160909113038",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":81,"wgHostname":"mw1181"});});</script>
+	</body>
+</html>

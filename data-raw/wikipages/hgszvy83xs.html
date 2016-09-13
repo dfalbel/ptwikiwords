@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Espiral de Ulam – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Espiral_de_Ulam","wgTitle":"Espiral de Ulam","wgCurRevisionId":44448061,"wgRevisionId":44448061,"wgArticleId":1049904,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Esboços sobre matemática","!Esboços maiores que 1000 bytes","Curvas","Números primos"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Espiral_de_Ulam","wgRelevantArticleId":1049904,"wgRequestId":"V9b39QpAIDMAAAuG3acAAABW","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q842172","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Espiral_de_Ulam"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Espiral_de_Ulam&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Espiral_de_Ulam&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Espiral_de_Ulam"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Espiral_de_Ulam rootpage-Espiral_de_Ulam skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Espiral de Ulam</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Spirale_Ulam_150.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Spirale_Ulam_150.jpg/220px-Spirale_Ulam_150.jpg" width="220" height="221" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/34/Spirale_Ulam_150.jpg/330px-Spirale_Ulam_150.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/34/Spirale_Ulam_150.jpg/440px-Spirale_Ulam_150.jpg 2x" data-file-width="750" data-file-height="752" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Spirale_Ulam_150.jpg" class="internal" title="Ampliar"></a></div>
+A espiral de Ulam. Os pontos vermelhos representam números primos; os pontos azuis representam números compostos, com o tamanho do ponto indicando o nível de composição. <i>(clique na imagem para ampliar)</i></div>
+</div>
+</div>
+<p>A <b>Espiral de Ulam</b>, ou <b>Espiral dos Primos</b>, é um método simples de representar os <a href="/wiki/N%C3%BAmeros_primos" class="mw-redirect" title="Números primos">números primos</a> por intermédio de um <a href="/wiki/Teoria_de_Grafos" class="mw-redirect" title="Teoria de Grafos">grafo</a> e que revela um padrão que permanece por explicar. Foi descoberta pelo <a href="/wiki/Matem%C3%A1tico" title="Matemático">matemático</a> <a href="/wiki/Stanis%C5%82aw_Ulam" title="Stanisław Ulam">Stanisław Ulam</a> em <a href="/wiki/1963" title="1963">1963</a>, enquanto <a href="/wiki/Doodle" title="Doodle">rabiscava distraidamente</a> num papel por estar entediado durante um encontro científico.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup> Ulam, aborrecido, desenhou um <a href="/wiki/Teoria_de_Grafos" class="mw-redirect" title="Teoria de Grafos">grafo</a> com números, começando com o 1 no centro e prosseguindo, em espiral, para o exterior:</p>
+<div class="center">
+<div class="floatnone"><a href="/wiki/Ficheiro:Ulam-Spirale1.png" class="image" title="Números de 1 a 5 em espiral"><img alt="Números de 1 a 5 em espiral" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ulam-Spirale1.png/250px-Ulam-Spirale1.png" width="250" height="167" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ulam-Spirale1.png/375px-Ulam-Spirale1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ulam-Spirale1.png/500px-Ulam-Spirale1.png 2x" data-file-width="1800" data-file-height="1200" /></a></div>
+</div>
+<p>Então, assinalou todos os primos e obteve a seguinte figura:</p>
+<div class="center">
+<div class="floatnone"><a href="/wiki/Ficheiro:Ulam-Spirale2.png" class="image" title="Espiral de Ulam (pequena)"><img alt="Espiral de Ulam (pequena)" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ulam-Spirale2.png/250px-Ulam-Spirale2.png" width="250" height="167" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ulam-Spirale2.png/375px-Ulam-Spirale2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ulam-Spirale2.png/500px-Ulam-Spirale2.png 2x" data-file-width="1800" data-file-height="1200" /></a></div>
+</div>
+<p>Verificou, surpreendido, que os números assinalados tendiam a agrupar-se segundo <a href="/wiki/Diagonal" class="mw-disambig" title="Diagonal">diagonais</a>. A imagem abaixo é de uma Espiral de Ulam 200×200, onde os números primos estão assinalados a preto. As diagonais são perfeitamente visíveis, confirmando o padrão.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup></p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/Ficheiro:Ulam_1.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ulam_1.png/250px-Ulam_1.png" width="250" height="250" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Ulam_1.png/375px-Ulam_1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/6/69/Ulam_1.png 2x" data-file-width="400" data-file-height="400" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Ulam_1.png" class="internal" title="Ampliar"></a></div>
+Espiral de Ulam (200×200)</div>
+</div>
+</div>
+<p>Todos os números primos, excepto o 2, são <a href="/wiki/%C3%8Dmpar" class="mw-redirect" title="Ímpar">ímpares</a>. Como na Espiral de Ulam as diagonais adjacentes são, alternadamente, pares e ímpares, é normal que todos os números primos estejam em diagonais alternadas. No entanto, é curiosa a tendência de certas diagonais terem mais números primos do que outras.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup></p>
+<p>Até agora, os testes confirmaram que há diagonais mesmo quando se representa uma quantidade muito grande de números. O padrão também parece manter-se mesmo que o número do centro não seja 1 (pode ser muito maior que 1). Isto implica que há várias constantes inteiras <i>b</i> e <i>c</i> tais que a função:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mn>4</mn>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(n)=4n^{2}+bn+c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bf900ad4e657d8bc8c20c0f8a35cde9f5845fbf0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:20.405ex; height:3.176ex;" alt="{\displaystyle f(n)=4n^{2}+bn+c}" /></span></dd>
+</dl>
+<p>gera uma quantidade de números primos (com n = 1, 2, 3, ...) que é grande comparada com a proporção de números primos entre números de magnitude semelhante. Esta descoberta foi tão significativa que a Espiral de Ulam apareceu na capa da <i><a href="/wiki/Scientific_American" title="Scientific American">Scientific American</a></i> em Março de <a href="/wiki/1964" title="1964">1964</a>.</p>
+<p>A uma distância suficiente do centro, também são perfeitamente visíveis linhas horizontais e verticais.</p>
+<h2><span class="mw-headline" id="Variantes">Variantes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Espiral_de_Ulam&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Variantes">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Espiral_de_Ulam&amp;action=edit&amp;section=1" title="Editar secção: Variantes">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Outras variantes da Espiral de Ulam, como a <a href="/wiki/Espiral_de_Sacks" title="Espiral de Sacks">Espiral de Sacks</a>, também têm padrões que estão por explicar.</p>
+<h2 style="cursor: help;" title="Esta seção foi configurada para não ser editável diretamente. Edite a página toda ou a seção anterior em vez disso."><span class="mw-headline" id="Refer.C3.AAncias">Referências</span></h2>
+<div class="reflist references-small" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><span class="citation" id="CITEREFGardner1964"><a href="/wiki/Martin_Gardner" title="Martin Gardner">Gardner, M.</a> (March 1964), <a rel="nofollow" class="external text" href="http://www.scientificamerican.com/article/mathematical-games-1964-03/">"<b>Mathematical Games: The Remarkable Lore of the Prime Numbers</b>"</a>, <i><a href="/wiki/Scientific_American" title="Scientific American">Scientific American</a></i> <b>210</b>: 120–128<span class="printonly">, <a rel="nofollow" class="external free" href="http://www.scientificamerican.com/article/mathematical-games-1964-03/">http://www.scientificamerican.com/article/mathematical-games-1964-03/</a></span></span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=%27%27%27Mathematical+Games%3A+The+Remarkable+Lore+of+the+Prime+Numbers%27%27%27&amp;rft.jtitle=%5B%5BScientific+American%5D%5D&amp;rft.aulast=Gardner&amp;rft.aufirst=M.&amp;rft.au=Gardner%2C%26%2332%3BM.&amp;rft.date=March+1964&amp;rft.volume=210&amp;rft.pages=120%E2%80%93128&amp;rft_id=http%3A%2F%2Fwww.scientificamerican.com%2Farticle%2Fmathematical-games-1964-03%2F&amp;rfr_id=info:sid/en.wikipedia.org:Espiral_de_Ulam"><span style="display: none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><a href="#cite_ref-2">↑</a></span> <span class="reference-text">Stein, M. and Ulam, S. M. (1967), <b>An Observation on the Distribution of Primes</b>. <i>American Mathematical Monthly</i> 74, 43-44. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.2307/2314055">10.2307/2314055</a> <small><a href="/wiki/ISSN" class="mw-redirect" title="ISSN">ISSN</a> <span class="plainlinks"><a rel="nofollow" class="external text" href="http://dispatch.opac.d-nb.de/DB=1.1/LNG=EN/CMD?ACT=SRCHA&amp;IKT=8&amp;TRM=0002-9890">0002-9890</a></span></small> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><a href="#cite_ref-3">↑</a></span> <span class="reference-text">* Stein, M. L.; Ulam, S. M.; and Wells, M. B. (1964), <b>A Visual Display of Some Properties of the Distribution of Primes</b>. <i>American Mathematical Monthly</i> 71, 516-520. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.2307/2312588">10.2307/2312588</a> <small><a href="/wiki/ISSN" class="mw-redirect" title="ISSN">ISSN</a> <span class="plainlinks"><a rel="nofollow" class="external text" href="http://dispatch.opac.d-nb.de/DB=1.1/LNG=EN/CMD?ACT=SRCHA&amp;IKT=8&amp;TRM=0002-9890">0002-9890</a></span></small> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</span></li>
+</ol>
+</div>
+<p><br /></p>
+<div style="clear:both;"></div>
+<table class="navbox hlist noprint collapsible collapsed nowraplinks" style="border-top: solid silver 1px; border-bottom:1px solid silver; margin:auto; background:white;background:white;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;">
+<div style="float:left; width:6em; vertical-align:middle; text-align:left;">
+<div class="noprint plainlinksneverexpand navbar" style="background:none; padding:0; font-weight:normal;;border:none;; font-size:xx-small;"><a href="/wiki/Predefini%C3%A7%C3%A3o:Teoria_dos_n%C3%BAmeros" title="Predefinição:Teoria dos números"><span class="plainlinks" title="Ver esta predefinição" style=";border:none;">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:Teoria_dos_n%C3%BAmeros&amp;action=edit"><span title="Editar esta predefinição" style=";border:none;;">e</span></a></span></div>
+</div>
+<span class="" style="font-size:110%;">Tópicos principais sobre <a href="/wiki/Teoria_dos_n%C3%BAmeros" title="Teoria dos números">teoria dos números</a></span></th>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><b>Fundamentos</b></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;">
+<table class="nowraplinks hlist navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;">Conceitos</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/w/index.php?title=Ad%C3%A8les&amp;action=edit&amp;redlink=1" class="new" title="Adèles (página não existe)">Adèles</a></li>
+<li><a href="/wiki/Criptografia" title="Criptografia">Criptografia</a></li>
+<li><a href="/wiki/Curva_el%C3%ADptica" title="Curva elíptica">Curva elíptica</a></li>
+<li><strong class="selflink">Espiral de Ulam</strong></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_aditiva" title="Função aditiva">Função aditiva</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_geradora" title="Função geradora">Função geradora</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_multiplicativa" title="Função multiplicativa">Função multiplicativa</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_zeta_de_Riemann" title="Função zeta de Riemann">Zeta-Riemann</a></li>
+<li><a href="/wiki/Inteiro_gaussiano" class="mw-redirect" title="Inteiro gaussiano">Inteiro gaussiano</a></li>
+<li><a href="/wiki/N%C3%BAmero_alg%C3%A9brico" title="Número algébrico">Número algébrico</a></li>
+<li><a href="/wiki/Progress%C3%A3o_aritm%C3%A9tica" title="Progressão aritmética">Progressão aritmética</a></li>
+<li><a href="/wiki/Progress%C3%A3o_geom%C3%A9trica" title="Progressão geométrica">Progressão geométrica</a></li>
+<li><a href="/wiki/Teoremas_abeliano_e_tauberiano" title="Teoremas abeliano e tauberiano">Teoremas abeliano e tauberiano</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>Ferramentas</b></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Aritm%C3%A9tica_modular" title="Aritmética modular">Aritmética modular</a></li>
+<li><a href="/wiki/Congru%C3%AAncia_(%C3%A1lgebra)" title="Congruência (álgebra)">Congruência</a></li>
+<li><a href="/wiki/Fatora%C3%A7%C3%A3o_de_inteiros" title="Fatoração de inteiros">Fatoração de inteiros</a></li>
+<li><a href="/wiki/M%C3%A9todo_do_c%C3%ADrculo_de_Hardy_e_Littlewood" title="Método do círculo de Hardy e Littlewood">Método do círculo</a></li>
+<li><a href="/w/index.php?title=N%C3%BAmero_l-%C3%A1dico&amp;action=edit&amp;redlink=1" class="new" title="Número l-ádico (página não existe)">Número l-ádico</a></li>
+<li><a href="/wiki/N%C3%BAmero_p-%C3%A1dico" title="Número p-ádico">Número p-ádico</a></li>
+<li><a href="/w/index.php?title=Somas_gaussianas&amp;action=edit&amp;redlink=1" class="new" title="Somas gaussianas (página não existe)">Somas gaussianas</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>Números notáveis</b></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/N%C3%BAmero_abundante" title="Número abundante">Abundante</a></li>
+<li><a href="/wiki/N%C3%BAmero_de_Carmichael" title="Número de Carmichael">Carmichael</a></li>
+<li><a href="/wiki/N%C3%BAmero_deficiente" class="mw-redirect" title="Número deficiente">Deficiente</a></li>
+<li><a href="/wiki/N%C3%BAmero_de_Fermat" title="Número de Fermat">Fermat</a></li>
+<li><a href="/wiki/N%C3%BAmero_de_Mersenne" title="Número de Mersenne">Número de Mersenne</a></li>
+<li><a href="/wiki/N%C3%BAmero_perfeito" title="Número perfeito">Perfeito</a></li>
+<li><a href="/wiki/N%C3%BAmero_primo" title="Número primo">Primo</a></li>
+<li><a href="/wiki/N%C3%BAmero_quasi-primo" class="mw-redirect" title="Número quasi-primo">Quasi-primo</a></li>
+<li><a href="/wiki/N%C3%BAmero_semiprimo" title="Número semiprimo">Semiprimo</a></li>
+<li><a href="/wiki/Sequ%C3%AAncia_de_Fibonacci" title="Sequência de Fibonacci">Sequência de Fibonacci</a></li>
+<li><a href="/wiki/Sequ%C3%AAncia_de_Lucas" title="Sequência de Lucas">Sequência de Lucas</a></li>
+<li><a href="/wiki/N%C3%BAmero_de_Sierpi%C5%84ski" title="Número de Sierpiński">Sierpiński</a></li>
+<li><a href="/wiki/N%C3%BAmeros_primos_de_Sophie_Germain" class="mw-redirect" title="Números primos de Sophie Germain">Sophie Germain</a></li>
+<li><a href="/wiki/N%C3%BAmeros_superabundantes" title="Números superabundantes">Superabundante</a></li>
+<li><a href="/wiki/Terno_pitag%C3%B3rico" title="Terno pitagórico">Ternas pitagóricas</a></li>
+<li><a href="/wiki/N%C3%BAmero_triangular" title="Número triangular">Triangular</a></li>
+<li><a href="/wiki/Primos_de_Wall%E2%80%93Sun%E2%80%93Sun" title="Primos de Wall–Sun–Sun">Wall–Sun–Sun</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><b><a href="/wiki/Algoritmos" class="mw-redirect" title="Algoritmos">Algoritmos</a></b></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Teste_de_primalidade_AKS" title="Teste de primalidade AKS">AKS</a></li>
+<li><a href="/w/index.php?title=Algoritmo_canguru_de_Pollard&amp;action=edit&amp;redlink=1" class="new" title="Algoritmo canguru de Pollard (página não existe)">Canguru de Pollard</a></li>
+<li><a href="/w/index.php?title=Crivo_especial_sobre_corpo_num%C3%A9rico&amp;action=edit&amp;redlink=1" class="new" title="Crivo especial sobre corpo numérico (página não existe)">Crivo sobre corpo numérico</a></li>
+<li><a href="/wiki/Algoritmo_de_Euclides" title="Algoritmo de Euclides">Euclides</a></li>
+<li><a href="/wiki/Algoritmo_de_Euclides_estendido" title="Algoritmo de Euclides estendido">Euclides estendido</a></li>
+<li><a href="/wiki/F%C3%B3rmula_BBP" title="Fórmula BBP">Fórmula BBP</a></li>
+<li><a href="/wiki/Algoritmo_de_Karatsuba" title="Algoritmo de Karatsuba">Karatsuba</a></li>
+<li><a href="/wiki/Teste_de_primalidade_de_Miller-Rabin" title="Teste de primalidade de Miller-Rabin">Miller-Rabin</a></li>
+<li><a href="/wiki/Algoritmo_de_multiplica%C3%A7%C3%A3o_de_Booth" title="Algoritmo de multiplicação de Booth">Multiplicação de Booth</a></li>
+<li><a href="/w/index.php?title=Algoritmo_p_%E2%88%92_1_de_Pollard&amp;action=edit&amp;redlink=1" class="new" title="Algoritmo p − 1 de Pollard (página não existe)">p − 1 de Pollard</a></li>
+<li><a href="/w/index.php?title=Algoritmo_rho_de_Pollard&amp;action=edit&amp;redlink=1" class="new" title="Algoritmo rho de Pollard (página não existe)">rho-Pollard</a></li>
+<li><a href="/w/index.php?title=Algoritmo_rho_de_Pollard_para_logaritmos&amp;action=edit&amp;redlink=1" class="new" title="Algoritmo rho de Pollard para logaritmos (página não existe)">rho-Pollard para logaritmos</a></li>
+<li><a href="/wiki/Teste_de_primalidade" title="Teste de primalidade">Teste de primalidade</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><a href="/wiki/Constantes" class="mw-redirect" title="Constantes">Constantes</a></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/wiki/Constante_de_Ap%C3%A9ry" title="Constante de Apéry">Apéry</a></li>
+<li><a href="/wiki/Constante_de_Brun" title="Constante de Brun">Brun</a></li>
+<li><a href="/wiki/Constante_de_Catalan" title="Constante de Catalan">Catalan</a></li>
+<li><a href="/wiki/Constante_de_Euler-Mascheroni" title="Constante de Euler-Mascheroni">Euler-Mascheroni</a></li>
+<li><a href="/wiki/Constante_de_Liouville" class="mw-redirect" title="Constante de Liouville">Liouville</a></li>
+<li><a href="/wiki/N%C3%BAmero_de_Euler" title="Número de Euler">Número de Euler</a></li>
+<li><a href="/wiki/Propor%C3%A7%C3%A3o_%C3%A1urea" title="Proporção áurea">Número de Ouro</a></li>
+<li><a href="/wiki/Pi" title="Pi">Pi</a></li>
+<li><a href="/wiki/Conjectura_dos_primos_g%C3%AAmeos" title="Conjectura dos primos gêmeos">Primos gêmeos</a></li>
+<li><a href="/wiki/Unidade_imagin%C3%A1ria" title="Unidade imaginária">Unidade imaginária</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><a href="/wiki/Fun%C3%A7%C3%A3o_aritm%C3%A9tica" title="Função aritmética">Funções aritméticas</a></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_de_contagem_de_n%C3%BAmeros_primos" title="Função de contagem de números primos">Contagem de primos</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_divisor" title="Função divisor">Divisor</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o-peso" title="Função-peso">Função-peso</a></li>
+<li><a href="/wiki/S%C3%ADmbolo_de_Jacobi" title="Símbolo de Jacobi">Jacobi</a></li>
+<li><a href="/wiki/S%C3%ADmbolo_de_Kronecker" title="Símbolo de Kronecker">Kronecker</a></li>
+<li><a href="/wiki/S%C3%ADmbolo_de_Legendre" title="Símbolo de Legendre">Legendre</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_de_M%C3%B6bius" title="Função de Möbius">Möbius</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_de_parti%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função de partição (matemática)">Partição</a></li>
+<li><a href="/w/index.php?title=Fun%C3%A7%C3%A3o_soma_de_divisores&amp;action=edit&amp;redlink=1" class="new" title="Função soma de divisores (página não existe)">Soma de divisores</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_total_de_fatores_primos_incluso_repetidos" title="Função total de fatores primos incluso repetidos">Total de fatores incluso repetidos</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_total_de_fatores_primos_n%C3%A3o_repetidos" title="Função total de fatores primos não repetidos">Total de fatores não repetidos</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_totiente_de_Euler" title="Função totiente de Euler">Totiente de Euler</a></li>
+<li><a href="/wiki/Fun%C3%A7%C3%A3o_de_von_Mangoldt" class="mw-redirect" title="Função de von Mangoldt">von Mangoldt</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><b>História</b></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/wiki/Teoria_dos_n%C3%BAmeros#Hist.C3.B3ria" title="Teoria dos números">História da Teoria dos Números</a></li>
+<li><a href="/wiki/Teoria_aditiva_dos_n%C3%BAmeros" title="Teoria aditiva dos números">Teoria aditiva dos números</a></li>
+<li><a href="/wiki/Teoria_alg%C3%A9brica_dos_n%C3%BAmeros" title="Teoria algébrica dos números">Teoria algébrica dos números</a></li>
+<li><a href="/wiki/Teoria_anal%C3%ADtica_dos_n%C3%BAmeros" title="Teoria analítica dos números">Teoria analítica dos números</a></li>
+<li><a href="/wiki/Teoria_elementar_dos_n%C3%BAmeros#Sobre_a_teoria_elementar_dos_n.C3.BAmeros" class="mw-redirect" title="Teoria elementar dos números">Teoria elementar dos números</a></li>
+<li><a href="/wiki/Teoria_probabil%C3%ADstica_dos_n%C3%BAmeros" title="Teoria probabilística dos números">Teoria probabilística dos números</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><b><a href="/wiki/N%C3%BAmero_de_Erd%C5%91s" title="Número de Erdős">Número de Erdős</a></b></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<table class="nowraplinks hlist navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>igual a 0</b></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Paul_Erd%C5%91s" title="Paul Erdős">Erdős</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>igual a 1</b></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bob_Vaughan" title="Bob Vaughan">Vaughan</a></li>
+<li><a href="/wiki/Aurel_Wintner" title="Aurel Wintner">Wintner</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>igual a 2</b></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Enrico_Bombieri" title="Enrico Bombieri">Bombieri</a></li>
+<li><a href="/wiki/Atle_Selberg" title="Atle Selberg">Selberg</a></li>
+<li><a href="/wiki/Terence_Tao" title="Terence Tao">Tao</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><a href="/wiki/Teoremas" class="mw-redirect" title="Teoremas">Teoremas</a></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;">
+<table class="nowraplinks hlist navbox-subgroup" style="border-spacing:0">
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>Demonstrados</b></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Teorema_de_Barban%E2%80%93Davenport%E2%80%93Halberstam" title="Teorema de Barban–Davenport–Halberstam">Barban–Davenport–Halberstam</a></li>
+<li><a href="/wiki/Teorema_de_Bombieri-Vinogradov" title="Teorema de Bombieri-Vinogradov">Bombieri-Vinogradov</a></li>
+<li><a href="/wiki/Teorema_de_Brun%E2%80%93Titchmarsh" title="Teorema de Brun–Titchmarsh">Brun–Titchmarsh</a></li>
+<li><a href="/wiki/Teorema_de_Chen" title="Teorema de Chen">Chen</a></li>
+<li><a href="/wiki/Teorema_de_Dirichlet_sobre_progress%C3%B5es_aritm%C3%A9ticas" title="Teorema de Dirichlet sobre progressões aritméticas">Dirichlet</a></li>
+<li><a href="/wiki/Teorema_de_Erd%C5%91s%E2%80%93Kac" title="Teorema de Erdős–Kac">Erdős–Kac</a></li>
+<li><a href="/wiki/Teorema_de_Erd%C5%91s%E2%80%93Wintner" title="Teorema de Erdős–Wintner">Erdős–Wintner</a></li>
+<li><a href="/wiki/Teorema_da_equidistribui%C3%A7%C3%A3o_de_Weyl" title="Teorema da equidistribuição de Weyl">Equidistribuição de Weyl</a></li>
+<li><a href="/wiki/Teorema_de_Euclides" title="Teorema de Euclides">Euclides</a></li>
+<li><a href="/wiki/Teorema_de_Green-Tao" title="Teorema de Green-Tao">Green-Tao</a></li>
+<li><a href="/wiki/Teorema_do_n%C3%BAmero_primo" title="Teorema do número primo">Hadamard-Poussin</a></li>
+<li><a href="/wiki/Teorema_de_Linnik" title="Teorema de Linnik">Linnik</a></li>
+<li><a href="/wiki/Teorema_de_Mordell-Weil" title="Teorema de Mordell-Weil">Mordell-Weil</a></li>
+<li><a href="/wiki/Teorema_do_n%C3%BAmero_poligonal_de_Fermat" title="Teorema do número poligonal de Fermat">Número poligonal de Fermat</a></li>
+<li><a href="/wiki/Pequeno_teorema_de_Fermat" class="mw-redirect" title="Pequeno teorema de Fermat">Pequeno teorema de Fermat</a></li>
+<li><a href="/wiki/Teorema_de_Pit%C3%A1goras" title="Teorema de Pitágoras">Pitágoras</a></li>
+<li><a href="/wiki/Postulado_de_Bertrand" title="Postulado de Bertrand">Postulado de Bertrand</a></li>
+<li><a href="/wiki/Lei_da_reciprocidade_quadr%C3%A1tica" title="Lei da reciprocidade quadrática">Reciprocidade quadrática</a></li>
+<li><a href="/wiki/Teorema_chin%C3%AAs_do_resto" title="Teorema chinês do resto">Teorema chinês do resto</a></li>
+<li><a href="/wiki/%C3%9Altimo_teorema_de_Fermat" title="Último teorema de Fermat">Último teorema de Fermat</a></li>
+<li><a href="/wiki/Teorema_de_Wilson" title="Teorema de Wilson">Wilson</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0;padding-right:0;width:5em;">
+<div style="padding:0em 0.75em;"><b>Em aberto</b></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Hip%C3%B3tese_da_densidade" title="Hipótese da densidade">Hipótese da densidade</a></li>
+<li><a href="/wiki/Hip%C3%B3tese_de_Riemann" title="Hipótese de Riemann">Hipótese de Riemann</a></li>
+<li><a href="/wiki/Conjectura_de_Goldbach" class="mw-redirect" title="Conjectura de Goldbach">Goldbach</a></li>
+<li><a href="/wiki/Conjectura_de_Legendre" title="Conjectura de Legendre">Legendre</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff">Teoria dos crivos</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Crivo_de_Atkin" title="Crivo de Atkin">Atkin</a></li>
+<li><a href="/wiki/Crivo_de_Brun" title="Crivo de Brun">Brun</a></li>
+<li><a href="/w/index.php?title=Crivo_geral_de_corpo_num%C3%A9rico&amp;action=edit&amp;redlink=1" class="new" title="Crivo geral de corpo numérico (página não existe)">Crivo geral de corpo numérico</a></li>
+<li><a href="/w/index.php?title=Crivo_quadr%C3%A1tico&amp;action=edit&amp;redlink=1" class="new" title="Crivo quadrático (página não existe)">Crivo quadrático</a></li>
+<li><a href="/wiki/Crivo_de_Erat%C3%B3stenes" title="Crivo de Eratóstenes">Eratóstenes</a></li>
+<li><a href="/w/index.php?title=Grande_Crivo&amp;action=edit&amp;redlink=1" class="new" title="Grande Crivo (página não existe)">Grande Crivo</a></li>
+<li><a href="/wiki/Crivo_de_Legendre" title="Crivo de Legendre">Legendre</a></li>
+<li><a href="/wiki/Lema_fundamental_de_teoria_dos_crivos" title="Lema fundamental de teoria dos crivos">Lema fundamental</a></li>
+<li><a href="/wiki/Crivo_de_Selberg" title="Crivo de Selberg">Selberg</a></li>
+<li><a href="/wiki/Crivo_de_Sundaram" title="Crivo de Sundaram">Sundaram</a></li>
+<li><a href="/wiki/Teoria_dos_crivos" title="Teoria dos crivos">Teoria dos crivos</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;background:#ddddff"><b>Teoristas</b></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/wiki/Mark_Borisovitch_Barban" title="Mark Borisovitch Barban">Barban</a></li>
+<li><a href="/wiki/Enrico_Bombieri" title="Enrico Bombieri">Bombieri</a></li>
+<li><a href="/wiki/Viggo_Brun" title="Viggo Brun">Brun</a></li>
+<li><a href="/wiki/Jingrun_Chen" title="Jingrun Chen">Chen</a></li>
+<li><a href="/wiki/Peter_Gustav_Lejeune_Dirichlet" class="mw-redirect" title="Peter Gustav Lejeune Dirichlet">Dirichlet</a></li>
+<li><a href="/wiki/Gotthold_Eisenstein" title="Gotthold Eisenstein">Eisenstein</a></li>
+<li><a href="/wiki/Paul_Erd%C5%91s" title="Paul Erdős">Erdős</a></li>
+<li><a href="/wiki/Euclides_de_Alexandria" class="mw-redirect" title="Euclides de Alexandria">Euclides</a></li>
+<li><a href="/wiki/Leonhard_Euler" title="Leonhard Euler">Euler</a></li>
+<li><a href="/wiki/Pierre_de_Fermat" title="Pierre de Fermat">Fermat</a></li>
+<li><a href="/wiki/Carl_Friedrich_Gauss" title="Carl Friedrich Gauss">Gauss</a></li>
+<li><a href="/wiki/Sophie_Germain" title="Sophie Germain">Germain</a></li>
+<li><a href="/wiki/Fernando_Quadros_Gouv%C3%AAa" title="Fernando Quadros Gouvêa">Gouvêa</a></li>
+<li><a href="/wiki/Ben_Green" title="Ben Green">Green</a></li>
+<li><a href="/wiki/Jacques_Hadamard" title="Jacques Hadamard">Hadamard</a></li>
+<li><a href="/wiki/Godfrey_Harold_Hardy" title="Godfrey Harold Hardy">Hardy</a></li>
+<li><a href="/wiki/Luogeng_Hua" title="Luogeng Hua">Hua</a></li>
+<li><a href="/wiki/Matti_Jutila" title="Matti Jutila">Jutila</a></li>
+<li><a href="/wiki/Mark_Kac" title="Mark Kac">Kac</a></li>
+<li><a href="/wiki/Anatolii_Alexeievitch_Karatsuba" title="Anatolii Alexeievitch Karatsuba">Karatsuba</a></li>
+<li><a href="/wiki/Ernst_Kummer" title="Ernst Kummer">Kummer</a></li>
+<li><a href="/wiki/Joseph-Louis_Lagrange" title="Joseph-Louis Lagrange">Lagrange</a></li>
+<li><a href="/wiki/Gabriel_Lam%C3%A9" title="Gabriel Lamé">Lamé</a></li>
+<li><a href="/wiki/Adrien-Marie_Legendre" title="Adrien-Marie Legendre">Legendre</a></li>
+<li><a href="/wiki/Yuri_Vladimirovitch_Linnik" class="mw-redirect" title="Yuri Vladimirovitch Linnik">Linnik</a></li>
+<li><a href="/wiki/John_Edensor_Littlewood" title="John Edensor Littlewood">Littlewood</a></li>
+<li><a href="/wiki/%C3%89douard_Lucas" title="Édouard Lucas">Lucas</a></li>
+<li><a href="/wiki/Giuseppe_Peano" title="Giuseppe Peano">Peano</a></li>
+<li><a href="/wiki/John_M._Pollard" title="John M. Pollard">Pollard</a></li>
+<li><a href="/wiki/Charles-Jean_de_La_Vall%C3%A9e_Poussin" title="Charles-Jean de La Vallée Poussin">Poussin</a></li>
+<li><a href="/wiki/Srinivasa_Ramanujan" title="Srinivasa Ramanujan">Ramanujan</a></li>
+<li><a href="/wiki/Paulo_Ribenboim" title="Paulo Ribenboim">Ribenboim</a></li>
+<li><a href="/wiki/Kenneth_Alan_Ribet" title="Kenneth Alan Ribet">Ribet</a></li>
+<li><a href="/wiki/Bernhard_Riemann" title="Bernhard Riemann">Riemann</a></li>
+<li><a href="/wiki/Goro_Shimura" title="Goro Shimura">Shimura</a></li>
+<li><a href="/wiki/Wac%C5%82aw_Sierpi%C5%84ski" title="Wacław Sierpiński">Sierpiński</a></li>
+<li><a href="/wiki/Yutaka_Taniyama" title="Yutaka Taniyama">Taniyama</a></li>
+<li><a href="/wiki/Terence_Tao" title="Terence Tao">Tao</a></li>
+<li><a href="/wiki/Pafnuti_Tchebychev" title="Pafnuti Tchebychev">Tchebychev</a></li>
+<li><a href="/wiki/Stanis%C5%82aw_Ulam" title="Stanisław Ulam">Ulam</a></li>
+<li><a href="/wiki/Bob_Vaughan" title="Bob Vaughan">Vaughan</a></li>
+<li><a href="/wiki/Askold_Ivanovitch_Vinogradov" title="Askold Ivanovitch Vinogradov">Vinogradov, A.</a></li>
+<li><a href="/wiki/Ivan_Vinogradov" title="Ivan Vinogradov">Vinogradov, I.</a></li>
+<li><a href="/wiki/Andr%C3%A9_Weil" title="André Weil">Weil</a></li>
+<li><a href="/wiki/Hermann_Weyl" title="Hermann Weyl">Weyl</a></li>
+<li><a href="/wiki/Andrew_Wiles" title="Andrew Wiles">Wiles</a></li>
+<li><a href="/wiki/Aurel_Wintner" title="Aurel Wintner">Wintner</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<table class="noprint" style="margin: 0 0 1em 1em; border: solid sienna 1px; background: sandybrown; padding: 1ex; font-size: 90%; clear: right; float: right;">
+<tr>
+<td><a href="/wiki/Ficheiro:Nuvola_apps_edu_mathematics-p.svg" class="image" title="Portal"><img alt="Portal" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/60px-Nuvola_apps_edu_mathematics-p.svg.png" width="60" height="60" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/90px-Nuvola_apps_edu_mathematics-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/120px-Nuvola_apps_edu_mathematics-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a></td>
+<td style="font-size: 8pt; padding: 4pt; line-height: 1.25em; color: yellow&#160;;">A Wikipédia possui o<br />
+<b><a href="/wiki/Portal:Matem%C3%A1tica" title="Portal:Matemática">Portal da Matemática</a></b>.</td>
+</tr>
+</table>
+<ul class="noprint" style="border-top: solid silver 1px; border-bottom:1px solid silver; padding:3px; background-color: #F9F9F9; text-align: center; margin-top:10px; margin-left: 0; clear: both;">
+<li style="display: inline;"><span style="white-space: nowrap; margin: auto 1.5em"><span style="margin-right: 0.5em"><a href="/wiki/Ficheiro:Nuvola_apps_edu_mathematics-p.svg" title="Portal da matemática"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/25px-Nuvola_apps_edu_mathematics-p.svg.png" width="25" height="25" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/38px-Nuvola_apps_edu_mathematics-p.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Nuvola_apps_edu_mathematics-p.svg/50px-Nuvola_apps_edu_mathematics-p.svg.png 2x" data-file-width="128" data-file-height="128" /></a></span> <span style="font-weight:bold"><a href="/wiki/Portal:Matem%C3%A1tica" title="Portal:Matemática">Portal da matemática</a></span></span></li>
+</ul>
+<table class="noprint" style="border-top:none; border-bottom:none; background:none;">
+<tr>
+<td align="center"><a href="/wiki/Ficheiro:E-to-the-i-pi.svg" class="image"><img alt="Ícone de esboço" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/34px-E-to-the-i-pi.svg.png" width="34" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/51px-E-to-the-i-pi.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/68px-E-to-the-i-pi.svg.png 2x" data-file-width="320" data-file-height="283" /></a></td>
+<td><i>Este artigo sobre <span><a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a></span> é um <a href="/wiki/Wikip%C3%A9dia:Esbo%C3%A7o" title="Wikipédia:Esboço">esboço</a>. Você pode ajudar a Wikipédia <span class="plainlinks" style="font-weight:bold;"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Espiral_de_Ulam&amp;action=edit">expandindo-o</a></span>.</i>
+<div class="noprint plainlinksneverexpand navbar plainlinks" style="background:none; padding:0; font-weight:normal;; font-size:xx-small; position:absolute; right:15px; font-size:smaller; display:none;"><a href="/wiki/Predefini%C3%A7%C3%A3o:Esbo%C3%A7o-matem%C3%A1tica" title="Predefinição:Esboço-matemática"><span title="Ver esta predefinição" style="">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:Esbo%C3%A7o-matem%C3%A1tica&amp;action=edit"><span title="Editar esta predefinição" style=";">e</span></a></div>
+</td>
+</tr>
+</table>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:1049904-0!*!0!!*!4!*!math=5 and timestamp 20160815164444 and revision id 44448061
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Espiral_de_Ulam&amp;oldid=44448061">https://pt.wikipedia.org/w/index.php?title=Espiral_de_Ulam&amp;oldid=44448061</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:Curvas" title="Categoria:Curvas">Curvas</a></li><li><a href="/wiki/Categoria:N%C3%BAmeros_primos" title="Categoria:Números primos">Números primos</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categorias ocultas: <ul><li><a href="/wiki/Categoria:!Esbo%C3%A7os_sobre_matem%C3%A1tica" title="Categoria:!Esboços sobre matemática">!Esboços sobre matemática</a></li><li><a href="/wiki/Categoria:!Esbo%C3%A7os_maiores_que_1000_bytes" title="Categoria:!Esboços maiores que 1000 bytes">!Esboços maiores que 1000 bytes</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Espiral+de+Ulam" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Espiral+de+Ulam" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Espiral_de_Ulam"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Espiral_de_Ulam"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Espiral_de_Ulam" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Espiral_de_Ulam&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Espiral_de_Ulam&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Espiral_de_Ulam&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Espiral+de+Ulam">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Espiral+de+Ulam&amp;returnto=Espiral+de+Ulam&amp;oldid=44448061&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Espiral_de_Ulam&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>Noutros projetos</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Ulam_spiral" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Espiral_de_Ulam" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Espiral_de_Ulam" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Espiral_de_Ulam&amp;oldid=44448061" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Espiral_de_Ulam&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q842172" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Espiral_de_Ulam&amp;id=44448061" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AD%D9%84%D8%B2%D9%88%D9%86%D9%8A%D8%A9_%D8%A3%D9%88%D9%84%D8%A7%D9%85" title="حلزونية أولام — árabe" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%80%D0%B0%D0%BB%D0%B0_%D0%BD%D0%B0_%D0%A3%D0%BB%D0%B0%D0%BC" title="Спирала на Улам — búlgaro" lang="bg" hreflang="bg">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Espiral_d%27Ulam" title="Espiral d'Ulam — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Ulamova_spir%C3%A1la" title="Ulamova spirála — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Ulam-Spirale" title="Ulam-Spirale — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Ulam_spiral" title="Ulam spiral — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Espiral_de_Ulam" title="Espiral de Ulam — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Ulamin_spiraali" title="Ulamin spiraali — finlandês" lang="fi" hreflang="fi">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Spirale_d%27Ulam" title="Spirale d'Ulam — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A1%D7%A4%D7%99%D7%A8%D7%9C%D7%AA_%D7%90%D7%95%D7%9C%D7%9D" title="ספירלת אולם — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Ulam-spir%C3%A1l" title="Ulam-spirál — húngaro" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Spirale_di_Ulam" title="Spirale di Ulam — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%A6%E3%83%A9%E3%83%A0%E3%81%AE%E8%9E%BA%E6%97%8B" title="ウラムの螺旋 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Ulama_spir%C4%81le" title="Ulama spirāle — letão" lang="lv" hreflang="lv">Latviešu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Spiraal_van_Ulam" title="Spiraal van Ulam — holandês" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Spirala_Ulama" title="Spirala Ulama — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Spiral%C4%83_Ulam" title="Spirală Ulam — romeno" lang="ro" hreflang="ro">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D1%82%D1%8C_%D0%A3%D0%BB%D0%B0%D0%BC%D0%B0" title="Скатерть Улама — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-scn"><a href="https://scn.wikipedia.org/wiki/Spirali_di_Ulam" title="Spirali di Ulam — siciliano" lang="scn" hreflang="scn">Sicilianu</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Ulamova_%C5%A1pir%C3%A1la" title="Ulamova špirála — eslovaco" lang="sk" hreflang="sk">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Ulamov_prt" title="Ulamov prt — esloveno" lang="sl" hreflang="sl">Slovenščina</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Ulams_spiral" title="Ulams spiral — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E4%B9%8C%E5%B2%9A%E8%9E%BA%E6%97%8B" title="乌岚螺旋 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q842172#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 18h11min de 10 de janeiro de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Espiral_de_Ulam&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.232",
+            "walltime": "0.315",
+            "ppvisitednodes": {
+                "value": 3956,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 82811,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 38721,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 14,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%  217.690      1 -total",
+                " 44.39%   96.635      1 Predefinição:Teoria_dos_números",
+                " 42.28%   92.040      1 Predefinição:Navbox",
+                " 34.65%   75.426      1 Predefinição:Navbox/core",
+                " 23.68%   51.543      1 Predefinição:Portal3",
+                " 23.40%   50.943      1 Predefinição:Referências",
+                " 22.74%   49.509      3 Predefinição:Navbox_subgroup",
+                " 22.55%   49.094      1 Predefinição:Portal3/Portais",
+                " 18.06%   39.325      3 Predefinição:Navbox/lua",
+                " 15.81%   34.413      1 Predefinição:Citation"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.012",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 836141,
+                "limit": 52428800
+            }
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1274",
+            "timestamp": "20160815164444",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":82,"wgHostname":"mw1181"});});</script>
+	</body>
+</html>

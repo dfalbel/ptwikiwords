@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Álgebra de Lie – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Álgebra_de_Lie","wgTitle":"Álgebra de Lie","wgCurRevisionId":39844182,"wgRevisionId":39844182,"wgArticleId":1423060,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Álgebra","Álgebra de Lie"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Álgebra_de_Lie","wgRelevantArticleId":1423060,"wgRequestId":"V9b8pwpAIDgAAAvu@lwAAAAU","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q664495","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/%C3%81lgebra_de_Lie"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/%C3%81lgebra_de_Lie"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Álgebra_de_Lie rootpage-Álgebra_de_Lie skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Álgebra de Lie</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p>Em <a href="/wiki/%C3%81lgebra" title="Álgebra">álgebra</a>, uma <b>álgebra de Lie</b> é uma <a href="/wiki/Estrutura_alg%C3%A9brica" title="Estrutura algébrica">estrutura algébrica</a> cujo principal uso está no estudo dos <a href="/wiki/Grupo_de_Lie" title="Grupo de Lie">grupos de Lie</a> e das <a href="/wiki/Variedade_(matem%C3%A1tica)" title="Variedade (matemática)">variedades diferenciáveis</a>. As álgebras de Lie foram introduzidas como ferramenta para o estudo das <a href="/wiki/Rota%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Rotação (matemática)">rotação</a> <a href="/wiki/Infinitesimal" title="Infinitesimal">infinitesimais</a>. O termo "Álgebra de Lie" é uma referência a <a href="/wiki/Sophus_Lie" title="Sophus Lie">Sophus Lie</a>, e foi cunhado pelo <a href="/wiki/Matem%C3%A1tico" title="Matemático">matemático</a> <a href="/wiki/Hermann_Weyl" title="Hermann Weyl">Hermann Weyl</a> na <a href="/wiki/D%C3%A9cada_de_1930" title="Década de 1930">década de 1930</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Defini.C3.A7.C3.A3o_e_primeiras_propriedades"><span class="tocnumber">1</span> <span class="toctext">Definição e primeiras propriedades</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Exemplos"><span class="tocnumber">2</span> <span class="toctext">Exemplos</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Rela.C3.A7.C3.A3o_com_grupos_de_Lie"><span class="tocnumber">3</span> <span class="toctext">Relação com grupos de Lie</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Refer.C3.AAncias"><span class="tocnumber">4</span> <span class="toctext">Referências</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Defini.C3.A7.C3.A3o_e_primeiras_propriedades">Definição e primeiras propriedades</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Definição e primeiras propriedades">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit&amp;section=1" title="Editar secção: Definição e primeiras propriedades">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Uma álgebra de Lie <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a913b1503ed9ec94361b99f7fd59ef60705c28" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.182ex; height:2.176ex;" alt="{\mathfrak  {g}}" /></span> é um tipo de <a href="/wiki/%C3%81lgebra_sobre_um_corpo" title="Álgebra sobre um corpo">álgebra sobre um corpo</a>; é um <a href="/wiki/Espa%C3%A7o_vetorial" title="Espaço vetorial">espaço vetorial</a> sobre um corpo <i>F</i> juntamente com uma <a href="/wiki/Opera%C3%A7%C3%A3o_bin%C3%A1ria" title="Operação binária">operação binária</a> (<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo>,</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">]</mo>
+        <mo>:</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [\cdot ,\cdot ]:{\mathfrak {g}}\times {\mathfrak {g}}\to {\mathfrak {g}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/44ce0ecebaaa6530dea73faf9e5831dacb050936" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.643ex; height:2.843ex;" alt="[\cdot ,\cdot ]:{\mathfrak  {g}}\times {\mathfrak  {g}}\to {\mathfrak  {g}}" /></span>, chamada de <i>comutador</i>, ou <i>colchete de Lie</i>), que satisfaz os seguintes <a href="/wiki/Axioma" title="Axioma">axiomas</a>:</p>
+<ul>
+<li><a href="/wiki/Bilinearidade" class="mw-redirect" title="Bilinearidade">Bilinearidade</a>:
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>a</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mi>a</mi>
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mo stretchy="false">[</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mo stretchy="false">[</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mi>a</mi>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mi>a</mi>
+        <mo stretchy="false">[</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mi>x</mi>
+        <mo stretchy="false">]</mo>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mo stretchy="false">[</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [ax+by,z]=a[x,z]+b[y,z],\quad [z,ax+by]=a[z,x]+b[z,y]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/730cd19026c1c8b8b3ac4e918cad74872c023d23" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:60.751ex; height:2.843ex;" alt="[ax+by,z]=a[x,z]+b[y,z],\quad [z,ax+by]=a[z,x]+b[z,y]" /></span></dd>
+<dd>para todos <a href="/wiki/Escalar" class="mw-redirect" title="Escalar">escalares</a> <i>a</i>, <i>b</i> em <i>F</i> e todos elementos <i>x</i>, <i>y</i>, <i>z</i> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff06a0bc943dac4e113137ca0470f76ba38a48ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.839ex; height:2.176ex;" alt="{\mathfrak  {g}}." /></span></dd>
+</dl>
+</li>
+<li><a href="/wiki/Anticomutatividade" title="Anticomutatividade">Anticomutatividade</a>:
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo stretchy="false">[</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>x</mi>
+        <mo stretchy="false">]</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [x,y]=-[y,x]\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc2368a07e7bfa6b79c565db255d212515e28e57" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.045ex; height:2.843ex;" alt="[x,y]=-[y,x]\," /></span></dd>
+<dd>para todos elementos <i>x</i>, <i>y</i> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff06a0bc943dac4e113137ca0470f76ba38a48ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.839ex; height:2.176ex;" alt="{\mathfrak  {g}}." /></span> Quando <i>F</i> for um corpo de característica dois, deve-se impor a condição mais forte</dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>x</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [x,x]=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/94ccb967db9ab0773c5aa2e0fc234cd33373f193" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.321ex; height:2.843ex;" alt="[x,x]=0" /></span></dd>
+<dd>para todo <i>x</i> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff06a0bc943dac4e113137ca0470f76ba38a48ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.839ex; height:2.176ex;" alt="{\mathfrak  {g}}." /></span></dd>
+</dl>
+</li>
+<li>A <a href="/wiki/Identidade_de_Jacobi" title="Identidade de Jacobi">identidade de Jacobi</a>:
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mo stretchy="false">[</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">]</mo>
+        <mo>+</mo>
+        <mo stretchy="false">[</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mo stretchy="false">[</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mi>x</mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">]</mo>
+        <mo>+</mo>
+        <mo stretchy="false">[</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mspace width="1em" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0\quad }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c5140846419cb8d565520cb9aa5778495f05ef04" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:37.274ex; height:2.843ex;" alt="[x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0\quad " /></span></dd>
+<dd>para todos<i>x</i>, <i>y</i>, <i>z</i> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ff06a0bc943dac4e113137ca0470f76ba38a48ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.839ex; height:2.176ex;" alt="{\mathfrak  {g}}." /></span></dd>
+</dl>
+</li>
+</ul>
+<p>Para qualquer <a href="/wiki/%C3%81lgebra_associativa" class="mw-redirect" title="Álgebra associativa">álgebra associativa</a> <i>A</i> com multiplicação *, pode-se construir uma álgebra de Lie <i>L</i>(<i>A</i>). Como espaço vetorial, <i>L</i>(<i>A</i>) coincide com <i>A</i>. O colchete de Lie de <i>L</i>(<i>A</i>) é definido como sendo o seu comutador em <i>A</i>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>a</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mi>a</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>b</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>b</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>a</mi>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [a,b]=a*b-b*a.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dd0315fe25b5146ffc2d2a748fae19649423cf80" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:20.131ex; height:2.843ex;" alt="[a,b]=a*b-b*a." /></span></dd>
+</dl>
+<p>A <a href="/wiki/Associatividade" title="Associatividade">associatividade</a> da <a href="/wiki/Multiplica%C3%A7%C3%A3o" title="Multiplicação">multiplicação</a> * em <i>A</i> implica a identidade de Jacobi para o comutador em <i>L</i> (<i>A</i>). Em particular, a álgebra associativa das <a href="/wiki/Matriz_(matem%C3%A1tica)" title="Matriz (matemática)">matrizes</a> <i>n'</i>&#160;×&#160;<i>n</i> sobre um corpo <i>F</i> dá origem ao <a href="/wiki/Grupo_linear_geral" title="Grupo linear geral">grupo linear geral</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="fraktur">g</mi>
+              <mi mathvariant="fraktur">l</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>F</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {gl}}_{n}(F).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1883beabdbe4e7375da2bb0c6f1351cbaa1e8585" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.309ex; height:2.843ex;" alt="{\mathfrak  {gl}}_{n}(F)." /></span> A álgebra associativa <i>A</i> é chamada de uma <i>álgebra envolvente</i> da álgebra de Lie <i>L</i> (<i>A</i>).</p>
+<p>É sabido que cada álgebra de Lie pode ser mergulhada em uma álgebra que é definida, desta forma, a partir de uma álgebra associativa.</p>
+<h2><span class="mw-headline" id="Exemplos">Exemplos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Exemplos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit&amp;section=2" title="Editar secção: Exemplos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Qualquer espaço vetorial <i>V</i> dotado de um colchete de Lie identicamente nulo é uma álgebra de Lie. Tais álgebras de Lie são chamadas de <i>abelianas</i>. Qualquer álgebra de Lie unidimensional sobre um corpo é abeliana, pela <a href="/wiki/Anticomutatividade" title="Anticomutatividade">antisimetria</a> do colchete de Lie.</li>
+<li>O <a href="/wiki/Espa%C3%A7o_euclidiano" title="Espaço euclidiano">espaço euclidiano</a> <a href="/wiki/Tridimensional" class="mw-redirect" title="Tridimensional">tridimensional</a> <b>R</b><sup>3</sup> munido do colchete de Lie dado pelo <a href="/wiki/Produto_vetorial" title="Produto vetorial">produto vetorial</a> de espaços vetoriais é uma álgebra de Lie tridimensional.</li>
+<li>A <a href="/w/index.php?title=%C3%81lgebra_de_Heisenberg&amp;action=edit&amp;redlink=1" class="new" title="Álgebra de Heisenberg (página não existe)">álgebra de Heisenberg</a> é uma álgebra de Lie tridimensional com geradores <i>x</i>,<i>y</i>,<i>z</i>, cujas relações de comutação são da forma</li>
+</ul>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mi>z</mi>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mo stretchy="false">[</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mspace width="1em" />
+        <mo stretchy="false">[</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>z</mi>
+        <mo stretchy="false">]</mo>
+        <mo>=</mo>
+        <mn>0.</mn>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [x,y]=z,\quad [x,z]=0,\quad [y,z]=0.\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/371d59a691932c02f3026462d86289bc412c5fd2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:34.836ex; height:2.843ex;" alt="[x,y]=z,\quad [x,z]=0,\quad [y,z]=0.\," /></span></dd>
+</dl>
+<ul>
+<li>Qualquer <a href="/wiki/Grupo_de_Lie" title="Grupo de Lie">grupo de Lie</a> <i>G</i> define uma álgebra de Lie associada <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mi>L</mi>
+        <mi>i</mi>
+        <mi>e</mi>
+        <mo stretchy="false">(</mo>
+        <mi>G</mi>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}=Lie(G).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0b75dc2be0cdf07fb299fd82a15e30d311d2aa08" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.116ex; height:2.843ex;" alt="{\mathfrak  {g}}=Lie(G)." /></span></li>
+</ul>
+<p>A definição geral é técnica, mas no caso dos grupos clássicos de matrizes reais, ela pode ser formulada via a aplicação exponencial. A álgebra de Lie <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a913b1503ed9ec94361b99f7fd59ef60705c28" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.182ex; height:2.176ex;" alt="{\mathfrak  {g}}" /></span> consiste das matrizes <i>X</i> da forma&#160;::<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>exp</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>t</mi>
+        <mi>X</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>G</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \exp(tX)\in G\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c791825ef1ccac684d1aff15ae14c643276b995e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:13.33ex; height:2.843ex;" alt="\exp(tX)\in G\," /></span>&#160;: para todos <i>t'</i>s reais. A álgebra de Lie de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="fraktur">g</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathfrak {g}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40a913b1503ed9ec94361b99f7fd59ef60705c28" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.182ex; height:2.176ex;" alt="{\mathfrak  {g}}" /></span> é dada pelo comutador de tais matrizes. Como um exemplo concreto, considere o <a href="/wiki/Grupo_linear_especial" title="Grupo linear especial">grupo linear especial</a> SL(<i>n</i>,<b>R</b>), consistindo das matrizes <i>n</i>&#160;×&#160;<i>n</i> com entradas reais e <a href="/wiki/Determinante" title="Determinante">determinante</a> 1. Este um grupo clássico, e a sua álgebra de Lie tem como elementos todas as matrizes <i>n</i>&#160;×&#160;<i>n</i> reais e com <a href="/wiki/Tra%C3%A7o_(%C3%A1lgebra_linear)" title="Traço (álgebra linear)">Traço</a> zero.</p>
+<h2><span class="mw-headline" id="Rela.C3.A7.C3.A3o_com_grupos_de_Lie">Relação com grupos de Lie</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Relação com grupos de Lie">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit&amp;section=3" title="Editar secção: Relação com grupos de Lie">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A correspondência entre álgebras de Lie e grupos de Lie é utilizada de diversas maneiras, incluindo-se na elaboração da lista dos grupos de Lie simples e na teoria da representação dos grupos de Lie. Toda representação de uma álgebra de Lie é levantada de forma única para um representação do grupo de Lie conexo e simplesmente conexo correspondente. De forma recíproca, toda representação de um grupo de Lie induz uma representação da sua álgebra de Lie; suas representações estão <a href="/wiki/Fun%C3%A7%C3%A3o_bijectiva" title="Função bijectiva">biunivocamente correspondidas</a>.</p>
+<h2><span class="mw-headline" id="Refer.C3.AAncias">Referências</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit&amp;section=4" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>San Martin, Luiz A. Barrera. <i>Álgebras de Lie</i>, 2ª edição, Editora da Unicamp, Campinas, 2010. <a href="/wiki/Especial:Fontes_de_livros/9788526808768" class="internal mw-magiclink-isbn">ISBN 978-85-268-0876-8</a></li>
+<li>Erdmann, Karin &amp; Wildon, Mark. <i>Introduction to Lie Algebras</i>, 1st edition, Springer, 2006. <a href="/wiki/Especial:Fontes_de_livros/1846280400" class="internal mw-magiclink-isbn">ISBN 1-84628-040-0</a></li>
+<li>Brian C. Hall <i>Lie Groups, Lie Algebras, and Representations: An Elementary Introduction</i>, Springer, 2003. <a href="/wiki/Especial:Fontes_de_livros/0387401229" class="internal mw-magiclink-isbn">ISBN 0-387-40122-9</a></li>
+<li>Humphreys, James E. <i>Introduction to Lie Algebras and Representation Theory</i>, Second printing, revised. Graduate Texts in Mathematics, 9. Springer-Verlag, New York, 1978. <a href="/wiki/Especial:Fontes_de_livros/0387900535" class="internal mw-magiclink-isbn">ISBN 0-387-90053-5</a></li>
+<li>Jacobson, Nathan, <i>Lie algebras</i>, Republication of the 1962 original. Dover Publications, Inc., New York, 1979. <a href="/wiki/Especial:Fontes_de_livros/0486638324" class="internal mw-magiclink-isbn">ISBN 0-486-63832-4</a></li>
+<li>Kac, Victor G. et al. <i>Course notes for MIT 18.745: Introduction to Lie Algebras</i>, <a rel="nofollow" class="external free" href="http://www-math.mit.edu/~lesha/745lec/">http://www-math.mit.edu/~lesha/745lec/</a></li>
+<li>Varadarajan, V. S. <i>Lie Groups, Lie Algebras, and Their Representations</i>, 1st edition, Springer, 2004. <a href="/wiki/Especial:Fontes_de_livros/0387909699" class="internal mw-magiclink-isbn">ISBN 0-387-90969-9</a></li>
+<li>O'Connor, J. J. &amp; Robertson, E.F. Biography of Sophus Lie, MacTutor History of Mathematics Archive, <a rel="nofollow" class="external free" href="http://www-history.mcs.st-and.ac.uk/Biographies/Lie.html">http://www-history.mcs.st-and.ac.uk/Biographies/Lie.html</a></li>
+<li>O'Connor, J. J. &amp; Robertson, E.F. Biography of Wilhelm Killing, MacTutor History of Mathematics Archive, <a rel="nofollow" class="external free" href="http://www-history.mcs.st-and.ac.uk/Biographies/Killing.html">http://www-history.mcs.st-and.ac.uk/Biographies/Killing.html</a></li>
+<li>(2010) <a rel="nofollow" class="external text" href="http://video.if.usp.br/aulas/álgebras-de-lie">Videoaulas sobre Álgebra de Lie</a> Videoteca do Instituto de Física da USP, professor Roldão da Rocha Jr.</li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:1423060-0!*!0!!pt!*!*!math=5 and timestamp 20160830114606 and revision id 39844182
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Álgebra_de_Lie&amp;oldid=39844182">https://pt.wikipedia.org/w/index.php?title=Álgebra_de_Lie&amp;oldid=39844182</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:%C3%81lgebra" title="Categoria:Álgebra">Álgebra</a></li><li><a href="/wiki/Categoria:%C3%81lgebra_de_Lie" title="Categoria:Álgebra de Lie">Álgebra de Lie</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=%C3%81lgebra+de+Lie" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=%C3%81lgebra+de+Lie" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/%C3%81lgebra_de_Lie"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:%C3%81lgebra_de_Lie&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/%C3%81lgebra_de_Lie" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=%C3%81lgebra+de+Lie">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=%C3%81lgebra+de+Lie&amp;returnto=%C3%81lgebra+de+Lie&amp;oldid=39844182&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/%C3%81lgebra_de_Lie" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/%C3%81lgebra_de_Lie" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;oldid=39844182" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=%C3%81lgebra_de_Lie&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q664495" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=%C3%81lgebra_de_Lie&amp;id=39844182" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/%C3%80lgebra_de_Lie" title="Àlgebra de Lie — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Lieova_algebra" title="Lieova algebra — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Lie-Algebra" title="Lie-Algebra — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Lie_algebra" title="Lie algebra — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/%C3%81lgebra_de_Lie" title="Álgebra de Lie — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AC%D8%A8%D8%B1_%D9%84%DB%8C" title="جبر لی — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Alg%C3%A8bre_de_Lie" title="Algèbre de Lie — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%AA_%D7%9C%D7%99" title="אלגברת לי — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Lie-algebra" title="Lie-algebra — húngaro" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Algebra_di_Lie" title="Algebra di Lie — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E4%BB%A3%E6%95%B0" title="リー代数 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%90%E1%83%9A%E1%83%92%E1%83%94%E1%83%91%E1%83%A0%E1%83%90" title="ლის ალგებრა — georgiano" lang="ka" hreflang="ka">ქართული</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%A6%AC_%EB%8C%80%EC%88%98" title="리 대수 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Lie-algebra" title="Lie-algebra — holandês" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Algebra_Liego" title="Algebra Liego — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0_%D0%9B%D0%B8" title="Алгебра Ли — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9B%D0%B8%D1%98%D0%B5%D0%B2%D0%B0_%D0%B0%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0" title="Лијева алгебра — sérvio" lang="sr" hreflang="sr">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Liealgebra" title="Liealgebra — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Lie_cebiri" title="Lie cebiri — turco" lang="tr" hreflang="tr">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0_%D0%9B%D1%96" title="Алгебра Лі — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9D%8E%E4%BB%A3%E6%95%B8" title="李代數 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q664495#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 17h42min de 17 de agosto de 2014.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=%C3%81lgebra_de_Lie&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.036",
+            "walltime": "0.864",
+            "ppvisitednodes": {
+                "value": 131,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 2,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%    0.000      1 -total"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1218",
+            "timestamp": "20160830114607",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":89,"wgHostname":"mw1186"});});</script>
+	</body>
+</html>

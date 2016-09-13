@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Conjunto de Mandelbrot – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Conjunto_de_Mandelbrot","wgTitle":"Conjunto de Mandelbrot","wgCurRevisionId":45065251,"wgRevisionId":45065251,"wgArticleId":65843,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Fractais","Teoria do caos"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Conjunto_de_Mandelbrot","wgRelevantArticleId":65843,"wgRequestId":"V9aBtwpAADsAATwhXeQAAACH","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q257","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","mediawiki.page.gallery.styles":"ready","ext.tmh.thumbnail.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","mw.TMHGalleryHook.js","mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.page.gallery.styles%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Conjunto_de_Mandelbrot"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Conjunto_de_Mandelbrot"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Conjunto_de_Mandelbrot rootpage-Conjunto_de_Mandelbrot skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Conjunto de Mandelbrot</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/Ficheiro:Mandelset_hires.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/300px-Mandelset_hires.png" width="300" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/450px-Mandelset_hires.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/600px-Mandelset_hires.png 2x" data-file-width="3121" data-file-height="2288" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelset_hires.png" class="internal" title="Ampliar"></a></div>
+Uma imagem renderizada do conjunto de Mandelbrot: os pontos pretos representam os pontos estáveis segundo o mapa iterativo</div>
+</div>
+</div>
+<p>Em <a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a>, <b>conjunto de Mandelbrot</b> é um <a href="/wiki/Fractal" title="Fractal">fractal</a> definido como o conjunto de pontos <i>c</i> no plano <a href="/wiki/N%C3%BAmero_complexo" title="Número complexo">complexo</a> para o qual a <a href="/wiki/Sucess%C3%A3o_matem%C3%A1tica" class="mw-redirect" title="Sucessão matemática">sucessão</a> (sequência, no Brasil) definida <a href="/wiki/Recursividade" title="Recursividade">recursivamente</a>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z_{0}=0\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81f6f4311c47cbb4b4e5de7b5984f7773f7c34ad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.822ex; height:2.509ex;" alt="z_{0}=0\," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>z</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z_{n+1}={z_{n}}^{2}+c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1a54e8358cb6b679f0936e282906d718bd34ecb3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:14.789ex; height:3.009ex;" alt="z_{{n+1}}={z_{n}}^{2}+c" /></span></dd>
+</dl>
+<p><i>não</i> tende ao infinito.</p>
+<p>Para cada ponto c do plano complexo, a sequência se expande como:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+        <mo>=</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mi>y</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c=x+iy\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5d9f0771a35be7004b0f586acceccaebf49116f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.683ex; height:2.509ex;" alt="c=x+iy\," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z_{0}=0\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5dd497a143ce750d5677bbee7dd0b8697d94ef29" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.328ex; height:2.509ex;" alt="Z_{0}=0\," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Z</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <msubsup>
+                  <mi>Z</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>0</mn>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>+</mo>
+                <mi>c</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&#xA0;</mtext>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>y</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{matrix}Z_{1}&amp;=&amp;Z_{0}^{2}+c\\\ &amp;=&amp;x+iy\end{matrix}}\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b1037d7be89460a6dcf372e0da6b043972aff56" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:16.911ex; height:6.509ex;" alt="{\begin{matrix}Z_{1}&amp;=&amp;Z_{0}^{2}+c\\\ &amp;=&amp;x+iy\end{matrix}}\," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable rowspacing="4pt" columnspacing="1em">
+            <mtr>
+              <mtd>
+                <msub>
+                  <mi>Z</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <msubsup>
+                  <mi>Z</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msubsup>
+                <mo>+</mo>
+                <mi>c</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&#xA0;</mtext>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mo stretchy="false">(</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>y</mi>
+                <msup>
+                  <mo stretchy="false">)</mo>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>y</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&#xA0;</mtext>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <msup>
+                  <mi>x</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>2</mn>
+                <mi>i</mi>
+                <mi>x</mi>
+                <mi>y</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <msup>
+                  <mi>y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mi>i</mi>
+                <mi>y</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mtext>&#xA0;</mtext>
+              </mtd>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <msup>
+                  <mi>x</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>&#x2212;<!-- − --></mo>
+                <msup>
+                  <mi>y</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mn>2</mn>
+                <mi>x</mi>
+                <mi>y</mi>
+                <mo>+</mo>
+                <mi>y</mi>
+                <mo stretchy="false">)</mo>
+                <mi>i</mi>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{matrix}Z_{2}&amp;=&amp;Z_{1}^{2}+c\\\ &amp;=&amp;(x+iy)^{2}+x+iy\\\ &amp;=&amp;x^{2}+2ixy-y^{2}+x+iy\\\ &amp;=&amp;x^{2}-y^{2}+x+(2xy+y)i\end{matrix}}\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5fb448a77bd9ee8b07c73d9a2ed3981f47be3bfe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -6.171ex; width:35.128ex; height:13.509ex;" alt="{\begin{matrix}Z_{2}&amp;=&amp;Z_{1}^{2}+c\\\ &amp;=&amp;(x+iy)^{2}+x+iy\\\ &amp;=&amp;x^{2}+2ixy-y^{2}+x+iy\\\ &amp;=&amp;x^{2}-y^{2}+x+(2xy+y)i\end{matrix}}\," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msubsup>
+          <mi>Z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msubsup>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mo>=</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z_{3}=Z_{2}^{2}+c=...\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc45a764ad60be7275b59c700c3c79b532e3b5a7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:18.014ex; height:3.176ex;" alt="Z_{3}=Z_{2}^{2}+c=...\," /></span></dd>
+</dl>
+<p>e assim por diante.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/Ficheiro:Trajectmandel.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Trajectmandel.jpg/250px-Trajectmandel.jpg" width="250" height="204" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Trajectmandel.jpg/375px-Trajectmandel.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/d/d1/Trajectmandel.jpg 2x" data-file-width="499" data-file-height="408" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Trajectmandel.jpg" class="internal" title="Ampliar"></a></div>
+A sequência z<sub>n+1</sub>= z<sub>n</sub><sup>2</sup>+c para 5 valores diferentes de c, sobreposta ao conjunto de Mandelbrot. Em cada sequência, os pontos z<sub>n</sub> (a amarelo) estão ligados aos pontos z<sub>n-1</sub> e z<sub>n+1</sub> por uma linha (a vermelha)</div>
+</div>
+</div>
+<p>Se reescrevermos a sequência em termos das partes real e imaginária (coordenadas x e y do plano complexo), a cada iteração n, substituindo <i>z</i><sub><i>n</i></sub> pelo ponto <i>x<sub>n</sub></i> + <i>y<sub>n</sub>i</i> e <i>c</i> pelo ponto <i>a</i> + <i>bi</i>, temos:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2212;<!-- − --></mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>a</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x_{n+1}={x_{n}}^{2}-{y_{n}}^{2}+a\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6f5676071689ddf9a3193de114a60d4435d3b7ee" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:22.184ex; height:3.009ex;" alt="x_{{n+1}}={x_{n}}^{2}-{y_{n}}^{2}+a\," /></span></dd>
+</dl>
+<p>e</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>2</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>x</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>y</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>n</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>+</mo>
+        <mi>b</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{n+1}=2{x_{n}}{y_{n}}+b\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/94bdce3fd483e94bed9ad070c3fd2cbd8c8e354c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:17.96ex; height:2.509ex;" alt="y_{{n+1}}=2{x_{n}}{y_{n}}+b\," /></span></dd>
+</dl>
+<p>O conjunto de Mandelbrot, em sua representação gráfica, pode ser dividido em um conjunto infinito de figuras pretas, sendo a maior delas um <a href="/wiki/Cardi%C3%B3ide" class="mw-redirect" title="Cardióide">cardióide</a> localizado ao centro do plano complexo. Existe uma infinidade (contável) de quase-círculos (o maior deles é a única figura que, de fato, é um círculo exato e localiza-se à esquerda do cardióide) que tangenciam o cardióide e variam de tamanho com raio tendendo <a href="/wiki/Ass%C3%ADntota" class="mw-redirect" title="Assíntota">assintoticamente</a> a <a href="/wiki/Zero" class="mw-redirect" title="Zero">zero</a>.</p>
+<p>Cada um desses círculos tem seu próprio conjunto infinito (contável) de pequenos círculos cujos raios também tendem assintoticamente a zero. Esse processo se repete infinitamente, gerando uma figura fractal que roda em varios graus de rotação anti horário e a figura se move como na sequência abaixo, dos destaques ampliados:</p>
+<div class="center">
+<div class="thumb tnone">
+<div class="thumbinner" style="width:447px;"><a href="/wiki/Ficheiro:Mandelzoom.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/c/c6/Mandelzoom.jpg" width="445" height="102" class="thumbimage" data-file-width="445" data-file-height="102" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelzoom.jpg" class="internal" title="Ampliar"></a></div>
+Dentro do conjunto de Mandelbrot há réplicas do conjunto ad infinitum.</div>
+</div>
+</div>
+</div>
+<p>Quando se explora o Conjunto de Mandelbrot com mais resolução (fazendo «zoom») encontram-se sempre réplicas e mais réplicas do conjunto ad infinitum. É uma característica dos objectos fractais. Só a limitada precisão das computações possíveis faz com que, a partir de certa altura, isso deixe de acontecer.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Hist.C3.B3ria"><span class="tocnumber">1</span> <span class="toctext">História</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Rela.C3.A7.C3.A3o_com_os_conjuntos_de_Julia"><span class="tocnumber">2</span> <span class="toctext">Relação com os conjuntos de Julia</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ciclos_Peri.C3.B3dicos_no_conjunto_de_Mandelbrot"><span class="tocnumber">3</span> <span class="toctext">Ciclos Periódicos no conjunto de Mandelbrot</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Desenhando_o_conjunto"><span class="tocnumber">4</span> <span class="toctext">Desenhando o conjunto</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Adicionando_cor"><span class="tocnumber">4.1</span> <span class="toctext">Adicionando cor</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Otimiza.C3.A7.C3.A3o"><span class="tocnumber">4.1.1</span> <span class="toctext">Otimização</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Alguns_detalhes_do_conjunto_de_Mandelbrot"><span class="tocnumber">4.2</span> <span class="toctext">Alguns detalhes do conjunto de Mandelbrot</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Arte_e_o_Conjunto_de_Mandelbrot"><span class="tocnumber">4.3</span> <span class="toctext">Arte e o Conjunto de Mandelbrot</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Outros_Conjuntos_de_Mandelbrot"><span class="tocnumber">5</span> <span class="toctext">Outros Conjuntos de Mandelbrot</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#O_Conjunto_de_Mandelbrot_e_a_m.C3.BAsica"><span class="tocnumber">6</span> <span class="toctext">O Conjunto de Mandelbrot e a música</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">7</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">8</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Hist.C3.B3ria">História</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: História">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=1" title="Editar secção: História">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O conjunto de Mandelbrot foi definido pela primeira vez em 1905 por <a href="/wiki/Pierre_Fatou" title="Pierre Fatou">Pierre Fatou</a>, um matemático <a href="/wiki/Fran%C3%A7a" title="França">francês</a> que trabalhou no campo da <a href="/w/index.php?title=Din%C3%A2mica_anal%C3%ADtica_complexa&amp;action=edit&amp;redlink=1" class="new" title="Dinâmica analítica complexa (página não existe)">dinâmica analítica complexa</a>. Fatou estudou processos <a href="/wiki/Recursividade" title="Recursividade">recursivos</a> como</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>z</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msup>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z\to z^{2}+c\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f474e54f2250ea8340dbe7a78c3d742de485e23" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:11.141ex; height:2.843ex;" alt="z\to z^{2}+c\," /></span></dd>
+</dl>
+<p>Começando com um ponto qualquer <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9e72d1d86e86355892b39b8eb32b964834e113bf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.153ex; height:2.009ex;" alt="z_0" /></span> no plano complexo, podem-se gerar pontos sucessivos aplicando-se repetidamente esta fórmula. A seqüência de pontos obtida é chamada órbita de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9e72d1d86e86355892b39b8eb32b964834e113bf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.153ex; height:2.009ex;" alt="z_0" /></span> sob a transformação <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>z</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msup>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>c</mi>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z\to z^{2}+c\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f474e54f2250ea8340dbe7a78c3d742de485e23" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:11.141ex; height:2.843ex;" alt="z\to z^{2}+c\," /></span>.</p>
+<p>Fatou percebeu que a órbita de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z_{0}=0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6015a6c1d9f7912952d18c0ddc01d7a4b901483" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.435ex; height:2.509ex;" alt="z_{0}=0" /></span> sob esta transformação forneceria alguma introspecção sobre o comportamento de tais sistemas. Existe um número infinito de tais <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">funções</a> - uma para cada valor de <i>c</i>. Fatou não teve acesso a um <a href="/wiki/Computador" title="Computador">computador</a> capaz de <a href="/wiki/Plotter" title="Plotter">plotar</a> as órbitas de todas essas funções, mas ele tentou fazer isso a mão. Ele provou que uma vez que um ponto atinge uma distância da origem maior que 2, a órbita explode para o infinito.</p>
+<p>Fatou nunca viu uma imagem, como estamos acostumados a ver, do que hoje chamamos de conjunto de Mandelbrot pois a quantidade de cálculos necessária para se gerarem tais imagens está além da capacidade de um ser humano executar a mão. O Professor <a href="/wiki/Beno%C3%AEt_Mandelbrot" title="Benoît Mandelbrot">Benoît Mandelbrot</a> foi a primeira pessoa a utilizar um computador para plotar o conjunto.</p>
+<p>Os fractais foram popularizados por Mandelbrot em <a href="/wiki/1975" title="1975">1975</a> em seu livro <i><a href="/w/index.php?title=Les_Objets_Fractals:_Forme,_Hasard_et_Dimension&amp;action=edit&amp;redlink=1" class="new" title="Les Objets Fractals: Forme, Hasard et Dimension (página não existe)">Les Objets Fractals: Forme, Hasard et Dimension</a></i>. Neste livro, Mandelbrot usou o termo <a href="/wiki/Fractal" title="Fractal">fractal</a> para descrever um número de fenômenos matemáticos que pareciam exibir comportamento <a href="/wiki/Teoria_do_caos" title="Teoria do caos">caótico</a> ou surpreendente. Todos estes fenômenos envolviam a definição de alguma curva ou algum conjunto através do uso de algumas funções ou <a href="/wiki/Algoritmo" title="Algoritmo">algoritmos</a> <a href="/wiki/Recursividade" title="Recursividade">recursivos</a>. O conjunto de Mandelbrot é um desses fenômenos e leva o nome de seu descobridor.</p>
+<h2><span class="mw-headline" id="Rela.C3.A7.C3.A3o_com_os_conjuntos_de_Julia">Relação com os conjuntos de Julia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Relação com os conjuntos de Julia">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=2" title="Editar secção: Relação com os conjuntos de Julia">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>O conjunto de Mandelbrot foi criado por Benoît Mandelbrot como um índice ao <a href="/wiki/Conjunto_de_Julia" title="Conjunto de Julia">conjunto de Julia</a>: cada ponto no plano complexo corresponde a um conjunto de Julia diferente. Os pontos que pertencem ao conjunto de Mandelbrot correspondem precisamente aos conjuntos de Julia <a href="/wiki/Conexidade" title="Conexidade">conexos</a>, e os pontos fora do conjunto de Mandelbrot correspondem aos conjuntos de Julia desconexos.</p>
+<p><br />
+Intuitivamente, os conjuntos de Julia "interessantes" correspondem aos pontos próximos à fronteira do conjunto de Mandelbrot; pontos mais internos ao conjunto de Mandelbrot correspondem a formas geométricas relativamente simples, enquanto os pontos mais externos lembram poeira rodeada por manchas de cores. Alguns programas, como o <a href="/w/index.php?title=Fractint&amp;action=edit&amp;redlink=1" class="new" title="Fractint (página não existe)">Fractint</a>, permitem que o usuário escolha um ponto e veja o conjunto de Julia correspondente, tornando fácil a navegação. Um dos descansos de tela do pacote <a href="/w/index.php?title=Xscreensaver&amp;action=edit&amp;redlink=1" class="new" title="Xscreensaver (página não existe)">xscreensaver</a> apresenta uma animação dos diversos conjuntos de Julia relativos a um ponto que fica dançando na tela.</p>
+<p>O conjunto de Mandelbrot também "contém" estruturas muito semelhantes aos conjuntos de Julia; de fato, para qualquer valor <i>c</i>, a região do conjunto de Mandelbrot ao redor de <i>c</i> lembra o centro do conjunto de Julia com parâmetro <i>c</i>.</p>
+<h2><span class="mw-headline" id="Ciclos_Peri.C3.B3dicos_no_conjunto_de_Mandelbrot">Ciclos Periódicos no conjunto de Mandelbrot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Ciclos Periódicos no conjunto de Mandelbrot">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=3" title="Editar secção: Ciclos Periódicos no conjunto de Mandelbrot">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/Ficheiro:Mandelbrot_bulbs.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mandelbrot_bulbs.jpg/200px-Mandelbrot_bulbs.jpg" width="200" height="164" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mandelbrot_bulbs.jpg/300px-Mandelbrot_bulbs.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mandelbrot_bulbs.jpg/400px-Mandelbrot_bulbs.jpg 2x" data-file-width="579" data-file-height="475" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelbrot_bulbs.jpg" class="internal" title="Ampliar"></a></div>
+Valores do período para os bolbos</div>
+</div>
+</div>
+<p>Dentro do conjunto de Mandelbrot, a iteração da sequência z<sub>n+1</sub>= z<sub>n</sub>²+c evolui de modo diferente para diferentes valores de c. Para valores de c no centro da grande <a href="/wiki/Cardi%C3%B3ide" class="mw-redirect" title="Cardióide">cardióide</a>, as iterações convergem para um ponto. Para valores de c dentro do grande bolbo à esquerda do <a href="/wiki/Cardi%C3%B3ide" class="mw-redirect" title="Cardióide">cardióide</a>, as iterações convergem para um ciclo de período 2. Para os outros bolbos, as iterações convergem para ciclos com diferentes períodos, de acordo com o número mostrado na figura seguinte.</p>
+<p>Note que no bolbo que fica exatamente no meio entre o bolbo com n=2 e o bolbo com n=3, o período do ciclo é n=2+3=5; no bolbo entre o bolbo com n=2 e o bolbo com n=5, o período do ciclo é n=2+5=7; no bolbo entre o bolbo com n=2 e o bolbo com n=7, o período do ciclo é n=2+7=9. De fato, há nesse quadrante do <a href="/wiki/Cardi%C3%B3ide" class="mw-redirect" title="Cardióide">cardióide</a> tantos bolbos quanto a quantidade de números reais entre 2 e 3!</p>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:181px;"><a href="/wiki/Ficheiro:Animated_cycle.gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/1/1b/Animated_cycle.gif" width="179" height="128" class="thumbimage" data-file-width="179" data-file-height="128" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Animated_cycle.gif" class="internal" title="Ampliar"></a></div>
+Ciclo atractor no bolbo 2/5 desenhado sobre o conjunto de Julia correspondente (animação)</div>
+</div>
+</div>
+<p>Se observarmos o movimento dos pontos num ciclo do bolbo com n=5, vemos que o ciclo salta sempre 2 componentes no sentido anti-horário em cada iteração. Podemos então designar esse ciclo pelo número racional 2/5 e dizer que o ciclo roda em torno de um ponto central numa rotação de 2/5 de revolução por cada iteração. E esse bolbo pode ser designado por «bolbo 2/5».</p>
+<p>Usando esta designação, torna-se claro que os bolbos primários estão ordenados em ordem crescente em relação a este número de rotação: 1/7, 1/6, 1/5, 1/4, 2/7, 1/3, 3/8, 2/5, 3/7, 1/2. Para sabermos o número de rotação de um bolbo intermédio, basta somar os numeradores e os denominadores separadamente:</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/Ficheiro:Juliacycles1.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Juliacycles1.png/300px-Juliacycles1.png" width="300" height="164" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Juliacycles1.png/450px-Juliacycles1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Juliacycles1.png/600px-Juliacycles1.png 2x" data-file-width="700" data-file-height="383" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Juliacycles1.png" class="internal" title="Ampliar"></a></div>
+Ciclos atractores e conjuntos de Julia para parâmetros nos bolbos 1/2, 3/7, 2/5, 1/3, 1/4 e 1/5</div>
+</div>
+</div>
+<p>entre o bolbo 2/5 e o bolbo 1/2, há o bolbo 3/7. Existe também um outro bolbo 4/9 ainda menor entre o bolbo 1/2 e o bolbo 3/7.</p>
+<p>Os bolbos estão ordenados exatamente como os números racionais pois há um bolbo p/q para cada número racional entre 0 e 1 e, além disso, estão ordenados corretamente à volta do bolbo principal no sentido anti-horário, começando em zero na cúspide. Na parte de baixo, os ciclos rodam no sentido horário.</p>
+<div class="thumb tleft">
+<div class="thumbinner" style="width:162px;"><a href="/wiki/Ficheiro:Mandelbrot_iterations.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mandelbrot_iterations.jpg/160px-Mandelbrot_iterations.jpg" width="160" height="136" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mandelbrot_iterations.jpg/240px-Mandelbrot_iterations.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mandelbrot_iterations.jpg/320px-Mandelbrot_iterations.jpg 2x" data-file-width="549" data-file-height="468" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelbrot_iterations.jpg" class="internal" title="Ampliar"></a></div>
+Ciclos Periódicos no conjunto de Mandelbrot</div>
+</div>
+</div>
+<p><br />
+Na figura à esquerda, representa-se sobre o conjunto de Mandelbrot a evolução da sequência z<sub>n+1</sub>= z<sub>n</sub>²+c a partir de diferentes valores de c.</p>
+<p><br />
+<br />
+(Note-se que, embora sejam interessantes do ponto de vista gráfico, estas representações das diferentes evoluções sobrepostas ao conjunto de Mandelbrot não são muito correctas conceptualmente visto estas ocorrerem no espaço de fase de um sistema dinâmico e não no espaço de parâmetros de polinômios quadráticos, como o conjunto de Mandelbrot.)</p>
+<h2><span class="mw-headline" id="Desenhando_o_conjunto">Desenhando o conjunto</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Desenhando o conjunto">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=4" title="Editar secção: Desenhando o conjunto">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;">
+<div id="mwe_player_0" class="PopUpMediaTransform" style="width:220px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;width:400px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg/400px--Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; style=&quot;width:400px;height:320px&quot; class=&quot;kskin&quot; data-durationhint=&quot;42.4&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/5/55/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg&quot; type=&quot;video/ogg; codecs=&amp;quot;theora&amp;quot;&quot; data-title=&quot;Ficheiro Ogg original, 400 × 320 (1,86 Mbps)&quot; data-shorttitle=&quot;Fonte Ogg&quot; data-width=&quot;400&quot; data-height=&quot;320&quot; data-bandwidth=&quot;1859976&quot; data-framerate=&quot;25&quot;/&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg.160p.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Vídeo Ogg de baixa largura de banda (160P)&quot; data-shorttitle=&quot;Ogg 160P&quot; data-transcodekey=&quot;160p.ogv&quot; data-width=&quot;200&quot; data-height=&quot;160&quot; data-bandwidth=&quot;163608&quot; data-framerate=&quot;15&quot;/&gt;&lt;/video&gt;&lt;/div&gt;"><img alt="Ficheiro:Fractal-zoom-1-03-Mandelbrot Buzzsaw.ogg" style="width:220px;height:176px" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg/220px--Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/5/55/Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg" title="Reproduzir conteúdo" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Reproduzir conteúdo</span></span></a></div>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Fractal-zoom-1-03-Mandelbrot_Buzzsaw.ogg" class="internal" title="Ampliar"></a></div>
+Um filme com zoom sobre o ponto 0.001643721971153 + 0.822467633298876i no Conjunto de Mandelbrot</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Buddhabrot-W1000000-B100000-L20000-2000.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Buddhabrot-W1000000-B100000-L20000-2000.jpg/220px-Buddhabrot-W1000000-B100000-L20000-2000.jpg" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Buddhabrot-W1000000-B100000-L20000-2000.jpg/330px-Buddhabrot-W1000000-B100000-L20000-2000.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/Buddhabrot-W1000000-B100000-L20000-2000.jpg/440px-Buddhabrot-W1000000-B100000-L20000-2000.jpg 2x" data-file-width="2000" data-file-height="2000" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Buddhabrot-W1000000-B100000-L20000-2000.jpg" class="internal" title="Ampliar"></a></div>
+Método <i><a href="/wiki/Buddhabrot" title="Buddhabrot">Buddhabrot</a></i></div>
+</div>
+</div>
+<p>Pode-se mostrar que uma vez que o <a href="/wiki/Valor_absoluto" class="mw-disambig" title="Valor absoluto">valor absoluto</a> de <i>z</i> <sub><i>n</i></sub> é maior que 2 (na <a href="/wiki/Sistema_de_coordenadas_cartesiano" title="Sistema de coordenadas cartesiano">forma cartesiana</a>, quando <i>x</i><sub><i>n</i></sub>² + <i>y</i><sub><i>n</i></sub>² &gt; 2²) a sequência tenderá ao infinito e, portanto, <i>c</i> não pertence ao conjunto de Mandelbrot. Este valor, conhecido como valor de fuga, permite o término dos cálculos para pontos que não pertencem ao conjunto de Mandelbrot. Para aqueles que pertencem ao conjunto, ou seja, valores de <i>c</i> para os quais <i>z</i><sub><i>n</i></sub> não tende ao infinito, o cálculo nunca irá terminar. Portanto, o cálculo deve ser terminado após um certo número de iterações determinado pelo programa. Isso resulta numa imagem que é apenas uma representação aproximada do conjunto verdadeiro. Hobbistas aprendem rapidamente a reconhecer as imperfeições nas imagens geradas, onde pontos que não pertencem ao conjunto de Mandelbrot são incluídos na representação do conjunto devido ao número insuficiente de iterações executadas pelo algoritmo. Nestas situações, é possível reajustar o programa para que seja executado um número maior de iterações ao custo de tornar o processo mais lento devido ao aumento da quantidade de cálculos para os pontos que pertencem ao conjunto.</p>
+<p>Infelizmente, o número de iterações necessárias para a representação perfeita do conjunto é infinito. Além disso, o conjunto ocupa uma região contínua do <a href="/wiki/Plano_de_Argand-Gauss" class="mw-redirect" title="Plano de Argand-Gauss">plano de Argand-Gauss</a> que, portanto, é impossível de ser representada fielmente em uma imagem pixelizada (espaço <a href="/wiki/Discreto" class="mw-disambig" title="Discreto">discretizado</a>).</p>
+<h3><span class="mw-headline" id="Adicionando_cor">Adicionando cor</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Adicionando cor">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=5" title="Editar secção: Adicionando cor">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Matematicamente falando, as imagens dos conjuntos de Mandelbrot e de Julia são em "branco e preto", no sentido de que um ponto está ou dentro ou fora do conjunto em questão. Entretanto, a maioria das imagens geradas por computador são desenhadas em cores. No método de <a href="/wiki/Renderiza%C3%A7%C3%A3o" title="Renderização">renderização</a> mais comum, para os pontos que divergem para o infinito e que, portanto, não fazem parte do conjunto, as cores refletem o número de iterações necessárias para atingirem uma certa distância da origem. Isso cria formas concêntricas, cada uma sendo uma melhor aproximação para o conjunto de Mandelbrot em relação à camada exterior.</p>
+<p>Um esquema de cores possível é pintar de preto os pontos que divergem rapidamente, ter as cores mais claras ao centro da imagem e um gradiente de tons de cinza (ou de qualquer outra cor de preferência) sendo que os pontos mais próximos de branco são os que divergem mais vagarosamente.</p>
+<p>Para determinar se o ponto <i>Z<sub>0</sub></i> pertence ao conjunto de Mandelbrot (tradicionalmente representado em preto) ou se está fora do conjunto (colorido de acordo com sua velocidade de escape), a distância de <i>Z<sub>i</sub></i> deve ser calculada a cada iteração:</p>
+<p>Se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>Z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>X</mi>
+        <mo>+</mo>
+        <mi>i</mi>
+        <mi>Y</mi>
+        <mtext>&#xA0;</mtext>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Z_{i}=X+iY\ }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/816cc6acae8165e9efdc24e3c87655c44704f3ff" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:13.533ex; height:2.509ex;" alt="Z_{i}=X+iY\ " /></span>, então <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">&#x2225;<!-- ∥ --></mo>
+        <msub>
+          <mi>Z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2225;<!-- ∥ --></mo>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <msup>
+              <mi>X</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <msup>
+              <mi>Y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+          </msqrt>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \|Z_{i}\|={\sqrt {X^{2}+Y^{2}}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2fe89a5024f032b92a52ec469a2e2b9a3f24895e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.086ex; height:3.509ex;" alt="\|Z_{i}\|={\sqrt  {X^{2}+Y^{2}}}" /></span>. Note que uma das muitas otimizações possíveis no cálculo de mandelbrots pode se aplicar aqui. Em vez de testar se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <msup>
+              <mi>X</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <msup>
+              <mi>Y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+          </msqrt>
+        </mrow>
+        <mo>&gt;</mo>
+        <mn>2</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\sqrt {X^{2}+Y^{2}}}&gt;2}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e3c7633e534b0a957c3233caaacc8d36045aad26" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.508ex; height:3.509ex;" alt="{\sqrt  {X^{2}+Y^{2}}}&gt;2" /></span>, podemos simplesmente testar se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>X</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>Y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&gt;</mo>
+        <mn>4</mn>
+        <mtext>&#xA0;</mtext>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X^{2}+Y^{2}&gt;4\ }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/422b4c27a9cdf7eeceacc82565afa4bc4312c8f5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:13.755ex; height:2.843ex;" alt="X^{2}+Y^{2}&gt;4\ " /></span> evitando, desse modo, a operação de cálculo da <a href="/wiki/Raiz_quadrada" title="Raiz quadrada">raiz quadrada</a>.</p>
+<p><br /></p>
+<h4><span class="mw-headline" id="Otimiza.C3.A7.C3.A3o">Otimização</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Otimização">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=6" title="Editar secção: Otimização">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Uma forma de melhorar o desempenho dos cálculos é achar de antemão se um dado ponto está dentro do cardióide. A equação polar do cardióide é</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C1;<!-- ρ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03B8;<!-- θ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rho _{c}={1 \over 2}-{1 \over 2}\cos \theta }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/657f3776f9baee76fdbd7d5332b2503efc036486" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:17.159ex; height:5.176ex;" alt="\rho _{c}={1 \over 2}-{1 \over 2}\cos \theta " /></span></dd>
+</dl>
+<p>mas com o centro das <a href="/wiki/Coordenadas_polares" title="Coordenadas polares">coordenadas polares</a> em (1/4,0) — a ponta do cardióide — em vez de estar na origem.</p>
+<p>Dado um ponto (<i>x</i>,<i>y</i>), calcule o seguinte:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <msup>
+              <mrow>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <msup>
+              <mi>y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+          </msqrt>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rho ={\sqrt {\left(x-{1 \over 4}\right)^{2}+y^{2}}},}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/951ad3619ef7f564c0bb57761fd7db4d7870779c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:23.1ex; height:7.676ex;" alt="\rho ={\sqrt  {\left(x-{1 \over 4}\right)^{2}+y^{2}}}," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03B8;<!-- θ --></mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>arctg</mtext>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mi>y</mi>
+              <mrow>
+                <mi>x</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>1</mn>
+                    <mn>4</mn>
+                  </mfrac>
+                </mrow>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \theta ={\hbox{arctg}}\left({y \over x-{1 \over 4}}\right),}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/97c785211f3904456943ec8de93ea794da952ab1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.505ex; width:21.262ex; height:7.843ex;" alt="\theta ={\hbox{arctg}}\left({y \over x-{1 \over 4}}\right)," /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03C1;<!-- ρ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mi>cos</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>&#x03B8;<!-- θ --></mi>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rho _{c}={1 \over 2}-{1 \over 2}\cos \theta .}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e993a7612a738deb8ba07a7dcd81f7525fb6e338" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:17.817ex; height:5.176ex;" alt="\rho _{c}={1 \over 2}-{1 \over 2}\cos \theta ." /></span></dd>
+</dl>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Mandelpart2.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mandelpart2.jpg/220px-Mandelpart2.jpg" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mandelpart2.jpg/330px-Mandelpart2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mandelpart2.jpg/440px-Mandelpart2.jpg 2x" data-file-width="1024" data-file-height="768" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelpart2.jpg" class="internal" title="Ampliar"></a></div>
+Uma parte do conjunto de Mandelbrot centrada em (0.282, -0.01)</div>
+</div>
+</div>
+<p>Se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C1;<!-- ρ --></mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <msub>
+          <mi>&#x03C1;<!-- ρ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rho \leq \rho _{c}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/64ebb37b73d375cd82715e18a2d5a60bda8dd4fd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.485ex; height:2.676ex;" alt="\rho \leq \rho _{c}" /></span> então o ponto (<i>x</i>,<i>y</i>) pertence ao conjunto de Mandelbrot (pinte-o de preto, por exemplo), e pode-se saltar os cálculos para este ponto.</p>
+<p>Para outros pontos, é possível evitar uma grande quantidade de operações fazendo-se "testes de periodicidade" - verificar se um ponto alcançado numa iteração de um pixel já foi alcançado anteriormente. Se já, a seqüência não pode divergir, e o ponto deve pertencer ao conjunto.</p>
+<h3><span class="mw-headline" id="Alguns_detalhes_do_conjunto_de_Mandelbrot">Alguns detalhes do conjunto de Mandelbrot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=7" class="mw-editsection-visualeditor" title="Editar secção: Alguns detalhes do conjunto de Mandelbrot">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=7" title="Editar secção: Alguns detalhes do conjunto de Mandelbrot">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>feitos com base num <a rel="nofollow" class="external text" href="http://to-campos.planetaclix.pt/fractal/mandel.html">applet de JAVA</a></p>
+<ul class="gallery mw-gallery-traditional">
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:17px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mandelbrot_detail1.jpg/120px-Mandelbrot_detail1.jpg" width="120" height="116" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mandelbrot_detail1.jpg/180px-Mandelbrot_detail1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mandelbrot_detail1.jpg/240px-Mandelbrot_detail1.jpg 2x" data-file-width="341" data-file-height="331" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.582; ponto-inferior-esquerdo=-0.4+0.5i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:21px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail2.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mandelbrot_detail2.jpg/120px-Mandelbrot_detail2.jpg" width="120" height="108" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mandelbrot_detail2.jpg/180px-Mandelbrot_detail2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mandelbrot_detail2.jpg/240px-Mandelbrot_detail2.jpg 2x" data-file-width="366" data-file-height="329" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.0017815; ponto-inferior-esquerdo=-0.75+0.06i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:21px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail3.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mandelbrot_detail3.jpg/120px-Mandelbrot_detail3.jpg" width="120" height="108" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mandelbrot_detail3.jpg/180px-Mandelbrot_detail3.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Mandelbrot_detail3.jpg/240px-Mandelbrot_detail3.jpg 2x" data-file-width="354" data-file-height="320" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.004402; ponto-inferior-esquerdo=0.28+0.0084i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:17px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail4.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mandelbrot_detail4.jpg/120px-Mandelbrot_detail4.jpg" width="120" height="116" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mandelbrot_detail4.jpg/180px-Mandelbrot_detail4.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mandelbrot_detail4.jpg/240px-Mandelbrot_detail4.jpg 2x" data-file-width="323" data-file-height="312" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.000191; ponto-inferior-esquerdo=-0.78-0.136i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:15.5px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail5.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Mandelbrot_detail5.jpg/120px-Mandelbrot_detail5.jpg" width="120" height="119" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Mandelbrot_detail5.jpg/180px-Mandelbrot_detail5.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/16/Mandelbrot_detail5.jpg/240px-Mandelbrot_detail5.jpg 2x" data-file-width="326" data-file-height="324" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.00004; ponto-inferior-esquerdo=-1.595+0.000095i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:18.5px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail6.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mandelbrot_detail6.jpg/120px-Mandelbrot_detail6.jpg" width="120" height="113" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mandelbrot_detail6.jpg/180px-Mandelbrot_detail6.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/75/Mandelbrot_detail6.jpg/240px-Mandelbrot_detail6.jpg 2x" data-file-width="356" data-file-height="336" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.0001558; ponto-inferior-esquerdo=-0.75+0.064i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:21.5px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail7.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Mandelbrot_detail7.jpg/120px-Mandelbrot_detail7.jpg" width="120" height="107" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Mandelbrot_detail7.jpg/180px-Mandelbrot_detail7.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Mandelbrot_detail7.jpg/240px-Mandelbrot_detail7.jpg 2x" data-file-width="373" data-file-height="332" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.0000829; ponto-inferior-esquerdo=0.253-0.0031i</p>
+</div>
+</div>
+</li>
+<li class="gallerybox" style="width: 155px">
+<div style="width: 155px">
+<div class="thumb" style="width: 150px;">
+<div style="margin:16px auto;"><a href="/wiki/Ficheiro:Mandelbrot_detail8.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mandelbrot_detail8.jpg/120px-Mandelbrot_detail8.jpg" width="120" height="118" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mandelbrot_detail8.jpg/180px-Mandelbrot_detail8.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Mandelbrot_detail8.jpg/240px-Mandelbrot_detail8.jpg 2x" data-file-width="343" data-file-height="337" /></a></div>
+</div>
+<div class="gallerytext">
+<p>lado=0.0166; ponto-inferior-esquerdo=-1.042-0.0346i</p>
+</div>
+</div>
+</li>
+</ul>
+<h3><span class="mw-headline" id="Arte_e_o_Conjunto_de_Mandelbrot">Arte e o Conjunto de Mandelbrot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=8" class="mw-editsection-visualeditor" title="Editar secção: Arte e o Conjunto de Mandelbrot">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=8" title="Editar secção: Arte e o Conjunto de Mandelbrot">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Algumas pessoas têm o hobby de buscar no conjunto de Mandelbrot figuras interessantes. Elas têm coleções de figuras, junto com as respectivas cordenadas utilizadas para gerá-las. Por exemplo, a imagem à direita é um close centrado nas coordenadas (0.282, -0.01). Abaixo há mais exemplos de belas regiões do conjunto de Mandelbrot:</p>
+<p><a href="/wiki/Ficheiro:Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg" class="image" title="Cool Mandelbrot"><img alt="Cool Mandelbrot" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg/110px-Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg" width="110" height="75" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg/165px-Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg/220px-Rfl-mandel002-out-p02.ps.rgb.bmp-fv-ls.2-gq90op.jpg 2x" data-file-width="770" data-file-height="523" /></a> <a href="/wiki/Ficheiro:Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg" class="image" title="Hot Mandelbrot"><img alt="Hot Mandelbrot" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg/110px-Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg" width="110" height="75" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg/165px-Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg/220px-Rfl-mandel003-out-p03.ps.rgb.bmp-fv-ls.2-gq90op.jpg 2x" data-file-width="770" data-file-height="523" /></a></p>
+<p>Há muitos programas para geração de fractais disponíveis gratuitamente na internet assim como implementações <a href="/wiki/Software_livre" title="Software livre">livres</a>. Há, por exemplo, aqueles feitos por <a href="/w/index.php?title=Stephen_Ferguson&amp;action=edit&amp;redlink=1" class="new" title="Stephen Ferguson (página não existe)">Stephen Ferguson</a> (<a href="/w/index.php?title=Sterling_Fractal&amp;action=edit&amp;redlink=1" class="new" title="Sterling Fractal (página não existe)">Sterling Fractal</a> e a série <a href="/w/index.php?title=Tierazon&amp;action=edit&amp;redlink=1" class="new" title="Tierazon (página não existe)">Tierazon</a>). Muitas pessoas escrevem seus próprios programas de geração de fractais para que possam ter a maior mobilidade possível no processo de geração das imagens.</p>
+<p><br /></p>
+<h2><span class="mw-headline" id="Outros_Conjuntos_de_Mandelbrot">Outros Conjuntos de Mandelbrot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=9" class="mw-editsection-visualeditor" title="Editar secção: Outros Conjuntos de Mandelbrot">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=9" title="Editar secção: Outros Conjuntos de Mandelbrot">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Quando as pessoas falam sobre o conjunto de Mandelbrot, elas frequentemente se referem ao conjunto descrito acima. Entretanto, qualquer <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">função</a> mapeada a partir de, ou para, o campo complexo possui um conjunto de Mandelbrot que indica, para cada ponto, se o conjunto de Julia correspondente àquela função é ou não conexo.</p>
+<p>Exemplo:</p>
+<p>Seja <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msup>
+          <mi>z</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+        <mo>+</mo>
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{c}(z)=z^{3}+c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a40c1f2730ff991f5489003c2360c164c93b2d1d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:14.17ex; height:3.176ex;" alt="f_{c}(z)=z^{3}+c" /></span>.</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:352px;"><a href="/wiki/Ficheiro:Mandelbrot3_4.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/4/4a/Mandelbrot3_4.jpg" width="350" height="229" class="thumbimage" data-file-width="350" data-file-height="229" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Mandelbrot3_4.jpg" class="internal" title="Ampliar"></a></div>
+Conjunto de Mandelbrot para z<sup>3</sup>+c e z<sup>4</sup>+c</div>
+</div>
+</div>
+<p>Para cada valor de <i>c</i>, desenhamos o conjunto de Julia <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>J</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle J_{c}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f14b8899714f6f45d997547247a864a8b2e10c5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.252ex; height:2.509ex;" alt="J_{c}" /></span> de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>z</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{c}(z)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e592c115cbfc07a96668a4dc7f7918415219d839" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.03ex; height:2.843ex;" alt="f_{c}(z)" /></span>, e determinamos se ele é conexo ou não. Se <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>J</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle J_{c}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5f14b8899714f6f45d997547247a864a8b2e10c5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.252ex; height:2.509ex;" alt="J_{c}" /></span> for conexo, então <i>c</i> pertence ao conjunto de Mandelbrot de {<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>c</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{c}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d2b64a46c31800830b9fecc59b22812390e18c05" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.101ex; height:2.509ex;" alt="f_{c}" /></span>}, senão, <i>c</i> não pertence ao conjunto.</p>
+<p>Isto também pode ser generalizado para conjuntos de Julia parametrizados por mais de dois <a href="/wiki/N%C3%BAmero_real" title="Número real">números reais</a>. Por exemplo, uma família de conjuntos de Julia parametrizada por três números reais será associada a um conjunto de Mandelbrot tridimensional. Claramente, as figuras geradas nos casos bidimensionais são, em geral, mais facilmente visualizáveis.</p>
+<h2><span class="mw-headline" id="O_Conjunto_de_Mandelbrot_e_a_m.C3.BAsica">O Conjunto de Mandelbrot e a música</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=10" class="mw-editsection-visualeditor" title="Editar secção: O Conjunto de Mandelbrot e a música">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=10" title="Editar secção: O Conjunto de Mandelbrot e a música">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A banda australiana <a rel="nofollow" class="external text" href="http://www.ganggajang.com/">GangGajang</a> tem uma música <i><a rel="nofollow" class="external text" href="http://www.ganggajang.com/lyrics_time.htm">Time (and the Mandelbrot set)</a></i>, ou <i>Tempo (e o conjunto de Mandelbrot)</i>, onde o termo <i>Mandelbrot set</i> (Conjunto de Mandelbrot) é livremente usado.</p>
+<p>O cantor americano <a rel="nofollow" class="external text" href="http://www.jonathancoulton.com/">Jonathan Coulton</a> tem uma canção intitulada <i><a rel="nofollow" class="external text" href="http://www.jonathancoulton.com/lyrics.php?song=mandelbrot">Mandelbrot Set</a></i>, ou <i>Conjunto de Mandelbrot</i>, versando sobre a história do conjunto de Mandelbrot assim como a do próprio Benoît Mandelbrot.</p>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=11" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=11" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Buddhabrot" title="Buddhabrot">Buddhabrot</a>, uma representação gráfica alternativa para os conjuntos de Mandelbrot.</li>
+</ul>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit&amp;vesection=12" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit&amp;section=12" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint" style="clear: right; border: solid #aaa 1px; margin: 0 0 1em 1em; font-size: 90%; background: #f9f9f9; width: 250px; padding: 2px; spacing: 2px; text-align: center; float: right;">
+<div style="float: left; vertical-align:middle;">
+<div class="floatnone"><img alt="Wikisource" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/26px-Wikisource-logo.svg.png" title="Wikisource" width="26" height="27" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/39px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/52px-Wikisource-logo.svg.png 2x" data-file-width="410" data-file-height="430" /></div>
+</div>
+<div style="margin-left: 30px; line-height:normal; vertical-align:middle;">O <a href="/wiki/Wikisource" title="Wikisource">Wikisource</a> contém fontes primárias relacionadas com <i><b><a href="https://pt.wikisource.org/wiki/Mandelbrot_set" class="extiw" title="s:Mandelbrot set">Conjunto de Mandelbrot</a></b></i></div>
+</div>
+<div class="noprint" style="clear: right; border: solid #aaa 1px; margin: 0 0 1em 1em; font-size: 90%; background: #f9f9f9; width: 238px; padding: 5px; spacing: 2px; text-align: center; float: right;">
+<div style="float: left; vertical-align:middle;">
+<div class="floatnone"><a href="/wiki/Ficheiro:Commons-logo.svg" class="image" title="Commons"><img alt="Commons" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/22px-Commons-logo.svg.png" width="22" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/33px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/44px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a></div>
+</div>
+<div style="margin-left: 30px; line-height:normal; vertical-align:middle;">O <a href="https://commons.wikimedia.org/wiki/P%C3%A1gina_principal" class="extiw" title="commons:Página principal">Commons</a> possui imagens e outras mídias sobre <b><span class="plainlinks"><a class="external text" href="http://commons.wikimedia.org/w/index.php?title=Mandelbrot+set&amp;uselang=pt">Conjunto de Mandelbrot</a></span></b></div>
+</div>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://mandelbrot.sellit.pl/">"Mandelbrot set - online generator"</a> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://to-campos.planetaclix.pt/fractal/mandel.html">Conjuntos de Mandelbrot e Julia</a> Página em português com applet de JAVA para explorar os conjuntos de Mandelbrot e Julia.</li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.ucsb.edu/~ebarlas">Aplicação para explorar o conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.mrob.com/pub/muency.html">Mu-Ency - Enciclopédia do conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.geocities.com/fabioc">Fractal Explorer</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.oemfoe.org/mandelbrot/"><i>Explore e Descubra</i></a></li>
+<li><a rel="nofollow" class="external text" href="http://aleph0.clarku.edu/~djoyce/julia/explorer.html">Explorador do conjunto de Julia e Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.shodor.org/master/fractal/software/mandy/index.html">The Fractal Microscope</a> provê uma interface <a href="/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)" title="Java (linguagem de programação)">Java</a> para visualização do conjunto de Mandelbrot. Diferentemente de algumas outras interfaces disponíveis na internet, esta funciona em browsers para computadores Macintosh (testado nos seguintes browsers para <a href="/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a>: <a href="/wiki/Safari_(web_browser)" class="mw-redirect" title="Safari (web browser)">Safari</a>, <a href="/wiki/Mozilla" title="Mozilla">Mozilla</a>, <a href="/wiki/Camino" title="Camino">Camino</a>, <a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a>).</li>
+<li><a class="external text" href="http://sources.wikipedia.org/wiki/Wikisource:Mathematics">Conjunto de Mandelbrot detalhado, ver abaixo</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.dlt-online.com/pages/M3DApplet.jsp">3D Applet para explorar o conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://faemalia.net/Fractals/">Uma galeria de imagens de fractais e programas de geração de fractais.</a></li>
+<li><a rel="nofollow" class="external text" href="http://mandelbrot.collettivamente.com">Realtime Mandelbrot Set Generator - Explorador Web do conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cut-the-knot.org/Curriculum/Magic/MandelCycle.shtml">Circulação de cores no conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cut-the-knot.org/blue/Mandel.shtml">Iterações e o conjunto de Mandelbrot</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cut-the-knot.org/blue/julia.shtml">Conjuntos de Mandelbrot e Julia</a></li>
+<li><a rel="nofollow" class="external text" href="http://xaos.sourceforge.net/english.php">Xaos, um explorador fractal em código aberto para conjuntos de Mandelbrot/Julia e outres, com autopilot para facilitar na exploração</a></li>
+<li><a rel="nofollow" class="external text" href="http://fract.ygingras.net/">Fract: software livre para explorar o conjunto de Mandelbrot na web</a></li>
+<li><a rel="nofollow" class="external text" href="http://ibiblio.org/e-notes/MSet/Contents.htm">A anatomia do conjunto de Mandelbrot e Julia</a></li>
+<li><a rel="nofollow" class="external text" href="http://thread.gmane.org/gmane.comp.python.brasil/24458/focus=24523">Código em Python do Mandrelbrot</a></li>
+<li>(em <a href="/wiki/L%C3%ADngua_portuguesa" title="Língua portuguesa">português</a>)<a rel="nofollow" class="external text" href="http://www.girino.org/mediawiki/index.php/P%C3%A1gina_principal#Fractais">Applets java</a> que desenham os conjuntos de mandelbrot e seus respectivos <a rel="nofollow" class="external text" href="http://www.girino.org/mediawiki/index.php/P%C3%A1gina_principal#Fractais_2">códigos fonte</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.sedentario.org/internet/zoom-em-um-fractal-maior-que-o-universo-24487">Zoom em um fractal de Mandelbrot maior que o universo</a></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:65843-0!*!0!!pt!4!*!math=5 and timestamp 20160830003754 and revision id 45065251
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Conjunto_de_Mandelbrot&amp;oldid=45065251">https://pt.wikipedia.org/w/index.php?title=Conjunto_de_Mandelbrot&amp;oldid=45065251</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:Fractais" title="Categoria:Fractais">Fractais</a></li><li><a href="/wiki/Categoria:Teoria_do_caos" title="Categoria:Teoria do caos">Teoria do caos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Conjunto+de+Mandelbrot" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Conjunto+de+Mandelbrot" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Conjunto_de_Mandelbrot"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Conjunto_de_Mandelbrot"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Conjunto_de_Mandelbrot" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Conjunto+de+Mandelbrot">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Conjunto+de+Mandelbrot&amp;returnto=Conjunto+de+Mandelbrot&amp;oldid=45065251&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>Noutros projetos</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Mandelbrot_sets" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Conjunto_de_Mandelbrot" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Conjunto_de_Mandelbrot" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;oldid=45065251" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Conjunto_de_Mandelbrot&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q257" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Conjunto_de_Mandelbrot&amp;id=45065251" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9_%D9%85%D8%A7%D9%86%D8%AF%D9%84%D8%A8%D8%B1%D9%88" title="مجموعة ماندلبرو — árabe" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-ba"><a href="https://ba.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D1%80%D0%BE%D1%82_%D0%BA%D2%AF%D0%BF%D0%BB%D0%B5%D0%B3%D0%B5" title="Мандельброт күплеге — bashkir" lang="ba" hreflang="ba">Башҡортса</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Conjunt_de_Mandelbrot" title="Conjunt de Mandelbrot — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Mandelbrotova_mno%C5%BEina" title="Mandelbrotova množina — checo" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Mandelbrotm%C3%A6ngden" title="Mandelbrotmængden — dinamarquês" lang="da" hreflang="da">Dansk</a></li><li class="interlanguage-link interwiki-de badge-Q17437798 badge-goodarticle" title="artigo bom"><a href="https://de.wikipedia.org/wiki/Mandelbrot-Menge" title="Mandelbrot-Menge — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Aro_de_Mandelbrot" title="Aro de Mandelbrot — esperanto" lang="eo" hreflang="eo">Esperanto</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Conjunto_de_Mandelbrot" title="Conjunto de Mandelbrot — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Mandelbrot_multzo" title="Mandelbrot multzo — basco" lang="eu" hreflang="eu">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87_%D9%85%D9%86%D8%AF%D9%84%D8%A8%D8%B1%D9%88" title="مجموعه مندلبرو — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Mandelbrotin_joukko" title="Mandelbrotin joukko — finlandês" lang="fi" hreflang="fi">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Ensemble_de_Mandelbrot" title="Ensemble de Mandelbrot — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Conxunto_de_Mandelbrot" title="Conxunto de Mandelbrot — galego" lang="gl" hreflang="gl">Galego</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%AA_%D7%9E%D7%A0%D7%93%D7%9C%D7%91%D7%A8%D7%95%D7%98" title="קבוצת מנדלברוט — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Mandelbrotov_skup" title="Mandelbrotov skup — croata" lang="hr" hreflang="hr">Hrvatski</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Mandelbrot-halmaz" title="Mandelbrot-halmaz — húngaro" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Mandelbrot_mengi%C3%B0" title="Mandelbrot mengið — islandês" lang="is" hreflang="is">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Insieme_di_Mandelbrot" title="Insieme di Mandelbrot — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%B3%E3%83%87%E3%83%AB%E3%83%96%E3%83%AD%E9%9B%86%E5%90%88" title="マンデルブロ集合 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D1%80%D0%BE%D1%82_%D1%84%D1%80%D0%B0%D0%BA%D1%82%D0%B0%D0%BB%D1%8B" title="Мандельброт фракталы — cazaque" lang="kk" hreflang="kk">Қазақша</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%A7%9D%EB%8D%B8%EB%B8%8C%EB%A1%9C_%EC%A7%91%ED%95%A9" title="망델브로 집합 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-lv badge-Q17437798 badge-goodarticle" title="artigo bom"><a href="https://lv.wikipedia.org/wiki/Mandelbrota_kopa" title="Mandelbrota kopa — letão" lang="lv" hreflang="lv">Latviešu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Mandelbrotverzameling" title="Mandelbrotverzameling — holandês" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Mandelbrotmengden" title="Mandelbrotmengden — norueguês" lang="no" hreflang="no">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Zbi%C3%B3r_Mandelbrota" title="Zbiór Mandelbrota — polaco" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Mul%C8%9Bimea_lui_Mandelbrot" title="Mulțimea lui Mandelbrot — romeno" lang="ro" hreflang="ro">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%9C%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D1%80%D0%BE%D1%82%D0%B0" title="Множество Мандельброта — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Mandelbrotov_skup" title="Mandelbrotov skup — servo-croata" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Mandelbrot_set" title="Mandelbrot set — Simple English" lang="simple" hreflang="simple">Simple English</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Mandelbrotova_mno%C5%BEina" title="Mandelbrotova množina — eslovaco" lang="sk" hreflang="sk">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Mandelbrotova_mno%C5%BEica" title="Mandelbrotova množica — esloveno" lang="sl" hreflang="sl">Slovenščina</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Mandelbrotm%C3%A4ngden" title="Mandelbrotmängden — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-te"><a href="https://te.wikipedia.org/wiki/%E0%B0%AE%E0%B1%87%E0%B0%82%E0%B0%A1%E0%B1%86%E0%B0%B2%E0%B1%8D%E2%80%8C%E0%B0%AC%E0%B1%8D%E0%B0%B0%E0%B0%BE%E0%B0%9F%E0%B1%8D_%E0%B0%B8%E0%B1%86%E0%B0%9F%E0%B1%8D" title="మేండెల్‌బ్రాట్ సెట్ — telugu" lang="te" hreflang="te">తెలుగు</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%8B%E0%B8%95%E0%B8%A1%E0%B8%B2%E0%B8%99%E0%B8%94%E0%B8%B1%E0%B8%A5%E0%B8%9A%E0%B8%A3%E0%B8%AD" title="เซตมานดัลบรอ — tailandês" lang="th" hreflang="th">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Mandelbrot_k%C3%BCmesi" title="Mandelbrot kümesi — turco" lang="tr" hreflang="tr">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BD%D0%BE%D0%B6%D0%B8%D0%BD%D0%B0_%D0%9C%D0%B0%D0%BD%D0%B4%D0%B5%D0%BB%D1%8C%D0%B1%D1%80%D0%BE%D1%82%D0%B0" title="Множина Мандельброта — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/T%E1%BA%ADp_h%E1%BB%A3p_Mandelbrot" title="Tập hợp Mandelbrot — vietnamita" lang="vi" hreflang="vi">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9B%BC%E5%BE%B7%E5%8D%9A%E9%9B%86%E5%90%88" title="曼德博集合 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q257#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 19h02min de 13 de março de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Conjunto_de_Mandelbrot&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.122",
+            "walltime": "0.251",
+            "ppvisitednodes": {
+                "value": 287,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 1734,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 50,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 3,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   12.825      1 -total",
+                " 38.80%    4.976      1 Predefinição:Pt",
+                " 26.38%    3.383      1 Predefinição:En",
+                " 17.04%    2.185      1 Predefinição:Wikisource",
+                " 15.87%    2.036      1 Predefinição:Commons"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1220",
+            "timestamp": "20160830003754",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":70,"wgHostname":"mw1264"});});</script>
+	</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Indistinguibilidade de textos cifrados – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Indistinguibilidade_de_textos_cifrados","wgTitle":"Indistinguibilidade de textos cifrados","wgCurRevisionId":46491827,"wgRevisionId":46491827,"wgArticleId":3988954,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Teoria da criptografia"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Indistinguibilidade_de_textos_cifrados","wgRelevantArticleId":3988954,"wgRequestId":"V9clXApAICoAAEpYemAAAABW","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q840661","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Indistinguibilidade_de_textos_cifrados"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Indistinguibilidade_de_textos_cifrados"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Indistinguibilidade_de_textos_cifrados rootpage-Indistinguibilidade_de_textos_cifrados skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Indistinguibilidade de textos cifrados</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p><b>Indistinguibilidade de textos cifrados</b>, também chamados de <i>cifrotextos</i>, é uma propriedade de alguns esquemas de <a href="/wiki/Encripta%C3%A7%C3%A3o" title="Encriptação">encriptação</a>. Intuitivamente, se um criptossistema possui a propriedade de <a href="/w/index.php?title=Computational_indistinguishability&amp;action=edit&amp;redlink=1" class="new" title="Computational indistinguishability (página não existe)">indistinguibilidade</a>, então um adversário será incapaz de distinguir pares de <a href="/w/index.php?title=Cifrotextos&amp;action=edit&amp;redlink=1" class="new" title="Cifrotextos (página não existe)">textos cifrados</a> baseados em mensagens encriptadas por eles. A propriedade de indistinguibilidade sob <a href="/w/index.php?title=Ataque_de_purotexto_escolhido&amp;action=edit&amp;redlink=1" class="new" title="Ataque de purotexto escolhido (página não existe)">ataque_de_purotexto_escolhido</a> é considerado um requisito básico por grande parte dos <a href="/w/index.php?title=Criptossistemas_de_chave_p%C3%BAblica&amp;action=edit&amp;redlink=1" class="new" title="Criptossistemas de chave pública (página não existe)">criptossistemas de chave pública</a> <a href="/w/index.php?title=Provable_security&amp;action=edit&amp;redlink=1" class="new" title="Provable security (página não existe)">demonstravelmente seguros</a>, embora alguns esquemas também proveem indistinguibilidade sob <a href="/wiki/Ataque_de_cifrotexto_escolhido" title="Ataque de cifrotexto escolhido">ataque de cifrotexto escolhido</a> e <a href="/wiki/Ataque_de_cifrotexto_escolhido_adaptativo" title="Ataque de cifrotexto escolhido adaptativo">ataque de cifrotexto escolhido adaptativo</a>. indistinguibilidade sob ataque de purotexto escolhido é equivalente à propriedade de <a href="/wiki/Seguran%C3%A7a_sem%C3%A2ntica" title="Segurança semântica">segurança semântica</a>, e muitas provas criptográficas usam essas definições indistintamente.</p>
+<p>Um criptossistema é considerado <i>seguro em termos de indistinguibilidade</i> se nenhum adversário, dado uma encriptação de uma mensagem aleatoriamente escolhida de um espaço contendo duas mensagens determinado pelo adversário, pode identificar a escolha da mensagem com uma probabilidade significativamente melhor que a adivinhação aleatória (<span style="white-space:nowrap" class="template-frac"><sup>1</sup><big>⁄</big><sub>2</sub></span>). Se um adversário qualquer pode ser bem sucedido em distinguir o cifrotexto escolhido com uma probabilidade significativamente maior que 1⁄2, então esse adversário é considerado como tendo uma "vantagem" em distinguir o cifrotexto, e o esquema não é considerado seguro em termos de indistinguibilidade. Essa definição engloba a noção de que em um esquema seguro, o adversão não deveria ser capaz de obter nenhuma informação somente observando o cifrotexto. Portanto, o adversário não deveria ser capaz de fazer melhor do que se tivesse estipulado aleatoriamente.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Defini.C3.A7.C3.B5es_formais"><span class="tocnumber">1</span> <span class="toctext">Definições formais</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#indistinguibilidade_sob_ataque_de_purotexto_escolhido_.28IND-CPA.29"><span class="tocnumber">1.1</span> <span class="toctext">indistinguibilidade sob ataque de purotexto escolhido (IND-CPA)</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#indistinguibilidade_sob_ataque_de_cifrotexto_escolhido_.28IND-CCA.2C_IND-CCA2.29"><span class="tocnumber">1.2</span> <span class="toctext">indistinguibilidade sob ataque de cifrotexto escolhido (IND-CCA, IND-CCA2)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Equival.C3.AAncia_e_implica.C3.A7.C3.B5es"><span class="tocnumber">2</span> <span class="toctext">Equivalência e implicações</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Literatura"><span class="tocnumber">3</span> <span class="toctext">Literatura</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Veja_tamb.C3.A9m"><span class="tocnumber">4</span> <span class="toctext">Veja também</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Defini.C3.A7.C3.B5es_formais">Definições formais</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Definições formais">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=1" title="Editar secção: Definições formais">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Segurança em termos de indistinguibilidade tem muitas definições, dependendo das suposições feitas sobre as capacidades do atacante. A definição de segurança é normalmente apresentada como um jogo, onde o criptossistema é considerado seguro se nenhum adversário pode ganhar o jogo com probabilidade significativamente maior que um adversário que estipula aleatoriamente. As definições mais comuns usadas em criptografia são indistinguibilidade sob <a href="/w/index.php?title=Ataque_de_purotexto_escolhido&amp;action=edit&amp;redlink=1" class="new" title="Ataque de purotexto escolhido (página não existe)">ataque de purotexto escolhido</a> (abreviação em inglês: IND-CPA), indistinguibilidade sob <a href="/w/index.php?title=Ataque_(n%C3%A3o-adaptativo)_de_cifrotexto_escolhido&amp;action=edit&amp;redlink=1" class="new" title="Ataque (não-adaptativo) de cifrotexto escolhido (página não existe)">ataque (não-adaptativo) de cifrotexto escolhido</a> (IND-CCA), e indistinguibilidade sob <a href="/w/index.php?title=Ataque_adaptativo_de_cifrotexto_escolhido&amp;action=edit&amp;redlink=1" class="new" title="Ataque adaptativo de cifrotexto escolhido (página não existe)">ataque adaptativo de cifrotexto escolhido</a> (IND-CCA2). Segurança sob qualquer dessas definições implica segurança sob as anteriores: um esquema que é seguro sob IND-CCA também é seguro sob IND-CPA, e um esquema que é seguro sob IND-CCA2 também é seguro sob IND-CCA e sob IND-CPA. Portanto, IND-CCA2 é a mais forte das três definições de segurança.</p>
+<h3><span class="mw-headline" id="indistinguibilidade_sob_ataque_de_purotexto_escolhido_.28IND-CPA.29"><span id="IND-CPA"></span>indistinguibilidade sob ataque de purotexto escolhido (IND-CPA)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: indistinguibilidade sob ataque de purotexto escolhido (IND-CPA)">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=2" title="Editar secção: indistinguibilidade sob ataque de purotexto escolhido (IND-CPA)">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Para um algoritmo de encriptação probabilística assimétrica de chave pública, indistinguibilidade sob ataque de purotexto escolhido (IND-CPA) é definida pelo seguinte jogo entre um adversário e um desafiador. Para esquemas baseados em segurança computacional, o adversário é modelado por uma máquina de Turing de tempo polinomial probabilístico, o que significa que ela deve completar o jogo e dar como saída uma estipulação dentro de um número polinomial de unidades de tempo. Sob essa definição, E(PK, M) representa a encriptação de uma mensagem M sob a chave PK:</p>
+<ol>
+<li>O desafiador gera um par de chaves PK, SK baseado em algum parâmetro de segurança k (e.g., um tamanho de chave em bits), e publica PK para o adversário. O desafiador guarda SK.</li>
+<li>O adversário pode realizar um número polinomialmente limitado de encriptações ou outras operações.</li>
+<li>Posteriormente, o adversário submete dois purotextos distintos <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{0},M_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ddc70be455962d1c2dd81d5a770fa148b182373" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.342ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{0},M_{1}}" /></span> ao desafiador.</li>
+<li>O desafiador seleciona um b <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2208;<!-- ∈ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \in }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fe4d5b0a594c1da89b5e78e7dfbeed90bdcc32f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:1.843ex;" alt="\in " /></span> {0, 1} uniforme e aleatoriamente, e envia o cifrotexto desafio <i>C</i> = E(PK, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>b</mi>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{b}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb35c53ab8149ccf6f8f48cb5a69c8697171c152" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.344ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{b}}" /></span>) de volta ao adversário.</li>
+<li>O adversário é livre para realizar qualquer número de computações ou encriptações adicionais. Finalmente, ele dá como saída uma estipulação para o valor de b.</li>
+</ol>
+<p>Um criptossistema é indistinguível sob ataque de purotexto escolhido se todo adversário de tempo polinomial probabilístico tem apenas uma "vantagem" desprezível sob estipulação aleatória. Um adversário é dito ter uma "vantagem" desprezível se ele vence o jogo acima com probabilidade <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mspace width="thinmathspace" />
+          <mo>+</mo>
+          <mspace width="thinmathspace" />
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \left({\frac {1}{2}}\right)\,+\,\epsilon (k)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cc6e017761f4662f28973892c5007856e6bce9f0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.338ex; width:8.38ex; height:3.509ex;" alt="{\displaystyle \scriptstyle \left({\frac {1}{2}}\right)\,+\,\epsilon (k)}" /></span>, onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03F5;<!-- ϵ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon (k)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f1f269311867bfe835b43466bd3e14ba95ef475f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.006ex; height:2.843ex;" alt="{\displaystyle \epsilon (k)}" /></span> é uma função desprezível no parâmetro de segurança k, isto é, para toda função polinomial (não-nula) <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+        <mi>o</mi>
+        <mi>l</mi>
+        <mi>y</mi>
+        <mo stretchy="false">(</mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle poly()}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/49b4e54ee2c95c79946e1fe03ac107d31794935b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; margin-left: -0.079ex; width:6.097ex; height:2.843ex;" alt="{\displaystyle poly()}" /></span> existe <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>k</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle k_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eafdfeca4ead3960fca92311910970eba7ec48a1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.283ex; height:2.509ex;" alt="k_0" /></span> tal que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mo stretchy="false">(</mo>
+          <mi>k</mi>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo stretchy="false">|</mo>
+          </mrow>
+          <mspace width="thickmathspace" />
+          <mo>&lt;</mo>
+          <mspace width="thickmathspace" />
+          <mrow>
+            <mo>|</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mrow>
+                  <mi>p</mi>
+                  <mi>o</mi>
+                  <mi>l</mi>
+                  <mi>y</mi>
+                  <mo stretchy="false">(</mo>
+                  <mi>k</mi>
+                  <mo stretchy="false">)</mo>
+                </mrow>
+              </mfrac>
+            </mrow>
+            <mo>|</mo>
+          </mrow>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle |\epsilon (k)|\;&lt;\;\left|{\frac {1}{poly(k)}}\right|}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/862081013fa961ea9f5465480da23bc9bbb2f491" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.671ex; width:12.26ex; height:4.176ex;" alt="{\displaystyle \scriptstyle |\epsilon (k)|\;&lt;\;\left|{\frac {1}{poly(k)}}\right|}" /></span> para todo <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mi>k</mi>
+          <mspace width="thickmathspace" />
+          <mo>&gt;</mo>
+          <mspace width="thickmathspace" />
+          <msub>
+            <mi>k</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle k\;&gt;\;k_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e699044f84204fb94c85772173578d03b5ab50cf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.142ex; height:2.009ex;" alt="{\displaystyle \scriptstyle k\;&gt;\;k_{0}}" /></span>.</p>
+<p>Embora o adversário conheça <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80e951b86e377bdef5ae68c8b882e7500402094e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.439ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{0}}" /></span>, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7e92df15a1d02addad33e143ec90cb895700c055" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.439ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{1}}" /></span> e PK, a natureza probabilística de E significa que a encriptação de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>b</mi>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{b}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb35c53ab8149ccf6f8f48cb5a69c8697171c152" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.344ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{b}}" /></span> será apenas um de muitos cifrotextos válidos, e portanto encriptar <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/80e951b86e377bdef5ae68c8b882e7500402094e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.439ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{0}}" /></span>, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7e92df15a1d02addad33e143ec90cb895700c055" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.439ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{1}}" /></span>, e comparar os cifrotextos resultantes com o cifrotexto desafio não concede qualquer vantagem não-desprezível ao adversário.</p>
+<p>Enquanto que a definição acima é específica para um criptossistema de chave assimétrica, ela pode ser adaptada ao caso simétrico substituindo-se a função de encriptação de chave pública por um "oráculo de encriptação", que retém a chave de encriptação secreta e encripta purotextos arbitrários à medida em que o adversário solicita.</p>
+<h3><span class="mw-headline" id="indistinguibilidade_sob_ataque_de_cifrotexto_escolhido_.28IND-CCA.2C_IND-CCA2.29"><span id="IND-CCA"></span><span id="IND-CCA2"></span>indistinguibilidade sob ataque de cifrotexto escolhido (IND-CCA, IND-CCA2)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: indistinguibilidade sob ataque de cifrotexto escolhido (IND-CCA, IND-CCA2)">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=3" title="Editar secção: indistinguibilidade sob ataque de cifrotexto escolhido (IND-CCA, IND-CCA2)">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Indistinguibilidade sob Ataque de Cifrotexto Escolhido não-adaptativo (IND-CCA, IND-CCA2) usa uma definição semelhante à de IND-CPA. Entretanto, além da chave pública (ou do oráculo de encriptação, no caso simétrico), o adversário ganha acesso a um oráculo de decriptação que decripta cifrotextos arbitrários sob solicitação do adversário, retornando o purotexto. Na definição não-adaptativa, o adversário pode consultar esse oráculo somente até que ele receba o cifrotexto desafio. Na definição adaptativa, o adversário pode continuar a consultar o oráculo de decriptação mesmo após ele ter recebido o cifrotexto desafio, com a restrição de que ele não pode passar o cifrotexto desafio para decriptação (pois, do contrário, a definição seria trivial).</p>
+<ol>
+<li>O desafiador gera um par de chaves "PK", "SK" baseado em algum parâmetro de segurança k (e.g. um tamanho de chave em bits), e publica "PK" para o adversário. O desafiador retém "SK".</li>
+<li>O adversário pode realizar qualquer quantidade de encriptações, chamadas ao oráculo de decriptação baseadas em cifrotextos arbitrários, ou outras operações.</li>
+<li>Posteriormente, o adversário submete dois purotextos escolhidos distintos <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>0</mn>
+            </mrow>
+          </msub>
+          <mo>,</mo>
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{0},M_{1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ddc70be455962d1c2dd81d5a770fa148b182373" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.342ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{0},M_{1}}" /></span> ao desafiador.</li>
+<li>The challenger selects a bit b ∈ {0, 1} uniformly at random, and sends the "challenge" ciphertext C = E(PK, ) back to the adversary. O desafiador seleciona um bit <i>b</i> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mo>&#x2208;<!-- ∈ --></mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \in }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e0a4e4b18f88a540b881dab023807160f159f8a9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.104ex; height:1.509ex;" alt="{\displaystyle \scriptstyle \in }" /></span> {0, 1} uniforme e aleatoriamente por e envia o cifrotexto <i>desafio</i> <i>C</i> = E(PK, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <msub>
+            <mi>M</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>b</mi>
+            </mrow>
+          </msub>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle M_{b}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb35c53ab8149ccf6f8f48cb5a69c8697171c152" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.344ex; height:2.009ex;" alt="{\displaystyle \scriptstyle M_{b}}" /></span>) de volta para o adversário.</li>
+<li>O adversário é livre para realizar qualquer quantidade de computações ou encriptações adicionais.
+<ol>
+<li>No caso <i>não adaptativo</i> (IND-CCA), o adversário pode <i>não</i> fazer futuras chamadas ao oráculo de decriptação.</li>
+<li>No caso <i>adaptativo</i> (IND-CCA2), o adversário pode fazer chamadas para o oráculo de decriptação, mas não pode submeter o cifrotexto desafio <i>C</i>.</li>
+</ol>
+</li>
+<li>Finamente, o adversário faz uma estipulação para o valor de "b e o dá como saída.</li>
+</ol>
+<p>Um esquema é IND-CCA/IND-CCA2 seguro se nenhum adversário tem uma vantagem não desprezível para vencer o jogo acima.</p>
+<h2><span class="mw-headline" id="Equival.C3.AAncia_e_implica.C3.A7.C3.B5es">Equivalência e implicações</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Equivalência e implicações">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=4" title="Editar secção: Equivalência e implicações">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Indistinguibilidade é uma importante propriedade para manutenção da confidencialidade de comunicações encriptadas. No entanto, a propriedade da indistinguibilidade tem, em alguns casos sido revelada como implicando em outras, aparentemente não-relacionadas propriedades de segurança. Às vezes essas implicações vão em ambas as direções, tornando as duas definições equivalentes; por exemplo, sabe-se que a propriedade da indisguinbilidade sob ataque de cifrotexto escolhido adaptativo (IND-CCA2) é equivalente à propriedade da não-maleabilidade sob o mesmo cenário de ataque (NM-CCA2). Essa equivalência não é imediatamente óbvia, pois não-maleabilidade é uma propriedade que trata da integridade de mensagens, ao invés de confidencialidade. Em outros casos, tem sido demonstrado que indistinguibilidade pode ser combinada com certas outras definições, de modo a levar a outras definições úteis, e vice-versa. A seguinte lista resume algumas implicações conhecidas, embora não seja de forma alguma completa.</p>
+<p>A notação <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mi>A</mi>
+          <mspace width="thickmathspace" />
+          <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+          <mspace width="thickmathspace" />
+          <mi>B</mi>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle A\;\Rightarrow \;B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b1a28bfa9d57c550241b57802c3b232cbe0b367f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.436ex; height:1.843ex;" alt="{\displaystyle \scriptstyle A\;\Rightarrow \;B}" /></span> significa que a propriedade A implica na propriedade B. <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mi>A</mi>
+          <mspace width="thickmathspace" />
+          <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+          <mspace width="thickmathspace" />
+          <mi>B</mi>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle A\;\Leftrightarrow \;B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f6c4bbf63902e8d471259c15b115f2c3033c0b60" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.436ex; height:1.843ex;" alt="{\displaystyle \scriptstyle A\;\Leftrightarrow \;B}" /></span> siginfica que a propriedade A e B são <i>equivalentes</i>. <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mi>A</mi>
+          <mspace width="thickmathspace" />
+          <mo>&#x21CF;</mo>
+          <mspace width="thickmathspace" />
+          <mi>B</mi>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle A\;\not \Rightarrow \;B}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6d4c9cb70762c19861c4f3e3b880cbedd666360d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.436ex; height:1.843ex;" alt="{\displaystyle \scriptstyle A\;\not \Rightarrow \;B}" /></span> significa que a propriedade A não necessariamente implica na propriedade B.</p>
+<ul>
+<li>IND-CPA <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \Leftrightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/875130c0980c8d4419506be91c32f141997f8b6e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.651ex; height:1.509ex;" alt="{\displaystyle \scriptstyle \Leftrightarrow }" /></span> <a href="/w/index.php?title=Semantic_security&amp;action=edit&amp;redlink=1" class="new" title="Semantic security (página não existe)">semântica segura</a> sobre CPA.</li>
+<li>NM-CPA (<a href="/w/index.php?title=Malleability_(cryptography)&amp;action=edit&amp;redlink=1" class="new" title="Malleability (cryptography) (página não existe)">não maleável</a> sob ataque de purotexto escolhido) <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \Rightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d49c6f4ab46821e8d4e5bebec9e2dc713801df50" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.651ex; height:1.509ex;" alt="{\displaystyle \scriptstyle \Rightarrow }" /></span> IND-CPA.</li>
+<li>NM-CPA (<a href="/w/index.php?title=Malleability_(cryptography)&amp;action=edit&amp;redlink=1" class="new" title="Malleability (cryptography) (página não existe)">não maleável</a> sob ataque de purotexto escolhido) <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mo>&#x21CF;</mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \not \Rightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2b4f3da06ef05c799cd32c8e79bd22c5caa0514b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.651ex; height:1.509ex;" alt="{\displaystyle \scriptstyle \not \Rightarrow }" /></span> IND-CCA2.</li>
+<li>NM-CCA2 (<a href="/w/index.php?title=Malleability_(cryptography)&amp;action=edit&amp;redlink=1" class="new" title="Malleability (cryptography) (página não existe)">não maleável</a> sob ataque de cifrotexto escolhido) <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="1">
+          <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \scriptstyle \Leftrightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/875130c0980c8d4419506be91c32f141997f8b6e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.651ex; height:1.509ex;" alt="{\displaystyle \scriptstyle \Leftrightarrow }" /></span> IND-CCA2.</li>
+</ul>
+<h2><span class="mw-headline" id="Literatura">Literatura</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Literatura">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=5" title="Editar secção: Literatura">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Jonathan Katz, Yehuda Lindell, "Introduction to Modern Cryptography: Principles and Protocols," Chapman &amp; Hall/CRC, 2007</li>
+</ul>
+<h2><span class="mw-headline" id="Veja_tamb.C3.A9m">Veja também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Veja também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;section=6" title="Editar secção: Veja também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/w/index.php?title=Chosen_ciphertext_attack&amp;action=edit&amp;redlink=1" class="new" title="Chosen ciphertext attack (página não existe)">Chosen ciphertext attack</a></li>
+<li><a href="/w/index.php?title=Adaptive_chosen_ciphertext_attack&amp;action=edit&amp;redlink=1" class="new" title="Adaptive chosen ciphertext attack (página não existe)">Adaptive chosen ciphertext attack</a></li>
+</ul>
+<p><a href="/w/index.php?title=Predefini%C3%A7%C3%A3o:Cryptography_navbox&amp;action=edit&amp;redlink=1" class="new" title="Predefinição:Cryptography navbox (página não existe)">Predefinição:Cryptography navbox</a></p>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:3988954-0!*!0!!pt!*!*!math=5 and timestamp 20160819235438 and revision id 46491827
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;oldid=46491827">https://pt.wikipedia.org/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;oldid=46491827</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Teoria_da_criptografia" title="Categoria:Teoria da criptografia">Teoria da criptografia</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Indistinguibilidade+de+textos+cifrados" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Indistinguibilidade+de+textos+cifrados" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Indistinguibilidade_de_textos_cifrados"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:Indistinguibilidade_de_textos_cifrados&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Indistinguibilidade_de_textos_cifrados" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Indistinguibilidade+de+textos+cifrados">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Indistinguibilidade+de+textos+cifrados&amp;returnto=Indistinguibilidade+de+textos+cifrados&amp;oldid=46491827&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Indistinguibilidade_de_textos_cifrados" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Indistinguibilidade_de_textos_cifrados" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;oldid=46491827" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q840661" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Indistinguibilidade_de_textos_cifrados&amp;id=46491827" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Ciphertext_Indistinguishability" title="Ciphertext Indistinguishability — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Ciphertext_indistinguishability" title="Ciphertext indistinguishability — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Niveaux_d%27attaques" title="Niveaux d'attaques — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%95%94%ED%98%B8%EB%AC%B8_%EB%B9%84%EA%B5%AC%EB%B3%84%EC%84%B1" title="암호문 비구별성 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q840661#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 23h54min de 19 de agosto de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Indistinguibilidade_de_textos_cifrados&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.036",
+            "walltime": "0.093",
+            "ppvisitednodes": {
+                "value": 199,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 546,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 47,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 5,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   10.533      1 -total",
+                " 58.90%    6.204      2 Predefinição:Anchor",
+                " 18.39%    1.937      1 Predefinição:Frac",
+                "  6.04%    0.636      1 Predefinição:Cryptography_navbox"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1290",
+            "timestamp": "20160819235437",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":87,"wgHostname":"mw1172"});});</script>
+	</body>
+</html>

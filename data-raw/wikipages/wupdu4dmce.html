@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Interpretação geométrica para o método dos mínimos quadráticos – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos","wgTitle":"Interpretação geométrica para o método dos mínimos quadráticos","wgCurRevisionId":37234785,"wgRevisionId":37234785,"wgArticleId":4014112,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Análise numérica"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos","wgRelevantArticleId":4014112,"wgRequestId":"V9dF4gpAEK4AACx19McAAABL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q18465946","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos rootpage-Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Interpretação geométrica para o método dos mínimos quadráticos</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p>Na <a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a>, sobretudo na <a href="/wiki/An%C3%A1lise_num%C3%A9rica" title="Análise numérica">análise numérica</a> e <a href="/wiki/%C3%81lgebra_linear" title="Álgebra linear">álgebra linear</a>, O <a href="/wiki/M%C3%A9todo_dos_m%C3%ADnimos_quadrados" title="Método dos mínimos quadrados">método dos mínimos quadrados</a> é um estratégia para lidar com sistemas lineares impossíveis <i>Ax=b</i>. O método adota a solução <i>x</i> que minimiza a soma do quadrado dos erros, chamado resíduo, isto é a <a href="/w/index.php?title=Norma_vetorial&amp;action=edit&amp;redlink=1" class="new" title="Norma vetorial (página não existe)">norma</a> L<sup>2</sup> de <i>Ax-b</i>.</p>
+<p>O objetivo deste artigo é apresentar uma interpretação geométrica do método.</p>
+<p>Falando em modo algébrico, estamos procurando um <b>x</b> que se aproxime ao máximo de <b>y</b>, em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax=y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/46902df09a57bc107f0f872c486d4c18ae8738f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.949ex; height:2.676ex;" alt="{\displaystyle \ Ax=y}" /></span>.<br /></p>
+<p>Dada <b>A</b>, uma matriz com os coeficientes de equações lineares, com tamanho <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>m</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ m*n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e321d2bb90896775a6e971b2508bcda731f693dd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:6.242ex; height:1.676ex;" alt="{\displaystyle \ m*n}" /></span>, uma observação importante que podemos fazer é que independente do vetor <b>x</b> em questão, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7dea64e16a35b6433eb87f50a577db1c7b4b195b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.674ex; height:2.343ex;" alt="{\displaystyle \ Ax}" /></span> pertence ao espaço de colunas de <b>A</b>, de tamanho <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>R</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ R^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40cfc9572547022d85e3750df6682fc6594a0ccf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.581ex; height:2.343ex;" alt="{\displaystyle \ R^{n}}" /></span>. Pelo método dos mínimos quadráticos devemos procurar <b>x</b> que torna <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7dea64e16a35b6433eb87f50a577db1c7b4b195b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.674ex; height:2.343ex;" alt="{\displaystyle \ Ax}" /></span> o ponto mais próximo de <b>y</b> no espaço das colunas de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9a29b7d7604962065930f413ee72574d1f7a6e81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:2.343ex;" alt="{\displaystyle \ A}" /></span>. É claro que, se <b>y</b> está no espaço das Colunas da matriz <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9a29b7d7604962065930f413ee72574d1f7a6e81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:2.343ex;" alt="{\displaystyle \ A}" /></span>, então <b>y</b> é da forma <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7dea64e16a35b6433eb87f50a577db1c7b4b195b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.674ex; height:2.343ex;" alt="{\displaystyle \ Ax}" /></span> para algum <b>x</b> e esse <b>x</b> é a solução dos mínimos quadráticos.</p>
+<p><br /></p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg/220px-Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg" width="220" height="132" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg/330px-Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg/440px-Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg 2x" data-file-width="576" data-file-height="346" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Interpreta%C3%A7%C3%A3o_Geom%C3%A9trica_dos_Vetores.jpg" class="internal" title="Ampliar"></a></div>
+Interpretação Visual</div>
+</div>
+</div>
+<p>Avaliando a imagem acima podemos ver que <b>Ŷ</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>=</mo>
+        <mi>p</mi>
+        <mi>r</mi>
+        <mi>o</mi>
+        <msub>
+          <mi>j</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>C</mi>
+            <mi>o</mi>
+            <mi>l</mi>
+            <mi>u</mi>
+            <mi>n</mi>
+            <mi>a</mi>
+            <mi>s</mi>
+            <mi>A</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle =proj_{ColunasA}*y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/50bd158e667a6f2f18cb838bae194e30e37d4775" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:17.808ex; height:2.509ex;" alt="{\displaystyle =proj_{ColunasA}*y}" /></span>.<br />
+Como <b>y</b> está no espaço de colunas de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9a29b7d7604962065930f413ee72574d1f7a6e81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:2.343ex;" alt="{\displaystyle \ A}" /></span>, a equação <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax=y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/46902df09a57bc107f0f872c486d4c18ae8738f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.949ex; height:2.676ex;" alt="{\displaystyle \ Ax=y}" /></span> é possível se existe um <b>X</b> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>R</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ R^{m}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5403250e6bf2dd341ec728652013f42532cee66a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:4.038ex; height:2.343ex;" alt="{\displaystyle \ R^{m}}" /></span> tal que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mo>=</mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ AX=y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8e0741e3671fc634835ecef5bb57ba7065166fed" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:8.6ex; height:2.676ex;" alt="{\displaystyle \ AX=y}" /></span>.<br />
+Como <b>Ŷ</b> é o ponto mais próximo de <b>y</b>, no espaço das colunas de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9a29b7d7604962065930f413ee72574d1f7a6e81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:2.343ex;" alt="{\displaystyle \ A}" /></span>, um vetor <b>X</b> é uma solução de mínimos quadráticos para <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax=y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/46902df09a57bc107f0f872c486d4c18ae8738f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.949ex; height:2.676ex;" alt="{\displaystyle \ Ax=y}" /></span> se e somente se <b>X</b> for solução de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>X</mi>
+        <mo>=</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A*X=}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dd074cf67f76c934acefbc5a7fe4fcafeab2ae27" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:8.994ex; height:2.343ex;" alt="{\displaystyle \ A*X=}" /></span><b>Ŷ</b>.</p>
+<p>Dito isto, sempre haverá uma solução para o sistema, pois da álgebra, sabemos que se há um subespaço <b>w</b> do <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>R</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ R^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40cfc9572547022d85e3750df6682fc6594a0ccf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.581ex; height:2.343ex;" alt="{\displaystyle \ R^{n}}" /></span>, então cada <b>y</b> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>R</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ R^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/40cfc9572547022d85e3750df6682fc6594a0ccf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.581ex; height:2.343ex;" alt="{\displaystyle \ R^{n}}" /></span> pode ser escrito de maneira única na forma <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>y</mi>
+        <mo>=</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ y=}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dbddba497e0d545ec7b9ff879a2458be4661b863" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.21ex; height:2.009ex;" alt="{\displaystyle \ y=}" /></span><b>ŷ</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>+</mo>
+        <mi>z</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle +z}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d128a5e034d5136437e671ed08b7188cead3f33f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.505ex; width:2.917ex; height:2.176ex;" alt="+z" /></span>, onde <b>ŷ</b> é a projeção de <b>y</b> sobre <b>W</b> e denotado por <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>p</mi>
+        <mi>r</mi>
+        <mi>o</mi>
+        <msub>
+          <mi>j</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>w</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ proj_{w}*y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/468e08ddc98c3817f536ef7f49b24b15b64ba7a9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:9.714ex; height:2.509ex;" alt="{\displaystyle \ proj_{w}*y}" /></span>.<br /></p>
+<p>A projeção de um vetor tem a propriedade de que se a subtração <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>y</mi>
+        <mo>&#x2212;<!-- − --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ y-}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b0a73039406e12359fd0d80372060f23d2587bcc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.081ex; height:2.009ex;" alt="{\displaystyle \ y-}" /></span><b>Ŷ</b> for ortogonal ao espaço Colunas de <b>A</b>, logo <b>y-Ax</b> é ortogonal a cada coluna de <b>A</b>. Como cada <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msubsup>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ a_{j}^{t}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d2830d6364232cf4440abc4810f1fc5bc8e674bd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.338ex; width:2.738ex; height:3.509ex;" alt="{\displaystyle \ a_{j}^{t}}" /></span> é uma linha de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A^{t}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ebcd1aa1c335d144af677ea04f60198c201170e7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.168ex; height:2.676ex;" alt="{\displaystyle \ A^{t}}" /></span>, ortogonais entre si temos que: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>A</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>x</mi>
+        <mo>=</mo>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A^{t}*A*x=A^{t}*y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1079970885ed48ae17b735f0c02d698a86f63b8a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:19.739ex; height:3.009ex;" alt="{\displaystyle \ A^{t}*A*x=A^{t}*y}" /></span>.</p>
+<p>Desta forma, o conjunto de soluções de mínimos quadráticos de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <mi>A</mi>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ Ax=y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/46902df09a57bc107f0f872c486d4c18ae8738f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.949ex; height:2.676ex;" alt="{\displaystyle \ Ax=y}" /></span> é igual ao conjunto de soluções da equação <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mtext>&#xA0;</mtext>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>A</mi>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>x</mi>
+        <mo>=</mo>
+        <msup>
+          <mi>A</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>t</mi>
+          </mrow>
+        </msup>
+        <mo>&#x2217;<!-- ∗ --></mo>
+        <mi>y</mi>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \ A^{t}*A*x=A^{t}*y.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6a5e152017e61f36635bd101e2f4e99f4d5da663" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.396ex; height:3.009ex;" alt="{\displaystyle \ A^{t}*A*x=A^{t}*y.}" /></span></p>
+<p><br /></p>
+<h2><span class="mw-headline" id="Refer.C3.AAncias"><b>Referências</b></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=edit&amp;section=1" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Análise Numérica, Richard L. Burden e J. Douglas Faires</li>
+<li><a rel="nofollow" class="external free" href="http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1982-21702011000200007&amp;nrm=iso&amp;tlng=pt">http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1982-21702011000200007&amp;nrm=iso&amp;tlng=pt</a></li>
+<li class="mw-empty-elt"></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:4014112-0!*!0!*!*!4!*!math=5 and timestamp 20160905205648 and revision id 37234785
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos&amp;oldid=37234785">https://pt.wikipedia.org/w/index.php?title=Interpretação_geométrica_para_o_método_dos_mínimos_quadráticos&amp;oldid=37234785</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:An%C3%A1lise_num%C3%A9rica" title="Categoria:Análise numérica">Análise numérica</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Interpreta%C3%A7%C3%A3o+geom%C3%A9trica+para+o+m%C3%A9todo+dos+m%C3%ADnimos+quadr%C3%A1ticos" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Interpreta%C3%A7%C3%A3o+geom%C3%A9trica+para+o+m%C3%A9todo+dos+m%C3%ADnimos+quadr%C3%A1ticos" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Interpreta%C3%A7%C3%A3o+geom%C3%A9trica+para+o+m%C3%A9todo+dos+m%C3%ADnimos+quadr%C3%A1ticos">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Interpreta%C3%A7%C3%A3o+geom%C3%A9trica+para+o+m%C3%A9todo+dos+m%C3%ADnimos+quadr%C3%A1ticos&amp;returnto=Interpreta%C3%A7%C3%A3o+geom%C3%A9trica+para+o+m%C3%A9todo+dos+m%C3%ADnimos+quadr%C3%A1ticos&amp;oldid=37234785&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;oldid=37234785" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q18465946" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;id=37234785" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q18465946#sitelinks-wikipedia" title="Adicionar ligações interlínguas" class="wbc-editpage">Adicionar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 18h32min de 2 de novembro de 2013.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Interpreta%C3%A7%C3%A3o_geom%C3%A9trica_para_o_m%C3%A9todo_dos_m%C3%ADnimos_quadr%C3%A1ticos&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.032",
+            "walltime": "0.266",
+            "ppvisitednodes": {
+                "value": 147,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 2,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%    0.000      1 -total"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1270",
+            "timestamp": "20160905205649",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":75,"wgHostname":"mw1219"});});</script>
+	</body>
+</html>

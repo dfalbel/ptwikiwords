@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Teoria de Sturm-Liouville – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Teoria_de_Sturm-Liouville","wgTitle":"Teoria de Sturm-Liouville","wgCurRevisionId":40729309,"wgRevisionId":40729309,"wgArticleId":1566809,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Esboços sobre matemática","!Esboços maiores que 1000 bytes","Equações diferenciais"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Teoria_de_Sturm-Liouville","wgRelevantArticleId":1566809,"wgRequestId":"V9cnhwpAADkAALgy4agAAAAG","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikibaseItemId":"Q1154082","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.nojs":"ready","ext.tmh.thumbnail.styles":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CEnhancedSearch%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CPagesForDeletion%2CReferenceTooltips%2CTitleRewrite%2CTopicon%2CWikiMiniAtlas%2Ccharinsert%2Cwikibugs%7Cext.math.styles%7Cext.tmh.thumbnail.styles%7Cext.uls.nojs%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.18"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Teoria_de_Sturm-Liouville"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Teoria_de_Sturm-Liouville"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Teoria_de_Sturm-Liouville rootpage-Teoria_de_Sturm-Liouville skin-vector action-view feature-page-action-bar-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Teoria de Sturm-Liouville</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p>Na teoria das <a href="/wiki/Equa%C3%A7%C3%A3o_diferencial_ordin%C3%A1ria" title="Equação diferencial ordinária">equações diferenciais ordinárias</a>, chama-se de <b>equaçao de Sturm-Liouville</b>, nome dado em homenagem aos matemáticos <a href="/wiki/Jacques_Charles_Fran%C3%A7ois_Sturm" title="Jacques Charles François Sturm">Jacques Charles François Sturm</a> (1803-1855) e <a href="/wiki/Joseph_Liouville" title="Joseph Liouville">Joseph Liouville</a> (1809-1882), uma equação diferencial real de segunda ordem da forma:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>d</mi>
+            <mrow>
+              <mi>d</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mrow>
+          <mo>[</mo>
+          <mi>p</mi>
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mi>d</mi>
+                <mi>y</mi>
+              </mrow>
+              <mrow>
+                <mi>d</mi>
+                <mi>x</mi>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>q</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>y</mi>
+        <mo>=</mo>
+        <mi>&#x03BB;<!-- λ --></mi>
+        <mi>w</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mspace width="2em" />
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle -{\frac {d}{dx}}\left[p(x){\frac {dy}{dx}}\right]+q(x)y=\lambda w(x)y,\qquad (1).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3d2984564bf3953055575848eb8db0c0e9266240" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:43.94ex; height:6.176ex;" alt="{\displaystyle -{\frac {d}{dx}}\left[p(x){\frac {dy}{dx}}\right]+q(x)y=\lambda w(x)y,\qquad (1).}" /></span></dd>
+</dl>
+<p>As <a href="/wiki/Fun%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Função (matemática)">funções</a> <i>p</i>(<i>x</i>), <i>q</i>(<i>x</i>), e <i>w</i>(<i>x</i>) são parâmetros e, no caso dito regular, são <a href="/wiki/Fun%C3%A7%C3%A3o_cont%C3%ADnua" title="Função contínua">contínuas</a> no <a href="/wiki/Intervalo_(matem%C3%A1tica)" title="Intervalo (matemática)">intervalo</a> <a href="/wiki/Conjunto_fechado" title="Conjunto fechado">fechado</a> <a href="/wiki/Conjunto_limitado" title="Conjunto limitado">limitado</a> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">[</mo>
+        <mi>a</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle [a,b]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9c4b788fc5c637e26ee98b45f89a5c08c85f7935" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.607ex; height:2.843ex;" alt="[a, b]" /></span>. O problema é normalmente complementado com <a href="/wiki/Condi%C3%A7%C3%A3o_de_contorno" class="mw-redirect" title="Condição de contorno">condições de contorno</a> especificadas. A função <i>w</i>(<i>x</i>) é costumeiramente chamada de função "peso" ou função "densidade".</p>
+<p>O valor de λ pode não ser especificado na equação. Encontrar os valores de λ para os quais existe uma solução não trivial de (1) satisfazendo as condições de contorno constitui o <b>problema de Sturm-Liouville</b>. Tais λ são chamados de <a href="/wiki/Valor_pr%C3%B3prio" title="Valor próprio">valores próprios</a> ou autovalores.</p>
+<div style="clear:both;"></div>
+<table class="navbox noprint collapsible autocollapse nowraplinks" style="border-top: solid silver 1px; border-bottom:1px solid silver; margin:auto; background:white;background:white;">
+<tr>
+<th colspan="3" style="text-align:center;width:100%;">
+<div style="float:left; width:6em; vertical-align:middle; text-align:left;">
+<div class="noprint plainlinksneverexpand navbar" style="background:none; padding:0; font-weight:normal;;border:none;; font-size:xx-small;"><a href="/wiki/Predefini%C3%A7%C3%A3o:Equa%C3%A7%C3%B5es_diferenciais" title="Predefinição:Equações diferenciais"><span class="plainlinks" title="Ver esta predefinição" style=";border:none;">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:Equa%C3%A7%C3%B5es_diferenciais&amp;action=edit"><span title="Editar esta predefinição" style=";border:none;;">e</span></a></span></div>
+</div>
+<span class="" style="font-size:110%;"><i><a href="/wiki/Equa%C3%A7%C3%A3o_diferencial" title="Equação diferencial">Equações diferenciais</a></i></span></th>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;"><a href="/wiki/Sistema_de_equa%C3%A7%C3%B5es_diferenciais" title="Sistema de equações diferenciais">Sistema de equações diferenciais<br /></a></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;"><a href="/wiki/Equa%C3%A7%C3%B5es_diferenciais" class="mw-redirect" title="Equações diferenciais">Equações diferenciais</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%B5es_diferenciais_ordin%C3%A1rias" class="mw-redirect" title="Equações diferenciais ordinárias">Equações diferenciais ordinárias</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_diferencial_ordin%C3%A1ria_de_primeira_ordem" title="Equação diferencial ordinária de primeira ordem">Equação diferencial ordinária de primeira ordem</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_diferencial_de_d%27Alembert" title="Equação diferencial de d'Alembert">Equação diferencial de d'Alembert</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_diferencial_de_Bernoulli" title="Equação diferencial de Bernoulli">Equação diferencial de Bernoulli</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Clairaut" title="Equação de Clairaut">Equação de Clairaut</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Duffing" title="Equação de Duffing">Equação de Duffing</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Decaimento_exponencial" title="Decaimento exponencial">Decaimento exponencial</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Euler" class="mw-disambig" title="Equação de Euler">Equação de Euler</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Lane-Emden" title="Equação de Lane-Emden">Equação de Lane-Emden</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Lotka-Volterra" title="Equação de Lotka-Volterra">Equação de Lotka-Volterra</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_do_p%C3%AAndulo" title="Equação do pêndulo">Equação do pêndulo</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Riccati" title="Equação de Riccati">Equação de Riccati</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Crescimento_demogr%C3%A1fico_(equa%C3%A7%C3%A3o_diferencial)" title="Crescimento demográfico (equação diferencial)">Crescimento Demográfico</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Trajet%C3%B3ria_ortogonal" title="Trajetória ortogonal">Trajetória ortogonal</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Cin%C3%A9tica_qu%C3%ADmica_(equa%C3%A7%C3%A3o_diferencial)" title="Cinética química (equação diferencial)">Cinética química</a></td>
+<td rowspan="5" style="vertical-align:middle; padding-left:7px; width:0%;"><a href="/wiki/Ficheiro:Airflow-Obstructed-Duct.png" class="image"><img alt="Airflow-Obstructed-Duct.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/250px-Airflow-Obstructed-Duct.png" width="250" height="179" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/375px-Airflow-Obstructed-Duct.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/Airflow-Obstructed-Duct.png/500px-Airflow-Obstructed-Duct.png 2x" data-file-width="1270" data-file-height="907" /></a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;"><a href="/wiki/Equa%C3%A7%C3%A3o_de_derivadas_parciais" class="mw-redirect" title="Equação de derivadas parciais">Equações diferenciais<br />
+parciais</a></th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;"><a href="/wiki/Equa%C3%A7%C3%A3o_de_Mason-Weaver" title="Equação de Mason-Weaver">Equação de Mason-Weaver</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_do_transporte" class="mw-redirect" title="Equação do transporte">Equação do transporte</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Laplace" title="Equação de Laplace">Equação de Laplace</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_de_Poisson" title="Equação de Poisson">Equação de Poisson</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_do_calor" title="Equação do calor">Equação do calor</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes" title="Equações de Navier-Stokes">Equações de Navier-Stokes</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Equa%C3%A7%C3%A3o_da_onda" title="Equação da onda">Equação da onda</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Métodos analíticos</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;"><a href="/wiki/Separa%C3%A7%C3%A3o_de_vari%C3%A1veis" title="Separação de variáveis">Separação de variáveis</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_de_Frobenius" title="Método de Frobenius">Método de Frobenius</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_de_d%27Alembert" title="Método de d'Alembert">Método de d'Alembert</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Métodos numéricos</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;"><a href="/wiki/M%C3%A9todo_dos_elementos_de_contorno" title="Método dos elementos de contorno">Método dos elementos de contorno</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_dos_elementos_finitos" title="Método dos elementos finitos">Método dos elementos finitos</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_Multigrid" title="Método Multigrid">Método Multigrid</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_de_Runge-Kutta" title="Método de Runge-Kutta">Método de Runge-Kutta</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_de_Dormand-Prince" title="Método de Dormand-Prince">Método de Dormand-Prince</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Wronskiano" title="Wronskiano">Método Wronskiano</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/M%C3%A9todo_da_varia%C3%A7%C3%A3o_de_par%C3%A2metros" title="Método da variação de parâmetros">Método da variação de parâmetros</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Outros</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;"><a href="/wiki/Lema_de_Gr%C3%B6nwall" title="Lema de Grönwall">Lema de Grönwall</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Teorema_de_Picard-Lindel%C3%B6f" title="Teorema de Picard-Lindelöf">Teorema de Picard-Lindelöf</a> <span style="font-weight:bold;">&#160;·</span> <strong class="selflink">Teoria de Sturm-Liouville</strong></td>
+</tr>
+</table>
+<p><br /></p>
+<table class="noprint" style="border-top:none; border-bottom:none; background:none;">
+<tr>
+<td align="center"><a href="/wiki/Ficheiro:E-to-the-i-pi.svg" class="image"><img alt="Ícone de esboço" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/34px-E-to-the-i-pi.svg.png" width="34" height="30" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/51px-E-to-the-i-pi.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/35/E-to-the-i-pi.svg/68px-E-to-the-i-pi.svg.png 2x" data-file-width="320" data-file-height="283" /></a></td>
+<td><i>Este artigo sobre <span><a href="/wiki/Matem%C3%A1tica" title="Matemática">matemática</a></span> é um <a href="/wiki/Wikip%C3%A9dia:Esbo%C3%A7o" title="Wikipédia:Esboço">esboço</a>. Você pode ajudar a Wikipédia <span class="plainlinks" style="font-weight:bold;"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=edit">expandindo-o</a></span>.</i>
+<div class="noprint plainlinksneverexpand navbar plainlinks" style="background:none; padding:0; font-weight:normal;; font-size:xx-small; position:absolute; right:15px; font-size:smaller; display:none;"><a href="/wiki/Predefini%C3%A7%C3%A3o:Esbo%C3%A7o-matem%C3%A1tica" title="Predefinição:Esboço-matemática"><span title="Ver esta predefinição" style="">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:Esbo%C3%A7o-matem%C3%A1tica&amp;action=edit"><span title="Editar esta predefinição" style=";">e</span></a></div>
+</td>
+</tr>
+</table>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:1566809-0!*!0!*!*!4!*!math=5 and timestamp 20160831100907 and revision id 40729309
+ -->
+<noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Teoria_de_Sturm-Liouville&amp;oldid=40729309">https://pt.wikipedia.org/w/index.php?title=Teoria_de_Sturm-Liouville&amp;oldid=40729309</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Equa%C3%A7%C3%B5es_diferenciais" title="Categoria:Equações diferenciais">Equações diferenciais</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categorias ocultas: <ul><li><a href="/wiki/Categoria:!Esbo%C3%A7os_sobre_matem%C3%A1tica" title="Categoria:!Esboços sobre matemática">!Esboços sobre matemática</a></li><li><a href="/wiki/Categoria:!Esbo%C3%A7os_maiores_que_1000_bytes" title="Categoria:!Esboços maiores que 1000 bytes">!Esboços maiores que 1000 bytes</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Teoria+de+Sturm-Liouville" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Teoria+de+Sturm-Liouville" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Teoria_de_Sturm-Liouville"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:Teoria_de_Sturm-Liouville&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Teoria_de_Sturm-Liouville" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisa" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Teoria+de+Sturm-Liouville">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Teoria+de+Sturm-Liouville&amp;returnto=Teoria+de+Sturm-Liouville&amp;oldid=40729309&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Teoria_de_Sturm-Liouville" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Teoria_de_Sturm-Liouville" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;oldid=40729309" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Teoria_de_Sturm-Liouville&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1154082" title="Ligação para o item de repositório de dados conectado [g]" accesskey="g">Item no Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Teoria_de_Sturm-Liouville&amp;id=40729309" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%D9%8A%D8%A9_%D8%B3%D8%AA%D9%88%D8%B1%D9%85-%D9%84%D9%8A%D9%88%D9%81%D9%8A%D9%84" title="نظرية ستورم-ليوفيل — árabe" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Teoria_de_Sturm-Liouville" title="Teoria de Sturm-Liouville — catalão" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Sturm-Liouville-Problem" title="Sturm-Liouville-Problem — alemão" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Sturm%E2%80%93Liouville_theory" title="Sturm–Liouville theory — inglês" lang="en" hreflang="en">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_Sturm-Liouville" title="Teoría de Sturm-Liouville — espanhol" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%86%D8%B8%D8%B1%DB%8C%D9%87_%D8%A7%D8%B4%D8%AA%D9%88%D8%B1%D9%85-%D9%84%DB%8C%D9%88%D9%88%DB%8C%D9%84" title="نظریه اشتورم-لیوویل — persa" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_de_Sturm-Liouville" title="Théorie de Sturm-Liouville — francês" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%A9%D7%98%D7%95%D7%A8%D7%9D-%D7%9C%D7%99%D7%95%D7%91%D7%99%D7%9C" title="תורת שטורם-ליוביל — hebraico" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Teoria_di_Sturm-Liouville" title="Teoria di Sturm-Liouville — italiano" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%84%E3%83%AB%E3%83%A0%EF%BC%9D%E3%83%AA%E3%82%A6%E3%83%B4%E3%82%A3%E3%83%AB%E5%9E%8B%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E5%BC%8F" title="スツルム＝リウヴィル型微分方程式 — japonês" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%8A%80%EB%A6%84-%EB%A6%AC%EC%9A%B0%EB%B9%8C_%EC%9D%B4%EB%A1%A0" title="스튀름-리우빌 이론 — coreano" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Sturm-liouvillevraagstuk" title="Sturm-liouvillevraagstuk — holandês" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%A8%D1%82%D1%83%D1%80%D0%BC%D0%B0_%E2%80%94_%D0%9B%D0%B8%D1%83%D0%B2%D0%B8%D0%BB%D0%BB%D1%8F" title="Задача Штурма — Лиувилля — russo" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Sturm%E2%80%93Liouvilles_problem" title="Sturm–Liouvilles problem — sueco" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%A8%D1%82%D1%83%D1%80%D0%BC%D0%B0_%E2%80%94_%D0%9B%D1%96%D1%83%D0%B2%D1%96%D0%BB%D0%BB%D1%8F" title="Задача Штурма — Ліувілля — ucraniano" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%96%BD%E5%9B%BE%E5%A7%86-%E5%88%98%E7%BB%B4%E5%B0%94%E7%90%86%E8%AE%BA" title="施图姆-刘维尔理论 — chinês" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1154082#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 21h18min de 28 de novembro de 2014.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Teoria_de_Sturm-Liouville&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interlanguage","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.062",
+            "walltime": "0.191",
+            "ppvisitednodes": {
+                "value": 1105,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 28123,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 15590,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 12,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "timingprofile": [
+                "100.00%   63.490      1 -total",
+                " 66.05%   41.934      1 Predefinição:Equações_diferenciais",
+                " 59.13%   37.539      1 Predefinição:Navbox",
+                " 41.96%   26.639      1 Predefinição:Navbox/core",
+                " 33.84%   21.482      1 Predefinição:Esboço-matemática",
+                " 30.27%   19.221      1 Predefinição:Esboço_personalizado",
+                " 16.56%   10.513      1 Predefinição:Asbox",
+                "  9.38%    5.954      1 Predefinição:Esboços_por_tamanho",
+                "  8.45%    5.365      1 Predefinição:Tnavbar",
+                "  6.33%    4.018      1 Predefinição:Artigos_e_outros"
+            ]
+        },
+        "EntityAccessCount": 0,
+        "cachereport": {
+            "origin": "mw1244",
+            "timestamp": "20160831100907",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":79,"wgHostname":"mw1262"});});</script>
+	</body>
+</html>
