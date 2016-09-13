@@ -42,3 +42,16 @@ The dataset contains 3 columns:
 * word: word, as is, found in Wikipedia pages
 * count: number of times the word was found in the sample of Wikipedia pages
 * check: wheter the word exists in the portuguese language
+
+Here is a wordcloud of those words:
+
+```{r, wordcloud}
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(wordcloud))
+words_filter <- ptwikiwords %>%
+  filter(check == T) %>%
+  slice(1:300)
+wordcloud(words_filter$word, words_filter$count)
+```
+
+
