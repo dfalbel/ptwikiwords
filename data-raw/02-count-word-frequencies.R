@@ -22,7 +22,7 @@ ptwikiwords$check <- hunspell::hunspell_check(
   dict = system.file("dict/Portuguese_Brazilian.dic", package = "ptstem")
   )
 
-devtools::use_data(ptwikiwords)
+devtools::use_data(ptwikiwords, overwrite = T)
 
 
 
