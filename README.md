@@ -5,7 +5,7 @@ ptwikiwords
 
 > Words used in Portuguese Wikipedia
 
-[![Travis-CI Build Status](https://travis-ci.org/dfalbel/ptwikiwords.svg?branch=master)](https://travis-ci.org/dfalbel/ptwikiwords)
+[![Travis-CI Build Status](https://travis-ci.org/dfalbel/ptwikiwords.svg?branch=master)](https://travis-ci.org/dfalbel/ptwikiwords) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/ptwikiwords)](https://cran.r-project.org/package=ptwikiwords)
 
 This data-package contains a dataset with words used in a random sample from ~15.000 pages from the [Portuguese Wikipedia](https://pt.wikipedia.org/).
 
@@ -27,13 +27,15 @@ After installing the package, you can load the dataset using:
 library(ptwikiwords)
 data(ptwikiwords)
 head(ptwikiwords)
-#>   word  count check
-#> 1   de 210954  TRUE
-#> 2    a 109652  TRUE
-#> 3    e 100028  TRUE
-#> 4    o  87839  TRUE
-#> 5   em  67040  TRUE
-#> 6   do  59489  TRUE
+#> # A tibble: 6 × 3
+#>    word  count check
+#>   <chr>  <int> <lgl>
+#> 1    de 210954  TRUE
+#> 2     a 109652  TRUE
+#> 3     e 100028  TRUE
+#> 4     o  87839  TRUE
+#> 5    em  67040  TRUE
+#> 6    do  59489  TRUE
 ```
 
 The dataset contains 3 columns:
