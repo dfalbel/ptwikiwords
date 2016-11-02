@@ -57,4 +57,14 @@ words_filter <- ptwikiwords %>%
 wordcloud(words_filter$word, words_filter$count)
 ```
 
+Here is a wordcloud of the 2-grams.
+
+```{r worcloud_ngrams}
+data(ngrams)
+words_filter <- ngrams %>%
+  slice(1:100)
+wordcloud(words_filter$ngrams, words_filter$count)
+```
+
+
 

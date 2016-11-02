@@ -56,3 +56,30 @@ wordcloud(words_filter$word, words_filter$count)
 ```
 
 ![](README-wordcloud-1.png)
+
+Here is a wordcloud of the 2-grams.
+
+``` r
+data(ngrams)
+words_filter <- ngrams %>%
+  slice(1:100)
+wordcloud(words_filter$ngrams, words_filter$count)
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): com o could
+#> not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): o primeiro
+#> could not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): é um could
+#> not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): para a could
+#> not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): de um could
+#> not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): janeiro de
+#> could not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): é uma could
+#> not be fit on page. It will not be plotted.
+#> Warning in wordcloud(words_filter$ngrams, words_filter$count): setembro de
+#> could not be fit on page. It will not be plotted.
+```
+
+![](README-worcloud_ngrams-1.png)

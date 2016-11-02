@@ -1,7 +1,7 @@
 library(httr)
 download_wikipedia <- function(path){
   fn <- sample(c(letters, 1:10), size = 10, replace = T) %>% paste0(collapse = "")
-  GET("https://pt.wikipedia.org/wiki/Especial:Aleat%C3%B3ria",
+  dplyr::failwith(NULL, GET)("https://pt.wikipedia.org/wiki/Especial:Aleat%C3%B3ria",
       write_disk(sprintf("%s%s.html", path, fn)))
 }
 
