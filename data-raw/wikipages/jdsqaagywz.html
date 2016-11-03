@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Árvore binária de busca – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Árvore_binária_de_busca","wgTitle":"Árvore binária de busca","wgCurRevisionId":46631017,"wgRevisionId":46631017,"wgArticleId":196630,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Páginas que usam referências com parâmetros depreciadas","Estruturas de dados"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Árvore_binária_de_busca","wgRelevantArticleId":196630,"wgRequestId":"WBo68QpAEKcAAARIXakAAAAJ","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q623818","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","ext.pygments":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@1w3gin5",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.cite.styles%7Cext.gadget.ElementosOcultaveis%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CTopicon%2Cwikibugs%7Cext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.23"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Árvore_binária_de_busca rootpage-Árvore_binária_de_busca skin-vector action-view feature-footer-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Árvore binária de busca</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p>Em <a href="/wiki/Ci%C3%AAncia_da_computa%C3%A7%C3%A3o" title="Ciência da computação">Ciência da computação</a>, uma <b>árvore binária de busca</b> <i>(ou <b>árvore binária de pesquisa</b>)</i> é uma <a href="/wiki/Estrutura_de_dados" title="Estrutura de dados">estrutura de dados</a> de <a href="/wiki/%C3%81rvore_bin%C3%A1ria" title="Árvore binária">árvore binária</a> baseada em <a href="/wiki/Nodo" class="mw-redirect" title="Nodo">nós</a>, onde todos os nós da subárvore esquerda possuem um valor numérico inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da aplicação).</p>
+<p>O objetivo desta árvore é estruturar os dados de forma a permitir <a href="/wiki/Pesquisa_bin%C3%A1ria" title="Pesquisa binária">busca binária</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span>[</span>1<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Conceitos_b.C3.A1sicos"><span class="tocnumber">1</span> <span class="toctext">Conceitos básicos</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Defini.C3.A7.C3.A3o.5B2.5D"><span class="tocnumber">1.1</span> <span class="toctext">Definição<sup><span>[</span>2<span>]</span></sup></span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Elementos"><span class="tocnumber">1.2</span> <span class="toctext">Elementos</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Complexidade.5B3.5D"><span class="tocnumber">1.3</span> <span class="toctext">Complexidade<sup><span>[</span>3<span>]</span></sup></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Opera.C3.A7.C3.B5es.5B3.5D"><span class="tocnumber">2</span> <span class="toctext">Operações<sup><span>[</span>3<span>]</span></sup></span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Busca"><span class="tocnumber">2.1</span> <span class="toctext">Busca</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Inser.C3.A7.C3.A3o"><span class="tocnumber">2.2</span> <span class="toctext">Inserção</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Remo.C3.A7.C3.A3o"><span class="tocnumber">2.3</span> <span class="toctext">Remoção</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Remo.C3.A7.C3.A3o_na_folha"><span class="tocnumber">2.3.1</span> <span class="toctext">Remoção na folha</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Remo.C3.A7.C3.A3o_de_n.C3.B3_com_um_filho"><span class="tocnumber">2.3.2</span> <span class="toctext">Remoção de nó com um filho</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Remo.C3.A7.C3.A3o_de_n.C3.B3_com_dois_filhos"><span class="tocnumber">2.3.3</span> <span class="toctext">Remoção de nó com dois filhos</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Aplica.C3.A7.C3.B5es"><span class="tocnumber">3</span> <span class="toctext">Aplicações</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Percursos_em_ABB"><span class="tocnumber">3.1</span> <span class="toctext">Percursos em ABB</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Ordena.C3.A7.C3.A3o"><span class="tocnumber">3.2</span> <span class="toctext">Ordenação</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">4</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1"><a href="#Refer.C3.AAncias"><span class="tocnumber">5</span> <span class="toctext">Referências</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">6</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Conceitos_b.C3.A1sicos">Conceitos básicos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Conceitos básicos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=1" title="Editar secção: Conceitos básicos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:202px;"><a href="/wiki/Ficheiro:Binary_search_tree.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png" width="200" height="167" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png 2x" data-file-width="300" data-file-height="250" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Binary_search_tree.svg" class="internal" title="Ampliar"></a></div>
+Árvore binária de busca de cardinalidade 9 e altura 4, com raiz 8 e folhas 1, 4, 7 e 13.</div>
+</div>
+</div>
+<h3><span class="mw-headline" id="Defini.C3.A7.C3.A3o.5B2.5D">Definição<sup id="cite_ref-:0_2-0" class="reference"><a href="#cite_note-:0-2"><span>[</span>2<span>]</span></a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Definição[2]">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=2" title="Editar secção: Definição[2]">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Seja S = {s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>n</sub>} um conjunto de chaves tais que s<sub>1</sub> &lt; s<sub>2</sub> ... s<sub>n</sub>. Seja k um valor dados. Deseja-se verificar se k <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2208;<!-- ∈ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \in }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fe4d5b0a594c1da89b5e78e7dfbeed90bdcc32f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:1.843ex;" alt="\in " /></span> S e identificar o índice i tal que k = s<sub>i</sub>.</p>
+<p>A Árvore Binária de Busca (ABB) resolve o problemas proposto. A figura ilustra uma ABB.</p>
+<p>Uma ABB é uma árvore binária rotulada T com as seguintes propriedades:</p>
+<ol>
+<li>T possui n nós. Cada nó u armazena uma chave distinta s<sub>j</sub> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2208;<!-- ∈ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \in }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6fe4d5b0a594c1da89b5e78e7dfbeed90bdcc32f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:1.843ex;" alt="\in " /></span> S e tem como rótulo o valor r(u) = s<sub>j</sub>.</li>
+<li>Para cada nó v de T r(v<sub>1</sub>) &lt; r(v) e r(v<sub>2</sub>) &gt; r(v), onde v<sub>1</sub> pertence à subárvore esquerda de v e v<sub>2</sub> pertence à subárvore direita de v.</li>
+</ol>
+<p>Dado o conjunto S com mais de um elemento, existem várias ABB que resolvem o problema.</p>
+<h3><span class="mw-headline" id="Elementos">Elementos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Elementos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=3" title="Editar secção: Elementos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li><b>Nós</b> - são todos os itens guardados na árvore</li>
+<li><b>Raiz</b> - é o nó do topo da árvore (no caso da figura acima, a raiz é o nó 8)</li>
+<li><b>Filhos</b> - são os nós que vem depois dos outros nós (no caso da figura acima, o nó 6 é filho do 3)</li>
+<li><b>Pais</b> - são os nós que vem antes dos outros nós (no caso da figura acima, o nó 10 é pai do 14)</li>
+<li><b>Folhas</b> - são os nós que não têm filhos; são os últimos nós da árvore (no caso da figura acima, as folhas são 1, 4, 7 e 13)</li>
+</ul>
+<h3><span class="mw-headline" id="Complexidade.5B3.5D">Complexidade<sup id="cite_ref-:1_3-0" class="reference"><a href="#cite_note-:1-3"><span>[</span>3<span>]</span></a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Complexidade[3]">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=4" title="Editar secção: Complexidade[3]">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A complexidade das operações sobre ABB depende diretamente da altura da árvore.</p>
+<p>Uma árvore binária de busca com chaves aleatórias uniformemente distribuídas tem altura O(log n).</p>
+<p>No pior caso, uma ABB poderá ter altura O(n). Neste caso a árvore é chamada de árvore zig-zag e corresponde a uma degeneração da árvore em lista encadeada.</p>
+<p>Em função da observação anterior, a árvore binária de busca é de pouca utilidade para ser aplicada em problemas de busca em geral. Daí o interesse em árvores balanceadas, cuja altura seja O(log n) no pior caso</p>
+<h2><span class="mw-headline" id="Opera.C3.A7.C3.B5es.5B3.5D">Operações<sup id="cite_ref-:1_3-1" class="reference"><a href="#cite_note-:1-3"><span>[</span>3<span>]</span></a></sup></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Operações[3]">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=5" title="Editar secção: Operações[3]">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Busca">Busca</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Busca">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=6" title="Editar secção: Busca">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/Ficheiro:Bstreesearchexample.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bstreesearchexample.jpg/300px-Bstreesearchexample.jpg" width="300" height="134" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/f/fa/Bstreesearchexample.jpg 1.5x" data-file-width="342" data-file-height="153" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Bstreesearchexample.jpg" class="internal" title="Ampliar"></a></div>
+Buscando um valor na árvore binária.</div>
+</div>
+</div>
+<p>A busca em uma árvore binária por um valor específico pode ser um processo <a href="/wiki/Recursividade_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)" title="Recursividade (ciência da computação)">recursivo</a> ou <a href="/wiki/Itera%C3%A7%C3%A3o" title="Iteração">iterativo</a>. Será apresentado um método recursivo.</p>
+<p>A busca começa examinando o nó raiz. Se a árvore está vazia, o valor procurado não pode existir na árvore. Caso contrário, se o valor é igual a raiz, a busca foi bem sucedida. Se o valor é menor do que a raiz, a busca segue pela subárvore esquerda. Similarmente, se o valor é maior do que a raiz, a busca segue pela subárvore direita. Esse processo é repetido até o valor ser encontrado ou a subárvore ser nula (vazia). Se o valor não for encontrado até a busca chegar na subárvore nula, então o valor não deve estar presente na árvore.</p>
+<p>Segue abaixo o algoritmo de busca implementado na linguagem <a href="/wiki/Python" title="Python">Python</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="c1"># 'no' refere-se ao nó-pai, neste caso</span>
+<span class="k">def</span> <span class="nf">arvore_binaria_buscar</span><span class="p">(</span><span class="n">no</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">no</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="c1"># valor não encontrado</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">valor</span> <span class="o">==</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span><span class="p">:</span>
+            <span class="c1"># valor encontrado</span>
+            <span class="k">return</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span>
+        <span class="k">elif</span> <span class="n">valor</span> <span class="o">&lt;</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span><span class="p">:</span>
+            <span class="c1"># busca na subárvore esquerda</span>
+            <span class="k">return</span> <span class="n">arvore_binaria_buscar</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_esquerdo</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span><span class="p">:</span>
+            <span class="c1"># busca na subárvore direita</span>
+            <span class="k">return</span> <span class="n">arvore_binaria_buscar</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_direito</span><span class="p">,</span> <span class="n">valor</span><span class="p">)</span>
+</pre></div>
+<p>Essa operação poderá ser <a href="/wiki/Grande-O" title="Grande-O">O</a>(log n) em algumas situações, mas necessita <a href="/wiki/Grande-O" title="Grande-O">O</a>(n) de tempo no pior caso, quando a árvore assumir a forma de <a href="/wiki/Lista_ligada" title="Lista ligada">lista ligada</a> (árvore ziig-zag)<sup id="cite_ref-:0_2-1" class="reference"><a href="#cite_note-:0-2"><span>[</span>2<span>]</span></a></sup>.</p>
+<h3><span class="mw-headline" id="Inser.C3.A7.C3.A3o">Inserção</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=7" class="mw-editsection-visualeditor" title="Editar secção: Inserção">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=7" title="Editar secção: Inserção">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A inserção começa com uma busca, procurando pelo valor, mas se não for encontrado, procuram-se as subárvores da esquerda ou direita, como na busca. Eventualmente, alcança-se a folha, inserindo-se então o valor nesta posição. Ou seja, a raiz é examinada e introduz-se um nó novo na subárvore da esquerda se o valor novo for menor do que a raiz, ou na subárvore da direita se o valor novo for maior do que a raiz. Abaixo, um <a href="/wiki/Algoritmo" title="Algoritmo">algoritmo</a> de inserção em Python:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">arvore_binaria_inserir</span><span class="p">(</span><span class="n">no</span><span class="p">,</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">no</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">chave</span> <span class="o">==</span> <span class="n">no</span><span class="o">.</span><span class="n">chave</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_esquerdo</span><span class="p">,</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span><span class="n">filho_direito</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">chave</span> <span class="o">&lt;</span> <span class="n">no</span><span class="o">.</span><span class="n">chave</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">arvore_binaria_inserir</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_esquerdo</span><span class="p">,</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">),</span> <span class="n">no</span><span class="o">.</span><span class="n">chave</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span><span class="n">filho_direito</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_esquerdo</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span><span class="n">chave</span><span class="p">,</span> <span class="n">no</span><span class="o">.</span><span class="n">valor</span><span class="p">,</span> <span class="n">arvore_binaria_inserir</span><span class="p">(</span><span class="n">no</span><span class="o">.</span><span class="n">filho_direito</span><span class="p">,</span> <span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">))</span>
+</pre></div>
+<p>Esta operação requer <a href="/wiki/Grande-O" title="Grande-O">O</a> (log n) vezes para o caso médio e necessita de O (n) no pior caso. A fim de introduzir um nó novo na árvore, seu valor é primeiro comparado com o valor da raiz. Se seu valor for menor que a raiz, é comparado então com o valor do filho da esquerda da raiz. Se seu valor for maior, está comparado com o filho da direita da raiz. Este processo continua até que o nó novo esteja comparado com um nó da folha, e então adiciona-se o filho da direita ou esquerda, dependendo de seu valor.</p>
+<h3><span class="mw-headline" id="Remo.C3.A7.C3.A3o">Remoção</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=8" class="mw-editsection-visualeditor" title="Editar secção: Remoção">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=8" title="Editar secção: Remoção">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A exclusão de um nó é um processo mais complexo. Para excluir um nó de uma árvore binária de busca, há de se considerar três casos distintos para a exclusão:</p>
+<h4><span class="mw-headline" id="Remo.C3.A7.C3.A3o_na_folha">Remoção na folha</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=9" class="mw-editsection-visualeditor" title="Editar secção: Remoção na folha">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=9" title="Editar secção: Remoção na folha">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>A exclusão na folha é a mais simples, basta removê-lo da árvore.</p>
+<p><a href="/wiki/Ficheiro:Bstreedeleteleafexample.jpg" class="image" title="Excluindo o nó folha de valor 40."><img alt="Excluindo o nó folha de valor 40." src="//upload.wikimedia.org/wikipedia/commons/6/6c/Bstreedeleteleafexample.jpg" width="350" height="157" data-file-width="342" data-file-height="153" /></a></p>
+<h4><span class="mw-headline" id="Remo.C3.A7.C3.A3o_de_n.C3.B3_com_um_filho">Remoção de nó com um filho</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=10" class="mw-editsection-visualeditor" title="Editar secção: Remoção de nó com um filho">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=10" title="Editar secção: Remoção de nó com um filho">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Excluindo-o, o filho sobe para a posição do pai.</p>
+<p><a href="/wiki/Ficheiro:Bstreedeleteonechildexample.jpg" class="image" title="Exclusão do nó pai,: o filho sobe para pai."><img alt="Exclusão do nó pai,: o filho sobe para pai." src="//upload.wikimedia.org/wikipedia/commons/6/6a/Bstreedeleteonechildexample.jpg" width="701" height="153" data-file-width="701" data-file-height="153" /></a></p>
+<h4><span class="mw-headline" id="Remo.C3.A7.C3.A3o_de_n.C3.B3_com_dois_filhos">Remoção de nó com dois filhos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=11" class="mw-editsection-visualeditor" title="Editar secção: Remoção de nó com dois filhos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=11" title="Editar secção: Remoção de nó com dois filhos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Neste caso, pode-se operar de duas maneiras diferentes. Pode-se substituir o valor do nó a ser retirado pelo valor sucessor (o nó mais à esquerda da subárvore direita) ou pelo valor antecessor (o nó mais à direita da subárvore esquerda), removendo-se aí o nó sucessor (ou antecessor).</p>
+<p><a href="/wiki/Ficheiro:Bstreedeletenotrightchildexample.jpg" class="image" title="Exluindo um nó do lado direito."><img alt="Exluindo um nó do lado direito." src="//upload.wikimedia.org/wikipedia/commons/1/15/Bstreedeletenotrightchildexample.jpg" width="632" height="255" data-file-width="632" data-file-height="255" /></a></p>
+<p>No exemplo acima, o nó de valor 30 está para ser removido, e possui como sucessor imediato o valor 35 (nó mais à esquerda da sua sub-árvore direita). Assim sendo, na exclusão, o valor 35 será promovido no lugar do nó a ser excluído, enquanto a sua sub-árvore (direita) será promovida para sub-árvore esquerda do 40, como pode ser visto na figura.</p>
+<p><b>Exemplo de algoritmo de exclusão em Python:</b></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">exclusao_em_arvore_binaria</span><span class="p">(</span><span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="p">,</span> <span class="n">valor</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="bp">None</span> <span class="c1"># Valor não encontrado</span>
+    <span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">direita</span> <span class="o">=</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">valor</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">direita</span>
+    <span class="k">if</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span> <span class="o">==</span> <span class="n">valor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">esquerda</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">direita</span>
+        <span class="k">elif</span> <span class="n">direita</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">esquerda</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">valor_max</span><span class="p">,</span> <span class="n">novo_esquerda</span> <span class="o">=</span> <span class="n">busca_max</span><span class="p">(</span><span class="n">esquerda</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">novo_esquerda</span><span class="p">,</span> <span class="n">valor_max</span><span class="p">,</span> <span class="n">direita</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">valor</span> <span class="o">&lt;</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">exclusao_em_arvore_binaria</span><span class="p">(</span><span class="n">esquerda</span><span class="p">,</span> <span class="n">valor</span><span class="p">),</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">direita</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">TreeNode</span><span class="p">(</span><span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">exclusao_em_arvore_binaria</span><span class="p">(</span><span class="n">direita</span><span class="p">,</span> <span class="n">valor</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">busca_max</span><span class="p">(</span><span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="p">):</span>
+    <span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">direita</span> <span class="o">=</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">valor</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="o">.</span><span class="n">direita</span>
+    <span class="k">if</span> <span class="n">direita</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="p">(</span><span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">esquerda</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">valor_max</span><span class="p">,</span> <span class="n">novo_direita</span><span class="p">)</span> <span class="o">=</span> <span class="n">busca_max</span><span class="p">(</span><span class="n">direita</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">valor_max</span><span class="p">,</span> <span class="p">(</span><span class="n">esquerda</span><span class="p">,</span> <span class="n">n</span><span class="err">ó</span><span class="n">_valor</span><span class="p">,</span> <span class="n">novo_direita</span><span class="p">))</span>
+</pre></div>
+<p>Embora esta operação não percorra sempre a árvore até uma folha, esta é sempre uma possibilidade; assim, no pior caso, requer o tempo proporcional à altura da árvore, visitando-se cada nó somente uma única vez.</p>
+<h2><span class="mw-headline" id="Aplica.C3.A7.C3.B5es">Aplicações</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=12" class="mw-editsection-visualeditor" title="Editar secção: Aplicações">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=12" title="Editar secção: Aplicações">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Percursos_em_ABB">Percursos em ABB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=13" class="mw-editsection-visualeditor" title="Editar secção: Percursos em ABB">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=13" title="Editar secção: Percursos em ABB">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Em uma árvore binária de busca podem-se fazer os três percursos que se fazem para qualquer árvore binária (percursos em inordem, pré-ordem e pós-ordem). É interessante notar que, quando se faz um percurso em ordem em uma árvore binária de busca, os valores dos nós aparecem em ordem crescente. A operação "Percorre" tem como objetivo percorrer a árvore numa dada ordem, enumerando os seus nós. Quando um nó é enumerado, diz-se que ele foi "visitado".</p>
+<p>Pré-ordem (ou profundidade):</p>
+<ol>
+<li>Visita a raiz</li>
+<li>Percorre a subárvore esquerda em pré-ordem</li>
+<li>Percorre a subárvore direita em pré-ordem</li>
+</ol>
+<p>Ordem Simétrica:</p>
+<ol>
+<li>Percorre a subárvore esquerda em ordem simétrica</li>
+<li>Visita a raiz</li>
+<li>Percorre a subárvore direita em ordem simétrica</li>
+</ol>
+<p>Pós-ordem:</p>
+<ol>
+<li>Percorre a subárvore esquerda em pós-ordem</li>
+<li>Percorre a subárvore direita em pós-ordem</li>
+<li>Visita a raiz</li>
+</ol>
+<div class="thumb tnone">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/Ficheiro:Binary_search_tree.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/220px-Binary_search_tree.svg.png" width="220" height="183" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/330px-Binary_search_tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/440px-Binary_search_tree.svg.png 2x" data-file-width="300" data-file-height="250" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/Ficheiro:Binary_search_tree.svg" class="internal" title="Ampliar"></a></div>
+Árvore Binária de Busca</div>
+</div>
+</div>
+<p>Usando a ABB acima, os resultados serão os seguintes:</p>
+<p>Pré-ordem =&gt; 8, 3, 1, 6, 4, 7, 10, 14, 13</p>
+<p>Ordem simétrica =&gt; 1, 3, 4, 6, 7, 8, 10, 13, 14 (chaves ordenadas)</p>
+<p>Pós-ordem =&gt; 1, 4, 7, 6, 3, 13, 14, 10, 8</p>
+<h3><span class="mw-headline" id="Ordena.C3.A7.C3.A3o">Ordenação</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=14" class="mw-editsection-visualeditor" title="Editar secção: Ordenação">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=14" title="Editar secção: Ordenação">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Uma árvore binária de busca pode ser usada para ordenação de chaves. Para fazer isto, basta inserir todos os valores desejados na ABB e executar o percurso em ordem simétrica.</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre>
+<span class="k">def</span> <span class="nf">criar_arvore_binaria</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+    <span class="n">arvore</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">valor</span><span class="p">:</span>
+        <span class="n">arvore</span> <span class="o">=</span> <span class="n">arvore_binaria_de_insercao</span><span class="p">(</span><span class="n">arvore</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">arvore</span>
+
+<span class="k">def</span> <span class="nf">arvore_binaria_transversal</span><span class="p">(</span><span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span> <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">esquerda</span><span class="p">,</span> <span class="n">valor</span><span class="p">,</span> <span class="n">direita</span> <span class="o">=</span> <span class="n">n</span><span class="err">ó</span><span class="n">_arvore</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">arvore_binaria_transversal</span><span class="p">(</span><span class="n">esquerda</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="n">valor</span><span class="p">]</span> <span class="o">+</span> <span class="n">arvore_binaria_transversal</span><span class="p">(</span><span class="n">direita</span><span class="p">))</span>
+</pre></div>
+<p>Criar ABB tem complexidade O(<i>n<sup>2</sup></i>) no pior caso. A geração de um vetor de chaves ordenadas tem complexidade O(n). O algoritmo de ordenação terá complexidade final O(<i>n<sup>2</sup></i>) no pior caso.</p>
+<p>Cabe observar que há algoritmos de ordenação dedicados com complexidade O(n.log n), com desempenho superior ao proposto neste tópico.</p>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=15" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=15" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="infobox noprint" style="width:250px; line-height:2.2em; font-size:90%">
+<tr style="line-height:1.3em">
+<td colspan="2" style="text-align: center;">Outros projetos <a href="/wiki/Wikimedia" title="Wikimedia">Wikimedia</a> também contêm material sobre este tema:</td>
+</tr>
+<tr>
+<th><a href="https://pt.wikibooks.org/wiki/Special:Search/:en:Data_Structures/Trees#Binary_Search_Trees" title="Wikilivros"><img alt="Wikilivros" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/21px-Wikibooks-logo.svg.png" width="21" height="21" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/32px-Wikibooks-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/42px-Wikibooks-logo.svg.png 2x" data-file-width="300" data-file-height="300" /></a></th>
+<td><a href="https://pt.wikibooks.org/wiki/Special:Search/:en:Data_Structures/Trees#Binary_Search_Trees" class="extiw" title="b:Special:Search/:en:Data Structures/Trees"><span title="Procurar por livros e manuais no Wikilivros"><b>Livros e manuais</b></span></a> no <a href="https://pt.wikibooks.org/wiki/P%C3%A1gina_principal" class="extiw" title="b:Página principal"><span title="Wikilivros">Wikilivros</span></a></td>
+</tr>
+<tr>
+<th><a href="https://commons.wikimedia.org/wiki/Special:Search/Category:Binary_Trees" title="Commons"><img alt="Commons" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/21px-Commons-logo.svg.png" width="21" height="28" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/32px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/42px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a></th>
+<td><a href="https://commons.wikimedia.org/wiki/Special:Search/Category:Binary_Trees" class="extiw" title="commons:Special:Search/Category:Binary Trees"><span title="Procurar por imagens e mídia no Commons"><b>Imagens e <i>media</i></b></span></a> no <a href="https://commons.wikimedia.org/wiki/P%C3%A1gina_principal" class="extiw" title="commons:Página principal"><span title="Commons">Commons</span></a></td>
+</tr>
+</table>
+<div id="interProject" style="display:none;">
+<ul>
+<li><a href="https://commons.wikimedia.org/wiki/Special:Search/Category:Binary_Trees" class="extiw" title="commons:Special:Search/Category:Binary Trees"><span title="Commons">Commons</span></a></li>
+<li><a href="https://pt.wikibooks.org/wiki/Special:Search/:en:Data_Structures/Trees#Binary_Search_Trees" class="extiw" title="b:Special:Search/:en:Data Structures/Trees"><span title="Wikilivros">Wikilivros</span></a></li>
+</ul>
+</div>
+<ul>
+<li><a href="/wiki/%C3%81rvore_(estrutura_de_dados)" title="Árvore (estrutura de dados)">Árvore (estrutura de dados)</a></li>
+<li><a href="/wiki/%C3%81rvore_bin%C3%A1ria" title="Árvore binária">Árvore binária</a></li>
+<li><a href="/wiki/%C3%81rvore_AVL" title="Árvore AVL">Árvore AVL</a></li>
+<li><a href="/wiki/%C3%81rvore_B" title="Árvore B">Árvore B</a></li>
+<li><a href="/wiki/%C3%81rvore_Patricia" title="Árvore Patricia">Árvore Patricia</a></li>
+<li><a href="/wiki/Estrutura_de_dados" title="Estrutura de dados">Estrutura de dados</a></li>
+</ul>
+<h2 style="cursor: help;" title="Esta seção foi configurada para não ser editável diretamente. Edite a página toda ou a seção anterior em vez disso."><span class="mw-headline" id="Refer.C3.AAncias">Referências</span></h2>
+<div class="reflist references-small" style="">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><a href="#cite_ref-1">↑</a></span> <span class="reference-text"><cite class="citation book">Gilberg, R.; Forouzan, B. (2001). «8». <i>Data Structures: A Pseudocode Approach With C++</i> (em inglês) (Pacific Grove, CA: Brooks/Cole). p.&#160;339. <a href="/wiki/Especial:Fontes_de_livros/053495216X" class="internal mw-magiclink-isbn">ISBN 0-534-95216-X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3A%C3%81rvore+bin%C3%A1ria+de+busca&amp;rft.atitle=8&amp;rft.au=Gilberg%2C+R.&amp;rft.btitle=Data+Structures%3A+A+Pseudocode+Approach+With+C%2B%2B&amp;rft.date=2001&amp;rft.genre=bookitem&amp;rft.pages=339&amp;rft.place=Pacific+Grove%2C+CA&amp;rft.pub=Brooks%2FCole&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span> <span style="display:none;font-size:100%" class="error citation-comment">A referência emprega parâmetros obsoletos (<a href="/wiki/Ajuda:Erros_nas_refer%C3%AAncias#deprecated_params" title="Ajuda:Erros nas referências">Ajuda</a>)</span></span></li>
+<li id="cite_note-:0-2"><span class="mw-cite-backlink">↑ <sup><i><b><a href="#cite_ref-:0_2-0">a</a></b></i></sup> <sup><i><b><a href="#cite_ref-:0_2-1">b</a></b></i></sup></span> <span class="reference-text"><cite class="citation book">Swarcfiter, Jayme Luiz (1994). <i>Estruturas de Dados e seus Algoritmos</i> (Rio de Janeiro: LTC). pp.&#160;91–97.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3A%C3%81rvore+bin%C3%A1ria+de+busca&amp;rft.aufirst=Jayme+Luiz&amp;rft.aulast=Swarcfiter&amp;rft.btitle=Estruturas+de+Dados+e+seus+Algoritmos&amp;rft.date=1994&amp;rft.genre=book&amp;rft.pages=91-97&amp;rft.place=Rio+de+Janeiro&amp;rft.pub=LTC&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-:1-3"><span class="mw-cite-backlink">↑ <sup><i><b><a href="#cite_ref-:1_3-0">a</a></b></i></sup> <sup><i><b><a href="#cite_ref-:1_3-1">b</a></b></i></sup></span> <span class="reference-text"><cite class="citation book">Cormen, Thomas H.; et al. (2009). <i>Introduction to Algorithms</i> (Massachusetts: MIT Press). pp.&#160;286–307.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3A%C3%81rvore+bin%C3%A1ria+de+busca&amp;rft.aufirst=Thomas+H.&amp;rft.aulast=Cormen&amp;rft.btitle=Introduction+to+Algorithms&amp;rft.date=2009&amp;rft.genre=book&amp;rft.pages=286-307&amp;rft.place=Massachusetts&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit&amp;vesection=16" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit&amp;section=16" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://cslibrary.stanford.edu/110">An introduction to binary trees from Stanford</a> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://www.ime.usp.br/~pf/estruturas-de-dados/aulas/st-bst.html">Árvores Binárias de Busca (IME/USP)</a> (em <a href="/wiki/L%C3%ADngua_portuguesa" title="Língua portuguesa">português</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://www.nist.gov/dads/HTML/binarySearchTree.html">Dicionário de Algoritmos e Estrutura de Dados - Capítulo de árvore binária de busca</a> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/286239">Exemplo de árvore binária de busca em Python</a> (em <a href="/wiki/L%C3%ADngua_inglesa" title="Língua inglesa">inglês</a>)</li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:196630-0!*!0!!pt!4!*!math=5 and timestamp 20161005100333 and revision id 46631017
+ -->
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.log.warn("Gadget \"Topicon\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"Metacaixa\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"ElementosOcultaveis\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"FeedbackHighlight\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"NewVillagePump\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"wikibugs\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");});</script><noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Árvore_binária_de_busca&amp;oldid=46631017">https://pt.wikipedia.org/w/index.php?title=Árvore_binária_de_busca&amp;oldid=46631017</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Estruturas_de_dados" title="Categoria:Estruturas de dados">Estruturas de dados</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categoria oculta: <ul><li><a href="/wiki/Categoria:!P%C3%A1ginas_que_usam_refer%C3%AAncias_com_par%C3%A2metros_depreciadas" title="Categoria:!Páginas que usam referências com parâmetros depreciadas">!Páginas que usam referências com parâmetros depreciadas</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=%C3%81rvore+bin%C3%A1ria+de+busca" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=%C3%81rvore+bin%C3%A1ria+de+busca" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/%C3%81rvore_bin%C3%A1ria_de_busca"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:%C3%81rvore_bin%C3%A1ria_de_busca"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/%C3%81rvore_bin%C3%A1ria_de_busca" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisar em Wikipédia" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=%C3%81rvore+bin%C3%A1ria+de+busca">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=%C3%81rvore+bin%C3%A1ria+de+busca&amp;returnto=%C3%81rvore+bin%C3%A1ria+de+busca&amp;oldid=46631017&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>Noutros projetos</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Binary_search_trees" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/%C3%81rvore_bin%C3%A1ria_de_busca" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/%C3%81rvore_bin%C3%A1ria_de_busca" rel="nofollow" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;oldid=46631017" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q623818" title="Ligação para o elemento do repositório de dados [g]" accesskey="g">Elemento Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=%C3%81rvore_bin%C3%A1ria_de_busca&amp;id=46631017" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A8%D8%AD%D8%AB_%D8%AB%D9%86%D8%A7%D8%A6%D9%8A%D8%A9" title="شجرة بحث ثنائية — árabe" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE_%D0%B4%D1%8A%D1%80%D0%B2%D0%BE_%D0%B7%D0%B0_%D1%82%D1%8A%D1%80%D1%81%D0%B5%D0%BD%D0%B5" title="Двоично дърво за търсене — búlgaro" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-bs"><a href="https://bs.wikipedia.org/wiki/Binarno_stablo_pretra%C5%BEivanja" title="Binarno stablo pretraživanja — bósnio" lang="bs" hreflang="bs" class="interlanguage-link-target">Bosanski</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Arbre_binari_de_cerca" title="Arbre binari de cerca — catalão" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Bin%C3%A1rn%C3%AD_vyhled%C3%A1vac%C3%AD_strom" title="Binární vyhledávací strom — checo" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Bin%C3%A6rt_s%C3%B8getr%C3%A6" title="Binært søgetræ — dinamarquês" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Bin%C3%A4rer_Suchbaum" title="Binärer Suchbaum — alemão" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Binary_search_tree" title="Binary search tree — inglês" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/%C3%81rbol_binario_de_b%C3%BAsqueda" title="Árbol binario de búsqueda — espanhol" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AF%D8%B1%D8%AE%D8%AA_%D8%AC%D8%B3%D8%AA%D8%AC%D9%88%DB%8C_%D8%AF%D9%88%D8%AF%D9%88%DB%8C%DB%8C" title="درخت جستجوی دودویی — persa" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Bin%C3%A4%C3%A4rinen_hakupuu" title="Binäärinen hakupuu — finlandês" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Arbre_binaire_de_recherche" title="Arbre binaire de recherche — francês" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A2%D7%A5_%D7%97%D7%99%D7%A4%D7%95%D7%A9" title="עץ חיפוש — hebraico" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Pohon_biner_terurut" title="Pohon biner terurut — indonésio" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Albero_binario_di_ricerca" title="Albero binario di ricerca — italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2%E6%9C%A8" title="二分探索木 — japonês" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%A7%84_%ED%83%90%EC%83%89_%ED%8A%B8%EB%A6%AC" title="이진 탐색 트리 — coreano" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Binaire_zoekboom" title="Binaire zoekboom — holandês" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Binarne_drzewo_poszukiwa%C5%84" title="Binarne drzewo poszukiwań — polaco" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Arbore_binar_de_c%C4%83utare" title="Arbore binar de căutare — romeno" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0" title="Двоичное дерево поиска — russo" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Bin%C3%A1rny_vyh%C4%BEad%C3%A1vac%C3%AD_strom" title="Binárny vyhľadávací strom — eslovaco" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Binarno_stablo_pretrage" title="Binarno stablo pretrage — sérvio" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Bin%C3%A4rt_s%C3%B6ktr%C3%A4d" title="Binärt sökträd — sueco" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%A7%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%84" title="ต้นไม้ค้นหาแบบทวิภาค — tailandês" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%94%D0%B2%D1%96%D0%B9%D0%BA%D0%BE%D0%B2%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D1%88%D1%83%D0%BA%D1%83" title="Двійкове дерево пошуку — ucraniano" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/C%C3%A2y_t%C3%ACm_ki%E1%BA%BFm_nh%E1%BB%8B_ph%C3%A2n" title="Cây tìm kiếm nhị phân — vietnamita" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%85%83%E6%90%9C%E5%B0%8B%E6%A8%B9" title="二元搜尋樹 — chinês" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q623818#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 00h15min de 5 de setembro de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=%C3%81rvore_bin%C3%A1ria_de_busca&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.cite.a11y","ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.523",
+            "walltime": "1.185",
+            "ppvisitednodes": {
+                "value": 10105,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 10795,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 1089,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 13,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "entityaccesscount": {
+                "value": 0,
+                "limit": 400
+            },
+            "timingprofile": [
+                "100.00%  487.011      1 -total",
+                " 70.42%  342.954      4 Predefinição:Link",
+                " 69.36%  337.791      4 Predefinição:Link/código",
+                " 65.16%  317.338      4 Predefinição:Link/línguas",
+                " 26.02%  126.738      1 Predefinição:Referências",
+                " 21.51%  104.755      3 Predefinição:Citar_livro",
+                " 18.30%   89.117      4 Predefinição:Língua-meta",
+                "  3.43%   16.711      1 Predefinição:Correlatos",
+                "  0.40%    1.970     20 Predefinição:!-",
+                "  0.37%    1.818      1 Predefinição:Esconder_link_para_editar_seção"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.056",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 1714088,
+                "limit": 52428800
+            }
+        },
+        "cachereport": {
+            "origin": "mw1211",
+            "timestamp": "20161005100334",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":66,"wgHostname":"mw1212"});});</script>
+	</body>
+</html>

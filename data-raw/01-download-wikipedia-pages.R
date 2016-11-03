@@ -5,7 +5,7 @@ download_wikipedia <- function(path){
       write_disk(sprintf("%s%s.html", path, fn)))
 }
 
-for (i in 1:2000) {
+for (i in 1:10000) {
   download_wikipedia(path = "data-raw/wikipages/")
   Sys.sleep(1)
 }

@@ -1,0 +1,3137 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Lógica de Árvore de Computação – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Lógica_de_Árvore_de_Computação","wgTitle":"Lógica de Árvore de Computação","wgCurRevisionId":46116424,"wgRevisionId":46116424,"wgArticleId":4641117,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Teoria dos autômatos"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Lógica_de_Árvore_de_Computação","wgRelevantArticleId":4641117,"wgRequestId":"WBp-iQpAIDAAAHl2LpUAAAAL","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q1040040","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@1w3gin5",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CTopicon%2Cwikibugs%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.23"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Lógica_de_Árvore_de_Computação rootpage-Lógica_de_Árvore_de_Computação skin-vector action-view feature-footer-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Lógica de Árvore de Computação</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><p><b>Lógica de Árvore de Computação&#160;(LAC)</b> é uma ramificação-temporal da <a href="/wiki/L%C3%B3gica_Matem%C3%A1tica" class="mw-redirect" title="Lógica Matemática">Lógica</a>, significando que seu modelo de tempo é como a estrutura árvore no qual o futuro não é determinado. Não tem caminhos diferentes no futuro, qualquer um deles pode ser um caminho atual que é realizado. É usado na <a href="/wiki/Verifica%C3%A7%C3%A3o_formal" title="Verificação formal">verificação formal</a> de artefatos de software ou hardware, tipicamente por aplicações de software conhecidas como verificadores de modelos que determina se um dado artefato possui propriedades de segurança ou <i>liveness</i>. Por exemplo, LAC pode especificar que quando alguma condição inicial é satisfeita (ex: todas as variáveis do programa são positivas ou não há carros na estrada que escarrancham duas pistas ), então todas as possíveis execuções do programa evitam alguma condição indesejável (ex: dividir um número por zero ou o a colisão de dois carros na estrada) . Neste exemplo, a propriedade de segurança pode ser verificada por um modelo verificador que explora todas as possibilidades de transações para fora de um programa de estados satisfazendo a condição inicial que garante que todos as execuções satisfazem esta propriedade. Lógica de Árvore de Computação está na classe de <a href="/wiki/L%C3%B3gica_temporal" title="Lógica temporal">Lógica temporal</a> que inclui <a href="/wiki/L%C3%B3gica_Temporal" class="mw-redirect" title="Lógica Temporal">Lógica Temporal</a>&#160;(LLT). Embora aqui existam propriedades expressáveis em apenas uma das LAC ou LLT, todas as propriedades em ambas as lógicas podem ser expressas em <a href="/w/index.php?title=LAC*&amp;action=edit&amp;redlink=1" class="new" title="LAC* (página não existe)">LAC*</a>.</p>
+<p><br /></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Sintaxe_da_LAC"><span class="tocnumber">1</span> <span class="toctext">Sintaxe da LAC</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operadores"><span class="tocnumber">2</span> <span class="toctext">Operadores</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Operadores_L.C3.B3gicos"><span class="tocnumber">2.1</span> <span class="toctext">Operadores Lógicos</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Operadores_Temporais"><span class="tocnumber">2.2</span> <span class="toctext">Operadores Temporais</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Conjunto_m.C3.ADnimo_de_operadores"><span class="tocnumber">2.3</span> <span class="toctext">Conjunto mínimo de operadores</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Semanticas_da_LAC"><span class="tocnumber">3</span> <span class="toctext">Semanticas da LAC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Defini.C3.A7.C3.A3o"><span class="tocnumber">3.1</span> <span class="toctext">Definição</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Caracteriza.C3.A7.C3.A3o_de_uma_LAC"><span class="tocnumber">3.2</span> <span class="toctext">Caracterização de uma LAC</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Equival.C3.AAncias_sem.C3.A2nticas"><span class="tocnumber">3.3</span> <span class="toctext">Equivalências semânticas</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Exemplos"><span class="tocnumber">4</span> <span class="toctext">Exemplos</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Rela.C3.A7.C3.B5es_com_outras_l.C3.B3gicas"><span class="tocnumber">5</span> <span class="toctext">Relações com outras lógicas</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Veja_Tamb.C3.A9m"><span class="tocnumber">6</span> <span class="toctext">Veja Também</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Refer.C3.AAncias"><span class="tocnumber">7</span> <span class="toctext">Referências</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">8</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Sintaxe_da_LAC">Sintaxe da LAC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Sintaxe da LAC">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=1" title="Editar secção: Sintaxe da LAC">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <a href="/wiki/Linguagem_regular" title="Linguagem regular">linguagem</a> das <a href="/wiki/F%C3%B3rmula_bem_formada" title="Fórmula bem formada">fórmulas bem formadas</a> para LAC é gerada pela seguinte <a href="/wiki/Gram%C3%A1tica_Livre_de_Contexto" class="mw-redirect" title="Gramática Livre de Contexto">gramática</a>:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>::=</mo>
+        <mi mathvariant="normal">&#x22A5;<!-- ⊥ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi mathvariant="normal">&#x22A4;<!-- ⊤ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>p</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AX&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EX&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AF&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EF&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AG&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EG&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>A&#xA0;</mtext>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;U&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">]</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>E&#xA0;</mtext>
+        </mrow>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;U&#xA0;</mtext>
+        </mrow>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi ::=\bot |\top |p|(\neg \phi )|(\phi \land \phi )|(\phi \lor \phi )|(\phi \Rightarrow \phi )|(\phi \Leftrightarrow \phi )|{\mbox{AX }}\phi |{\mbox{EX }}\phi |{\mbox{AF }}\phi |{\mbox{EF }}\phi |{\mbox{AG }}\phi |{\mbox{EG }}\phi |{\mbox{A }}[\phi {\mbox{ U }}\phi ]|{\mbox{E }}[\phi {\mbox{ U }}\phi ]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cebe6717fc7deed5e8a0f43b1624e246a84cc2bf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:106.889ex; height:2.843ex;" alt="{\displaystyle \phi ::=\bot |\top |p|(\neg \phi )|(\phi \land \phi )|(\phi \lor \phi )|(\phi \Rightarrow \phi )|(\phi \Leftrightarrow \phi )|{\mbox{AX }}\phi |{\mbox{EX }}\phi |{\mbox{AF }}\phi |{\mbox{EF }}\phi |{\mbox{AG }}\phi |{\mbox{EG }}\phi |{\mbox{A }}[\phi {\mbox{ U }}\phi ]|{\mbox{E }}[\phi {\mbox{ U }}\phi ]}" /></span></dd>
+</dl>
+<p>onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81eac1e205430d1f40810df36a0edffdc367af36" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.079ex; width:1.259ex; height:2.009ex;" alt="p" /></span> varia sobre o conjunto das <a href="/wiki/F%C3%B3rmula_at%C3%B4mica" title="Fórmula atômica">fórmulas atômicas</a>. Nem todas esses conectivos são necessários&#160;– por exemplo, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mo>,</mo>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AX</mtext>
+        </mrow>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AU</mtext>
+        </mrow>
+        <mo>,</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EU</mtext>
+        </mrow>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{\neg ,\land ,{\mbox{AX}},{\mbox{AU}},{\mbox{EU}}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ce47e80e79ce95a03e45a473446e21b39c5657b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:20.006ex; height:2.843ex;" alt="{\displaystyle \{\neg ,\land ,{\mbox{AX}},{\mbox{AU}},{\mbox{EU}}\}}" /></span> Comprime um completo conjunto de conectivos , e os outros podem ser definidos utilizando eles.</p>
+<ul>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>A</mtext>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mbox{A}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5ae904df569a1bc943ae9533602f29d39899c107" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.754ex; height:2.343ex;" alt="{\displaystyle {\mbox{A}}}" /></span> significa por todos os Caminhos <i>(Inevitável)</i></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>E</mtext>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mbox{E}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/885aa313037abbbda3a60338e009f8efc22194e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.593ex; height:2.176ex;" alt="{\displaystyle {\mbox{E}}}" /></span> significa pelo menos (existe) um caminho <i>(Possível)</i></li>
+</ul>
+<p>Por exemplo, a seguinte é uma fórmula LAC bem formada:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EF&#xA0;</mtext>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EG&#xA0;</mtext>
+        </mrow>
+        <mi>p</mi>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>AF&#xA0;</mtext>
+        </mrow>
+        <mi>r</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mbox{EF }}({\mbox{EG }}p\Rightarrow {\mbox{AF }}r}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/76e7199c51eb133e844b15afaaafa546d0f34a55" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.352ex; height:2.843ex;" alt="{\displaystyle {\mbox{EF }}({\mbox{EG }}p\Rightarrow {\mbox{AF }}r}" /></span>)</dd>
+</dl>
+<p>Por exemplo, a seguinte não é uma fórmula LAC bem formada:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>EF&#xA0;</mtext>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mi>r</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;U&#xA0;</mtext>
+        </mrow>
+        <mi>q</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mbox{EF }}{\big (}r{\mbox{ U }}q{\big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/60410d0de68554a35819ca1cf29626d8d46498da" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.171ex; width:10.907ex; height:3.343ex;" alt="{\displaystyle {\mbox{EF }}{\big (}r{\mbox{ U }}q{\big )}}" /></span></dd>
+</dl>
+<p>O problema com essa <i>string</i> é que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>U</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle U}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/458a728f53b9a0274f059cd695e067c430956025" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.793ex; height:2.176ex;" alt="U" /></span> pode ocorrer quando emparelhada com <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.754ex; height:2.343ex;" alt="A" /></span> ou <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4232c9de2ee3eec0a9c0a19b15ab92daa6223f9b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.786ex; height:2.176ex;" alt="E" /></span>. Essa usa <a href="/wiki/Senten%C3%A7a_at%C3%B4mica" title="Sentença atômica">proposições atômicas</a> como essa constrói os blocos para fazer declarações sobre os estados do sistema. LAC então combina essas proposições em fórmulas utilizando <a href="/wiki/Operadores_l%C3%B3gicos" class="mw-redirect" title="Operadores lógicos">operadores lógicos</a> e <a href="/wiki/L%C3%B3gica_temporal" title="Lógica temporal">lógica temporal</a>.</p>
+<h2><span class="mw-headline" id="Operadores">Operadores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Operadores">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=2" title="Editar secção: Operadores">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Operadores_L.C3.B3gicos">Operadores Lógicos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Operadores Lógicos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=3" title="Editar secção: Operadores Lógicos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Os <a href="/wiki/Conectivo_l%C3%B3gico" title="Conectivo lógico">operadores lógicos</a> são os usuais: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mo>,</mo>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mo>,</mo>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mo>,</mo>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg ,\lor ,\land ,\Rightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0bd8ac75f9ae15bc051f0459b87a37f2efabd423" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.15ex; height:2.343ex;" alt="{\displaystyle \neg ,\lor ,\land ,\Rightarrow }" /></span> e <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Leftrightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/64812e13399c20cf3ce94e049d3bb2d85f26abcf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:1.843ex;" alt="\Leftrightarrow " /></span>. Por todos esses operadores, fórmulas LAC podem ser também fzer uso de constantes booleanas <i>Verdadeiro</i> e <i>Falso</i>.</p>
+<h3><span class="mw-headline" id="Operadores_Temporais">Operadores Temporais</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Operadores Temporais">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=4" title="Editar secção: Operadores Temporais">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Os operadores temporais são os seguintes:</p>
+<ul>
+<li>Quantificadores através de caminhos
+<ul>
+<li><b>A</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>&#160;– <b>A</b>ll: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> tem que dizer para manter todos os caminhos começando do estado atual.</li>
+<li><b>E</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>&#160;– <b>E</b>xists: existe ao menos um caminho começando do estado atual onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> é mantido.</li>
+</ul>
+</li>
+<li>Quantificadores de caminhos-específicos
+<ul>
+<li><b>X</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>&#160;– Ne<b>x</b>t: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> precisa para manter o próximo estado (este operador é algumas vezes notado como <b>N</b> em vez de <b>X</b>).</li>
+<li><b>G</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>&#160;– <b>G</b>lobally: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> tem que manter todo o caminho subsequente.</li>
+<li><b>F</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>&#160;– <b>F</b>inally: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> eventualmente tem que manter (em alguns momentos no caminho subsequente).</li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> <b>U</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>&#160;– <b>U</b>ntil: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> precisa manter <i>ao menos</i> antes de alguma posição <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span> manter. Isso implica que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span> irá ser verificada no futuro.</li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> <b>W</b> <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>&#160;– <b>W</b>eak até: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> tiver que manter <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span> mantém.</li>
+</ul>
+</li>
+</ul>
+<p>A diferença com <b>U</b> É que aqui não é garantido que <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span> nunca irá ser verificada. O operador <b>W</b> é algumas vezes chamado de "ao menos".</p>
+<p>Na <a href="/w/index.php?title=LAC*&amp;action=edit&amp;redlink=1" class="new" title="LAC* (página não existe)">LAC*</a>, os operadores temporais podem ser livremente misturados. Na LAC, o operador precisa sempre estar agrupado em dois: um operador de caminho seguido de um operador de estado. Veja o exemplo abaixo. <a href="/w/index.php?title=LAC*&amp;action=edit&amp;redlink=1" class="new" title="LAC* (página não existe)">LAC*</a> é estritamente mais expressiva que LAC.</p>
+<h3><span class="mw-headline" id="Conjunto_m.C3.ADnimo_de_operadores">Conjunto mínimo de operadores</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Conjunto mínimo de operadores">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=5" title="Editar secção: Conjunto mínimo de operadores">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Na LAC existe um conjunto mínimo de operadores. Todas fórmulas LAC podem ser transformadas para usarem apenas aqueles operadores. Isto é útil na <a href="/w/index.php?title=Checagem_de_modelo&amp;action=edit&amp;redlink=1" class="new" title="Checagem de modelo (página não existe)">Checagem de modelo</a>. Um conjunto mínimo de operadores é: {true, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mo>,</mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \lor ,\neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/748ec49041d9d79517ba9759dfaa3ab57b073406" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:4.166ex; height:2.343ex;" alt="{\displaystyle \lor ,\neg }" /></span>, <b>EG</b>, <b>EU</b>, <b>EX</b>}.</p>
+<p>Algumas das transformações usadas para operadores temporais são:</p>
+<ul>
+<li><b>EF</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> == <b>E</b>[true<b>U</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>)] ( porque <b>F</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> == [true<b>U</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>)] )</li>
+<li><b>AX</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> == <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><b>EX</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>)</li>
+<li><b>AG</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> == <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><b>EF</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>) == <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span> <b>E</b>[true<b>U</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>)]</li>
+<li><b>AF</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> == <b>A</b>[true<b>U</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>] == <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><b>EG</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>)</li>
+<li><b>A</b>[<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span><b>U</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>] == <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span>( <b>E</b>[(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>)<b>U</b><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2228;<!-- ∨ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \lor }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ab47f6b1f589aedcf14638df1d63049d233d851a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:2.009ex;" alt="\lor " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>)] <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2228;<!-- ∨ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \lor }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ab47f6b1f589aedcf14638df1d63049d233d851a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:2.009ex;" alt="\lor " /></span> <b>EG</b>(<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fa78fd02085d39aa58c9e47a6d4033ce41e02fad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.183ex; margin-bottom: -0.355ex; width:1.561ex; height:1.343ex;" alt="\neg " /></span><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span>) )</li>
+</ul>
+<h2><span class="mw-headline" id="Semanticas_da_LAC">Semanticas da LAC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=6" class="mw-editsection-visualeditor" title="Editar secção: Semanticas da LAC">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=6" title="Editar secção: Semanticas da LAC">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Defini.C3.A7.C3.A3o">Definição</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=7" class="mw-editsection-visualeditor" title="Editar secção: Definição">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=7" title="Editar secção: Definição">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Fórmulas LAC são interpretadas através de <a href="/w/index.php?title=Sistema_de_transi%C3%A7%C3%A3o&amp;action=edit&amp;redlink=1" class="new" title="Sistema de transição (página não existe)">sistemas de transições</a>. Um sistema de transação é uma tripla <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>S</mi>
+        <mo>,</mo>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>,</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {M}}=(S,\rightarrow ,L)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/61149a3f0713302d68a0847aa068b2d690ad7a83" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.266ex; height:2.843ex;" alt="{\displaystyle {\mathcal {M}}=(S,\rightarrow ,L)}" /></span>, onde <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>S</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle S}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4611d85173cd3b508e67077d4a1252c9c05abca2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.51ex; height:2.176ex;" alt="S" /></span> é um conjunto de estados, <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">&#x2192;<!-- → -->&#x2286;<!-- ⊆ --></mo>
+        <mi>S</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>S</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \rightarrow \subseteq S\times S}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7e32d3024833167f5f562c897056e4a00ea5385e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.668ex; height:2.509ex;" alt="{\displaystyle \rightarrow \subseteq S\times S}" /></span> é uma transição relativa, assumida para ser serializada, isto é, cada estado tem ao menos um sucessor, e <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>L</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle L}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/103168b86f781fe6e9a4a87b8ea1cebe0ad4ede8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.593ex; height:2.176ex;" alt="L" /></span> é uma função de rotulação, assinando letras proposicionais à estados. Deixe <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <mi>S</mi>
+        <mo>,</mo>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>,</mo>
+        <mi>L</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {M}}=(S,\rightarrow ,L)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/61149a3f0713302d68a0847aa068b2d690ad7a83" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.266ex; height:2.843ex;" alt="{\displaystyle {\mathcal {M}}=(S,\rightarrow ,L)}" /></span> ser uma transição de modelo&#160;:with <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>S</mi>
+        <mo>,</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>F</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s\in S,\phi \in F}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/00755588b145af33eca272b9569b2ce841e97767" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:12.504ex; height:2.509ex;" alt="{\displaystyle s\in S,\phi \in F}" /></span> onde F é o conjunto de <a href="/wiki/F%C3%B3rmula_bem_formada" title="Fórmula bem formada">fórmulas bem formadas</a> sobre a <a href="/w/index.php?title=Linguagem_Regular&amp;action=edit&amp;redlink=1" class="new" title="Linguagem Regular (página não existe)">linguagem</a> de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {M}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2cc2abebd45ec020509a0ec548b67c9a2cb7cecd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.801ex; height:2.176ex;" alt="{\mathcal  {M}}" /></span>.</p>
+<p>Então a relação de semântica <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle ({\mathcal {M}},s\models \phi )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/70925759561d826a66137c5130c40ed8c21b5d1b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.488ex; height:2.843ex;" alt="{\displaystyle ({\mathcal {M}},s\models \phi )}" /></span> é definida por <a href="/wiki/Indu%C3%A7%C3%A3o_Estrutural" class="mw-redirect" title="Indução Estrutural">indução estrutural</a> em <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span>:</p>
+<ol>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi mathvariant="normal">&#x22A4;<!-- ⊤ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22AD;</mo>
+        <mi mathvariant="normal">&#x22A5;<!-- ⊥ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models \top {\Big )}\Leftrightarrow {\Big (}({\mathcal {M}},s)\not \models \bot {\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a3017f735936f35ae72b53f56d7155f7c7505f46" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:32.444ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models \top {\Big )}\Leftrightarrow {\Big (}({\mathcal {M}},s)\not \models \bot {\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>p</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi>p</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>L</mi>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models p{\Big )}\Leftrightarrow {\Big (}p\in L(s){\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a05f2e40a319619c299b98b816d4e41b6e89e77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:29.045ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models p{\Big )}\Leftrightarrow {\Big (}p\in L(s){\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22AD;</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models \neg \phi {\Big )}\Leftrightarrow {\Big (}({\mathcal {M}},s)\not \models \phi {\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d9bf165c6200589eaa928c919b0a4ef136446be9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:33.16ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models \neg \phi {\Big )}\Leftrightarrow {\Big (}({\mathcal {M}},s)\not \models \phi {\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\land \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/49a632344275698cb913d1952d0fa7314106f319" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:58.811ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\land \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\lor \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\lor {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/297daf314bded9e1bd8aa70f52125239147b3208" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:58.811ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\lor \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\lor {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22AD;</mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\Rightarrow \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\not \models \phi _{1}{\big )}\lor {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f32b0b8faa4b9737f0443773e54673a5b394348" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:59.248ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models \phi _{1}\Rightarrow \phi _{2}{\Big )}\Leftrightarrow {\Big (}{\big (}({\mathcal {M}},s)\not \models \phi _{1}{\big )}\lor {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\bigg (}({\mathcal {M}},s)\models \phi _{1}\Leftrightarrow \phi _{2}{\bigg )}\Leftrightarrow {\bigg (}{\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}\lor {\Big (}\neg {\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land \neg {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}{\bigg )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a7967db0b63692f7fa32ab04fea295d3117b967e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:104.435ex; height:6.176ex;" alt="{\displaystyle {\bigg (}({\mathcal {M}},s)\models \phi _{1}\Leftrightarrow \phi _{2}{\bigg )}\Leftrightarrow {\bigg (}{\Big (}{\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}\lor {\Big (}\neg {\big (}({\mathcal {M}},s)\models \phi _{1}{\big )}\land \neg {\big (}({\mathcal {M}},s)\models \phi _{2}{\big )}{\Big )}{\bigg )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <mi>s</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models AX\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s\rightarrow s_{1}\rangle {\big (}({\mathcal {M}},s_{1})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b3c039594592d6766cdf664ae23229f2822e049e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:49.171ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models AX\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s\rightarrow s_{1}\rangle {\big (}({\mathcal {M}},s_{1})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <mi>s</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models EX\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s\rightarrow s_{1}\rangle {\big (}({\mathcal {M}},s_{1})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2ffa515f4d36691664ef1148c1c1ac3fcd8367d2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:49.203ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models EX\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s\rightarrow s_{1}\rangle {\big (}({\mathcal {M}},s_{1})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>A</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models AG\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\forall i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8ffdff10ab7d1509889225841a053d6e64ab8f4b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:66.501ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models AG\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\forall i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>E</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models EG\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\forall i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5c073f861d459fd9cf0304e1fcc26b01fa1f7619" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:66.534ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models EG\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\forall i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>A</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models AF\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/332acc1e3685a7e38a1ba5798babf5dd1edf6746" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:66.415ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models AF\phi {\Big )}\Leftrightarrow {\Big (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>E</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\Big (}({\mathcal {M}},s)\models EF\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/93838e53fe87922a77b2f669d8fb4466ff63beda" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:66.448ex; height:4.843ex;" alt="{\displaystyle {\Big (}({\mathcal {M}},s)\models EF\phi {\Big )}\Leftrightarrow {\Big (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\big (}({\mathcal {M}},s_{i})\models \phi {\big )}{\Big )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>A</mi>
+        <mo stretchy="false">[</mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>U</mi>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">]</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>j</mi>
+        <mo>&lt;</mo>
+        <mi>i</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\bigg (}({\mathcal {M}},s)\models A[\phi _{1}U\phi _{2}]{\bigg )}\Leftrightarrow {\bigg (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\Big (}{\big (}({\mathcal {M}},s_{i})\models \phi _{2}{\big )}\land {\big (}\forall (j&lt;i)({\mathcal {M}},s_{j})\models \phi _{1}{\big )}{\Big )}{\bigg )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3dcde0c80e048ab8a9f89e4d75f5c94aea75a6f3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:102.674ex; height:6.176ex;" alt="{\displaystyle {\bigg (}({\mathcal {M}},s)\models A[\phi _{1}U\phi _{2}]{\bigg )}\Leftrightarrow {\bigg (}\forall \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\Big (}{\big (}({\mathcal {M}},s_{i})\models \phi _{2}{\big )}\land {\big (}\forall (j&lt;i)({\mathcal {M}},s_{j})\models \phi _{1}{\big )}{\Big )}{\bigg )}}" /></span></li>
+<li><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>s</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <mi>E</mi>
+        <mo stretchy="false">[</mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>U</mi>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">]</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">&#x21D4;<!-- ⇔ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>s</mi>
+        <mo>=</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mi mathvariant="normal">&#x2203;<!-- ∃ --></mi>
+        <mi>i</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">(</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">(</mo>
+          </mrow>
+        </mrow>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>j</mi>
+        <mo>&lt;</mo>
+        <mi>i</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">M</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22A8;<!-- ⊨ --></mo>
+        <msub>
+          <mi>&#x03D5;<!-- ϕ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.2em" minsize="1.2em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="1.623em" minsize="1.623em">)</mo>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo maxsize="2.047em" minsize="2.047em">)</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\bigg (}({\mathcal {M}},s)\models E[\phi _{1}U\phi _{2}]{\bigg )}\Leftrightarrow {\bigg (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\Big (}{\big (}({\mathcal {M}},s_{i})\models \phi _{2}{\big )}\land {\big (}\forall (j&lt;i)({\mathcal {M}},s_{j})\models \phi _{1}{\big )}{\Big )}{\bigg )}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0d04777cb8e0ba5d53918b4b64927615b6fefc1a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:102.707ex; height:6.176ex;" alt="{\displaystyle {\bigg (}({\mathcal {M}},s)\models E[\phi _{1}U\phi _{2}]{\bigg )}\Leftrightarrow {\bigg (}\exists \langle s_{1}\rightarrow s_{2}\rightarrow \ldots \rangle (s=s_{1})\exists i{\Big (}{\big (}({\mathcal {M}},s_{i})\models \phi _{2}{\big )}\land {\big (}\forall (j&lt;i)({\mathcal {M}},s_{j})\models \phi _{1}{\big )}{\Big )}{\bigg )}}" /></span></li>
+</ol>
+<h3><span class="mw-headline" id="Caracteriza.C3.A7.C3.A3o_de_uma_LAC">Caracterização de uma LAC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=8" class="mw-editsection-visualeditor" title="Editar secção: Caracterização de uma LAC">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=8" title="Editar secção: Caracterização de uma LAC">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As 10 à 15 regras acima referem-se à caminhos de computação em modelos e são o que ultimamente caracterizam a "Árvore de Computação"; São assertivas sobre a natureza do profundo infinito da árvore de computação enraizada no dado estado <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>s</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/01d131dfd7673938b947072a13a9744fe997e632" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.101ex; height:1.676ex;" alt="s" /></span>.</p>
+<h3><span class="mw-headline" id="Equival.C3.AAncias_sem.C3.A2nticas">Equivalências semânticas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=9" class="mw-editsection-visualeditor" title="Editar secção: Equivalências semânticas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=9" title="Editar secção: Equivalências semânticas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A fórmula <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/72b1f30316670aee6270a28334bdf4f5072cdde4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.396ex; height:2.509ex;" alt="\phi" /></span> e <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/45e5789e5d9c8f7c79744f43ecaaf8ba42a8553a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.524ex; height:2.509ex;" alt="\psi " /></span> são ditas como semanticamente equivalentes se algum estado em algum modelo que satisfaz uma também satisfaz a outra. Isso é chamado <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03C8;<!-- ψ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \phi \equiv \psi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6786212cdc76b6ec6fe76bae5c2facaa1874f70b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.028ex; height:2.509ex;" alt="{\displaystyle \phi \equiv \psi }" /></span></p>
+<p>Nisto pode ser ver que A e A são duplas, sendo quantificadores de caminhos de computações universais e existencies respectivamente: <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>A</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>E</mi>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg A\phi \equiv E\neg \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/93382106fc78b4dc8b3d03da8718c5fd0a317b81" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:12.562ex; height:2.676ex;" alt="{\displaystyle \neg A\phi \equiv E\neg \phi }" /></span>.</p>
+<p>Ainda mais são G e F.</p>
+<p>E uma instância da <a href="/wiki/Teoremas_de_De_Morgan" title="Teoremas de De Morgan">Lei de De Morgan</a> pode ser formulada em LAC:</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>A</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>E</mi>
+        <mi>G</mi>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg AF\phi \equiv EG\neg \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/18e2f03724a1739d0c69b4bb75f080ba1424c65b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:16.15ex; height:2.676ex;" alt="{\displaystyle \neg AF\phi \equiv EG\neg \phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>E</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>A</mi>
+        <mi>G</mi>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg EF\phi \equiv AG\neg \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/25b3864276c430af2973d13420c63562972fa5a1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:16.15ex; height:2.676ex;" alt="{\displaystyle \neg EF\phi \equiv AG\neg \phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \neg AX\phi \equiv EX\neg \phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/778b6bd72e8747e61b47b3d7ed256376a6c77b30" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:16.543ex; height:2.676ex;" alt="{\displaystyle \neg AX\phi \equiv EX\neg \phi }" /></span></dd>
+</dl>
+<p>Isto ppde ser mostrado usando os identificadores que subconjunto de conectivos temporais de LAC é adequado se ele contém <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mi>U</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle EU}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0540f98b65a648c9f2711f2712b36120ae3b910d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.579ex; height:2.176ex;" alt="{\displaystyle EU}" /></span>, ao menos um de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mo>,</mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{AX,EX\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/90780c46e83b9620f0b74e98798daa238d940876" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.911ex; height:2.843ex;" alt="{\displaystyle \{AX,EX\}}" /></span> e ao menos um de <span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>E</mi>
+        <mi>G</mi>
+        <mo>,</mo>
+        <mi>A</mi>
+        <mi>F</mi>
+        <mo>,</mo>
+        <mi>A</mi>
+        <mi>U</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{EG,AF,AU\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8f200e4eeec0c6ec39860e01cc92f6ef61d2d7db" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.109ex; height:2.843ex;" alt="{\displaystyle \{EG,AF,AU\}}" /></span> e os conectivos booleanos.</p>
+<p>A equivalência importante abaixo chamada de lei da expansão; elas permitem para desvirar as verificações de um conectivo LAC à frente de seu sucessor no tempo.</p>
+<dl>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mi>A</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle AG\phi \equiv \phi \land AXAG\phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f0364fe35455e99a8b8921b6e2b662ed69ce731e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.815ex; height:2.676ex;" alt="{\displaystyle AG\phi \equiv \phi \land AXAG\phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mi>E</mi>
+        <mi>G</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle EG\phi \equiv \phi \land EXEG\phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3f8a3c8d890e863d14685d05b2c47e1ff2ceb01a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.913ex; height:2.509ex;" alt="{\displaystyle EG\phi \equiv \phi \land EXEG\phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mi>A</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle AF\phi \equiv \phi \lor AXAF\phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ac867ff99f6db222225dd052ab3979c819036419" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.643ex; height:2.676ex;" alt="{\displaystyle AF\phi \equiv \phi \lor AXAF\phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mi>E</mi>
+        <mi>F</mi>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle EF\phi \equiv \phi \lor EXEF\phi }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/83c1396dd5043b477b86fcbef6a1e6936213e14f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.741ex; height:2.509ex;" alt="{\displaystyle EF\phi \equiv \phi \lor EXEF\phi }" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mi>U</mi>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">]</mo>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>A</mi>
+        <mi>X</mi>
+        <mi>A</mi>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mi>U</mi>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A[\phi U\psi ]\equiv \psi \lor (\phi \land AXA[\phi U\psi ])}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/04e432a4e05e0f27a955be8f1520f6746e653517" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:32.35ex; height:2.843ex;" alt="{\displaystyle A[\phi U\psi ]\equiv \psi \lor (\phi \land AXA[\phi U\psi ])}" /></span></dd>
+<dd><span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mi>U</mi>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">]</mo>
+        <mo>&#x2261;<!-- ≡ --></mo>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo>&#x2228;<!-- ∨ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>E</mi>
+        <mi>X</mi>
+        <mi>E</mi>
+        <mo stretchy="false">[</mo>
+        <mi>&#x03D5;<!-- ϕ --></mi>
+        <mi>U</mi>
+        <mi>&#x03C8;<!-- ψ --></mi>
+        <mo stretchy="false">]</mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E[\phi U\psi ]\equiv \psi \lor (\phi \land EXE[\phi U\psi ])}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/1e5839bd0d5c32f192612cb8ed45733343e15442" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:32.448ex; height:2.843ex;" alt="{\displaystyle E[\phi U\psi ]\equiv \psi \lor (\phi \land EXE[\phi U\psi ])}" /></span></dd>
+</dl>
+<h2><span class="mw-headline" id="Exemplos">Exemplos</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=10" class="mw-editsection-visualeditor" title="Editar secção: Exemplos">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=10" title="Editar secção: Exemplos">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Seja "P" significando "Eu amo chocolate" e Q significando "Está frio lá fora"</p>
+<ul>
+<li><b>AG</b>.P</li>
+</ul>
+<dl>
+<dd>"Eu irei gostar de chocolate a partir de agora, não importa o que aconteça"</dd>
+</dl>
+<ul>
+<li><b>EF</b>.P</li>
+</ul>
+<dl>
+<dd>"É possível que eu ame chocolate algum dia, ao menos por um dia."</dd>
+</dl>
+<ul>
+<li><b>AF</b>.<b>EG</b>.P</li>
+</ul>
+<dl>
+<dd>"É sempre possível (AF) que eu comece a amar chocolate pelo resto de minha vida."</dd>
+</dl>
+<p>(Note: não apenas o resto da minha vida, desde que minha vida é finita, enquanot <b>G</b> é infinito).</p>
+<ul>
+<li><b>EG</b>.<b>AF</b>.P</li>
+</ul>
+<dl>
+<dd>"Isso é um momento crítico da vida. Dependendo do que venha a acontecer (E), é sempre possível que pelo resto de meu tempo (G), irá existir sempre algo no tempo no futuro (AF) quando eu amar chocolate. De qualquer maneira, se a coisa errada acontecer em seguinte, então todas as apostas são desligadas e não há garantias se eu irei sempre amar chocolate."</dd>
+</dl>
+<p>Os dois examplos seguintes mostram o exempre entre LAC e LAC*, assim como eles permitem o operador para não ser qualificado com nenhum operador de caminho (<b>A</b> or <b>E</b>):</p>
+<ul>
+<li><b>AG</b>(P<b>U</b>Q)</li>
+</ul>
+<dl>
+<dd>"A partir de agora, antes que fique quente lá fora, eu irei amar chocolate todo dia. Uma vez que fique quente lá fora, todas as apostas são desligadas para se eu irei gostar de chocolate mais. Ah, e é garantido ficar quente lá fora eventualmente, mesmo se por apenas um único dia."</dd>
+</dl>
+<ul>
+<li><b>EF</b>((<b>EX</b>.P)<b>U</b>(<b>AG</b>.Q))</li>
+</ul>
+<dl>
+<dd>"É possível que: irá eventualmente existir um tempo quando ficar quente para sempre (AG.Q) e que antes desse tempo irá existir sempre <i>algum</i> jeito de eu vir a gostar de chocolate no próximo dia (EX.P)."</dd>
+</dl>
+<h2><span class="mw-headline" id="Rela.C3.A7.C3.B5es_com_outras_l.C3.B3gicas">Relações com outras lógicas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=11" class="mw-editsection-visualeditor" title="Editar secção: Relações com outras lógicas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=11" title="Editar secção: Relações com outras lógicas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Lógica de Árvore de Computação (LAC) é um subconjunto de de LAC* assim como da <a href="/w/index.php?title=Modal_mu_cLACulus&amp;action=edit&amp;redlink=1" class="new" title="Modal mu cLACulus (página não existe)">modal µ cLACulus</a>. LAC é também um fragmento de Alur, Henzinger and Kupferman's <a href="/w/index.php?title=L%C3%B3gica_Temporal_Alternativa&amp;action=edit&amp;redlink=1" class="new" title="Lógica Temporal Alternativa (página não existe)">Lógica Temporal Alternativa</a> (LTA).</p>
+<p>Lógica de Árvore de Computação (LAC) e <a href="/wiki/L%C3%B3gica_Temporal" class="mw-redirect" title="Lógica Temporal">Lógica Temporal</a> (LLT) são todos subconjuntos de LAC*. CTL e LLT não são equivalentes e eles não possuem subconjuntos em comum, o que é um próprio subconjunto de LAC e LLT.</p>
+<ul>
+<li><b>FG</b>.P existe em LLT mas não em LAC.</li>
+<li><b>AG</b>(P<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">&#x21D2;<!-- ⇒ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \Rightarrow }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/469b737d167b9b28a74e27c7f5e35b5ea9256100" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:1.843ex;" alt="\Rightarrow " /></span>((<b>EX</b>.Q)<span><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x2227;<!-- ∧ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \land }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d6823e5a222eb3ca49672818ac3d13ec607052c4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.561ex; height:2.009ex;" alt="\land " /></span>(<b>EX</b>¬Q))) existe em LAC mas não existe em LLT.</li>
+</ul>
+<h2><span class="mw-headline" id="Veja_Tamb.C3.A9m">Veja Também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=12" class="mw-editsection-visualeditor" title="Editar secção: Veja Também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=12" title="Editar secção: Veja Também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/w/index.php?title=LLC_Probabil%C3%ADstica&amp;action=edit&amp;redlink=1" class="new" title="LLC Probabilística (página não existe)">LLC Probabilística</a></li>
+<li><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o_Segura&amp;action=edit&amp;redlink=1" class="new" title="Lógica de Árvore de Computação Segura (página não existe)">Lógica de Árvore de Computação Segura</a></li>
+<li><a href="/wiki/L%C3%B3gica_Temporal" class="mw-redirect" title="Lógica Temporal">Lógica Temporal</a></li>
+</ul>
+<h2><span class="mw-headline" id="Refer.C3.AAncias">Referências</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=13" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=13" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><cite class="citation journal">Michael Huth and Mark Ryan (2004). «Logic in Computer Science (Second Edition)» Cambridge University Press [S.l.]: 207. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/0-521-54310-X" title="Especial:Fontes de livros/0-521-54310-X">0-521-54310-X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AL%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;rft.atitle=Logic+in+Computer+Science+%28Second+Edition%29&amp;rft.au=Michael+Huth+and+Mark+Ryan&amp;rft.chron=2004&amp;rft.date=2004&amp;rft.genre=article&amp;rft.isbn=0-521-54310-X&amp;rft.pages=207&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Emerson, E. A. and Halpern, J. Y. (1985). «Decision procedures and expressiveness in the temporal logic of branching time». <i>Journal of Computer and System Sciences</i> [S.l.: s.n.] <b>30</b> (1): 1–24. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.1016%2F0022-0000%2885%2990001-7">10.1016/0022-0000(85)90001-7</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AL%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;rft.atitle=Decision++procedures+and+expressiveness+in+the+temporal+logic+of+branching+time&amp;rft.au=Emerson%2C+E.+A.+and+Halpern%2C+J.+Y.&amp;rft.chron=1985&amp;rft.date=1985&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1016%2F0022-0000%2885%2990001-7&amp;rft.issue=1&amp;rft.jtitle=Journal+of+Computer+and+System+Sciences&amp;rft.pages=1-24&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=30" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation journal">Clarke, E. M., Emerson, E. A., and Sistla, A. P. (1986). «Automatic verification of finite-state concurrent systems using temporal logic specifications». <i>ACM Transactions on Programming Languages and Systems</i> [S.l.: s.n.] <b>8</b> (2): 244–263. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.1145%2F5397.5399">10.1145/5397.5399</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AL%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;rft.atitle=Automatic+verification+of+finite-state+concurrent+systems+using+temporal+logic+specifications&amp;rft.au=Clarke%2C+E.+M.%2C+Emerson%2C+E.+A.%2C+and+Sistla%2C+A.+P.&amp;rft.chron=1986&amp;rft.date=1986&amp;rft.genre=article&amp;rft_id=info%3Adoi%2F10.1145%2F5397.5399&amp;rft.issue=2&amp;rft.jtitle=ACM+Transactions+on+Programming+Languages+and+Systems&amp;rft.pages=244-263&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=8" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><cite class="citation book">Emerson, E. A. (1990). «Temporal and modal logic». In: <a href="/w/index.php?title=Jan_van_Leeuwen&amp;action=edit&amp;redlink=1" class="new" title="Jan van Leeuwen (página não existe)">Jan van Leeuwen</a>. <i>Handbook of Theoretical Computer Science, vol. B</i> MIT Press [S.l.] pp.&#160;955–1072. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Especial:Fontes_de_livros/0-262-22039-3" title="Especial:Fontes de livros/0-262-22039-3">0-262-22039-3</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fpt.wikipedia.org%3AL%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;rft.atitle=Temporal+and+modal+logic&amp;rft.au=Emerson%2C+E.+A.&amp;rft.btitle=Handbook+of+Theoretical+Computer+Science%2C+vol.+B&amp;rft.date=1990&amp;rft.genre=bookitem&amp;rft.isbn=0-262-22039-3&amp;rft.pages=955-1072&amp;rft.pub=MIT+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit&amp;vesection=14" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;section=14" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.inf.unibz.it/~artale/FM/slide4.pdf">Teaching slides of CTL</a></li>
+</ul>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:4641117-0!*!0!!pt!*!*!math=5 and timestamp 20161018193116 and revision id 46116424
+ -->
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.log.warn("Gadget \"Topicon\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"Metacaixa\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"ElementosOcultaveis\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"FeedbackHighlight\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"NewVillagePump\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"wikibugs\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");});</script><noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Lógica_de_Árvore_de_Computação&amp;oldid=46116424">https://pt.wikipedia.org/w/index.php?title=Lógica_de_Árvore_de_Computação&amp;oldid=46116424</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categoria</a>: <ul><li><a href="/wiki/Categoria:Teoria_dos_aut%C3%B4matos" title="Categoria:Teoria dos autômatos">Teoria dos autômatos</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=L%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=L%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk" class="new"><span><a href="/w/index.php?title=Discuss%C3%A3o:L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit&amp;redlink=1"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisar em Wikipédia" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=L%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=L%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;returnto=L%C3%B3gica+de+%C3%81rvore+de+Computa%C3%A7%C3%A3o&amp;oldid=46116424&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o" rel="nofollow" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;oldid=46116424" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q1040040" title="Ligação para o elemento do repositório de dados [g]" accesskey="g">Elemento Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;id=46116424" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Computation_Tree_Logic" title="Computation Tree Logic — alemão" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%9B%CE%BF%CE%B3%CE%B9%CE%BA%CE%AE_%CF%85%CF%80%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CE%BF%CF%8D_%CE%B4%CE%AD%CE%BD%CE%B4%CF%81%CE%BF%CF%85" title="Λογική υπολογιστικού δένδρου — grego" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Computation_tree_logic" title="Computation tree logic — inglês" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E6%9C%A8%E8%AB%96%E7%90%86" title="計算木論理 — japonês" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%84%EC%82%B0_%ED%8A%B8%EB%A6%AC_%EB%85%BC%EB%A6%AC" title="계산 트리 논리 — coreano" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q1040040#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 20h45min de 8 de julho de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=L%C3%B3gica_de_%C3%81rvore_de_Computa%C3%A7%C3%A3o&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["ext.math.scripts","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.172",
+            "walltime": "0.412",
+            "ppvisitednodes": {
+                "value": 719,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 6668,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 0,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 4,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "entityaccesscount": {
+                "value": 0,
+                "limit": 400
+            },
+            "timingprofile": [
+                "100.00%   56.494      1 -total",
+                " 88.93%   50.240      3 Predefinição:Cite_journal",
+                " 10.61%    5.994      1 Predefinição:Cite_book"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.030",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 1960795,
+                "limit": 52428800
+            }
+        },
+        "cachereport": {
+            "origin": "mw1183",
+            "timestamp": "20161018193116",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":70,"wgHostname":"mw1178"});});</script>
+	</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="pt" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Modelo relacional – Wikipédia, a enciclopédia livre</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Modelo_relacional","wgTitle":"Modelo relacional","wgCurRevisionId":45291842,"wgRevisionId":45291842,"wgArticleId":15904,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["!Artigos precisando de wikificação desde junho de 2015","!Artigos que carecem de notas de rodapé desde novembro de 2012","SGBDs","Modelo relacional","Paradigmas de programação"],"wgBreakFrames":false,"wgPageContentLanguage":"pt","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"],"wgMonthNamesShort":["","jan.","fev.","mar.","abr.","mai.","jun.","jul.","ago.","set.","out.","nov.","dez."],"wgRelevantPageName":"Modelo_relacional","wgRelevantArticleId":15904,"wgRequestId":"WBpd3QpAIC8AABNyIuAAAAAM","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"pt","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"pt","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"português","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikibaseItemId":"Q755662","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user.cssprefs":"ready","user":"ready","user.options":"loading","user.tokens":"loading","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@1w3gin5",function($,jQuery,require,module){mw.user.options.set({"variant":"pt"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.desktopArticleTarget.init","ext.uls.interface","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=ext.gadget.ElementosOcultaveis%2CFeedbackHighlight%2CMetacaixa%2CNewVillagePump%2CTopicon%2Cwikibugs%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=pt&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=pt&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.23"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/pt.m.wikipedia.org/wiki/Modelo_relacional"/>
+<link rel="alternate" type="application/x-wiki" title="Editar" href="/w/index.php?title=Modelo_relacional&amp;action=edit"/>
+<link rel="edit" title="Editar" href="/w/index.php?title=Modelo_relacional&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipédia (pt)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//pt.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://pt.wikipedia.org/wiki/Modelo_relacional"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Modelo_relacional rootpage-Modelo_relacional skin-vector action-view feature-footer-v2">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="pt">Modelo relacional</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">Origem: Wikipédia, a enciclopédia livre.</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Ir para:					<a href="#mw-head">navegação</a>, 					<a href="#p-search">pesquisa</a>
+				</div>
+				<div id="mw-content-text" lang="pt" dir="ltr" class="mw-content-ltr"><table align="center" class="noprint" style="width:80%; margin:0 auto; border-collapse:collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #f4c430;">
+<tr>
+<td width="8%" align="center">
+<div style="width:52px;">
+<div class="center">
+<div class="floatnone"><a href="/wiki/Wikip%C3%A9dia:Wikifica%C3%A7%C3%A3o" title="Wikipédia:Wikificação"><img alt="Wikitext.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Wikitext.svg/40px-Wikitext.svg.png" width="40" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Wikitext.svg/60px-Wikitext.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Wikitext.svg/80px-Wikitext.svg.png 2x" data-file-width="200" data-file-height="78" /></a></div>
+</div>
+</div>
+</td>
+<td width="91%"><b>Esta página ou seção precisa ser <i><a href="/wiki/Wikip%C3%A9dia:Wikifica%C3%A7%C3%A3o" title="Wikipédia:Wikificação">wikificada</a></i></b> <small>(desde junho de 2015)</small>.<br />
+Por favor ajude a <a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Formata%C3%A7%C3%A3o" title="Ajuda:Guia de edição/Formatação">formatar</a> esta página de acordo com as <b><a href="/wiki/Wikip%C3%A9dia:Wikifica%C3%A7%C3%A3o#Como_ajudar" title="Wikipédia:Wikificação">diretrizes</a></b> estabelecidas.</td>
+<td width="1%" align="center"></td>
+</tr>
+</table>
+<table align="center" class="noprint" style="width:80%; margin:0 auto; border-collapse:collapse; background: #fbfbfb; border: 1px solid #aaa; border-left: 10px solid #f28500;">
+<tr>
+<td width="8%" align="center">
+<div style="width:52px;"><a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes" title="Wikipédia:Livro de estilo/Cite as fontes"><img alt="Text document with red question mark.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></a></div>
+</td>
+<td width="91%">Este artigo ou secção contém <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes#Refer.C3.AAncias_no_fim" title="Wikipédia:Livro de estilo/Cite as fontes">fontes no fim do texto</a>, mas que <b>não são <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Cite_as_fontes#Refer.C3.AAncias_no_texto" title="Wikipédia:Livro de estilo/Cite as fontes">citadas no corpo do artigo</a></b>, o que <b>compromete a <a href="/wiki/Wikip%C3%A9dia:V" class="mw-redirect" title="Wikipédia:V">confiabilidade</a></b> das informações. <small>(desde novembro de 2012)</small><br />
+<small>Por favor, <span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Modelo_relacional&amp;action=edit">melhore</a></span> este artigo introduzindo <a href="/wiki/Wikip%C3%A9dia:Livro_de_estilo/Notas_de_rodap%C3%A9" class="mw-redirect" title="Wikipédia:Livro de estilo/Notas de rodapé">notas de rodapé</a> citando as fontes, inserindo-as no corpo do texto quando necessário.</small></td>
+<td width="1%" align="center"></td>
+</tr>
+</table>
+<p>O <b>modelo relacional</b> é um <a href="/wiki/Modelo_de_dados" class="mw-redirect" title="Modelo de dados">modelo de dados</a> representativos (ou de implementação), adequado a ser o modelo subjacente de um <a href="/wiki/Sistema_Gerenciador_de_Banco_de_Dados" class="mw-redirect" title="Sistema Gerenciador de Banco de Dados">Sistema Gerenciador de Banco de Dados</a> (SGBD), que se baseia no princípio em que todos os dados estão guardados em tabelas (ou, <a href="/wiki/Matem%C3%A1tica" title="Matemática">matematicamente</a> falando, <a href="/wiki/Rela%C3%A7%C3%A3o_(matem%C3%A1tica)" title="Relação (matemática)">relações</a>). Toda sua definição é teórica e baseada na <a href="/wiki/L%C3%B3gica_de_predicados" title="Lógica de predicados">lógica de predicados</a> e na <a href="/wiki/Teoria_dos_conjuntos" title="Teoria dos conjuntos">teoria dos conjuntos</a>.</p>
+<p>O conceito foi criado por <a href="/wiki/Edgar_Frank_Codd" title="Edgar Frank Codd">Edgar Frank Codd</a> em <a href="/wiki/1970" title="1970">1970</a>, sendo descrito no artigo "Relational Model of Data for Large Shared Data Banks". Na verdade, o <b>modelo relacional</b> foi o primeiro modelo de dados descrito teoricamente, os bancos de dados já existentes passaram então a ser conhecidos como (<a href="/wiki/Modelo_hier%C3%A1rquico" title="Modelo hierárquico">modelo hierárquico</a>, <a href="/wiki/Modelo_em_rede" class="mw-redirect" title="Modelo em rede">modelo em rede</a> ou <a href="/wiki/Codasyl" class="mw-redirect" title="Codasyl">Codasyl</a> e <a href="/w/index.php?title=Modelo_de_listas_invertidas&amp;action=edit&amp;redlink=1" class="new" title="Modelo de listas invertidas (página não existe)">modelo de listas invertidas</a>).</p>
+<p>O modelo relacional para gerência de bases de dados (SGBD) é um modelo de dados baseado em <a href="/wiki/L%C3%B3gica" title="Lógica">lógica</a> e na <a href="/wiki/Teoria_de_conjuntos" class="mw-redirect" title="Teoria de conjuntos">teoria de conjuntos</a>.</p>
+<p>Em definição simplificada, o modelo baseia-se em dois conceitos: conceito de entidade e relação - Uma entidade é um elemento caracterizado pelos dados que são recolhidos na sua identificação vulgarmente designado por tabela. Na construção da tabela identificam-se os dados da entidade. A atribuição de valores a uma entidade constrói um registro da tabela. A relação determina o modo como cada registro de cada tabela se associa a registros de outras tabelas.</p>
+<p>Historicamente ele é o sucessor do <a href="/wiki/Modelo_hier%C3%A1rquico" title="Modelo hierárquico">modelo hierárquico</a> e do <a href="/wiki/Modelo_em_rede" class="mw-redirect" title="Modelo em rede">modelo em rede</a>. Estas arquiteturas antigas são até hoje utilizadas em alguns <i><a href="/wiki/Data_center" class="mw-redirect" title="Data center">data centers</a></i> com alto volume de dados, onde a migração é inviabilizada pelo custo que ela demandaria; existem ainda os novos modelos baseados em <a href="/wiki/Orienta%C3%A7%C3%A3o_ao_objeto" class="mw-redirect" title="Orientação ao objeto">orientação ao objeto</a>, que na maior parte das vezes são encontrados como kits em linguagem formal.</p>
+<p>O modelo relacional foi inventado pelo Frank Codd e subsequentemente mantido e aprimorado por <a href="/w/index.php?title=Chris_Date&amp;action=edit&amp;redlink=1" class="new" title="Chris Date (página não existe)">Chris Date</a> e <a href="/w/index.php?title=Hugh_Darwen&amp;action=edit&amp;redlink=1" class="new" title="Hugh Darwen (página não existe)">Hugh Darwen</a> como um modelo geral de dados. No <a href="/w/index.php?title=Terceiro_Manifesto&amp;action=edit&amp;redlink=1" class="new" title="Terceiro Manifesto (página não existe)">Terceiro Manifesto</a> (1995) eles mostraram como o modelo relacional pode ser estendido com características de orientação a objeto sem comprometer os seus princípios fundamentais.</p>
+<p>A linguagem <a href="/wiki/Padr%C3%A3o" title="Padrão">padrão</a> para os bancos de dados relacionais, <a href="/wiki/SQL" title="SQL">SQL</a>, é apenas vagamente remanescente do <a href="/wiki/Modelo_matem%C3%A1tico" class="mw-redirect" title="Modelo matemático">modelo matemático</a>. Atualmente ela é adotada, apesar de suas restrições, porque ela é antiga e muito mais popular que qualquer outra <a href="/wiki/Linguagem_de_banco_de_dados" class="mw-redirect" title="Linguagem de banco de dados">linguagem de banco de dados</a>.</p>
+<p>A principal proposição do modelo relacional é que todos os <a href="/wiki/Dado" title="Dado">dados</a> são representados como relações matemáticas, isto é, um <a href="/wiki/Subconjunto" title="Subconjunto">subconjunto</a> do <a href="/wiki/Produto_Cartesiano" class="mw-redirect" title="Produto Cartesiano">produto Cartesiano</a> de <i>n</i> <a href="/wiki/Conjunto" title="Conjunto">conjuntos</a>. No modelo matemático (diferentemente do SQL), a análise dos dados é feita em uma lógica de predicados de dois valores (ou seja, sem o valor nulo); isto significa que existem dois possíveis valores para uma <a href="/wiki/Proposi%C3%A7%C3%A3o" title="Proposição">proposição</a>: verdadeira ou falsa. Os dados são tratados pelo cálculo relacional ou <a href="/wiki/%C3%81lgebra_relacional" title="Álgebra relacional">álgebra relacional</a>.</p>
+<p>O modelo relacional permite ao <a href="/wiki/Projetista" class="mw-redirect" title="Projetista">projetista</a> criar um modelo lógico consistente da <a href="/wiki/Informa%C3%A7%C3%A3o" title="Informação">informação</a> a ser armazenada. Este modelo lógico pode ser refinado através de um processo de <a href="/wiki/Normaliza%C3%A7%C3%A3o_de_dados" title="Normalização de dados">normalização</a>. Um <a href="/wiki/Banco_de_dados" title="Banco de dados">banco de dados</a> construído puramente baseado no modelo relacional estará inteiramente normalizado. O <a href="/w/index.php?title=Plano_de_acesso&amp;action=edit&amp;redlink=1" class="new" title="Plano de acesso (página não existe)">plano de acesso</a>, outras implementações e detalhes de operação são tratados pelo sistema <a href="/wiki/DBMS" class="mw-redirect" title="DBMS">DBMS</a>, e não devem ser refletidos no modelo lógico. Isto se contrapõe à prática comum para DBMSs SQL nos quais o ajuste de desempenho frequentemente requer mudanças no modelo lógico.</p>
+<p>Os blocos básicos do modelo relacional são o <a href="/wiki/Dom%C3%ADnio" title="Domínio">domínio</a>, ou <a href="/wiki/Tipo_de_dado" title="Tipo de dado">tipo de dado</a>. Uma <a href="/wiki/Tupla" class="mw-redirect" title="Tupla">tupla</a> é um conjunto de <a href="/wiki/Atributo" title="Atributo">atributos</a> que são ordenados em pares de domínio e valor. Uma relvar (<a href="/w/index.php?title=Vari%C3%A1vel_relacional&amp;action=edit&amp;redlink=1" class="new" title="Variável relacional (página não existe)">variável relacional</a>) é um conjunto de pares ordenados de domínio e nome que serve como um cabeçalho para uma relação. Uma <a href="/wiki/Rela%C3%A7%C3%A3o" class="mw-disambig" title="Relação">relação</a> é um conjunto desordenado de tuplas. Apesar destes conceitos matemáticos, eles correspondem basicamente aos conceitos tradicionais dos bancos de dados. Uma relação é similar ao conceito de <i><a href="/wiki/Tabela" title="Tabela">tabela</a></i> e uma tupla é similar ao conceito de <i><a href="/wiki/Linha" class="mw-disambig" title="Linha">linha</a></i>.</p>
+<p>O princípio básico do modelo relacional é o princípio da informação: toda informação é representada por <a href="/wiki/Valores" class="mw-redirect mw-disambig" title="Valores">valores</a> em relações (relvars). Assim, as relvars não são relacionadas umas às outras no momento do projeto. Entretanto, os projetistas utilizam o mesmo <a href="/wiki/Dom%C3%ADnio" title="Domínio">domínio</a> em vários relvars, e se um atributo é dependente de outro, esta dependência é garantida através da <a href="/wiki/Integridade_referencial" title="Integridade referencial">integridade referencial</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Índice</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Banco_de_dados_exemplo"><span class="tocnumber">1</span> <span class="toctext">Banco de dados exemplo</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Exemplo:_cliente"><span class="tocnumber">2</span> <span class="toctext">Exemplo: cliente</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Ver_tamb.C3.A9m"><span class="tocnumber">3</span> <span class="toctext">Ver também</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Refer.C3.AAncias"><span class="tocnumber">4</span> <span class="toctext">Referências</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Liga.C3.A7.C3.B5es_externas"><span class="tocnumber">5</span> <span class="toctext">Ligações externas</span></a></li>
+</ul>
+</div>
+<p></p>
+<h4><span class="mw-headline" id="Banco_de_dados_exemplo">Banco de dados exemplo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit&amp;vesection=1" class="mw-editsection-visualeditor" title="Editar secção: Banco de dados exemplo">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit&amp;section=1" title="Editar secção: Banco de dados exemplo">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Um exemplo bem simples da descrição de algumas tabelas e seus atributos:</p>
+<p><a href="/wiki/Cliente" class="mw-disambig" title="Cliente">Cliente</a>(<b><u>ID Cliente</u></b>, ID Taxa, <a href="/wiki/Nome" title="Nome">Nome</a>, <a href="/wiki/Endere%C3%A7o" class="mw-disambig" title="Endereço">Endereço</a>, <a href="/wiki/Cidade" title="Cidade">Cidade</a>, <a href="/wiki/Estado" title="Estado">Estado</a>, <a href="/wiki/C%C3%B3digo_postal" title="Código postal">CEP</a>, <a href="/wiki/Telefone" title="Telefone">Telefone</a>)</p>
+<p><a href="/w/index.php?title=Pedido_de_compra&amp;action=edit&amp;redlink=1" class="new" title="Pedido de compra (página não existe)">Pedido de compra</a>(<b><u>Número do pedido</u></b>, <u>ID Cliente</u>, <u>Factura</u>, Data do pedido, Data prometida, <a href="/wiki/Status" class="mw-disambig" title="Status">Status</a>)</p>
+<p>Item do pedido(<b><u>Número do pedido</u></b>, <u>Número do item</u>, <u>Código do produto</u>, Quantidade)</p>
+<p><a href="/wiki/Nota_fiscal" title="Nota fiscal">Nota fiscal</a>(<b><u>Número da nota</u></b>, <u>ID Cliente</u>, <u>Número do pedido</u>, Data, Status)</p>
+<p>Item da nota fiscal(<b><u>Número da nota</u></b>,<u>Número do item</u>,<u>Código do produto</u>, Quantidade vendida)</p>
+<p>Neste <a href="/wiki/Projeto" title="Projeto">projeto</a> nós temos cinco relvars: Cliente, Pedido de compra, Item do pedido, Nota fiscal e Item da nota fiscal. Os atributos em negrito e sublinhados são <i><a href="/wiki/Chaves_candidatas" class="mw-redirect" title="Chaves candidatas">chaves candidatas</a></i>. Os itens sublinhados sem negrito são as <i><a href="/wiki/Chave_estrangeira" title="Chave estrangeira">chaves estrangeiras</a></i>.</p>
+<p>Normalmente uma <a href="/wiki/Chave_candidata" title="Chave candidata">chave candidata</a> é escolhida arbitrariamente para ser chamada de <a href="/wiki/Chave_prim%C3%A1ria" title="Chave primária">chave primária</a> e utilizada com preferência sobre as outras chaves candidatas, que são então chamadas de chaves alternativas.</p>
+<p>Uma <i>chave primária</i> é um identificador único que garante que nenhuma <a href="/wiki/Tupla" class="mw-redirect" title="Tupla">tupla</a> será duplicada; isto faz com que o <a href="/wiki/Relacionamento" title="Relacionamento">relacionamento</a> em algo denominado um <a href="/wiki/Multiconjunto" title="Multiconjunto">multiconjunto</a>, porque viola a definição básica de um <a href="/wiki/Conjunto" title="Conjunto">conjunto</a>. Uma <a href="/wiki/Chave_(banco_de_dados)" title="Chave (banco de dados)">chave</a> pode ser composta, isto é, pode ser formada por vários atributos. Abaixo temos um exemplo tabular da nossa variável exemplo Cliente; um relacionamento pode ser abstraído como um valor que pode ser atribuído a uma relvar.</p>
+<h3><span class="mw-headline" id="Exemplo:_cliente">Exemplo: cliente</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit&amp;vesection=2" class="mw-editsection-visualeditor" title="Editar secção: Exemplo: cliente">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit&amp;section=2" title="Editar secção: Exemplo: cliente">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>
+ID Cliente      ID Taxa             Nome                 Endereço               [Mais campos....]
+==================================================================================================
+1234567890      555-5512222         João Carlos          Rua Principal nº 120            ...
+2223344556      555-5523232         Dorotéia Santos      Avenida Principal nº 12         ...
+3334445563      555-5533322         Lisbela da Cruz      Rua de trás nº123               ...
+4232342432      555-5325523         E. F. Codd           Travessa principal nº 51        ...
+4265871131      555-5487333         franciwilliam        projetada nº 1252               ...
+</pre>
+<p>Se nós tentarmos <i>inserir</i> um novo cliente com o ID <i>1234567890</i>, isto irá violar o projeto da relvar pois <b><u>ID Cliente</u></b> é uma <i>chave primária</i> e nós já temos um cliente com o número <i>1234567890</i>. O <a href="/wiki/DBMS" class="mw-redirect" title="DBMS">DBMS</a> deve rejeitar uma <a href="/wiki/Transa%C3%A7%C3%A3o" class="mw-disambig" title="Transação">transação</a> como esta e deve acusar um erro de violação da integridade.</p>
+<p>As <i>chaves estrangeiras</i> são condições de integridade que garantem que o valor de um atributo é obtido de uma <i>chave candidata</i> de outra <a href="/w/index.php?title=Relvar&amp;action=edit&amp;redlink=1" class="new" title="Relvar (página não existe)">relvar</a>, por exemplo na relvar Pedido o atributo <b><u>ID Cliente</u></b> é uma chave estrangeira. Uma <i>união</i> é uma operação que retorna a informação de várias relvars de uma vez. Através da união de relvars do exemplo acima podemos <i>consultar</i> no banco de dados quais são os clientes, pedidos e notas. Se nós queremos apenas as tuplas de um cliente específico, podemos especificar isto utilizando uma condição de restrição.</p>
+<p>Se queremos obter todos os pedidos do cliente <i>1234567890</i>, podemos consultar o banco de dados de forma que este retorne toda linha na tabela de Pedidos com <b><u>ID Cliente</u></b> igual a <i>1234567890</i> e agrupar a tabela de pedidos com a tabela de itens de pedido baseado no <b><u>Número do pedido</u></b>.</p>
+<p>Existe uma imperfeição no projeto de banco de dados acima. A tabela de notas contém um atributo número do pedido. Assim, cada tupla na tabela de notas terá um pedido, o que implica precisamente um pedido para cada nota. Mas na realidade uma nota pode ser criada a partir de muitos pedidos, ou mesmo para nenhum pedido em particular. Adicionalmente um pedido contém um número de nota, implicando que cada pedido tem uma nota correspondente. Mas novamente isto não é verdadeiro no <a href="/w/index.php?title=Mundo_real&amp;action=edit&amp;redlink=1" class="new" title="Mundo real (página não existe)">mundo real</a>. Um pedido é às vezes pago através de várias notas, e às vezes pago sem um nota. Em outras palavras podemos ter muitas notas por pedido e muitos pedidos por nota. Isto é um relacionamento <b><a href="/wiki/V%C3%A1rios-para-v%C3%A1rios" class="mw-redirect" title="Vários-para-vários">vários-para-vários</a></b> entre pedidos e notas. Para representar este relacionamento no banco de dados uma nova tabela deve ser criada com o propósito de especificar a correspondência entre pedidos e notas:</p>
+<p>PedidoNota(<b><u>Número do pedido</u></b>,<b><u>Número da nota</u></b>)</p>
+<p>Agora, um pedido tem um relacionamento <i><a href="/wiki/Um-para-v%C3%A1rios" class="mw-redirect" title="Um-para-vários">um-para-vários</a></i> para a tabela PedidoNota, assim como o Cliente tem para a tabela de pedidos. Se quisermos retornar todas as notas de uma pedido específico, podemos consultar no banco de dados todos os pedidos cujo <b><u>Número do pedido</u></b> é igual ao <b><u>Número do pedido</u></b> na tabela PedidoNota, e onde o <b><u>Número da nota</u></b> na tabela PedidoNota é igual à <b><u>Número da nota</u></b> na tabela Notas.</p>
+<p>A <a href="/wiki/Normaliza%C3%A7%C3%A3o_de_dados" title="Normalização de dados">normalização de banco de dados</a> é normalmente realizada quando projeta-se um <a href="/wiki/Banco_de_dados_relacional" title="Banco de dados relacional">banco de dados relacional</a>, para melhorar a <a href="/wiki/Consist%C3%AAncia" title="Consistência">consistência</a> lógica do projeto do banco de dados e o desempenho transacional.</p>
+<p>Existem dois sistemas mais comuns de <a href="/wiki/Diagrama%C3%A7%C3%A3o" title="Diagramação">diagramação</a> que ajudam na representação visual do modelo relacional: O diagrama de entidade-relacionamento <a href="/wiki/Diagrama_entidade_relacionamento" class="mw-redirect" title="Diagrama entidade relacionamento">DER</a>, e o diagrama correlato <a href="/w/index.php?title=IDEF&amp;action=edit&amp;redlink=1" class="new" title="IDEF (página não existe)">IDEF</a> utilizado no método IDEF1X criado pela <a href="/wiki/For%C3%A7a_A%C3%A9rea_dos_Estados_Unidos" title="Força Aérea dos Estados Unidos">Força Aérea dos Estados Unidos</a> baseado no DER.</p>
+<h2><span class="mw-headline" id="Ver_tamb.C3.A9m">Ver também</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit&amp;vesection=3" class="mw-editsection-visualeditor" title="Editar secção: Ver também">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit&amp;section=3" title="Editar secção: Ver também">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Arquitetura_de_dados" title="Arquitetura de dados">Arquitetura de dados</a></li>
+<li><a href="/wiki/Administra%C3%A7%C3%A3o_de_dados" title="Administração de dados">Administração de dados</a></li>
+<li><a href="/wiki/Modelagem_de_dados" title="Modelagem de dados">Modelagem de dados</a></li>
+<li><a href="/wiki/Banco_de_Dados" class="mw-redirect" title="Banco de Dados">Banco de Dados</a></li>
+</ul>
+<h2><span class="mw-headline" id="Refer.C3.AAncias">Referências</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit&amp;vesection=4" class="mw-editsection-visualeditor" title="Editar secção: Referências">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit&amp;section=4" title="Editar secção: Referências">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li>Communications of the ACM, Vol. 13, No. 6, June 1970, pp. 377-387.</li>
+<li>Introduction to Database Systems. Date, C. J. 7th ed. 1999.</li>
+</ul>
+<h2><span class="mw-headline" id="Liga.C3.A7.C3.B5es_externas">Ligações externas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit&amp;vesection=5" class="mw-editsection-visualeditor" title="Editar secção: Ligações externas">editar</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit&amp;section=5" title="Editar secção: Ligações externas">editar código-fonte</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.acm.org/classics/nov95/toc.html">A Relational Model of Data for Large Shared Data Banks</a></li>
+<li><a rel="nofollow" class="external text" href="https://idbms.navo.navy.mil/DataModel/IDEF1X.html">IDEF1X</a></li>
+<li><a rel="nofollow" class="external text" href="http://dbdebunk.com/">DBDebunk</a></li>
+<li><a rel="nofollow" class="external text" href="http://dmoz.org./Computers/Software/Databases/Relational/">DMoz</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.ncbi.nlm.nih.gov/Database/datamodel/index.html">Modelo Entrez de Database</a></li>
+</ul>
+<div style="clear:both;"></div>
+<table class="navbox noprint collapsible autocollapse nowraplinks" style="border-top: solid silver 1px; border-bottom:1px solid silver; margin:auto; background:white;background:white;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;">
+<div style="float:left; width:6em; vertical-align:middle; text-align:left;">
+<div class="noprint plainlinksneverexpand navbar" style="background:none; padding:0; font-weight:normal;;border:none;; font-size:xx-small;"><a href="/wiki/Predefini%C3%A7%C3%A3o:Banco_de_dados" title="Predefinição:Banco de dados"><span class="plainlinks" title="Ver esta predefinição" style=";border:none;">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:Banco_de_dados&amp;action=edit"><span title="Editar esta predefinição" style=";border:none;;">e</span></a></span></div>
+</div>
+<span class="" style="font-size:110%;"><a href="/wiki/Sistema_de_gerenciamento_de_banco_de_dados" title="Sistema de gerenciamento de banco de dados">Sistemas de gerenciamento de bancos de dados</a></span></th>
+</tr>
+<tr>
+<td style="text-align:center;background:#ddddff;" colspan="2"><a href="/w/index.php?title=Modelagem_de_bancos_de_dados&amp;action=edit&amp;redlink=1" class="new" title="Modelagem de bancos de dados (página não existe)">Modelagem</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Normaliza%C3%A7%C3%A3o_de_dados" title="Normalização de dados">Normalização</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Estruturas_de_bancos_de_dados&amp;action=edit&amp;redlink=1" class="new" title="Estruturas de bancos de dados (página não existe)">Estrutura de banco de dados</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Banco_de_dados_distribu%C3%ADdos" title="Banco de dados distribuídos">GDBS distribuídos</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Integridade_referencial" title="Integridade referencial">Integridade referencial</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/%C3%81lgebra_relacional" title="Álgebra relacional">Álgebra relacional</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=C%C3%A1lculo_relacional&amp;action=edit&amp;redlink=1" class="new" title="Cálculo relacional (página não existe)">Cálculo relacional</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Banco_de_dados_relacional" title="Banco de dados relacional">Banco de dados relacional</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Mapeamento_objeto-relacional" title="Mapeamento objeto-relacional">Mapeamento objeto-relacional</a> <span style="font-weight:bold;">&#160;·</span> <strong class="selflink">Modelo relacional</strong> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Banco_de_dados_objeto-relacional" title="Banco de dados objeto-relacional">Banco de dados objeto-relacional</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Processamento_de_transa%C3%A7%C3%A3o" title="Processamento de transação">Processamento de transação</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Conceitos</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;"><a href="/wiki/Banco_de_dados" title="Banco de dados">Banco de dados</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/ACID" title="ACID">ACID</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/CRUD" title="CRUD">CRUD</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Null_(SQL)" title="Null (SQL)">Null</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Chave_candidata" title="Chave candidata">Chave candidata</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Chave_estrangeira" title="Chave estrangeira">Chave estrangeira</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Chave_prim%C3%A1ria" title="Chave primária">Chave primária</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Superkey&amp;action=edit&amp;redlink=1" class="new" title="Superkey (página não existe)">Superkey</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Surrogate_key&amp;action=edit&amp;redlink=1" class="new" title="Surrogate key (página não existe)">Surrogate key</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Axiomas_de_Armstrong&amp;action=edit&amp;redlink=1" class="new" title="Axiomas de Armstrong (página não existe)">Axiomas de Armstrong</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/NoSQL" title="NoSQL">NoSQL</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Objetos</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;"><a href="/w/index.php?title=Rela%C3%A7%C3%A3o_(banco_de_dados)&amp;action=edit&amp;redlink=1" class="new" title="Relação (banco de dados) (página não existe)">Relação</a> (<a href="/wiki/Tabela_(banco_de_dados)" title="Tabela (banco de dados)">Tabela</a>) <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Vis%C3%A3o_(banco_de_dados)" title="Visão (banco de dados)">Vista</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Gatilho_(banco_de_dados)" title="Gatilho (banco de dados)">Trigger</a> <span style="font-weight:bold;">&#160;·</span> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Cursor_(base_de_dados)&amp;action=edit&amp;redlink=1" class="new" title="Cursor (base de dados) (página não existe)">Cursor</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Log_de_transa%C3%A7%C3%A3o&amp;action=edit&amp;redlink=1" class="new" title="Log de transação (página não existe)">Log de transação</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Transa%C3%A7%C3%A3o_em_base_de_dados" title="Transação em base de dados">Transação</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/%C3%8Dndice_(banco_de_dados)" class="mw-redirect" title="Índice (banco de dados)">Índice</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Procedimento_armazenado" title="Procedimento armazenado">Procedimento armazenado</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Particionamento&amp;action=edit&amp;redlink=1" class="new" title="Particionamento (página não existe)">Partição</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Componentes</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;"><a href="/w/index.php?title=Controle_de_concorr%C3%AAncia&amp;action=edit&amp;redlink=1" class="new" title="Controle de concorrência (página não existe)">Controle de concorrência</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Dicion%C3%A1rio_de_dados" title="Dicionário de dados">Dicionário de dados</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/JDBC" title="JDBC">JDBC</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/ODBC" title="ODBC">ODBC</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Linguagem_de_consulta" title="Linguagem de consulta">Linguagem de consulta</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Query_optimizer&amp;action=edit&amp;redlink=1" class="new" title="Query optimizer (página não existe)">Query optimizer</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Query_plan&amp;action=edit&amp;redlink=1" class="new" title="Query plan (página não existe)">Query plan</a></td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Funções</th>
+<td colspan="1" class="" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;"><a href="/w/index.php?title=Gest%C3%A3o_e_automatiza%C3%A7%C3%A3o_de_base_dados&amp;action=edit&amp;redlink=1" class="new" title="Gestão e automatização de base dados (página não existe)">Gestão e automatização</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Otimiza%C3%A7%C3%A3o_de_consulta&amp;action=edit&amp;redlink=1" class="new" title="Otimização de consulta (página não existe)">Otimização de consulta</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Replica%C3%A7%C3%A3o_de_dados" title="Replicação de dados">Replicação</a></td>
+</tr>
+<tr>
+<td style="text-align:center;background:#ddddff;" colspan="2"><b>Produtos disponíveis no mercado:</b> <a href="/wiki/Lista_de_sistemas_de_gerenciamento_de_bancos_de_dados_orientados_a_objeto" title="Lista de sistemas de gerenciamento de bancos de dados orientados a objeto">Orientados a objeto</a> (<a href="/wiki/Comparativo_entre_sistemas_gerenciadores_de_bancos_de_dados_relacionais" title="Comparativo entre sistemas gerenciadores de bancos de dados relacionais">Comparativo</a>) <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/Lista_de_sistemas_de_gerenciamento_de_bancos_de_dados_relacionais" class="mw-redirect" title="Lista de sistemas de gerenciamento de bancos de dados relacionais">Relacionais</a> (<a href="/wiki/Compara%C3%A7%C3%A3o_entre_sistemas_de_gerenciamento_de_bancos_de_dados_relacionais" class="mw-redirect" title="Comparação entre sistemas de gerenciamento de bancos de dados relacionais">Comparativo</a>) <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=Lista_de_sistemas_de_gerenciamento_de_bancos_de_dados_orientados_a_documento&amp;action=edit&amp;redlink=1" class="new" title="Lista de sistemas de gerenciamento de bancos de dados orientados a documento (página não existe)">Orientados a documento</a> <span style="font-weight:bold;">&#160;·</span> <a href="/wiki/NoSQL" title="NoSQL">NoSQL</a> <span style="font-weight:bold;">&#160;·</span> <a href="/w/index.php?title=NewSQL&amp;action=edit&amp;redlink=1" class="new" title="NewSQL (página não existe)">NewSQL</a></td>
+</tr>
+</table>
+<div style="clear:both;"></div>
+<table class="navbox noprint collapsible collapsed nowraplinks" style="border-top: solid silver 1px; border-bottom:1px solid silver; margin:auto; background:white;background:white;">
+<tr>
+<th colspan="2" style="text-align:center;width:100%;">
+<div style="float:left; width:6em; vertical-align:middle; text-align:left;">
+<div class="noprint plainlinksneverexpand navbar" style="background:none; padding:0; font-weight:normal;;border:none;; font-size:xx-small;"><a href="/wiki/Predefini%C3%A7%C3%A3o:IBM" title="Predefinição:IBM"><span class="plainlinks" title="Ver esta predefinição" style=";border:none;">v</span></a>&#160;<span style="font-size:80%;">•</span>&#160;<span class="plainlinks"><a class="external text" href="//pt.wikipedia.org/w/index.php?title=Predefini%C3%A7%C3%A3o:IBM&amp;action=edit"><span title="Editar esta predefinição" style=";border:none;;">e</span></a></span></div>
+</div>
+<span class="" style="font-size:110%;"><a href="/wiki/IBM" title="IBM">IBM</a></span></th>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;"><a href="/w/index.php?title=Hist%C3%B3ria_da_IBM&amp;action=edit&amp;redlink=1" class="new" title="História da IBM (página não existe)">História</a></th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/w/index.php?title=Hist%C3%B3ria_da_IBM&amp;action=edit&amp;redlink=1" class="new" title="História da IBM (página não existe)">História da IBM</a></li>
+<li><a href="/w/index.php?title=Lista_de_fus%C3%B5es_e_aquisi%C3%A7%C3%B5es_pela_IBM&amp;action=edit&amp;redlink=1" class="new" title="Lista de fusões e aquisições pela IBM (página não existe)">Fusões e aquisições</a></li>
+<li><a href="/w/index.php?title=Pense_(IBM)&amp;action=edit&amp;redlink=1" class="new" title="Pense (IBM) (página não existe)">Pense</a> (lema)</li>
+<li><a href="/w/index.php?title=Hist%C3%B3ria_dos_sistemas_operacionais_de_mainframe_IBM&amp;action=edit&amp;redlink=1" class="new" title="História dos sistemas operacionais de mainframe IBM (página não existe)">Sistemas operacionais</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;"><a href="/w/index.php?title=Lista_dos_produtos_IBM&amp;action=edit&amp;redlink=1" class="new" title="Lista dos produtos IBM (página não existe)">Produtos</a></th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Cell_(microprocessador)" title="Cell (microprocessador)">Microprocessador Cell</a></li>
+<li><a href="/w/index.php?title=Mainframe_IBM&amp;action=edit&amp;redlink=1" class="new" title="Mainframe IBM (página não existe)">Mainframe</a></li>
+<li><a href="/wiki/IBM_PC" title="IBM PC">PC</a></li>
+<li><a href="/wiki/IBM_POWER" title="IBM POWER">POWER</a></li>
+<li><a href="/w/index.php?title=Software_de_Gest%C3%A3o_da_Informa%C3%A7%C3%A3o_IBM&amp;action=edit&amp;redlink=1" class="new" title="Software de Gestão da Informação IBM (página não existe)">Gestão da Informação</a></li>
+<li><a href="/w/index.php?title=Lotus_Software&amp;action=edit&amp;redlink=1" class="new" title="Lotus Software (página não existe)">Lotus Software</a></li>
+<li><a href="/w/index.php?title=Rational_Software&amp;action=edit&amp;redlink=1" class="new" title="Rational Software (página não existe)">Rational Software</a></li>
+<li><a href="/wiki/SPSS" title="SPSS">SPSS</a></li>
+<li><a href="/w/index.php?title=ILOG&amp;action=edit&amp;redlink=1" class="new" title="ILOG (página não existe)">ILOG</a></li>
+<li><a href="/w/index.php?title=Tivoli_Software&amp;action=edit&amp;redlink=1" class="new" title="Tivoli Software (página não existe)">Tivoli</a>: <a href="/w/index.php?title=Tivoli_Service_Automation_Manager&amp;action=edit&amp;redlink=1" class="new" title="Tivoli Service Automation Manager (página não existe)">Service Automation Manager</a></li>
+<li><a href="/wiki/Websphere" title="Websphere">Websphere</a></li>
+<li><a href="/w/index.php?title=AlphaWorks&amp;action=edit&amp;redlink=1" class="new" title="AlphaWorks (página não existe)">alphaWorks</a></li>
+<li><a href="/w/index.php?title=Criminal_Reduction_Utilising_Statistical_History&amp;action=edit&amp;redlink=1" class="new" title="Criminal Reduction Utilising Statistical History (página não existe)">Criminal Reduction Utilising Statistical History</a></li>
+<li><a href="/w/index.php?title=IBM_Mashup_Center&amp;action=edit&amp;redlink=1" class="new" title="IBM Mashup Center (página não existe)">Mashup Center</a></li>
+<li><a href="/w/index.php?title=IBM_PureQuery&amp;action=edit&amp;redlink=1" class="new" title="IBM PureQuery (página não existe)">PureQuery</a></li>
+<li><a href="/w/index.php?title=IBM_Redbooks&amp;action=edit&amp;redlink=1" class="new" title="IBM Redbooks (página não existe)">Redbooks</a></li>
+<li><a href="/wiki/Fortran" title="Fortran">Fortran</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Entidades empresariais</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/w/index.php?title=IBM_Global_Services&amp;action=edit&amp;redlink=1" class="new" title="IBM Global Services (página não existe)">Global Services</a></li>
+<li><a href="/w/index.php?title=IBM_jStart&amp;action=edit&amp;redlink=1" class="new" title="IBM jStart (página não existe)">jStart</a></li>
+<li><a href="/w/index.php?title=IBM_Research&amp;action=edit&amp;redlink=1" class="new" title="IBM Research (página não existe)">Research</a></li>
+<li><a href="/w/index.php?title=Lista_de_subsidi%C3%A1rias_internacionais_da_IBM&amp;action=edit&amp;redlink=1" class="new" title="Lista de subsidiárias internacionais da IBM (página não existe)">International</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Instalações</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li>Torres
+<ul>
+<li><a href="/wiki/1250_Ren%C3%A9-L%C3%A9vesque" title="1250 René-Lévesque">Montreal</a></li>
+<li><a href="/wiki/One_Atlantic_Center" title="One Atlantic Center">Atlanta</a></li>
+</ul>
+</li>
+<li>Software Labs
+<ul>
+<li><a href="/w/index.php?title=IBM_Rome_Software_Lab&amp;action=edit&amp;redlink=1" class="new" title="IBM Rome Software Lab (página não existe)">Rome</a></li>
+<li><a href="/w/index.php?title=IBM_Toronto_Software_Lab&amp;action=edit&amp;redlink=1" class="new" title="IBM Toronto Software Lab (página não existe)">Toronto</a></li>
+</ul>
+</li>
+<li>IBM Buildings
+<ul>
+<li><a href="/w/index.php?title=330_North_Wabash&amp;action=edit&amp;redlink=1" class="new" title="330 North Wabash (página não existe)">Chicago</a></li>
+<li><a href="/w/index.php?title=IBM_Building,_Johannesburg&amp;action=edit&amp;redlink=1" class="new" title="IBM Building, Johannesburg (página não existe)">Johannesburg</a></li>
+<li><a href="/w/index.php?title=IBM_Building_(Seattle)&amp;action=edit&amp;redlink=1" class="new" title="IBM Building (Seattle) (página não existe)">Seattle</a></li>
+</ul>
+</li>
+<li>Research Labs
+<ul>
+<li><a href="/w/index.php?title=IBM_Austin_Research_Laboratory&amp;action=edit&amp;redlink=1" class="new" title="IBM Austin Research Laboratory (página não existe)">Austin</a></li>
+<li><a href="/w/index.php?title=IBM_China_Research_Laboratory&amp;action=edit&amp;redlink=1" class="new" title="IBM China Research Laboratory (página não existe)">China</a></li>
+<li><a href="/w/index.php?title=IBM_Research_%E2%80%93_Tokyo&amp;action=edit&amp;redlink=1" class="new" title="IBM Research – Tokyo (página não existe)">Tokyo</a></li>
+<li><a href="/w/index.php?title=IBM_Zurich_Research_Laboratory&amp;action=edit&amp;redlink=1" class="new" title="IBM Zurich Research Laboratory (página não existe)">Zurich</a></li>
+<li><a href="/w/index.php?title=IBM_Haifa_Research_Laboratory&amp;action=edit&amp;redlink=1" class="new" title="IBM Haifa Research Laboratory (página não existe)">Haifa</a></li>
+<li><a href="/w/index.php?title=IBM_India_Research_Laboratory&amp;action=edit&amp;redlink=1" class="new" title="IBM India Research Laboratory (página não existe)">India</a></li>
+<li><a href="/w/index.php?title=IBM_Almaden_Research_Center&amp;action=edit&amp;redlink=1" class="new" title="IBM Almaden Research Center (página não existe)">Almaden</a></li>
+</ul>
+</li>
+<li>Instalações
+<ul>
+<li><a href="/w/index.php?title=IBM_Hakozaki_Facility&amp;action=edit&amp;redlink=1" class="new" title="IBM Hakozaki Facility (página não existe)">Hakozaki</a></li>
+<li><a href="/w/index.php?title=IBM_Yamato_Facility&amp;action=edit&amp;redlink=1" class="new" title="IBM Yamato Facility (página não existe)">Yamato</a></li>
+</ul>
+</li>
+<li><a href="/w/index.php?title=Cambridge_Scientific_Center&amp;action=edit&amp;redlink=1" class="new" title="Cambridge Scientific Center (página não existe)">IBM Scientific Center</a></li>
+<li><a href="/w/index.php?title=Hursley_House&amp;action=edit&amp;redlink=1" class="new" title="Hursley House (página não existe)">Hursley House</a></li>
+<li><a href="/w/index.php?title=IBM_Canada_Head_Office_Building&amp;action=edit&amp;redlink=1" class="new" title="IBM Canada Head Office Building (página não existe)">Canada Head Office Building</a></li>
+<li><a href="/w/index.php?title=Thomas_J._Watson_Research_Center&amp;action=edit&amp;redlink=1" class="new" title="Thomas J. Watson Research Center (página não existe)">Thomas J. Watson Research Center</a></li>
+<li><a href="/w/index.php?title=IBM_Rochester&amp;action=edit&amp;redlink=1" class="new" title="IBM Rochester (página não existe)">IBM Rochester</a></li>
+<li><a href="/w/index.php?title=IBM_Somers_Office_Complex&amp;action=edit&amp;redlink=1" class="new" title="IBM Somers Office Complex (página não existe)">Somers Office Complex</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Iniciativas</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/w/index.php?title=IBM_Academy_of_Technology&amp;action=edit&amp;redlink=1" class="new" title="IBM Academy of Technology (página não existe)">Academy of Technology</a></li>
+<li><a href="/w/index.php?title=IBM_Centers_for_Advanced_Studies&amp;action=edit&amp;redlink=1" class="new" title="IBM Centers for Advanced Studies (página não existe)">Centers for Advanced Studies</a>: <a href="/w/index.php?title=IBM_CASCON&amp;action=edit&amp;redlink=1" class="new" title="IBM CASCON (página não existe)">CASCON</a></li>
+<li><a href="/w/index.php?title=IBM_Deep_Thunder&amp;action=edit&amp;redlink=1" class="new" title="IBM Deep Thunder (página não existe)">Deep Thunder</a></li>
+<li><a href="/wiki/IBM_Fellow" title="IBM Fellow">IBM Fellow</a></li>
+<li><a href="/w/index.php?title=IBM_Distinguished_Engineer&amp;action=edit&amp;redlink=1" class="new" title="IBM Distinguished Engineer (página não existe)">IBM Distinguished Engineer</a></li>
+<li><a href="/w/index.php?title=IBM_Pulse_conference&amp;action=edit&amp;redlink=1" class="new" title="IBM Pulse conference (página não existe)">Pulse conference</a></li>
+<li><a href="/w/index.php?title=IBM%27s_The_Great_Mind_Challenge&amp;action=edit&amp;redlink=1" class="new" title="IBM's The Great Mind Challenge (página não existe)">The Great Mind Challenge</a></li>
+<li><a href="/wiki/DeveloperWorks" title="DeveloperWorks">DeveloperWorks</a>: <a href="/w/index.php?title=Develothon&amp;action=edit&amp;redlink=1" class="new" title="Develothon (página não existe)">Develothon</a></li>
+<li><a href="/w/index.php?title=Linux_Technology_Center&amp;action=edit&amp;redlink=1" class="new" title="Linux Technology Center (página não existe)">Linux Technology Center</a></li>
+<li><a href="/w/index.php?title=IBM_Virtual_Universe_Community&amp;action=edit&amp;redlink=1" class="new" title="IBM Virtual Universe Community (página não existe)">IBM Virtual Universe Community</a></li>
+<li><a href="/w/index.php?title=Smarter_Planet&amp;action=edit&amp;redlink=1" class="new" title="Smarter Planet (página não existe)">Smarter Planet</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Invenções</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Caixa_eletr%C3%B4nico" title="Caixa eletrônico">Caixa eletrônico</a></li>
+<li><a href="/w/index.php?title=Perfuradora_de_cart%C3%B5es&amp;action=edit&amp;redlink=1" class="new" title="Perfuradora de cartões (página não existe)">Perfuradora de cartões</a></li>
+<li><a href="/wiki/Disco_r%C3%ADgido" title="Disco rígido">Disco rígido</a></li>
+<li><a href="/wiki/Disquete" title="Disquete">Disquete</a></li>
+<li><a href="/wiki/Dynamic_random_access_memory" title="Dynamic random access memory">DRAM</a></li>
+<li><strong class="selflink">Modelo relacional</strong></li>
+<li><a href="/w/index.php?title=IBM_Selectric_typewriter&amp;action=edit&amp;redlink=1" class="new" title="IBM Selectric typewriter (página não existe)">Selectric Typewriter</a></li>
+<li><a href="/wiki/Swap" title="Swap">Swap</a></li>
+<li><a href="/w/index.php?title=Universal_Product_Code&amp;action=edit&amp;redlink=1" class="new" title="Universal Product Code (página não existe)">Universal Product Code</a></li>
+<li><a href="/wiki/Cart%C3%A3o_magn%C3%A9tico" title="Cartão magnético">Cartão magnético</a></li>
+<li><a href="/w/index.php?title=Sabre_(computer_system)&amp;action=edit&amp;redlink=1" class="new" title="Sabre (computer system) (página não existe)">SABRE airline reservation system</a></li>
+<li><a href="/wiki/Microsc%C3%B3pio_de_corrente_de_tunelamento" title="Microscópio de corrente de tunelamento">Microscópio de corrente de tunelamento</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Terminologia</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/wiki/GSGI" title="GSGI">GSGI</a></li>
+<li><a href="/w/index.php?title=Commercial_Processing_Workload&amp;action=edit&amp;redlink=1" class="new" title="Commercial Processing Workload (página não existe)">Commercial Processing Workload</a></li>
+<li><a href="/w/index.php?title=Consumability&amp;action=edit&amp;redlink=1" class="new" title="Consumability (página não existe)">Consumability</a></li>
+<li><a href="/w/index.php?title=Technology_dividend&amp;action=edit&amp;redlink=1" class="new" title="Technology dividend (página não existe)">Technology dividend</a></li>
+<li><a href="/wiki/E-business" title="E-business">E-business</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">CEOs</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Thomas_John_Watson" title="Thomas John Watson">Thomas John Watson</a> (1914–1956)</li>
+<li><a href="/w/index.php?title=Thomas_Watson,_Jr.&amp;action=edit&amp;redlink=1" class="new" title="Thomas Watson, Jr. (página não existe)">T. J. Watson, Jr.</a> (1956–1971)</li>
+<li><a href="/w/index.php?title=Thomas_Vincent_Learson&amp;action=edit&amp;redlink=1" class="new" title="Thomas Vincent Learson (página não existe)">Thomas Vincent Learson</a> (1971–1973)</li>
+<li><a href="/w/index.php?title=Frank_T._Cary&amp;action=edit&amp;redlink=1" class="new" title="Frank T. Cary (página não existe)">F. T. Cary</a> (1973–1981)</li>
+<li><a href="/w/index.php?title=John_Roberts_Opel&amp;action=edit&amp;redlink=1" class="new" title="John Roberts Opel (página não existe)">John Roberts Opel</a> (1981–1985)</li>
+<li><a href="/w/index.php?title=John_Fellows_Akers&amp;action=edit&amp;redlink=1" class="new" title="John Fellows Akers (página não existe)">John Fellows Akers</a> (1985–1993)</li>
+<li><a href="/w/index.php?title=Louis_Vincent_Gerstner&amp;action=edit&amp;redlink=1" class="new" title="Louis Vincent Gerstner (página não existe)">Louis Vincent Gerstner</a> (1993–2002)</li>
+<li><a href="/wiki/Samuel_J._Palmisano" title="Samuel J. Palmisano">Samuel J. Palmisano</a> (2002–2011)</li>
+<li><a href="/wiki/Ginni_Rometty" title="Ginni Rometty">V. M. Rometty</a> (2012-)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Conselho de administração</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;">
+<ul>
+<li><a href="/w/index.php?title=Alain_Belda&amp;action=edit&amp;redlink=1" class="new" title="Alain Belda (página não existe)">Alain Belda</a></li>
+<li><a href="/w/index.php?title=William_R._Brody&amp;action=edit&amp;redlink=1" class="new" title="William R. Brody (página não existe)">William R. Brody</a></li>
+<li><a href="/w/index.php?title=Kenneth_Chenault&amp;action=edit&amp;redlink=1" class="new" title="Kenneth Chenault (página não existe)">Kenneth Chenault</a></li>
+<li><a href="/wiki/Michael_L._Eskew" title="Michael L. Eskew">Michael L. Eskew</a></li>
+<li><a href="/w/index.php?title=David_Farr&amp;action=edit&amp;redlink=1" class="new" title="David Farr (página não existe)">David Farr</a></li>
+<li><a href="/w/index.php?title=Shirley_Ann_Jackson&amp;action=edit&amp;redlink=1" class="new" title="Shirley Ann Jackson (página não existe)">Shirley Ann Jackson</a></li>
+<li><a href="/w/index.php?title=Andrew_N._Liveris&amp;action=edit&amp;redlink=1" class="new" title="Andrew N. Liveris (página não existe)">Andrew N. Liveris</a></li>
+<li><a href="/wiki/James_McNerney" title="James McNerney">James McNerney</a></li>
+<li><a href="/w/index.php?title=James_W._Owens&amp;action=edit&amp;redlink=1" class="new" title="James W. Owens (página não existe)">James W. Owens</a></li>
+<li><a href="/wiki/Samuel_J._Palmisano" title="Samuel J. Palmisano">Samuel J. Palmisano</a></li>
+<li><a href="/w/index.php?title=Virginia_M._Rometty&amp;action=edit&amp;redlink=1" class="new" title="Virginia M. Rometty (página não existe)">Virginia M. Rometty</a></li>
+<li><a href="/w/index.php?title=Joan_E._Spero&amp;action=edit&amp;redlink=1" class="new" title="Joan E. Spero (página não existe)">Joan E. Spero</a></li>
+<li><a href="/w/index.php?title=Sidney_Taurel&amp;action=edit&amp;redlink=1" class="new" title="Sidney Taurel (página não existe)">Sidney Taurel</a></li>
+<li><a href="/w/index.php?title=Lorenzo_Zambrano&amp;action=edit&amp;redlink=1" class="new" title="Lorenzo Zambrano (página não existe)">Lorenzo Zambrano</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th class="" style="white-space:nowrap;background:#ddddff;text-align:right;">Outros</th>
+<td colspan="1" class="hlist" style="text-align:left;width:100%;font-size:95%;background:#f7f7f7;">
+<ul>
+<li><a href="/wiki/Deep_Thought" title="Deep Thought">Deep Thought</a></li>
+<li><a href="/wiki/Watson_(supercomputador)" title="Watson (supercomputador)">Watson (supercomputador)</a></li>
+<li><a href="/w/index.php?title=Common_Public_License&amp;action=edit&amp;redlink=1" class="new" title="Common Public License (página não existe)">Common Public License</a>/<a href="/w/index.php?title=IBM_Public_License&amp;action=edit&amp;redlink=1" class="new" title="IBM Public License (página não existe)">IBM Public License</a></li>
+<li><a href="/w/index.php?title=Customer_engineer&amp;action=edit&amp;redlink=1" class="new" title="Customer engineer (página não existe)">Customer engineer</a></li>
+<li><a href="/w/index.php?title=Dynamic_infrastructure&amp;action=edit&amp;redlink=1" class="new" title="Dynamic infrastructure (página não existe)">Dynamic infrastructure</a></li>
+<li><i><a href="/wiki/IBM_e_o_Holocausto" title="IBM e o Holocausto">IBM e o Holocausto</a></i></li>
+<li><a href="/w/index.php?title=IBM_international_chess_tournament&amp;action=edit&amp;redlink=1" class="new" title="IBM international chess tournament (página não existe)">IBM international chess tournament</a></li>
+<li><a href="/w/index.php?title=Lucifer_(cipher)&amp;action=edit&amp;redlink=1" class="new" title="Lucifer (cipher) (página não existe)">Lucifer cipher</a></li>
+<li><a href="/w/index.php?title=Mathematica:_A_World_of_Numbers..._and_Beyond&amp;action=edit&amp;redlink=1" class="new" title="Mathematica: A World of Numbers... and Beyond (página não existe)">Mathematica</a></li>
+<li><a href="/w/index.php?title=SHARE_(computing)&amp;action=edit&amp;redlink=1" class="new" title="SHARE (computing) (página não existe)">SHARE computing</a></li>
+<li><a href="/w/index.php?title=ScicomP&amp;action=edit&amp;redlink=1" class="new" title="ScicomP (página não existe)">ScicomP</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+
+<!-- Saved in parser cache with key ptwiki:pcache:idhash:15904-0!*!0!!pt!4!* and timestamp 20161016171335 and revision id 45291842
+ -->
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.log.warn("Gadget \"Topicon\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"Metacaixa\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"ElementosOcultaveis\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"FeedbackHighlight\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"NewVillagePump\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");mw.log.warn("Gadget \"wikibugs\" styles loaded twice. Migrate to type=general. See \u003Chttps://phabricator.wikimedia.org/T42284\u003E.");});</script><noscript><img src="//pt.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Obtida de "<a dir="ltr" href="https://pt.wikipedia.org/w/index.php?title=Modelo_relacional&amp;oldid=45291842">https://pt.wikipedia.org/w/index.php?title=Modelo_relacional&amp;oldid=45291842</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Especial:Categorias" title="Especial:Categorias">Categorias</a>: <ul><li><a href="/wiki/Categoria:SGBDs" title="Categoria:SGBDs">SGBDs</a></li><li><a href="/wiki/Categoria:Modelo_relacional" title="Categoria:Modelo relacional">Modelo relacional</a></li><li><a href="/wiki/Categoria:Paradigmas_de_programa%C3%A7%C3%A3o" title="Categoria:Paradigmas de programação">Paradigmas de programação</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Categorias ocultas: <ul><li><a href="/wiki/Categoria:!Artigos_precisando_de_wikifica%C3%A7%C3%A3o_desde_junho_de_2015" title="Categoria:!Artigos precisando de wikificação desde junho de 2015">!Artigos precisando de wikificação desde junho de 2015</a></li><li><a href="/wiki/Categoria:!Artigos_que_carecem_de_notas_de_rodap%C3%A9_desde_novembro_de_2012" title="Categoria:!Artigos que carecem de notas de rodapé desde novembro de 2012">!Artigos que carecem de notas de rodapé desde novembro de 2012</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menu de navegação</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Ferramentas pessoais</h3>
+						<ul>
+							<li id="pt-anonuserpage">Não autenticado</li><li id="pt-anontalk"><a href="/wiki/Especial:Minha_discuss%C3%A3o" title="Discussão sobre edições feitas a partir deste endereço IP [n]" accesskey="n">Discussão</a></li><li id="pt-anoncontribs"><a href="/wiki/Especial:Minhas_contribui%C3%A7%C3%B5es" title="Uma lista de edições feitas a partir deste endereço de IP [y]" accesskey="y">Contribuições</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Especial:Criar_conta&amp;returnto=Modelo+relacional" title="É encorajado a criar uma conta e iniciar sessão; no entanto, não é obrigatório">Criar uma conta</a></li><li id="pt-login"><a href="/w/index.php?title=Especial:Entrar&amp;returnto=Modelo+relacional" title="Aconselhamos-lhe a criar uma conta na Wikipédia, embora tal não seja obrigatório. [o]" accesskey="o">Entrar</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Domínios</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Modelo_relacional"  title="Ver a página de conteúdo [c]" accesskey="c">Artigo</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Discuss%C3%A3o:Modelo_relacional"  title="Discussão sobre o conteúdo da página [t]" accesskey="t" rel="discussion">Discussão</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variantes</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Modelo_relacional" >Ler</a></span></li>
+															<li id="ca-ve-edit"><span><a href="/w/index.php?title=Modelo_relacional&amp;veaction=edit"  title="Editar esta página [v]" accesskey="v">Editar</a></span></li>
+															<li id="ca-edit" class=" collapsible"><span><a href="/w/index.php?title=Modelo_relacional&amp;action=edit"  title="Editar esta página [e]" accesskey="e">Editar código-fonte</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Modelo_relacional&amp;action=history"  title="Edições anteriores desta página. [h]" accesskey="h">Ver histórico</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>Mais</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Busca</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Pesquisar em Wikipédia" title="Pesquisar na Wikipédia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Especial:Pesquisar" name="title"/><input type="submit" name="fulltext" value="Pesquisar" title="Procurar páginas que contêm este texto" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Ir" title="Ir para uma página com este nome exacto, caso exista" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"  title="Visitar a página principal"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navegação</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal" title="Visitar a página principal [z]" accesskey="z">Página principal</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Conte%C3%BAdo_destacado">Conteúdo destacado</a></li><li id="n-currentevents"><a href="/wiki/Portal:Eventos_atuais" title="Informação temática sobre eventos atuais">Eventos atuais</a></li><li id="n-villagepump"><a href="/wiki/Wikip%C3%A9dia:Esplanada">Esplanada</a></li><li id="n-randompage"><a href="/wiki/Especial:Aleat%C3%B3ria" title="Carregar página aleatória [x]" accesskey="x">Página aleatória</a></li><li id="n-portals"><a href="/wiki/Portal:%C3%8Dndice">Portais</a></li><li id="n-bug_in_article"><a href="/wiki/Wikip%C3%A9dia:Informe_um_erro">Informar um erro</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Colaboração</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-welcome"><a href="/wiki/Wikip%C3%A9dia:Boas-vindas">Boas-vindas</a></li><li id="n-help"><a href="/wiki/Ajuda:P%C3%A1gina_principal" title="Um local reservado para auxílio.">Ajuda</a></li><li id="n-testpage"><a href="/wiki/Wikip%C3%A9dia:P%C3%A1gina_de_testes">Página de testes</a></li><li id="n-portal"><a href="/wiki/Wikip%C3%A9dia:Portal_comunit%C3%A1rio" title="Sobre o projeto">Portal comunitário</a></li><li id="n-recentchanges"><a href="/wiki/Especial:Mudan%C3%A7as_recentes" title="Uma lista de mudanças recentes nesta wiki [r]" accesskey="r">Mudanças recentes</a></li><li id="n-maintenance"><a href="/wiki/Wikip%C3%A9dia:Manuten%C3%A7%C3%A3o">Manutenção</a></li><li id="n-createpage"><a href="/wiki/Ajuda:Guia_de_edi%C3%A7%C3%A3o/Como_come%C3%A7ar_uma_p%C3%A1gina">Criar página</a></li><li id="n-newpages-description"><a href="/wiki/Especial:P%C3%A1ginas_novas">Páginas novas</a></li><li id="n-contact-description"><a href="/wiki/Wikip%C3%A9dia:Contato">Contato</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20120521SB001&amp;uselang=pt" title="Ajude-nos">Donativos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=book_creator&amp;referer=Modelo+relacional">Criar um livro</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Especial:Livro&amp;bookcmd=render_article&amp;arttitle=Modelo+relacional&amp;returnto=Modelo+relacional&amp;oldid=45291842&amp;writer=rdf2latex">Descarregar como PDF</a></li><li id="t-print"><a href="/w/index.php?title=Modelo_relacional&amp;printable=yes" title="Versão para impressão desta página [p]" accesskey="p">Versão para impressão</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>Noutros projetos</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Relational_models" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Ferramentas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Especial:P%C3%A1ginas_afluentes/Modelo_relacional" title="Lista de todas as páginas que contêm ligações para esta [j]" accesskey="j">Páginas afluentes</a></li><li id="t-recentchangeslinked"><a href="/wiki/Especial:Altera%C3%A7%C3%B5es_relacionadas/Modelo_relacional" rel="nofollow" title="Mudanças recentes nas páginas para as quais esta contém ligação [k]" accesskey="k">Alterações relacionadas</a></li><li id="t-upload"><a href="/wiki/Wikipedia:Carregar_ficheiro" title="Carregar ficheiros [u]" accesskey="u">Carregar ficheiro</a></li><li id="t-specialpages"><a href="/wiki/Especial:P%C3%A1ginas_especiais" title="Lista de páginas especiais [q]" accesskey="q">Páginas especiais</a></li><li id="t-permalink"><a href="/w/index.php?title=Modelo_relacional&amp;oldid=45291842" title="Ligação permanente para esta versão da página">Ligação permanente</a></li><li id="t-info"><a href="/w/index.php?title=Modelo_relacional&amp;action=info" title="Mais informações sobre esta página">Informações da página</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q755662" title="Ligação para o elemento do repositório de dados [g]" accesskey="g">Elemento Wikidata</a></li><li id="t-cite"><a href="/w/index.php?title=Especial:Citar&amp;page=Modelo_relacional&amp;id=45291842" title="Informação sobre como citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Noutros idiomas</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Model_relacional" title="Model relacional — catalão" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Rela%C4%8Dn%C3%AD_model" title="Relační model — checo" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Relational_model" title="Relational model — inglês" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Modelo_relacional" title="Modelo relacional — espanhol" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AF%D9%84_%D8%B1%D8%A7%D8%A8%D8%B7%D9%87%E2%80%8C%D8%A7%DB%8C" title="مدل رابطه‌ای — persa" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Relaatiomalli" title="Relaatiomalli — finlandês" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_relationnel" title="Modèle relationnel — francês" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/Samhail_choibhneasta" title="Samhail choibhneasta — irlandês" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Rel%C3%A1ci%C3%B3s_adatmodell" title="Relációs adatmodell — húngaro" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ia"><a href="https://ia.wikipedia.org/wiki/Base_de_datos_relational" title="Base de datos relational — interlíngua" lang="ia" hreflang="ia" class="interlanguage-link-target">Interlingua</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Modello_relazionale" title="Modello relazionale — italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E9%96%A2%E4%BF%82%E3%83%A2%E3%83%87%E3%83%AB" title="関係モデル — japonês" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BB%D1%8F%D1%86%D0%B8%D1%8F%D0%BB%D1%8B%D2%9B_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C" title="Реляциялық модель — cazaque" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B4%80%EA%B3%84%ED%98%95_%EB%AA%A8%EB%8D%B8" title="관계형 모델 — coreano" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Reliacinis_modelis" title="Reliacinis modelis — lituano" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Rel%C4%81cijas" title="Relācijas — letão" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Model_hubungan" title="Model hubungan — malaio" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Relationeel_model" title="Relationeel model — holandês" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Relasjonsmodellen" title="Relasjonsmodellen — norueguês" lang="no" hreflang="no" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Model_relacyjny" title="Model relacyjny — polaco" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BB%D1%8F%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85" title="Реляционная модель данных — russo" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Relacioni_model" title="Relacioni model — servo-croata" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Relational_model" title="Relational model — Simple English" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BB%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B8_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB" title="Релациони модел — sérvio" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AF%8A%E0%AE%9F%E0%AE%B0%E0%AF%8D%E0%AE%AA%E0%AF%81%E0%AE%9A%E0%AE%BE%E0%AE%B0%E0%AF%8D_%E0%AE%AE%E0%AE%BE%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF" title="தொடர்புசார் மாதிரி — tâmil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BB%D1%8F%D1%86%D1%96%D0%B9%D0%BD%D0%B0_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%D0%B4%D0%B0%D0%BD%D0%B8%D1%85" title="Реляційна модель даних — ucraniano" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B" title="关系模型 — chinês" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q755662#sitelinks-wikipedia" title="Editar ligações interlínguas" class="wbc-editpage">Editar ligações</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página foi modificada pela última vez à(s) 21h40min de 8 de abril de 2016.</li>
+											<li id="footer-info-copyright">Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt">Creative Commons - Atribuição - Compartilha Igual 3.0 Não Adaptada (CC BY-SA 3.0)</a>;
+pode estar sujeito a condições adicionais.
+Para mais detalhes, consulte as <a href="https://wikimediafoundation.org/wiki/Condições_de_Uso">Condições de Uso</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/pt-br" class="extiw" title="m:Privacy policy/pt-br">Política de privacidade</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikip%C3%A9dia:Sobre" class="mw-redirect" title="Wikipédia:Sobre">Sobre a Wikipédia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikip%C3%A9dia:Aviso_geral" title="Wikipédia:Aviso geral">Avisos gerais</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Programadores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Declaração sobre cookies</a></li>
+											<li id="footer-places-mobileview"><a href="//pt.m.wikipedia.org/w/index.php?title=Modelo_relacional&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versão móvel</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.Topicon","ext.gadget.Metacaixa","ext.gadget.TitleRewrite","ext.gadget.ElementosOcultaveis","ext.gadget.FeedbackHighlight","ext.gadget.ReferenceTooltips","ext.gadget.NewVillagePump","ext.gadget.wikibugs","ext.gadget.charinsert","ext.gadget.EnhancedSearch","ext.gadget.WikiMiniAtlas","ext.gadget.PagesForDeletion","mmv.bootstrap.autostart","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.centralNotice.geoIP","ext.centralNotice.startUp"]);});</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set( {
+    "wgPageParseReport": {
+        "limitreport": {
+            "cputime": "0.184",
+            "walltime": "0.213",
+            "ppvisitednodes": {
+                "value": 3554,
+                "limit": 1000000
+            },
+            "ppgeneratednodes": {
+                "value": 0,
+                "limit": 1500000
+            },
+            "postexpandincludesize": {
+                "value": 59641,
+                "limit": 2097152
+            },
+            "templateargumentsize": {
+                "value": 30529,
+                "limit": 2097152
+            },
+            "expansiondepth": {
+                "value": 12,
+                "limit": 40
+            },
+            "expensivefunctioncount": {
+                "value": 0,
+                "limit": 500
+            },
+            "entityaccesscount": {
+                "value": 0,
+                "limit": 400
+            },
+            "timingprofile": [
+                "100.00%  142.543      1 -total",
+                " 44.33%   63.184      2 Predefinição:Manutenção/Categorizando_por_assunto",
+                " 42.03%   59.906      1 Predefinição:Wikificação",
+                " 36.64%   52.234      2 Predefinição:Navbox",
+                " 35.87%   51.133      1 Predefinição:Banco_de_dados",
+                " 26.53%   37.813      2 Predefinição:Navbox/core",
+                " 15.04%   21.434      1 Predefinição:Sem-notas",
+                "  6.75%    9.621      1 Predefinição:IBM",
+                "  5.93%    8.458      2 Predefinição:Ambox",
+                "  4.03%    5.743      2 Predefinição:Tnavbar"
+            ]
+        },
+        "scribunto": {
+            "limitreport-timeusage": {
+                "value": "0.006",
+                "limit": "10.000"
+            },
+            "limitreport-memusage": {
+                "value": 645328,
+                "limit": 52428800
+            }
+        },
+        "cachereport": {
+            "origin": "mw1180",
+            "timestamp": "20161016171335",
+            "ttl": 2592000,
+            "transientcontent": false
+        }
+    }
+} );});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":69,"wgHostname":"mw1177"});});</script>
+	</body>
+</html>
